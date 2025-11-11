@@ -5,13 +5,13 @@ np.random.seed(42)
 
 def data_generator():
     # Time of Arrival
-    TOA = np.random.randint(0, 1440)  # in minutes from midnight
+    TOA = np.random.randint(0, 1440)  
     
     # Maintenance Duration
-    MD = np.random.randint(30, 181)  # in minutes
+    MD = np.random.randint(30, 181)
     
     # Expected Departure
-    ED = TOA + MD + np.random.randint(15, 61)  # in minutes from midnight
+    ED = TOA + MD + np.random.randint(15, 61)  
 
     # Priority Level (0-1)
     PL = np.random.choice([0, 1], p=[0.8, 0.2])
