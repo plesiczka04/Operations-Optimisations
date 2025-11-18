@@ -12,6 +12,8 @@ def data_generator(num_initial_aircraft, num_incoming_aircraft, hangar_length, h
     incoming_aircraft = {}
 
     for i in range(num_initial_aircraft):
+        aircraft_id = f"a{i+1:02d}"
+        
         # Time of Arrival
         TOA = np.random.randint(-50, 0)  
         
@@ -56,7 +58,7 @@ def data_generator(num_initial_aircraft, num_incoming_aircraft, hangar_length, h
                     valid_position = False
                     break
 
-        initial_aircraft[i] = {
+        initial_aircraft[aircraft_id] = {
             "TOA": TOA,
             "MD": MD,
             "ED": ED,
@@ -74,6 +76,8 @@ def data_generator(num_initial_aircraft, num_incoming_aircraft, hangar_length, h
     
     
     for i in range(num_incoming_aircraft):
+        aircraft_id = f"a{i+1+num_initial_aircraft:02d}"
+        
         # Time of Arrival
         TOA = np.random.randint(0, 1440)  
         
@@ -104,7 +108,7 @@ def data_generator(num_initial_aircraft, num_incoming_aircraft, hangar_length, h
         # Delayed Departure Cost
         PDEP = np.random.randint(30, 181) + PL * np.random.randint(30, 181)
         
-        incoming_aircraft[i] = {
+        incoming_aircraft[aircraft_id] = {
             "TOA": TOA,
             "MD": MD,
             "ED": ED,
@@ -159,7 +163,7 @@ def build_csvs(
     T2 = pd.DataFrame(
         [
             {
-                "c": int(c),
+                "c": str(c),
                 "M_ID": int(mid_for(rec)),
                 "ETD": int(rec["ED"]),
                 "ServT": int(rec["MD"]),
@@ -174,7 +178,7 @@ def build_csvs(
     T3 = pd.DataFrame(
         [
             {
-                "f": int(f),
+                "f": str(f),
                 "M_ID": int(mid_for(rec)),
                 "ETA": int(rec["TOA"]),
                 "ETD": int(rec["ED"]),
