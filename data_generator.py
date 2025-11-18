@@ -13,10 +13,10 @@ def data_generator(num_initial_aircraft, num_incoming_aircraft, hangar_length, h
 
     for i in range(num_initial_aircraft):
         # Time of Arrival
-        TOA = np.random.randint(-720, 0)  
+        TOA = np.random.randint(-50, 0)  
         
         # Maintenance Duration
-        MD = np.random.randint(30, 181)
+        MD = np.random.randint(50, 181)
                 
         # Expected Departure
         ED = TOA + MD + np.random.randint(15, 61)  
@@ -28,10 +28,10 @@ def data_generator(num_initial_aircraft, num_incoming_aircraft, hangar_length, h
         SZ = np.random.choice([0, 1], p=[0.9, 0.1])
 
         # Aircraft Length (in meters)
-        AL = round(np.random.uniform(20.0, 76.0), 2)
+        AL = round(np.random.uniform(20.0, 76.0), 0)
 
         # Aircraft Wingspan (in meters)
-        AW = round(np.random.uniform(20.0, 80.0), 2)
+        AW = round(np.random.uniform(20.0, 80.0), 0)
 
         # Rejection Cost
         PREJ = np.random.randint(30, 181) + PL * np.random.randint(30, 181)
@@ -90,10 +90,10 @@ def data_generator(num_initial_aircraft, num_incoming_aircraft, hangar_length, h
         SZ = np.random.choice([0, 1], p=[0.9, 0.1])
         
         # Aircraft Length (in meters)
-        AL = round(np.random.uniform(20.0, 76.0), 2)
+        AL = round(np.random.uniform(20.0, 76.0), 0)
         
         # Aircraft Wingspan (in meters)
-        AW = round(np.random.uniform(20.0, 80.0), 2)
+        AW = round(np.random.uniform(20.0, 80.0), 0)
 
         # Rejection Cost
         PREJ = np.random.randint(30, 181) + PL * np.random.randint(30, 181)
