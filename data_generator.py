@@ -62,7 +62,6 @@ def data_generator(num_initial_aircraft, num_incoming_aircraft, hangar_length, h
             "TOA": TOA,
             "MD": MD,
             "ED": ED,
-            "PL": PL,
             "SZ": SZ,
             "AL": AL,
             "AW": AW,
@@ -112,7 +111,6 @@ def data_generator(num_initial_aircraft, num_incoming_aircraft, hangar_length, h
             "TOA": TOA,
             "MD": MD,
             "ED": ED,
-            "PL": PL,
             "SZ": SZ,
             "AL": AL,
             "AW": AW,
@@ -182,11 +180,10 @@ def build_csvs(
                 "M_ID": int(mid_for(rec)),
                 "ETA": int(rec["TOA"]),
                 "ETD": int(rec["ED"]),
-                "ServT": int(rec["MD"]),
+                "ServT": int(rec["MD"]),    
                 "P_Rej": int(rec["PREJ"]),
                 "P_Arr": int(rec["PARR"]),
-                "P_Dep": int(rec["PDEP"]),
-                "Is_VIP": int(rec["PL"]),
+                "P_Dep": int(rec["PDEP"])
             }
             for f, rec in incoming_aircraft.items()
         ]
@@ -195,7 +192,7 @@ def build_csvs(
     # Ensure exact column order per spec
     T1 = T1[["m", "W", "L"]]
     T2 = T2[["c", "M_ID", "ETD", "ServT", "P_Dep", "Init_X", "Init_Y"]]
-    T3 = T3[["f", "M_ID", "ETA", "ETD", "ServT", "P_Rej", "P_Arr", "P_Dep", "Is_VIP"]]
+    T3 = T3[["f", "M_ID", "ETA", "ETD", "ServT", "P_Rej", "P_Arr", "P_Dep"]]
 
     # Write CSVs
     os.makedirs(out_dir, exist_ok=True)
