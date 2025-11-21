@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-HangarScheduling — Gurobi.
+Hangar Scheduling — Gurobi.
 
 This module imports data from CSV files and constructs the necessary sets and parameters.
 
@@ -12,12 +12,12 @@ Input CSVs must have the first column as the row key (aircraft id or model id).
 -   T2.csv: current aircraft parameters indexed by aircraft id
     It should have the columns c (aircraft id), M_ID (model id), ETD, ServT, P_Dep, Init_X, Init_Y.
 -   T3.csv: future aircraft parameters indexed by aircraft id
-    It should have the columns f (aircraft id), M_ID (model id), ETA, ETD, ServT, P_Rej, P_Arr, P_Dep, Is_VIP.
+    It should have the columns f (aircraft id), M_ID (model id), ETA, ETD, ServT, P_Rej, P_Arr, P_Dep.
 
 Outputs:
 Parameter dictionaries:
 - W, L: dimensions from T1
-- ETA, ETD, ServT, P_Rej, P_Arr, P_Dep, Is_VIP, X_init, Y_init: aircraft parameters from T2/T3
+- ETA, ETD, ServT, P_Rej, P_Arr, P_Dep, X_init, Y_init: aircraft parameters from T2/T3
 Sets:
 - a: all aircraft (current + future)
 - c: current aircraft
@@ -35,8 +35,6 @@ Date: November 2025
 
 from typing import Dict, List, Tuple
 import csv
-import gurobipy as gp
-from gurobipy import GRB
 
 
 ############# DATA IMPORT HELPERS #############
@@ -101,7 +99,6 @@ def build_parameters(t1_map, t2_map, t3_map, a: List[str], c: List[str], f: List
     P_Rej: Dict[str, float] = {}
     P_Arr: Dict[str, float] = {}
     P_Dep: Dict[str, float] = {}
-    Is_VIP: Dict[str, int] = {}
     X_init: Dict[str, float] = {}
     Y_init: Dict[str, float] = {}
 
@@ -121,19 +118,17 @@ def build_parameters(t1_map, t2_map, t3_map, a: List[str], c: List[str], f: List
             P_Rej[ai] = float(t3_map[ai].get("P_Rej", 0.0))
             P_Arr[ai] = float(t3_map[ai].get("P_Arr", 0.0))
             P_Dep[ai] = float(t3_map[ai].get("P_Dep", 0.0))
-            Is_VIP[ai] = int(t3_map[ai].get("Is_VIP", "0"))
 
     return dict(W=W, L=L,
                 ETA=ETA, ETD=ETD, ServT=ServT, 
                 P_Rej=P_Rej, P_Arr=P_Arr, P_Dep=P_Dep,
-                Is_VIP=Is_VIP,
                 X_init=X_init, Y_init=Y_init)
 
 
 
 
 ########### EXAMPLE USAGE #############
-
+""" 
 # Define paths to input CSV files
 t1_path = "Code/HangarModelResearch-main/data/T1.csv"
 t2_path = "Code/HangarModelResearch-main/data/T2.csv"
@@ -164,5 +159,5 @@ print(f"  f (future aircraft): {f}")
 #Print M_ID mapping
 print("M_ID mapping:")
 for ai in a:
-    print(f"  Aircraft {ai} -> Model ID {M_ID[ai]}")        
-
+    print(f"  Aircraft {ai} -> Model ID {M_ID[ai]}")       
+"""
