@@ -17,12 +17,13 @@ Date: November 2025
 
 from csvimport import read_indexed_csv, build_sets, build_parameters
 from model import build_model, solve_and_report
+from datetime import datetime
 
 
 ############# PARAMETERS #############
 
-HW = 60           # Hangar Width [meters]
-HL = 60         # Hangar Length [meters]
+HW = 100           # Hangar Width [meters]
+HL = 100         # Hangar Length [meters]
 Buffer = 5.0       # Buffer space between aircraft [meters]
 epsilon_t = 0.1    # Minimum interval between aircraft movements [hours] (6 minutes)
 epsilon_p = 0.001  # Penalty coefficient to encourage closeness to origin 
@@ -33,17 +34,17 @@ epsilon_p = 0.001  # Penalty coefficient to encourage closeness to origin
 def main():
     import os
 
-    # Fixed input/output paths
-    t1_path = "Code/HangarModelResearch-main/data/T1.csv"
-    t2_path = "Code/HangarModelResearch-main/data/T2.csv"
-    t3_path = "Code/HangarModelResearch-main/data/random/T3-07-01.csv" 
-    out_path = "solution.csv"
-
+    # Fixed input/ou
+    t1_path = "Insert Path to T1.csv here"
+    t2_path = "Insert Path to T1.csv here"
+    t3_path = "Insert Path to T1.csv here" 
+    out_path = "Insert Path for the solution csv here"
+    out_vars = "Insert Path for the solution variables csv here"
+    
     # Solver options (keep None to leave unset)
     time_limit = None
     mip_gap = None
     threads = None
-    start_date = None
 
     # Read input CSVs (first column is the index)
     t1_keys, t1_map = read_indexed_csv(t1_path)
@@ -68,8 +69,12 @@ def main():
     if threads is not None:
         m.Params.Threads = threads
 
+    # Produce a consistent start-date string (minutes precision)
+    # Set the default startdate as 1st Jan 2026 00:00
+    start_date = "2026-01-01 00:00"
+
     # Solve and write report
-    solve_and_report(m, vars, a, c, f, HW, HL, params, out_path, start_date)
+    solve_and_report(m, vars, a, c, f, HW, HL, params, out_path, start_date, out_vars)
 
 
 if __name__ == "__main__":
