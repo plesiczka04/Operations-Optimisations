@@ -41,7 +41,6 @@ def build_model(params: Dict, a: List[str], c: List[str], f: List[str],
     ServT = params["ServT"]
     P_Rej, P_Arr, P_Dep = params["P_Rej"], params["P_Arr"], params["P_Dep"]
     X_init, Y_init = params["X_init"], params["Y_init"]
-    Is_VIP = params["Is_VIP"]
 
     max_eta = max(ETA.values()) if ETA else 0.0
     M_T = max_eta + sum(ServT[i] for i in a)
@@ -100,7 +99,7 @@ def build_model(params: Dict, a: List[str], c: List[str], f: List[str],
     ### CONSTRAINTS
     # Please note that the naming of constraints follows the numbering of equations in the paper.
     
-    # Acceptance and Scheduling Constraints e02-e06
+    # Acceptance and Scheduling Constraints 2.2-2.6
     for fi in f:
         m.addConstr(X[fi] + Y[fi] + Roll_in[fi] + Roll_out[fi] + D_Arr[fi] + D_Dep[fi]
                     <= (M_X + M_Y + 4*M_T) * Accept[fi], name=f"e02[{fi}]")
@@ -112,7 +111,7 @@ def build_model(params: Dict, a: List[str], c: List[str], f: List[str],
     for ai in a:
         m.addConstr(D_Dep[ai] >= Roll_out[ai] - ETD[ai], name=f"e06[{ai}]")
     
-    # Hangar Physical and Non-overlapping Constraints e07-e12
+    # Hangar Physical and Non-overlapping Constraints 2.7-2.12
     for fi in f:
         m.addConstr(X[fi] >= Buffer * Accept[fi], name=f"e07[{fi}]")
         m.addConstr(X[fi] + W[fi] <= HW - Buffer + M_X * (1 - Accept[fi]), name=f"e08[{fi}]")
@@ -124,7 +123,7 @@ def build_model(params: Dict, a: List[str], c: List[str], f: List[str],
                 m.addConstr(X[bi] + W[bi] + Buffer <= X[ai] + M_X * (1 - Right[ai, bi]), name=f"e11[{ai},{bi}]")
                 m.addConstr(Y[bi] + L[bi] + Buffer <= Y[ai] + M_Y * (1 - Above[ai, bi]), name=f"e12[{ai},{bi}]")
     
-    # Aircraft Physical and Temporal Sequencing Constraints e13-e20
+    # Aircraft Physical and Temporal Sequencing Constraints 2.13-2.20
     for ai in a:
         for bi in a:
             if ord_idx[ai] < ord_idx[bi]:
@@ -152,7 +151,7 @@ def build_model(params: Dict, a: List[str], c: List[str], f: List[str],
                     m.addConstr(Roll_out[bi] >= Roll_in[ai] + epsilon_t - M_T * (1 - InOut[ai, bi]) - M_T * (2 - Accept[ai] - Accept[bi]), name=f"e19[{ai},{bi}]")
                     m.addConstr(Roll_in[ai] >= Roll_out[bi] + epsilon_t - M_T * InOut[ai, bi] - M_T * (2 - Accept[ai] - Accept[bi]), name=f"e20[{ai},{bi}]")
     
-    # Blocking Constraints e21-e22
+    # Blocking Constraints 2.21-2.22
     for ai in a:
         for bi in a:
             if ai != bi:
@@ -165,7 +164,7 @@ def build_model(params: Dict, a: List[str], c: List[str], f: List[str],
                                 name=f"e22[{ai},{bi}]")
 
 
-    ### INITIAL CONDITIONS (e23-e29)
+    ### INITIAL CONDITIONS (2.23-2.29)
     for ci in c:
         Accept[ci].lb = 1.0; Accept[ci].ub = 1.0
         X[ci].lb = X_init[ci]; X[ci].ub = X_init[ci] # Fix X to initial value by setting lb=ub
@@ -190,16 +189,47 @@ def build_model(params: Dict, a: List[str], c: List[str], f: List[str],
 
 ############# SOLVING AND REPORTING ###############
 
+def check_model_status(m):
+    status = m.status
+    if status != GRB.Status.OPTIMAL:
+        if status == GRB.Status.UNBOUNDED:
+            print('The model cannot be solved because it is unbounded')
+        elif status == GRB.Status.INFEASIBLE:
+            print('The model is infeasible; computing IIS') # IIS is Irreducible Inconsistent Subsystem and helps diagnose infeasibility
+            m.computeIIS() # This outputs the IIS, i.e. the constraints that cannot be satisfied together
+            print('The following constraint(s) cannot be satisfied:')
+            for c in m.getConstrs():
+                if c.IISConstr:
+                    print(c.constrName)
+        elif status != GRB.Status.INF_OR_UNBD:
+            print('Optimization was stopped with status',status)
+        exit(0)
+
+
+def write_all_vars_csv(m, path, zero_tol=1e-9, only_nonzero=False):
+    with open(path, "w", newline="", encoding="utf-8") as f:
+        w = csv.DictWriter(f, fieldnames=["VarName", "Value"])
+        w.writeheader()
+        for v in m.getVars():
+            val = float(v.X)
+            if only_nonzero and abs(val) <= zero_tol:
+                continue
+            w.writerow({"VarName": v.VarName, "Value": val})
+
+
 def solve_and_report(m: gp.Model, vars, a: List[str], c: List[str], f: List[str],
                      HW: float, HL: float,
-                     params: Dict, out_csv: str, start_date: str | None = None):
+                     params: Dict, out_csv: str, start_date: str | None = None, 
+                     out_vars_csv: str | None = None):
     """
     Solve the model and write a CSV report using csv.DictWriter.
     Inputs are the model, variables dict, sets, hangar dimensions, parameters dict.
     Outputs are written to out_csv.
     """
 
+    m.write("hangar_scheduling_model.lp")  # Write model to file for inspection
     m.optimize()
+    check_model_status(m)
 
     # Store results
     X, Y = vars["X"], vars["Y"]
@@ -249,8 +279,15 @@ def solve_and_report(m: gp.Model, vars, a: List[str], c: List[str], f: List[str]
             }
             writer.writerow(row)
 
+    # Write variables CSV
+    if out_vars_csv is None:
+        out_vars_csv = out_csv.replace(".csv", "_vars.csv")
+
+    write_all_vars_csv(m, out_vars_csv)
+
     if m.SolCount > 0:
         print("Objective:", m.ObjVal)
     else:
         print("No solution found.")
     print("Saved report to:", os.path.abspath(out_csv))
+    print("Saved variables to:", os.path.abspath(out_vars_csv))
