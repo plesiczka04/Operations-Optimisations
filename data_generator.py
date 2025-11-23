@@ -14,14 +14,17 @@ def data_generator(num_initial_aircraft, num_incoming_aircraft, hangar_length, h
     for i in range(num_initial_aircraft):
         aircraft_id = f"a{i+1:02d}"
         
-        # Time of Arrival
-        TOA = np.random.randint(-50, 0)  
+        ED = 0  # initialise so the loop starts
         
-        # Maintenance Duration
-        MD = np.random.randint(50, 181)
-                
-        # Expected Departure
-        ED = TOA + MD + np.random.randint(15, 61)  
+        while ED <= 0:
+            # Time of Arrival
+            TOA = np.random.randint(-140, 0)  
+        
+            # Maintenance Duration
+            MD = np.random.randint(8, 280)
+        
+            # Expected Departure
+            ED = TOA + MD + np.random.randint(8, 24)
 
         # Priority Level (0-1)
         PL = np.random.choice([0, 1], p=[0.8, 0.2])
@@ -81,10 +84,10 @@ def data_generator(num_initial_aircraft, num_incoming_aircraft, hangar_length, h
         TOA = np.random.randint(0, 1440)  
         
         # Maintenance Duration
-        MD = np.random.randint(30, 181)
+        MD = np.random.randint(8, 280)
         
         # Expected Departure
-        ED = TOA + MD + np.random.randint(15, 61)  
+        ED = TOA + MD + np.random.randint(8, 24)  
 
         # Priority Level (0-1)
         PL = np.random.choice([0, 1], p=[0.8, 0.2])
