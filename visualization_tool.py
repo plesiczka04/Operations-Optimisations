@@ -10,7 +10,7 @@ import argparse
 # --- Script Configuration ---
 # Set to True to save a PDF of the hangar status at each event time.
 # Set to False to only run the interactive animation.
-EXPORT_VECTORS = False
+EXPORT_VECTORS = True
 
 # Running only in local mode
 # Import GUI libraries for local execution.
@@ -236,12 +236,16 @@ def draw_static_hangar_for_export(ax, time, df_accepted_data):
     """
     Draws a clean, static image of the hangar at a specific time, optimized for export.
     """
-    # Configure axes appearance.
-    ax.set_facecolor(COLORS["hangar_bg"])
-    ax.set_xlim(-5, HANGAR_WIDTH + 5)
-    ax.set_ylim(-5, HANGAR_LENGTH + 15)
+    # Configure axes appearance: keep the axes background white and draw the
+    # hangar interior as a rectangle so the fill does not extend beyond the hangar.
+    ax.set_facecolor('white')
+    # Constrain axes exactly to the hangar extents so they stop at the hangar borders.
+    ax.set_xlim(0, HANGAR_WIDTH)
+    ax.set_ylim(0, HANGAR_LENGTH)
     ax.set_aspect('equal')
-    ax.grid(True, linestyle='--', alpha=0.6, color=COLORS["grid"])
+    # Disable the default grid (which spans the entire axes) and draw grid
+    # lines only inside the hangar rectangle.
+    ax.grid(False)
     ax.set_xticks(np.arange(0, HANGAR_WIDTH + 1, 5))
     ax.set_yticks(np.arange(0, HANGAR_LENGTH + 1, 5))
 
@@ -251,17 +255,30 @@ def draw_static_hangar_for_export(ax, time, df_accepted_data):
     for spine in ['left', 'bottom']:
         ax.spines[spine].set_color(COLORS["grid"])
 
-    # Draw hangar border.
-    hangar_border = patches.Rectangle((0, 0), HANGAR_WIDTH, HANGAR_LENGTH, linewidth=2, edgecolor=COLORS["border"], facecolor='none')
+    # Draw hangar interior (filled) and border separately so fill is constrained
+    # to the hangar rectangle only.
+    hangar_interior = patches.Rectangle((0, 0), HANGAR_WIDTH, HANGAR_LENGTH,
+                                        linewidth=0, edgecolor='none', facecolor=COLORS["hangar_bg"], zorder=0)
+    hangar_border = patches.Rectangle((0, 0), HANGAR_WIDTH, HANGAR_LENGTH,
+                                      linewidth=2, edgecolor=COLORS["border"], facecolor='none', zorder=1)
+    ax.add_patch(hangar_interior)
     ax.add_patch(hangar_border)
+    # Draw gridlines only within the hangar bounds (0..HANGAR_WIDTH, 0..HANGAR_LENGTH)
+    for x in np.arange(0, HANGAR_WIDTH + 1, 5):
+        ax.vlines(x, 0, HANGAR_LENGTH, colors=COLORS["grid"], linestyles='--', alpha=0.6, zorder=0.2)
+    for y in np.arange(0, HANGAR_LENGTH + 1, 5):
+        ax.hlines(y, 0, HANGAR_WIDTH, colors=COLORS["grid"], linestyles='--', alpha=0.6, zorder=0.2)
 
     # Add a descriptive title with date and time.
     start_datetime = pd.to_datetime(df['StartDate'].iloc[0])
     event_datetime = start_datetime + pd.to_timedelta(time, unit='h')
     title_text = f"Hangar Status at Time: {time:.2f}h ({event_datetime.strftime('%Y-%m-%d %H:%M')})"
-    ax.text(HANGAR_WIDTH / 2, HANGAR_LENGTH + 8, title_text,
-            ha='center', va='top', color=COLORS["text"],
-            fontsize=22, weight='bold', stretch='semi-expanded')
+    # Place the title in axes coordinates (so it does NOT change data limits).
+    # Only show cumulative time (hours) in the title — remove the date/time part.
+    title_text = f"Hangar Status at Time: {time:.2f}h"
+    ax.text(0.5, 1.02, title_text, transform=ax.transAxes,
+            ha='center', va='bottom', color=COLORS["text"],
+            fontsize=30, weight='bold', stretch='semi-expanded')
 
     # Find the next event time to correctly color aircraft that are about to depart.
     current_time_index = np.where(time_points == time)[0]
@@ -320,8 +337,8 @@ def export_hangar_snapshots(time_points, df_accepted_data, output_folder):
         os.makedirs(output_folder)
 
     total_files = len(time_points)
-    print(f"\n--- Starting Vector Export ---")
-    print(f"Found {total_files} event times to export to '{output_folder}'.")
+    print(f"\n--- Starting Image Export (JPG) ---")
+    print(f"Found {total_files} event times to export to '{output_folder}' as JPG images.")
 
     for i, time in enumerate(time_points):
         # Create a new, clean figure for each snapshot to prevent state leakage.
@@ -333,17 +350,17 @@ def export_hangar_snapshots(time_points, df_accepted_data, output_folder):
         draw_static_hangar_for_export(temp_ax, time, df_accepted_data)
 
         # Define a consistent filename and save the figure.
-        filename = f"hangar_state_time_{time:.2f}.pdf".replace('.', '_', 1)
+        filename = f"hangar_state_time_{time:.2f}.jpg".replace('.', '_', 1)
         filepath = os.path.join(output_folder, filename)
-        # `bbox_inches='tight'` trims whitespace around the plot.
-        temp_fig.savefig(filepath, format='pdf', bbox_inches='tight', dpi=300)
+        # Save as JPEG (high quality). `bbox_inches='tight'` trims whitespace.
+        temp_fig.savefig(filepath, format='jpg', bbox_inches='tight', dpi=300)
 
         print(f"  ({i+1}/{total_files}) Saved: {filename}")
 
         # Close the figure to free up memory.
         plt.close(temp_fig)
 
-    print("--- Vector Export Complete ---\n")
+    print("--- Image Export (JPG) Complete ---\n")
 
 
 def update_table(ax_table, current_time):
@@ -491,9 +508,9 @@ if EXPORT_VECTORS:
     print("Vector export feature is enabled.")
     root_export = tk.Tk()
     root_export.withdraw()
-    output_dir = filedialog.askdirectory(title="Please select a folder to save the vector PDF images")
+    output_dir = filedialog.askdirectory(title="Please select a folder to save the exported JPG images")
     root_export.destroy() # Clean up the temporary window.
-
+    
     if output_dir:
         export_hangar_snapshots(time_points, df_accepted, output_dir)
     else:
@@ -530,11 +547,12 @@ ax_rejected_table = fig.add_subplot(gs[1, 1])
 plt.subplots_adjust(bottom=0.2, wspace=0.15, hspace=0.25)
 
 # Configure the hangar plot appearance.
-ax_hangar.set_facecolor(COLORS["hangar_bg"])
-ax_hangar.set_xlim(-5, HANGAR_WIDTH + 5)
-ax_hangar.set_ylim(-5, HANGAR_LENGTH + 15)
+ax_hangar.set_facecolor('white')
+# Constrain interactive axes to the hangar bounds so axes/ticks stop at the border.
+ax_hangar.set_xlim(0, HANGAR_WIDTH)
+ax_hangar.set_ylim(0, HANGAR_LENGTH)
 ax_hangar.set_aspect('equal')
-ax_hangar.grid(True, linestyle='--', alpha=0.6, color=COLORS["grid"])
+ax_hangar.grid(False)  # disable full-axes grid; draw inside hangar only below
 ax_hangar.set_xticks(np.arange(0, HANGAR_WIDTH + 1, 5))
 ax_hangar.set_yticks(np.arange(0, HANGAR_LENGTH + 1, 5))
 for spine in ['top', 'right']:
@@ -547,8 +565,17 @@ ax_rejected_table.axis('off')
 
 # Initialize lists and state variables for the animation.
 aircraft_artists = [] # Stores all plotted aircraft elements for easy removal.
-hangar_border = patches.Rectangle((0, 0), HANGAR_WIDTH, HANGAR_LENGTH, linewidth=2, edgecolor=COLORS["border"], facecolor='none')
+# Add a filled interior patch so the hangar fill stops at HANGAR_LENGTH.
+hangar_interior = patches.Rectangle((0, 0), HANGAR_WIDTH, HANGAR_LENGTH,
+                                    linewidth=0, edgecolor='none', facecolor=COLORS["hangar_bg"], zorder=0)
+ax_hangar.add_patch(hangar_interior)
+hangar_border = patches.Rectangle((0, 0), HANGAR_WIDTH, HANGAR_LENGTH, linewidth=2, edgecolor=COLORS["border"], facecolor='none', zorder=1)
 ax_hangar.add_patch(hangar_border)
+# Draw gridlines only inside the hangar bounds so they don't extend into the title area.
+for x in np.arange(0, HANGAR_WIDTH + 1, 5):
+    ax_hangar.vlines(x, 0, HANGAR_LENGTH, colors=COLORS["grid"], linestyles='--', alpha=0.6, zorder=0.2)
+for y in np.arange(0, HANGAR_LENGTH + 1, 5):
+    ax_hangar.hlines(y, 0, HANGAR_WIDTH, colors=COLORS["grid"], linestyles='--', alpha=0.6, zorder=0.2)
 interrupt_animation = False
 animation_running = False
 
@@ -676,7 +703,7 @@ def next_event(event):
         current_time = time_points[current_index]
         start_datetime = pd.to_datetime(df['StartDate'].iloc[0])
         event_datetime = start_datetime + pd.to_timedelta(current_time, unit='h')
-        ax_hangar.set_title(f"Hangar Status at Time: {current_time:.2f}h ({event_datetime.strftime('%Y-%m-%d %H:%M')})", color=COLORS["text"], fontsize=14.5, weight='bold', stretch='semi-expanded')
+        ax_hangar.set_title(f"Hangar Status at Time: {current_time:.2f}h", color=COLORS["text"], fontsize=14.5, weight='bold', stretch='semi-expanded')
         draw_hangar_state(current_time, animate=True)
         fig.canvas.draw_idle()
 
@@ -690,7 +717,7 @@ def prev_event(event):
         current_time = time_points[current_index]
         start_datetime = pd.to_datetime(df['StartDate'].iloc[0])
         event_datetime = start_datetime + pd.to_timedelta(current_time, unit='h')
-        ax_hangar.set_title(f"Hangar Status at Time: {current_time:.2f}h ({event_datetime.strftime('%Y-%m-%d %H:%M')})", color=COLORS["text"], fontsize=14.5, weight='bold', stretch='semi-expanded')
+        ax_hangar.set_title(f"Hangar Status at Time: {current_time:.2f}h", color=COLORS["text"], fontsize=14.5, weight='bold', stretch='semi-expanded')
         draw_hangar_state(current_time, animate=False) # No animation when going backward.
         fig.canvas.draw_idle()
 
@@ -712,7 +739,7 @@ for button in [b_next, b_prev]:
 initial_time = time_points[0] if len(time_points) > 0 else 0
 start_datetime = pd.to_datetime(df['StartDate'].iloc[0])
 event_datetime = start_datetime + pd.to_timedelta(initial_time, unit='h')
-ax_hangar.set_title(f"Hangar Status at Time: {initial_time:.2f}h ({event_datetime.strftime('%Y-%m-%d %H:%M')})", color=COLORS["text"], fontsize=14.5, weight='bold', stretch='semi-expanded')
+ax_hangar.set_title(f"Hangar Status at Time: {initial_time:.2f}h", color=COLORS["text"], fontsize=14.5, weight='bold', stretch='semi-expanded')
 draw_rejected_table(ax_rejected_table)
 draw_hangar_state(initial_time, animate=False)
 plt.show()
