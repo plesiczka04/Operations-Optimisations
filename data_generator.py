@@ -39,13 +39,13 @@ def data_generator(num_initial_aircraft, num_incoming_aircraft, hangar_length, h
         AW = round(np.random.uniform(20.0, 80.0), 0)
 
         # Rejection Cost
-        PREJ = np.random.randint(30, 181) + PL * np.random.randint(30, 181)
+        PREJ = np.random.randint(1, 100) + PL * np.random.randint(1, 100)
 
         # Delayed Arrival Cost
-        PARR = np.random.randint(30, 181) + PL * np.random.randint(30, 181)
+        PARR = np.random.randint(1, 100) + PL * np.random.randint(1, 100)
 
         # Delayed Departure Cost
-        PDEP = np.random.randint(30, 181) + PL * np.random.randint(30, 181)
+        PDEP = np.random.randint(1, 100) + PL * np.random.randint(1, 100)
 
         # Random position with no overlap
         valid_position = False
@@ -102,13 +102,13 @@ def data_generator(num_initial_aircraft, num_incoming_aircraft, hangar_length, h
         AW = round(np.random.uniform(20.0, 80.0), 0)
 
         # Rejection Cost
-        PREJ = np.random.randint(30, 181) + PL * np.random.randint(30, 181)
+        PREJ = np.random.randint(1, 100) + PL * np.random.randint(1, 100)
 
         # Delayed Arrival Cost
-        PARR = np.random.randint(30, 181) + PL * np.random.randint(30, 181)
+        PARR = np.random.randint(1, 100) + PL * np.random.randint(1, 100)
 
         # Delayed Departure Cost
-        PDEP = np.random.randint(30, 181) + PL * np.random.randint(30, 181)
+        PDEP = np.random.randint(1, 100) + PL * np.random.randint(1, 100)
         
         incoming_aircraft[aircraft_id] = {
             "TOA": TOA,
