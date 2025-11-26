@@ -37,15 +37,15 @@ def data_generator(num_initial_aircraft, num_incoming_aircraft, hangar_length, h
 
         # Aircraft Wingspan (in meters)
         AW = round(np.random.uniform(20.0, 80.0), 0)
-
+        
         # Rejection Cost
-        PREJ = np.random.randint(1, 100) + PL * np.random.randint(1, 100)
+        PREJ = (AL * AW) * (1 / (80 * 76) *(np.random.randint(700, 1200) + PL * np.random.randint(1500, 2000))
 
         # Delayed Arrival Cost
-        PARR = np.random.randint(1, 100) + PL * np.random.randint(1, 100)
+        PARR = np.random.randint(10, 20) + PL * np.random.randint(30, 60)
 
         # Delayed Departure Cost
-        PDEP = np.random.randint(1, 100) + PL * np.random.randint(1, 100)
+        PDEP = np.random.randint(10, 20) + PL * np.random.randint(30, 60)
 
         # Random position with no overlap
         valid_position = False
