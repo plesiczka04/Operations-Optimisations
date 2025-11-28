@@ -35,15 +35,25 @@ def data_generator(num_initial_aircraft, num_incoming_aircraft, hangar_length, h
         # Aircraft Wingspan (in meters)
         AW = round((AL * np.random.uniform(0.75, 1.1)), 0)
         
-        # Rejection Cost
-        PREJ = (AL) * (1 / (76)) * (np.random.randint(700, 1200) + PL * np.random.randint(1500, 2000))
+        if PL == 1:
+            # Rejection Cost
+            PREJ = (AL) * (1 / (76)) * (np.random.randint(1500, 2000))
 
-        # Delayed Arrival Cost
-        PARR = (AL) * (1 / (76)) * (np.random.randint(10, 20) + PL * np.random.randint(30, 60))
+            # Delayed Arrival Cost
+            PARR = (AL) * (1 / (76)) * (np.random.randint(30, 60))
 
-        # Delayed Departure Cost
-        PDEP = (AL) * (1 / (76)) * (np.random.randint(10, 20) + PL * np.random.randint(30, 60))
+            # Delayed Departure Cost
+            PDEP = (AL) * (1 / (76)) * (np.random.randint(30, 60))
+        else:
+            # Rejection Cost
+            PREJ = (AL) * (1 / (76)) * (np.random.randint(700, 1200))
 
+            # Delayed Arrival Cost
+            PARR = (AL) * (1 / (76)) * (np.random.randint(10, 20))
+
+            # Delayed Departure Cost
+            PDEP = (AL) * (1 / (76)) * (np.random.randint(10, 20))
+            
         # Random position with no overlap
         valid_position = False
         while not valid_position:
@@ -94,14 +104,24 @@ def data_generator(num_initial_aircraft, num_incoming_aircraft, hangar_length, h
         # Aircraft Wingspan (in meters)
         AW = round((AL * np.random.uniform(0.75, 1.1)), 0)
 
-        # Rejection Cost
-        PREJ = (AL) * (1 / (76)) * (np.random.randint(700, 1200) + PL * np.random.randint(1500, 2000))
+        if PL == 1:
+            # Rejection Cost
+            PREJ = (AL) * (1 / (76)) * (np.random.randint(1500, 2000))
 
-        # Delayed Arrival Cost
-        PARR = (AL) * (1 / (76)) * (np.random.randint(10, 20) + PL * np.random.randint(30, 60))
+            # Delayed Arrival Cost
+            PARR = (AL) * (1 / (76)) * (np.random.randint(30, 60))
 
-        # Delayed Departure Cost
-        PDEP = (AL) * (1 / (76)) * (np.random.randint(10, 20) + PL * np.random.randint(30, 60))
+            # Delayed Departure Cost
+            PDEP = (AL) * (1 / (76)) * (np.random.randint(30, 60))
+        else:
+            # Rejection Cost
+            PREJ = (AL) * (1 / (76)) * (np.random.randint(700, 1200))
+
+            # Delayed Arrival Cost
+            PARR = (AL) * (1 / (76)) * (np.random.randint(10, 20))
+
+            # Delayed Departure Cost
+            PDEP = (AL) * (1 / (76)) * (np.random.randint(10, 20))
         
         incoming_aircraft[aircraft_id] = {
             "TOA": TOA,
