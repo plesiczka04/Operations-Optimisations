@@ -29,23 +29,20 @@ def data_generator(num_initial_aircraft, num_incoming_aircraft, hangar_length, h
         # Priority Level (0-1)
         PL = np.random.choice([0, 1], p=[0.8, 0.2])
 
-        # Special Zone (0 or 1)
-        SZ = np.random.choice([0, 1], p=[0.9, 0.1])
-
         # Aircraft Length (in meters)
         AL = round(np.random.uniform(20.0, 76.0), 0)
 
         # Aircraft Wingspan (in meters)
-        AW = round(np.random.uniform(20.0, 80.0), 0)
+        AW = round((AL * np.random.uniform(0.75, 1.1)), 0)
         
         # Rejection Cost
-        PREJ = (AL * AW) * (1 / (80 * 76) *(np.random.randint(700, 1200) + PL * np.random.randint(1500, 2000))
+        PREJ = (AL) * (1 / (76)) * (np.random.randint(700, 1200) + PL * np.random.randint(1500, 2000))
 
         # Delayed Arrival Cost
-        PARR = np.random.randint(10, 20) + PL * np.random.randint(30, 60)
+        PARR = (AL) * (1 / (76)) * (np.random.randint(10, 20) + PL * np.random.randint(30, 60))
 
         # Delayed Departure Cost
-        PDEP = np.random.randint(10, 20) + PL * np.random.randint(30, 60)
+        PDEP = (AL) * (1 / (76)) * (np.random.randint(10, 20) + PL * np.random.randint(30, 60))
 
         # Random position with no overlap
         valid_position = False
@@ -65,7 +62,6 @@ def data_generator(num_initial_aircraft, num_incoming_aircraft, hangar_length, h
             "TOA": TOA,
             "MD": MD,
             "ED": ED,
-            "SZ": SZ,
             "AL": AL,
             "AW": AW,
             "PREJ": PREJ,
@@ -92,29 +88,25 @@ def data_generator(num_initial_aircraft, num_incoming_aircraft, hangar_length, h
         # Priority Level (0-1)
         PL = np.random.choice([0, 1], p=[0.8, 0.2])
         
-        # Special Zone (0 or 1)
-        SZ = np.random.choice([0, 1], p=[0.9, 0.1])
-        
         # Aircraft Length (in meters)
         AL = round(np.random.uniform(20.0, 76.0), 0)
-        
+
         # Aircraft Wingspan (in meters)
-        AW = round(np.random.uniform(20.0, 80.0), 0)
+        AW = round((AL * np.random.uniform(0.75, 1.1)), 0)
 
         # Rejection Cost
-        PREJ = np.random.randint(1, 100) + PL * np.random.randint(1, 100)
+        PREJ = (AL) * (1 / (76)) * (np.random.randint(700, 1200) + PL * np.random.randint(1500, 2000))
 
         # Delayed Arrival Cost
-        PARR = np.random.randint(1, 100) + PL * np.random.randint(1, 100)
+        PARR = (AL) * (1 / (76)) * (np.random.randint(10, 20) + PL * np.random.randint(30, 60))
 
         # Delayed Departure Cost
-        PDEP = np.random.randint(1, 100) + PL * np.random.randint(1, 100)
+        PDEP = (AL) * (1 / (76)) * (np.random.randint(10, 20) + PL * np.random.randint(30, 60))
         
         incoming_aircraft[aircraft_id] = {
             "TOA": TOA,
             "MD": MD,
             "ED": ED,
-            "SZ": SZ,
             "AL": AL,
             "AW": AW,
             "PREJ": PREJ,
@@ -212,8 +204,8 @@ def build_csvs(
 
 if __name__ == "__main__":
     paths = build_csvs(
-        num_initial_aircraft=10,
-        num_incoming_aircraft=15,
+        num_initial_aircraft=5,
+        num_incoming_aircraft=30,
         hangar_length=300.0,
         hangar_width=200.0,
         out_dir="."
