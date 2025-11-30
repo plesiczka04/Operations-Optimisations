@@ -186,6 +186,103 @@ def build_model(params: Dict, a: List[str], c: List[str], f: List[str],
                    Accept=Accept, Right=Right, Above=Above, OutIn=OutIn, InIn=InIn, OutOut=OutOut, InOut=InOut), \
            dict(M_T=M_T, M_X=M_X, M_Y=M_Y)
 
+def check_initial_configuration(params: Dict, c: List[str],
+                                HW: float, HL: float, Buffer: float) -> None:
+    """
+    Check feasibility of the initial configuration of aircraft already in the
+    hangar (set c) with respect to the physical and non-overlap constraints.
+
+    It mirrors the model's geometric logic:
+      - Wall / boundary clearance with Buffer (analogous to e07-e10 with Accept = 1)
+      - Pairwise non-overlap with Buffer between all aircraft in c
+        (geometric analogue of e11–e12 + "either right/left/above/below")
+
+    If any violation is found, a ValueError is raised with a descriptive message.
+    """
+
+    # Unpack needed parameters
+    W, L = params["W"], params["L"]
+    X_init = params.get("X_init")
+    Y_init = params.get("Y_init")
+
+    if X_init is None or Y_init is None:
+        raise ValueError(
+            "params['X_init'] and params['Y_init'] must be defined to "
+            "check feasibility of the initial configuration for aircraft in c."
+        )
+
+    violations = []
+
+    # 1) Boundary checks for each aircraft already in the hangar
+    for ci in c:
+        if ci not in X_init or ci not in Y_init:
+            violations.append(f"{ci}: missing X_init/Y_init in params.")
+            continue
+
+        x, y, w, l = X_init[ci], Y_init[ci], W[ci], L[ci]
+
+        # Left wall: X >= Buffer
+        if x < Buffer:
+            violations.append(
+                f"{ci}: X_init={x} is smaller than Buffer={Buffer} "
+                "(violates left wall clearance)."
+            )
+
+        # Right wall: X + W <= HW - Buffer
+        if x + w > HW - Buffer:
+            violations.append(
+                f"{ci}: X_init + W = {x + w} exceeds HW - Buffer = {HW - Buffer} "
+                "(violates right wall clearance)."
+            )
+
+        # Bottom wall: Y >= Buffer
+        if y < Buffer:
+            violations.append(
+                f"{ci}: Y_init={y} is smaller than Buffer={Buffer} "
+                "(violates bottom wall clearance)."
+            )
+
+        # Top wall: Y + L <= HL - Buffer
+        if y + l > HL - Buffer:
+            violations.append(
+                f"{ci}: Y_init + L = {y + l} exceeds HL - Buffer = {HL - Buffer} "
+                "(violates top wall clearance)."
+            )
+
+    # 2) Pairwise non-overlap for aircraft in c
+    c_list = list(c)
+    for i in range(len(c_list)):
+        ci = c_list[i]
+        if ci not in X_init or ci not in Y_init:
+            continue
+        xi, yi, wi, li = X_init[ci], Y_init[ci], W[ci], L[ci]
+
+        for j in range(i + 1, len(c_list)):
+            cj = c_list[j]
+            if cj not in X_init or cj not in Y_init:
+                continue
+            xj, yj, wj, lj = X_init[cj], Y_init[cj], W[cj], L[cj]
+
+            # Non-overlap with Buffer means: at least one is true:
+            #   ci is right of cj, cj is right of ci, ci is above cj, cj is above ci.
+            ci_right_of_cj = xj + wj + Buffer <= xi
+            cj_right_of_ci = xi + wi + Buffer <= xj
+            ci_above_cj    = yj + lj + Buffer <= yi
+            cj_above_ci    = yi + li + Buffer <= yj
+
+            if not (ci_right_of_cj or cj_right_of_ci or ci_above_cj or cj_above_ci):
+                violations.append(
+                    f"{ci} and {cj} overlap (or violate Buffer={Buffer}) in the "
+                    f"initial configuration: {ci} at ({xi}, {yi}), {cj} at ({xj}, {yj})."
+                )
+
+    if violations:
+        msg_lines = [
+            "Infeasible initial configuration for aircraft already in the hangar (set c):",
+            *[f" - {v}" for v in violations],
+        ]
+        raise ValueError("\n".join(msg_lines))
+
 
 ############# SOLVING AND REPORTING ###############
 
