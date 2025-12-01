@@ -13,19 +13,25 @@ def data_generator(num_initial_aircraft, num_incoming_aircraft, hangar_length, h
 
     for i in range(num_initial_aircraft):
         aircraft_id = f"a{i+1:02d}"
-        
-        ED = 0  # initialise so the loop starts
-        
-        while ED <= 0:
-            # Time of Arrival
-            TOA = np.random.randint(-140, 0)  
-        
-            # Maintenance Duration
-            MD = np.random.randint(8, 280)
-        
-            # Expected Departure
-            ED = TOA + MD + np.random.randint(8, 24)
+                
+        while True:
+            # Time of Arrival (before time 0)
+            TOA = np.random.randint(-140, 0)
 
+            # Total Maintenance Duration
+            MD = np.random.randint(8, 280)
+
+            # Enforce that maintenance is still ongoing at time 0:
+            # TOA < 0 and TOA + MD > 0  -> some maintenance already done, some left
+            if TOA + MD <= 0:
+                continue  
+            # Expected Departure (after maintenance finishes, plus some buffer)
+            ED = TOA + MD + np.random.randint(8, 24)
+            
+            MD = MD + TOA
+            # At this point ED will automatically be > 0, so we can break
+            break
+        
         # Priority Level (0-1)
         PL = np.random.choice([0, 1], p=[0.8, 0.2])
 
@@ -54,19 +60,42 @@ def data_generator(num_initial_aircraft, num_incoming_aircraft, hangar_length, h
             # Delayed Departure Cost
             PDEP = (AL) * (1 / (76)) * (np.random.randint(10, 20))
             
-        # Random position with no overlap
-        valid_position = False
-        while not valid_position:
-            POS_X = np.random.uniform(0, hangar_length)
-            POS_Y = np.random.uniform(0, hangar_width)
+        # ----- Check that the aircraft can fit in the hangar -----
+        if AL > hangar_length or AW > hangar_width:
+            raise ValueError(
+                f"Aircraft {aircraft_id} size ({AL} x {AW}) exceeds hangar dimensions "
+                f"({hangar_length} x {hangar_width})."
+            )
             
-            # Check no overlap with existing aircraft
+        # ----- Random position with no overlap and fully inside hangar -----
+        valid_position = False
+        max_tries = 10_000
+        tries = 0
+
+        while not valid_position and tries < max_tries:
+            tries += 1
+
+            # Sample the centre so that the full aircraft stays inside the hangar
+            POS_X = np.random.uniform(AL / 2, hangar_length - AL / 2)
+            POS_Y = np.random.uniform(AW / 2, hangar_width - AW / 2)
+            
+            # Assume valid until proven otherwise
             valid_position = True
+
+            # Check no overlap with existing aircraft
             for aircraft in initial_aircraft.values():
-                if (abs(POS_X - aircraft["POS_X"]) < (AL + aircraft["AL"]) / 2 and
-                    abs(POS_Y - aircraft["POS_Y"]) < (AW + aircraft["AW"]) / 2):
+                if (
+                    abs(POS_X - aircraft["POS_X"]) < (AL + aircraft["AL"]) / 2
+                    and abs(POS_Y - aircraft["POS_Y"]) < (AW + aircraft["AW"]) / 2
+                ):
                     valid_position = False
                     break
+
+        if not valid_position:
+            raise RuntimeError(
+                "Could not place aircraft without overlap after many attempts. "
+                "Try reducing the number of aircraft or increasing hangar size."
+            )
 
         initial_aircraft[aircraft_id] = {
             "TOA": TOA,
