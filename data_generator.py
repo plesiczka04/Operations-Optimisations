@@ -5,6 +5,7 @@ from collections import OrderedDict
 import pandas as pd
 
 np.random.seed(42)
+buffer = 5
 
 def data_generator(num_initial_aircraft, num_incoming_aircraft, hangar_length, hangar_width):
     
@@ -69,15 +70,14 @@ def data_generator(num_initial_aircraft, num_incoming_aircraft, hangar_length, h
             
         # ----- Random position with no overlap and fully inside hangar -----
         valid_position = False
-        max_tries = 10_000
+        max_tries = 10000
         tries = 0
 
         while not valid_position and tries < max_tries:
             tries += 1
-
             # Sample the centre so that the full aircraft stays inside the hangar
-            POS_X = np.random.uniform(AL / 2, hangar_length - AL / 2)
-            POS_Y = np.random.uniform(AW / 2, hangar_width - AW / 2)
+            POS_Y = np.random.uniform(AL / 2 + buffer, hangar_length - AL / 2 - buffer)
+            POS_X = np.random.uniform(AW / 2 + buffer, hangar_width - AW / 2 - buffer)
             
             # Assume valid until proven otherwise
             valid_position = True
@@ -85,8 +85,8 @@ def data_generator(num_initial_aircraft, num_incoming_aircraft, hangar_length, h
             # Check no overlap with existing aircraft
             for aircraft in initial_aircraft.values():
                 if (
-                    abs(POS_X - aircraft["POS_X"]) < (AL + aircraft["AL"]) / 2
-                    and abs(POS_Y - aircraft["POS_Y"]) < (AW + aircraft["AW"]) / 2
+                    abs(POS_Y - aircraft["POS_Y"]) < (AL + aircraft["AL"]) / 2
+                    and abs(POS_X - aircraft["POS_X"]) < (AW + aircraft["AW"]) / 2
                 ):
                     valid_position = False
                     break
@@ -210,8 +210,8 @@ def build_csvs(
                 "ETD": int(rec["ED"]),
                 "ServT": int(rec["MD"]),
                 "P_Dep": int(rec["PDEP"]),
-                "Init_X": round(float(rec["POS_X"]), 3),
-                "Init_Y": round(float(rec["POS_Y"]), 3),
+                "Init_X": round(float(rec["POS_X"]-rec["AW"]/2), 3),
+                "Init_Y": round(float(rec["POS_Y"]-rec["AL"]/2), 3),
             }
             for c, rec in initial_aircraft.items()
         ]

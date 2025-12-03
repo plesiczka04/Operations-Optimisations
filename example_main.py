@@ -35,11 +35,11 @@ def main():
     import os
 
     # Fixed input/output paths
-    t1_path = "Insert T1.csv path here"
-    t2_path = "Insert T2.csv path here"
-    t3_path = "Insert T3.csv path here"
-    out_path = "Insert solution.csv path here"
-    out_vars = "Insert solution_vars.csv path here"
+    t1_path = "T1.csv"
+    t2_path = "T2.csv"
+    t3_path = "T3.csv"
+    out_path = "solution.csv"
+    out_vars = "solution_vars.csv"
     
     # Solver options
     time_limit = None # it forces a time limit in seconds
