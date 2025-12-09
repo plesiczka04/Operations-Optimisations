@@ -327,6 +327,7 @@ def solve_and_report(m: gp.Model, vars, a: List[str], c: List[str], f: List[str]
     m.write("hangar_scheduling_model.lp")  # Write model to file for inspection
     m.optimize()
     check_model_status(m)
+    
 
     # Store results
     X, Y = vars["X"], vars["Y"]
@@ -340,7 +341,6 @@ def solve_and_report(m: gp.Model, vars, a: List[str], c: List[str], f: List[str]
     P_Rej, P_Arr, P_Dep = params["P_Rej"], params["P_Arr"], params["P_Dep"]
 
     stamp = start_date
-
     # Define report items
     fieldnames = ["Aircraft", "Accepted", "Width", "Length", "ETA", "Roll_In", "X", "Y",
                   "ServT", "ETD", "Roll_Out", "D_Arr", "D_Dep", "Penalty_Reject",
