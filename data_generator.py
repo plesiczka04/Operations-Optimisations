@@ -85,8 +85,8 @@ def data_generator(num_initial_aircraft, num_incoming_aircraft, hangar_length, h
             # Check no overlap with existing aircraft
             for aircraft in initial_aircraft.values():
                 if (
-                    abs(POS_Y - aircraft["POS_Y"]) < (AL + aircraft["AL"]) / 2
-                    and abs(POS_X - aircraft["POS_X"]) < (AW + aircraft["AW"]) / 2
+                    abs(POS_Y - aircraft["POS_Y"]) < (AL + aircraft["AL"]) / 2 + buffer
+                    and abs(POS_X - aircraft["POS_X"]) < (AW + aircraft["AW"]) / 2 + buffer
                 ):
                     valid_position = False
                     break
@@ -116,10 +116,19 @@ def data_generator(num_initial_aircraft, num_incoming_aircraft, hangar_length, h
         aircraft_id = f"a{i+1+num_initial_aircraft:02d}"
         
         # Time of Arrival
-        TOA = np.random.randint(0, 1440)  
+        TOA = np.random.randint(0, 336)  
         
         # Maintenance Duration
-        MD = np.random.randint(8, 280)
+        random_number = np.random.rand()
+        if random_number < 0.70:
+            # 70% category
+            MD = np.random.randint(10, 80)         # example short duration
+        elif random_number > 0.70 and random_number < 0.85:
+            # 15% category
+            MD = np.random.randint(80, 168)       # example middle duration
+        else:
+            # 15% category
+            MD = np.random.randint(168, 280)       # example long duration
         
         # Expected Departure
         ED = TOA + MD + np.random.randint(8, 24)  
@@ -253,10 +262,10 @@ def build_csvs(
 
 if __name__ == "__main__":
     paths = build_csvs(
-        num_initial_aircraft=5,
-        num_incoming_aircraft=30,
-        hangar_length=300.0,
-        hangar_width=200.0,
+        num_initial_aircraft=3,
+        num_incoming_aircraft=28,
+        hangar_length=100.0,
+        hangar_width=150.0,
         out_dir="."
     )
     print("Wrote files:", paths[:3])

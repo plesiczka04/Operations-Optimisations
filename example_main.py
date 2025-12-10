@@ -22,8 +22,8 @@ from datetime import datetime
 
 ############# PARAMETERS #############
 
-HW = 200           # Hangar Width [meters]
-HL = 300         # Hangar Length [meters]
+HW = 150           # Hangar Width [meters]
+HL = 100         # Hangar Length [meters]
 Buffer = 5.0       # Buffer space between aircraft [meters]
 epsilon_t = 0.1    # Minimum interval between aircraft movements [hours] (6 minutes)
 epsilon_p = 0.001  # Penalty coefficient to encourage closeness to origin 
