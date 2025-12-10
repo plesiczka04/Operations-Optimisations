@@ -4,7 +4,7 @@ import os
 from collections import OrderedDict
 import pandas as pd
 
-np.random.seed(42)
+np.random.seed(1266)
 buffer = 5
 
 def data_generator(num_initial_aircraft, num_incoming_aircraft, hangar_length, hangar_width):
@@ -85,8 +85,8 @@ def data_generator(num_initial_aircraft, num_incoming_aircraft, hangar_length, h
             # Check no overlap with existing aircraft
             for aircraft in initial_aircraft.values():
                 if (
-                    abs(POS_Y - aircraft["POS_Y"]) < (AL + aircraft["AL"]) / 2 + buffer
-                    and abs(POS_X - aircraft["POS_X"]) < (AW + aircraft["AW"]) / 2 + buffer
+                    abs(POS_Y - aircraft["POS_Y"]) < (AL + aircraft["AL"]) / 2 + 2*buffer
+                    and abs(POS_X - aircraft["POS_X"]) < (AW + aircraft["AW"]) / 2 + 2*buffer
                 ):
                     valid_position = False
                     break
@@ -263,7 +263,7 @@ def build_csvs(
 if __name__ == "__main__":
     paths = build_csvs(
         num_initial_aircraft=3,
-        num_incoming_aircraft=28,
+        num_incoming_aircraft=25,
         hangar_length=100.0,
         hangar_width=150.0,
         out_dir="."

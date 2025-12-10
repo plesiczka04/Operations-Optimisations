@@ -55,7 +55,7 @@ def main():
 
     # Sensitivity factors for the minimum time gap
     # Each factor multiplies the buffer values from the input data.
-    buffer_factors = [0.25, 0.5, 1.0, 1.5, 2.0, 2.5, 3.0, 3.5, 4.0]
+    buffer_factors = [0.2, 0.4, 0.6, 0.8, 1.0, 1.25, 1.5]
 
     # Read input CSVs (first column is the index)
     t1_keys, t1_map = read_indexed_csv(t1_path)
