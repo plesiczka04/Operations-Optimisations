@@ -266,6 +266,6 @@ if __name__ == "__main__":
         num_incoming_aircraft=25,
         hangar_length=100.0,
         hangar_width=150.0,
-        out_dir="."
+        out_dir="Sensitivity/Sensitivity_Scenario"
     )
     print("Wrote files:", paths[:3])

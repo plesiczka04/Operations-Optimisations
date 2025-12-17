@@ -1,6 +1,6 @@
 \ Model HangarScheduling
 \ LP format - for model browsing. Use MPS format to capture full model detail.
-\ Signature: 0xa244c9052df9820e
+\ Signature: 0xa244c9052df8d5fd
 Minimize
   0.001 X[a04] + 0.001 X[a05] + 0.001 X[a06] + 0.001 X[a07] + 0.001 X[a08]
    + 0.001 X[a09] + 0.001 X[a10] + 0.001 X[a11] + 0.001 X[a12]
@@ -27,195 +27,196 @@ Minimize
    + 11 D_Dep[a15] + 17 D_Dep[a16] + 10 D_Dep[a17] + 7 D_Dep[a18]
    + 3 D_Dep[a19] + 4 D_Dep[a20] + 6 D_Dep[a21] + 7 D_Dep[a22]
    + 11 D_Dep[a23] + 8 D_Dep[a24] + 5 D_Dep[a25] + 4 D_Dep[a26]
-   + 17 D_Dep[a27] + 4 D_Dep[a28] - 675 Accept[a04] - 552 Accept[a05]
-   - 443 Accept[a06] - 355 Accept[a07] - 316 Accept[a08] - 720 Accept[a09]
-   - 1804 Accept[a10] - 964 Accept[a11] - 715 Accept[a12] - 953 Accept[a13]
-   - 826 Accept[a14] - 811 Accept[a15] - 599 Accept[a16] - 688 Accept[a17]
-   - 552 Accept[a18] - 271 Accept[a19] - 346 Accept[a20] - 570 Accept[a21]
-   - 745 Accept[a22] - 598 Accept[a23] - 884 Accept[a24] - 290 Accept[a25]
-   - 332 Accept[a26] - 1122 Accept[a27] - 289 Accept[a28]
-   + 0 Right[a01,a01] + 0 Right[a02,a02] + 0 Right[a03,a03]
-   + 0 Right[a04,a04] + 0 Right[a05,a05] + 0 Right[a06,a06]
-   + 0 Right[a07,a07] + 0 Right[a08,a08] + 0 Right[a09,a09]
-   + 0 Right[a10,a10] + 0 Right[a11,a11] + 0 Right[a12,a12]
-   + 0 Right[a13,a13] + 0 Right[a14,a14] + 0 Right[a15,a15]
-   + 0 Right[a16,a16] + 0 Right[a17,a17] + 0 Right[a18,a18]
-   + 0 Right[a19,a19] + 0 Right[a20,a20] + 0 Right[a21,a21]
-   + 0 Right[a22,a22] + 0 Right[a23,a23] + 0 Right[a24,a24]
-   + 0 Right[a25,a25] + 0 Right[a26,a26] + 0 Right[a27,a27]
-   + 0 Right[a28,a28] + 0 Above[a01,a01] + 0 Above[a02,a02]
-   + 0 Above[a03,a03] + 0 Above[a04,a04] + 0 Above[a05,a05]
-   + 0 Above[a06,a06] + 0 Above[a07,a07] + 0 Above[a08,a08]
-   + 0 Above[a09,a09] + 0 Above[a10,a10] + 0 Above[a11,a11]
-   + 0 Above[a12,a12] + 0 Above[a13,a13] + 0 Above[a14,a14]
-   + 0 Above[a15,a15] + 0 Above[a16,a16] + 0 Above[a17,a17]
-   + 0 Above[a18,a18] + 0 Above[a19,a19] + 0 Above[a20,a20]
-   + 0 Above[a21,a21] + 0 Above[a22,a22] + 0 Above[a23,a23]
-   + 0 Above[a24,a24] + 0 Above[a25,a25] + 0 Above[a26,a26]
-   + 0 Above[a27,a27] + 0 Above[a28,a28] + 0 OutIn[a01,a01]
-   + 0 OutIn[a02,a02] + 0 OutIn[a03,a03] + 0 OutIn[a04,a04]
-   + 0 OutIn[a05,a05] + 0 OutIn[a06,a06] + 0 OutIn[a07,a07]
-   + 0 OutIn[a08,a08] + 0 OutIn[a09,a09] + 0 OutIn[a10,a10]
-   + 0 OutIn[a11,a11] + 0 OutIn[a12,a12] + 0 OutIn[a13,a13]
-   + 0 OutIn[a14,a14] + 0 OutIn[a15,a15] + 0 OutIn[a16,a16]
-   + 0 OutIn[a17,a17] + 0 OutIn[a18,a18] + 0 OutIn[a19,a19]
-   + 0 OutIn[a20,a20] + 0 OutIn[a21,a21] + 0 OutIn[a22,a22]
-   + 0 OutIn[a23,a23] + 0 OutIn[a24,a24] + 0 OutIn[a25,a25]
-   + 0 OutIn[a26,a26] + 0 OutIn[a27,a27] + 0 OutIn[a28,a28]
-   + 0 InIn[a01,a01] + 0 InIn[a02,a02] + 0 InIn[a03,a03] + 0 InIn[a04,a04]
-   + 0 InIn[a05,a05] + 0 InIn[a06,a06] + 0 InIn[a07,a07] + 0 InIn[a08,a08]
-   + 0 InIn[a09,a09] + 0 InIn[a10,a10] + 0 InIn[a11,a11] + 0 InIn[a12,a12]
-   + 0 InIn[a13,a13] + 0 InIn[a14,a14] + 0 InIn[a15,a15] + 0 InIn[a16,a16]
-   + 0 InIn[a17,a17] + 0 InIn[a18,a18] + 0 InIn[a19,a19] + 0 InIn[a20,a20]
-   + 0 InIn[a21,a21] + 0 InIn[a22,a22] + 0 InIn[a23,a23] + 0 InIn[a24,a24]
-   + 0 InIn[a25,a25] + 0 InIn[a26,a26] + 0 InIn[a27,a27] + 0 InIn[a28,a28]
-   + 0 OutOut[a01,a01] + 0 OutOut[a02,a01] + 0 OutOut[a02,a02]
-   + 0 OutOut[a03,a01] + 0 OutOut[a03,a02] + 0 OutOut[a03,a03]
-   + 0 OutOut[a04,a01] + 0 OutOut[a04,a02] + 0 OutOut[a04,a03]
-   + 0 OutOut[a04,a04] + 0 OutOut[a05,a01] + 0 OutOut[a05,a02]
-   + 0 OutOut[a05,a03] + 0 OutOut[a05,a04] + 0 OutOut[a05,a05]
-   + 0 OutOut[a06,a01] + 0 OutOut[a06,a02] + 0 OutOut[a06,a03]
-   + 0 OutOut[a06,a04] + 0 OutOut[a06,a05] + 0 OutOut[a06,a06]
-   + 0 OutOut[a07,a01] + 0 OutOut[a07,a02] + 0 OutOut[a07,a03]
-   + 0 OutOut[a07,a04] + 0 OutOut[a07,a05] + 0 OutOut[a07,a06]
-   + 0 OutOut[a07,a07] + 0 OutOut[a08,a01] + 0 OutOut[a08,a02]
-   + 0 OutOut[a08,a03] + 0 OutOut[a08,a04] + 0 OutOut[a08,a05]
-   + 0 OutOut[a08,a06] + 0 OutOut[a08,a07] + 0 OutOut[a08,a08]
-   + 0 OutOut[a09,a01] + 0 OutOut[a09,a02] + 0 OutOut[a09,a03]
-   + 0 OutOut[a09,a04] + 0 OutOut[a09,a05] + 0 OutOut[a09,a06]
-   + 0 OutOut[a09,a07] + 0 OutOut[a09,a08] + 0 OutOut[a09,a09]
-   + 0 OutOut[a10,a01] + 0 OutOut[a10,a02] + 0 OutOut[a10,a03]
-   + 0 OutOut[a10,a04] + 0 OutOut[a10,a05] + 0 OutOut[a10,a06]
-   + 0 OutOut[a10,a07] + 0 OutOut[a10,a08] + 0 OutOut[a10,a09]
-   + 0 OutOut[a10,a10] + 0 OutOut[a11,a01] + 0 OutOut[a11,a02]
-   + 0 OutOut[a11,a03] + 0 OutOut[a11,a04] + 0 OutOut[a11,a05]
-   + 0 OutOut[a11,a06] + 0 OutOut[a11,a07] + 0 OutOut[a11,a08]
-   + 0 OutOut[a11,a09] + 0 OutOut[a11,a10] + 0 OutOut[a11,a11]
-   + 0 OutOut[a12,a01] + 0 OutOut[a12,a02] + 0 OutOut[a12,a03]
-   + 0 OutOut[a12,a04] + 0 OutOut[a12,a05] + 0 OutOut[a12,a06]
-   + 0 OutOut[a12,a07] + 0 OutOut[a12,a08] + 0 OutOut[a12,a09]
-   + 0 OutOut[a12,a10] + 0 OutOut[a12,a11] + 0 OutOut[a12,a12]
-   + 0 OutOut[a13,a01] + 0 OutOut[a13,a02] + 0 OutOut[a13,a03]
-   + 0 OutOut[a13,a04] + 0 OutOut[a13,a05] + 0 OutOut[a13,a06]
-   + 0 OutOut[a13,a07] + 0 OutOut[a13,a08] + 0 OutOut[a13,a09]
-   + 0 OutOut[a13,a10] + 0 OutOut[a13,a11] + 0 OutOut[a13,a12]
-   + 0 OutOut[a13,a13] + 0 OutOut[a14,a01] + 0 OutOut[a14,a02]
-   + 0 OutOut[a14,a03] + 0 OutOut[a14,a04] + 0 OutOut[a14,a05]
-   + 0 OutOut[a14,a06] + 0 OutOut[a14,a07] + 0 OutOut[a14,a08]
-   + 0 OutOut[a14,a09] + 0 OutOut[a14,a10] + 0 OutOut[a14,a11]
-   + 0 OutOut[a14,a12] + 0 OutOut[a14,a13] + 0 OutOut[a14,a14]
-   + 0 OutOut[a15,a01] + 0 OutOut[a15,a02] + 0 OutOut[a15,a03]
-   + 0 OutOut[a15,a04] + 0 OutOut[a15,a05] + 0 OutOut[a15,a06]
-   + 0 OutOut[a15,a07] + 0 OutOut[a15,a08] + 0 OutOut[a15,a09]
-   + 0 OutOut[a15,a10] + 0 OutOut[a15,a11] + 0 OutOut[a15,a12]
-   + 0 OutOut[a15,a13] + 0 OutOut[a15,a14] + 0 OutOut[a15,a15]
-   + 0 OutOut[a16,a01] + 0 OutOut[a16,a02] + 0 OutOut[a16,a03]
-   + 0 OutOut[a16,a04] + 0 OutOut[a16,a05] + 0 OutOut[a16,a06]
-   + 0 OutOut[a16,a07] + 0 OutOut[a16,a08] + 0 OutOut[a16,a09]
-   + 0 OutOut[a16,a10] + 0 OutOut[a16,a11] + 0 OutOut[a16,a12]
-   + 0 OutOut[a16,a13] + 0 OutOut[a16,a14] + 0 OutOut[a16,a15]
-   + 0 OutOut[a16,a16] + 0 OutOut[a17,a01] + 0 OutOut[a17,a02]
-   + 0 OutOut[a17,a03] + 0 OutOut[a17,a04] + 0 OutOut[a17,a05]
-   + 0 OutOut[a17,a06] + 0 OutOut[a17,a07] + 0 OutOut[a17,a08]
-   + 0 OutOut[a17,a09] + 0 OutOut[a17,a10] + 0 OutOut[a17,a11]
-   + 0 OutOut[a17,a12] + 0 OutOut[a17,a13] + 0 OutOut[a17,a14]
-   + 0 OutOut[a17,a15] + 0 OutOut[a17,a16] + 0 OutOut[a17,a17]
-   + 0 OutOut[a18,a01] + 0 OutOut[a18,a02] + 0 OutOut[a18,a03]
-   + 0 OutOut[a18,a04] + 0 OutOut[a18,a05] + 0 OutOut[a18,a06]
-   + 0 OutOut[a18,a07] + 0 OutOut[a18,a08] + 0 OutOut[a18,a09]
-   + 0 OutOut[a18,a10] + 0 OutOut[a18,a11] + 0 OutOut[a18,a12]
-   + 0 OutOut[a18,a13] + 0 OutOut[a18,a14] + 0 OutOut[a18,a15]
-   + 0 OutOut[a18,a16] + 0 OutOut[a18,a17] + 0 OutOut[a18,a18]
-   + 0 OutOut[a19,a01] + 0 OutOut[a19,a02] + 0 OutOut[a19,a03]
-   + 0 OutOut[a19,a04] + 0 OutOut[a19,a05] + 0 OutOut[a19,a06]
-   + 0 OutOut[a19,a07] + 0 OutOut[a19,a08] + 0 OutOut[a19,a09]
-   + 0 OutOut[a19,a10] + 0 OutOut[a19,a11] + 0 OutOut[a19,a12]
-   + 0 OutOut[a19,a13] + 0 OutOut[a19,a14] + 0 OutOut[a19,a15]
-   + 0 OutOut[a19,a16] + 0 OutOut[a19,a17] + 0 OutOut[a19,a18]
-   + 0 OutOut[a19,a19] + 0 OutOut[a20,a01] + 0 OutOut[a20,a02]
-   + 0 OutOut[a20,a03] + 0 OutOut[a20,a04] + 0 OutOut[a20,a05]
-   + 0 OutOut[a20,a06] + 0 OutOut[a20,a07] + 0 OutOut[a20,a08]
-   + 0 OutOut[a20,a09] + 0 OutOut[a20,a10] + 0 OutOut[a20,a11]
-   + 0 OutOut[a20,a12] + 0 OutOut[a20,a13] + 0 OutOut[a20,a14]
-   + 0 OutOut[a20,a15] + 0 OutOut[a20,a16] + 0 OutOut[a20,a17]
-   + 0 OutOut[a20,a18] + 0 OutOut[a20,a19] + 0 OutOut[a20,a20]
-   + 0 OutOut[a21,a01] + 0 OutOut[a21,a02] + 0 OutOut[a21,a03]
-   + 0 OutOut[a21,a04] + 0 OutOut[a21,a05] + 0 OutOut[a21,a06]
-   + 0 OutOut[a21,a07] + 0 OutOut[a21,a08] + 0 OutOut[a21,a09]
-   + 0 OutOut[a21,a10] + 0 OutOut[a21,a11] + 0 OutOut[a21,a12]
-   + 0 OutOut[a21,a13] + 0 OutOut[a21,a14] + 0 OutOut[a21,a15]
-   + 0 OutOut[a21,a16] + 0 OutOut[a21,a17] + 0 OutOut[a21,a18]
-   + 0 OutOut[a21,a19] + 0 OutOut[a21,a20] + 0 OutOut[a21,a21]
-   + 0 OutOut[a22,a01] + 0 OutOut[a22,a02] + 0 OutOut[a22,a03]
-   + 0 OutOut[a22,a04] + 0 OutOut[a22,a05] + 0 OutOut[a22,a06]
-   + 0 OutOut[a22,a07] + 0 OutOut[a22,a08] + 0 OutOut[a22,a09]
-   + 0 OutOut[a22,a10] + 0 OutOut[a22,a11] + 0 OutOut[a22,a12]
-   + 0 OutOut[a22,a13] + 0 OutOut[a22,a14] + 0 OutOut[a22,a15]
-   + 0 OutOut[a22,a16] + 0 OutOut[a22,a17] + 0 OutOut[a22,a18]
-   + 0 OutOut[a22,a19] + 0 OutOut[a22,a20] + 0 OutOut[a22,a21]
-   + 0 OutOut[a22,a22] + 0 OutOut[a23,a01] + 0 OutOut[a23,a02]
-   + 0 OutOut[a23,a03] + 0 OutOut[a23,a04] + 0 OutOut[a23,a05]
-   + 0 OutOut[a23,a06] + 0 OutOut[a23,a07] + 0 OutOut[a23,a08]
-   + 0 OutOut[a23,a09] + 0 OutOut[a23,a10] + 0 OutOut[a23,a11]
-   + 0 OutOut[a23,a12] + 0 OutOut[a23,a13] + 0 OutOut[a23,a14]
-   + 0 OutOut[a23,a15] + 0 OutOut[a23,a16] + 0 OutOut[a23,a17]
-   + 0 OutOut[a23,a18] + 0 OutOut[a23,a19] + 0 OutOut[a23,a20]
-   + 0 OutOut[a23,a21] + 0 OutOut[a23,a22] + 0 OutOut[a23,a23]
-   + 0 OutOut[a24,a01] + 0 OutOut[a24,a02] + 0 OutOut[a24,a03]
-   + 0 OutOut[a24,a04] + 0 OutOut[a24,a05] + 0 OutOut[a24,a06]
-   + 0 OutOut[a24,a07] + 0 OutOut[a24,a08] + 0 OutOut[a24,a09]
-   + 0 OutOut[a24,a10] + 0 OutOut[a24,a11] + 0 OutOut[a24,a12]
-   + 0 OutOut[a24,a13] + 0 OutOut[a24,a14] + 0 OutOut[a24,a15]
-   + 0 OutOut[a24,a16] + 0 OutOut[a24,a17] + 0 OutOut[a24,a18]
-   + 0 OutOut[a24,a19] + 0 OutOut[a24,a20] + 0 OutOut[a24,a21]
-   + 0 OutOut[a24,a22] + 0 OutOut[a24,a23] + 0 OutOut[a24,a24]
-   + 0 OutOut[a25,a01] + 0 OutOut[a25,a02] + 0 OutOut[a25,a03]
-   + 0 OutOut[a25,a04] + 0 OutOut[a25,a05] + 0 OutOut[a25,a06]
-   + 0 OutOut[a25,a07] + 0 OutOut[a25,a08] + 0 OutOut[a25,a09]
-   + 0 OutOut[a25,a10] + 0 OutOut[a25,a11] + 0 OutOut[a25,a12]
-   + 0 OutOut[a25,a13] + 0 OutOut[a25,a14] + 0 OutOut[a25,a15]
-   + 0 OutOut[a25,a16] + 0 OutOut[a25,a17] + 0 OutOut[a25,a18]
-   + 0 OutOut[a25,a19] + 0 OutOut[a25,a20] + 0 OutOut[a25,a21]
-   + 0 OutOut[a25,a22] + 0 OutOut[a25,a23] + 0 OutOut[a25,a24]
-   + 0 OutOut[a25,a25] + 0 OutOut[a26,a01] + 0 OutOut[a26,a02]
-   + 0 OutOut[a26,a03] + 0 OutOut[a26,a04] + 0 OutOut[a26,a05]
-   + 0 OutOut[a26,a06] + 0 OutOut[a26,a07] + 0 OutOut[a26,a08]
-   + 0 OutOut[a26,a09] + 0 OutOut[a26,a10] + 0 OutOut[a26,a11]
-   + 0 OutOut[a26,a12] + 0 OutOut[a26,a13] + 0 OutOut[a26,a14]
-   + 0 OutOut[a26,a15] + 0 OutOut[a26,a16] + 0 OutOut[a26,a17]
-   + 0 OutOut[a26,a18] + 0 OutOut[a26,a19] + 0 OutOut[a26,a20]
-   + 0 OutOut[a26,a21] + 0 OutOut[a26,a22] + 0 OutOut[a26,a23]
-   + 0 OutOut[a26,a24] + 0 OutOut[a26,a25] + 0 OutOut[a26,a26]
-   + 0 OutOut[a27,a01] + 0 OutOut[a27,a02] + 0 OutOut[a27,a03]
-   + 0 OutOut[a27,a04] + 0 OutOut[a27,a05] + 0 OutOut[a27,a06]
-   + 0 OutOut[a27,a07] + 0 OutOut[a27,a08] + 0 OutOut[a27,a09]
-   + 0 OutOut[a27,a10] + 0 OutOut[a27,a11] + 0 OutOut[a27,a12]
-   + 0 OutOut[a27,a13] + 0 OutOut[a27,a14] + 0 OutOut[a27,a15]
-   + 0 OutOut[a27,a16] + 0 OutOut[a27,a17] + 0 OutOut[a27,a18]
-   + 0 OutOut[a27,a19] + 0 OutOut[a27,a20] + 0 OutOut[a27,a21]
-   + 0 OutOut[a27,a22] + 0 OutOut[a27,a23] + 0 OutOut[a27,a24]
-   + 0 OutOut[a27,a25] + 0 OutOut[a27,a26] + 0 OutOut[a27,a27]
-   + 0 OutOut[a28,a01] + 0 OutOut[a28,a02] + 0 OutOut[a28,a03]
-   + 0 OutOut[a28,a04] + 0 OutOut[a28,a05] + 0 OutOut[a28,a06]
-   + 0 OutOut[a28,a07] + 0 OutOut[a28,a08] + 0 OutOut[a28,a09]
-   + 0 OutOut[a28,a10] + 0 OutOut[a28,a11] + 0 OutOut[a28,a12]
-   + 0 OutOut[a28,a13] + 0 OutOut[a28,a14] + 0 OutOut[a28,a15]
-   + 0 OutOut[a28,a16] + 0 OutOut[a28,a17] + 0 OutOut[a28,a18]
-   + 0 OutOut[a28,a19] + 0 OutOut[a28,a20] + 0 OutOut[a28,a21]
-   + 0 OutOut[a28,a22] + 0 OutOut[a28,a23] + 0 OutOut[a28,a24]
-   + 0 OutOut[a28,a25] + 0 OutOut[a28,a26] + 0 OutOut[a28,a27]
-   + 0 OutOut[a28,a28] + 0 InOut[a01,a01] + 0 InOut[a01,a02]
-   + 0 InOut[a01,a03] + 0 InOut[a02,a01] + 0 InOut[a02,a02]
-   + 0 InOut[a02,a03] + 0 InOut[a03,a01] + 0 InOut[a03,a02]
-   + 0 InOut[a03,a03] + 0 InOut[a04,a04] + 0 InOut[a05,a05]
-   + 0 InOut[a06,a06] + 0 InOut[a07,a07] + 0 InOut[a08,a08]
-   + 0 InOut[a09,a09] + 0 InOut[a10,a10] + 0 InOut[a11,a11]
-   + 0 InOut[a12,a12] + 0 InOut[a13,a13] + 0 InOut[a14,a14]
-   + 0 InOut[a15,a15] + 0 InOut[a16,a16] + 0 InOut[a17,a17]
-   + 0 InOut[a18,a18] + 0 InOut[a19,a19] + 0 InOut[a20,a20]
-   + 0 InOut[a21,a21] + 0 InOut[a22,a22] + 0 InOut[a23,a23]
-   + 0 InOut[a24,a24] + 0 InOut[a25,a25] + 0 InOut[a26,a26]
-   + 0 InOut[a27,a27] + 0 InOut[a28,a28] + 16420 Constant
+   + 17 D_Dep[a27] + 4 D_Dep[a28] - 337.5 Accept[a04] - 276 Accept[a05]
+   - 221.5 Accept[a06] - 177.5 Accept[a07] - 158 Accept[a08]
+   - 360 Accept[a09] - 902 Accept[a10] - 482 Accept[a11]
+   - 357.5 Accept[a12] - 476.5 Accept[a13] - 413 Accept[a14]
+   - 405.5 Accept[a15] - 299.5 Accept[a16] - 344 Accept[a17]
+   - 276 Accept[a18] - 135.5 Accept[a19] - 173 Accept[a20]
+   - 285 Accept[a21] - 372.5 Accept[a22] - 299 Accept[a23]
+   - 442 Accept[a24] - 145 Accept[a25] - 166 Accept[a26] - 561 Accept[a27]
+   - 144.5 Accept[a28] + 0 Right[a01,a01] + 0 Right[a02,a02]
+   + 0 Right[a03,a03] + 0 Right[a04,a04] + 0 Right[a05,a05]
+   + 0 Right[a06,a06] + 0 Right[a07,a07] + 0 Right[a08,a08]
+   + 0 Right[a09,a09] + 0 Right[a10,a10] + 0 Right[a11,a11]
+   + 0 Right[a12,a12] + 0 Right[a13,a13] + 0 Right[a14,a14]
+   + 0 Right[a15,a15] + 0 Right[a16,a16] + 0 Right[a17,a17]
+   + 0 Right[a18,a18] + 0 Right[a19,a19] + 0 Right[a20,a20]
+   + 0 Right[a21,a21] + 0 Right[a22,a22] + 0 Right[a23,a23]
+   + 0 Right[a24,a24] + 0 Right[a25,a25] + 0 Right[a26,a26]
+   + 0 Right[a27,a27] + 0 Right[a28,a28] + 0 Above[a01,a01]
+   + 0 Above[a02,a02] + 0 Above[a03,a03] + 0 Above[a04,a04]
+   + 0 Above[a05,a05] + 0 Above[a06,a06] + 0 Above[a07,a07]
+   + 0 Above[a08,a08] + 0 Above[a09,a09] + 0 Above[a10,a10]
+   + 0 Above[a11,a11] + 0 Above[a12,a12] + 0 Above[a13,a13]
+   + 0 Above[a14,a14] + 0 Above[a15,a15] + 0 Above[a16,a16]
+   + 0 Above[a17,a17] + 0 Above[a18,a18] + 0 Above[a19,a19]
+   + 0 Above[a20,a20] + 0 Above[a21,a21] + 0 Above[a22,a22]
+   + 0 Above[a23,a23] + 0 Above[a24,a24] + 0 Above[a25,a25]
+   + 0 Above[a26,a26] + 0 Above[a27,a27] + 0 Above[a28,a28]
+   + 0 OutIn[a01,a01] + 0 OutIn[a02,a02] + 0 OutIn[a03,a03]
+   + 0 OutIn[a04,a04] + 0 OutIn[a05,a05] + 0 OutIn[a06,a06]
+   + 0 OutIn[a07,a07] + 0 OutIn[a08,a08] + 0 OutIn[a09,a09]
+   + 0 OutIn[a10,a10] + 0 OutIn[a11,a11] + 0 OutIn[a12,a12]
+   + 0 OutIn[a13,a13] + 0 OutIn[a14,a14] + 0 OutIn[a15,a15]
+   + 0 OutIn[a16,a16] + 0 OutIn[a17,a17] + 0 OutIn[a18,a18]
+   + 0 OutIn[a19,a19] + 0 OutIn[a20,a20] + 0 OutIn[a21,a21]
+   + 0 OutIn[a22,a22] + 0 OutIn[a23,a23] + 0 OutIn[a24,a24]
+   + 0 OutIn[a25,a25] + 0 OutIn[a26,a26] + 0 OutIn[a27,a27]
+   + 0 OutIn[a28,a28] + 0 InIn[a01,a01] + 0 InIn[a02,a02] + 0 InIn[a03,a03]
+   + 0 InIn[a04,a04] + 0 InIn[a05,a05] + 0 InIn[a06,a06] + 0 InIn[a07,a07]
+   + 0 InIn[a08,a08] + 0 InIn[a09,a09] + 0 InIn[a10,a10] + 0 InIn[a11,a11]
+   + 0 InIn[a12,a12] + 0 InIn[a13,a13] + 0 InIn[a14,a14] + 0 InIn[a15,a15]
+   + 0 InIn[a16,a16] + 0 InIn[a17,a17] + 0 InIn[a18,a18] + 0 InIn[a19,a19]
+   + 0 InIn[a20,a20] + 0 InIn[a21,a21] + 0 InIn[a22,a22] + 0 InIn[a23,a23]
+   + 0 InIn[a24,a24] + 0 InIn[a25,a25] + 0 InIn[a26,a26] + 0 InIn[a27,a27]
+   + 0 InIn[a28,a28] + 0 OutOut[a01,a01] + 0 OutOut[a02,a01]
+   + 0 OutOut[a02,a02] + 0 OutOut[a03,a01] + 0 OutOut[a03,a02]
+   + 0 OutOut[a03,a03] + 0 OutOut[a04,a01] + 0 OutOut[a04,a02]
+   + 0 OutOut[a04,a03] + 0 OutOut[a04,a04] + 0 OutOut[a05,a01]
+   + 0 OutOut[a05,a02] + 0 OutOut[a05,a03] + 0 OutOut[a05,a04]
+   + 0 OutOut[a05,a05] + 0 OutOut[a06,a01] + 0 OutOut[a06,a02]
+   + 0 OutOut[a06,a03] + 0 OutOut[a06,a04] + 0 OutOut[a06,a05]
+   + 0 OutOut[a06,a06] + 0 OutOut[a07,a01] + 0 OutOut[a07,a02]
+   + 0 OutOut[a07,a03] + 0 OutOut[a07,a04] + 0 OutOut[a07,a05]
+   + 0 OutOut[a07,a06] + 0 OutOut[a07,a07] + 0 OutOut[a08,a01]
+   + 0 OutOut[a08,a02] + 0 OutOut[a08,a03] + 0 OutOut[a08,a04]
+   + 0 OutOut[a08,a05] + 0 OutOut[a08,a06] + 0 OutOut[a08,a07]
+   + 0 OutOut[a08,a08] + 0 OutOut[a09,a01] + 0 OutOut[a09,a02]
+   + 0 OutOut[a09,a03] + 0 OutOut[a09,a04] + 0 OutOut[a09,a05]
+   + 0 OutOut[a09,a06] + 0 OutOut[a09,a07] + 0 OutOut[a09,a08]
+   + 0 OutOut[a09,a09] + 0 OutOut[a10,a01] + 0 OutOut[a10,a02]
+   + 0 OutOut[a10,a03] + 0 OutOut[a10,a04] + 0 OutOut[a10,a05]
+   + 0 OutOut[a10,a06] + 0 OutOut[a10,a07] + 0 OutOut[a10,a08]
+   + 0 OutOut[a10,a09] + 0 OutOut[a10,a10] + 0 OutOut[a11,a01]
+   + 0 OutOut[a11,a02] + 0 OutOut[a11,a03] + 0 OutOut[a11,a04]
+   + 0 OutOut[a11,a05] + 0 OutOut[a11,a06] + 0 OutOut[a11,a07]
+   + 0 OutOut[a11,a08] + 0 OutOut[a11,a09] + 0 OutOut[a11,a10]
+   + 0 OutOut[a11,a11] + 0 OutOut[a12,a01] + 0 OutOut[a12,a02]
+   + 0 OutOut[a12,a03] + 0 OutOut[a12,a04] + 0 OutOut[a12,a05]
+   + 0 OutOut[a12,a06] + 0 OutOut[a12,a07] + 0 OutOut[a12,a08]
+   + 0 OutOut[a12,a09] + 0 OutOut[a12,a10] + 0 OutOut[a12,a11]
+   + 0 OutOut[a12,a12] + 0 OutOut[a13,a01] + 0 OutOut[a13,a02]
+   + 0 OutOut[a13,a03] + 0 OutOut[a13,a04] + 0 OutOut[a13,a05]
+   + 0 OutOut[a13,a06] + 0 OutOut[a13,a07] + 0 OutOut[a13,a08]
+   + 0 OutOut[a13,a09] + 0 OutOut[a13,a10] + 0 OutOut[a13,a11]
+   + 0 OutOut[a13,a12] + 0 OutOut[a13,a13] + 0 OutOut[a14,a01]
+   + 0 OutOut[a14,a02] + 0 OutOut[a14,a03] + 0 OutOut[a14,a04]
+   + 0 OutOut[a14,a05] + 0 OutOut[a14,a06] + 0 OutOut[a14,a07]
+   + 0 OutOut[a14,a08] + 0 OutOut[a14,a09] + 0 OutOut[a14,a10]
+   + 0 OutOut[a14,a11] + 0 OutOut[a14,a12] + 0 OutOut[a14,a13]
+   + 0 OutOut[a14,a14] + 0 OutOut[a15,a01] + 0 OutOut[a15,a02]
+   + 0 OutOut[a15,a03] + 0 OutOut[a15,a04] + 0 OutOut[a15,a05]
+   + 0 OutOut[a15,a06] + 0 OutOut[a15,a07] + 0 OutOut[a15,a08]
+   + 0 OutOut[a15,a09] + 0 OutOut[a15,a10] + 0 OutOut[a15,a11]
+   + 0 OutOut[a15,a12] + 0 OutOut[a15,a13] + 0 OutOut[a15,a14]
+   + 0 OutOut[a15,a15] + 0 OutOut[a16,a01] + 0 OutOut[a16,a02]
+   + 0 OutOut[a16,a03] + 0 OutOut[a16,a04] + 0 OutOut[a16,a05]
+   + 0 OutOut[a16,a06] + 0 OutOut[a16,a07] + 0 OutOut[a16,a08]
+   + 0 OutOut[a16,a09] + 0 OutOut[a16,a10] + 0 OutOut[a16,a11]
+   + 0 OutOut[a16,a12] + 0 OutOut[a16,a13] + 0 OutOut[a16,a14]
+   + 0 OutOut[a16,a15] + 0 OutOut[a16,a16] + 0 OutOut[a17,a01]
+   + 0 OutOut[a17,a02] + 0 OutOut[a17,a03] + 0 OutOut[a17,a04]
+   + 0 OutOut[a17,a05] + 0 OutOut[a17,a06] + 0 OutOut[a17,a07]
+   + 0 OutOut[a17,a08] + 0 OutOut[a17,a09] + 0 OutOut[a17,a10]
+   + 0 OutOut[a17,a11] + 0 OutOut[a17,a12] + 0 OutOut[a17,a13]
+   + 0 OutOut[a17,a14] + 0 OutOut[a17,a15] + 0 OutOut[a17,a16]
+   + 0 OutOut[a17,a17] + 0 OutOut[a18,a01] + 0 OutOut[a18,a02]
+   + 0 OutOut[a18,a03] + 0 OutOut[a18,a04] + 0 OutOut[a18,a05]
+   + 0 OutOut[a18,a06] + 0 OutOut[a18,a07] + 0 OutOut[a18,a08]
+   + 0 OutOut[a18,a09] + 0 OutOut[a18,a10] + 0 OutOut[a18,a11]
+   + 0 OutOut[a18,a12] + 0 OutOut[a18,a13] + 0 OutOut[a18,a14]
+   + 0 OutOut[a18,a15] + 0 OutOut[a18,a16] + 0 OutOut[a18,a17]
+   + 0 OutOut[a18,a18] + 0 OutOut[a19,a01] + 0 OutOut[a19,a02]
+   + 0 OutOut[a19,a03] + 0 OutOut[a19,a04] + 0 OutOut[a19,a05]
+   + 0 OutOut[a19,a06] + 0 OutOut[a19,a07] + 0 OutOut[a19,a08]
+   + 0 OutOut[a19,a09] + 0 OutOut[a19,a10] + 0 OutOut[a19,a11]
+   + 0 OutOut[a19,a12] + 0 OutOut[a19,a13] + 0 OutOut[a19,a14]
+   + 0 OutOut[a19,a15] + 0 OutOut[a19,a16] + 0 OutOut[a19,a17]
+   + 0 OutOut[a19,a18] + 0 OutOut[a19,a19] + 0 OutOut[a20,a01]
+   + 0 OutOut[a20,a02] + 0 OutOut[a20,a03] + 0 OutOut[a20,a04]
+   + 0 OutOut[a20,a05] + 0 OutOut[a20,a06] + 0 OutOut[a20,a07]
+   + 0 OutOut[a20,a08] + 0 OutOut[a20,a09] + 0 OutOut[a20,a10]
+   + 0 OutOut[a20,a11] + 0 OutOut[a20,a12] + 0 OutOut[a20,a13]
+   + 0 OutOut[a20,a14] + 0 OutOut[a20,a15] + 0 OutOut[a20,a16]
+   + 0 OutOut[a20,a17] + 0 OutOut[a20,a18] + 0 OutOut[a20,a19]
+   + 0 OutOut[a20,a20] + 0 OutOut[a21,a01] + 0 OutOut[a21,a02]
+   + 0 OutOut[a21,a03] + 0 OutOut[a21,a04] + 0 OutOut[a21,a05]
+   + 0 OutOut[a21,a06] + 0 OutOut[a21,a07] + 0 OutOut[a21,a08]
+   + 0 OutOut[a21,a09] + 0 OutOut[a21,a10] + 0 OutOut[a21,a11]
+   + 0 OutOut[a21,a12] + 0 OutOut[a21,a13] + 0 OutOut[a21,a14]
+   + 0 OutOut[a21,a15] + 0 OutOut[a21,a16] + 0 OutOut[a21,a17]
+   + 0 OutOut[a21,a18] + 0 OutOut[a21,a19] + 0 OutOut[a21,a20]
+   + 0 OutOut[a21,a21] + 0 OutOut[a22,a01] + 0 OutOut[a22,a02]
+   + 0 OutOut[a22,a03] + 0 OutOut[a22,a04] + 0 OutOut[a22,a05]
+   + 0 OutOut[a22,a06] + 0 OutOut[a22,a07] + 0 OutOut[a22,a08]
+   + 0 OutOut[a22,a09] + 0 OutOut[a22,a10] + 0 OutOut[a22,a11]
+   + 0 OutOut[a22,a12] + 0 OutOut[a22,a13] + 0 OutOut[a22,a14]
+   + 0 OutOut[a22,a15] + 0 OutOut[a22,a16] + 0 OutOut[a22,a17]
+   + 0 OutOut[a22,a18] + 0 OutOut[a22,a19] + 0 OutOut[a22,a20]
+   + 0 OutOut[a22,a21] + 0 OutOut[a22,a22] + 0 OutOut[a23,a01]
+   + 0 OutOut[a23,a02] + 0 OutOut[a23,a03] + 0 OutOut[a23,a04]
+   + 0 OutOut[a23,a05] + 0 OutOut[a23,a06] + 0 OutOut[a23,a07]
+   + 0 OutOut[a23,a08] + 0 OutOut[a23,a09] + 0 OutOut[a23,a10]
+   + 0 OutOut[a23,a11] + 0 OutOut[a23,a12] + 0 OutOut[a23,a13]
+   + 0 OutOut[a23,a14] + 0 OutOut[a23,a15] + 0 OutOut[a23,a16]
+   + 0 OutOut[a23,a17] + 0 OutOut[a23,a18] + 0 OutOut[a23,a19]
+   + 0 OutOut[a23,a20] + 0 OutOut[a23,a21] + 0 OutOut[a23,a22]
+   + 0 OutOut[a23,a23] + 0 OutOut[a24,a01] + 0 OutOut[a24,a02]
+   + 0 OutOut[a24,a03] + 0 OutOut[a24,a04] + 0 OutOut[a24,a05]
+   + 0 OutOut[a24,a06] + 0 OutOut[a24,a07] + 0 OutOut[a24,a08]
+   + 0 OutOut[a24,a09] + 0 OutOut[a24,a10] + 0 OutOut[a24,a11]
+   + 0 OutOut[a24,a12] + 0 OutOut[a24,a13] + 0 OutOut[a24,a14]
+   + 0 OutOut[a24,a15] + 0 OutOut[a24,a16] + 0 OutOut[a24,a17]
+   + 0 OutOut[a24,a18] + 0 OutOut[a24,a19] + 0 OutOut[a24,a20]
+   + 0 OutOut[a24,a21] + 0 OutOut[a24,a22] + 0 OutOut[a24,a23]
+   + 0 OutOut[a24,a24] + 0 OutOut[a25,a01] + 0 OutOut[a25,a02]
+   + 0 OutOut[a25,a03] + 0 OutOut[a25,a04] + 0 OutOut[a25,a05]
+   + 0 OutOut[a25,a06] + 0 OutOut[a25,a07] + 0 OutOut[a25,a08]
+   + 0 OutOut[a25,a09] + 0 OutOut[a25,a10] + 0 OutOut[a25,a11]
+   + 0 OutOut[a25,a12] + 0 OutOut[a25,a13] + 0 OutOut[a25,a14]
+   + 0 OutOut[a25,a15] + 0 OutOut[a25,a16] + 0 OutOut[a25,a17]
+   + 0 OutOut[a25,a18] + 0 OutOut[a25,a19] + 0 OutOut[a25,a20]
+   + 0 OutOut[a25,a21] + 0 OutOut[a25,a22] + 0 OutOut[a25,a23]
+   + 0 OutOut[a25,a24] + 0 OutOut[a25,a25] + 0 OutOut[a26,a01]
+   + 0 OutOut[a26,a02] + 0 OutOut[a26,a03] + 0 OutOut[a26,a04]
+   + 0 OutOut[a26,a05] + 0 OutOut[a26,a06] + 0 OutOut[a26,a07]
+   + 0 OutOut[a26,a08] + 0 OutOut[a26,a09] + 0 OutOut[a26,a10]
+   + 0 OutOut[a26,a11] + 0 OutOut[a26,a12] + 0 OutOut[a26,a13]
+   + 0 OutOut[a26,a14] + 0 OutOut[a26,a15] + 0 OutOut[a26,a16]
+   + 0 OutOut[a26,a17] + 0 OutOut[a26,a18] + 0 OutOut[a26,a19]
+   + 0 OutOut[a26,a20] + 0 OutOut[a26,a21] + 0 OutOut[a26,a22]
+   + 0 OutOut[a26,a23] + 0 OutOut[a26,a24] + 0 OutOut[a26,a25]
+   + 0 OutOut[a26,a26] + 0 OutOut[a27,a01] + 0 OutOut[a27,a02]
+   + 0 OutOut[a27,a03] + 0 OutOut[a27,a04] + 0 OutOut[a27,a05]
+   + 0 OutOut[a27,a06] + 0 OutOut[a27,a07] + 0 OutOut[a27,a08]
+   + 0 OutOut[a27,a09] + 0 OutOut[a27,a10] + 0 OutOut[a27,a11]
+   + 0 OutOut[a27,a12] + 0 OutOut[a27,a13] + 0 OutOut[a27,a14]
+   + 0 OutOut[a27,a15] + 0 OutOut[a27,a16] + 0 OutOut[a27,a17]
+   + 0 OutOut[a27,a18] + 0 OutOut[a27,a19] + 0 OutOut[a27,a20]
+   + 0 OutOut[a27,a21] + 0 OutOut[a27,a22] + 0 OutOut[a27,a23]
+   + 0 OutOut[a27,a24] + 0 OutOut[a27,a25] + 0 OutOut[a27,a26]
+   + 0 OutOut[a27,a27] + 0 OutOut[a28,a01] + 0 OutOut[a28,a02]
+   + 0 OutOut[a28,a03] + 0 OutOut[a28,a04] + 0 OutOut[a28,a05]
+   + 0 OutOut[a28,a06] + 0 OutOut[a28,a07] + 0 OutOut[a28,a08]
+   + 0 OutOut[a28,a09] + 0 OutOut[a28,a10] + 0 OutOut[a28,a11]
+   + 0 OutOut[a28,a12] + 0 OutOut[a28,a13] + 0 OutOut[a28,a14]
+   + 0 OutOut[a28,a15] + 0 OutOut[a28,a16] + 0 OutOut[a28,a17]
+   + 0 OutOut[a28,a18] + 0 OutOut[a28,a19] + 0 OutOut[a28,a20]
+   + 0 OutOut[a28,a21] + 0 OutOut[a28,a22] + 0 OutOut[a28,a23]
+   + 0 OutOut[a28,a24] + 0 OutOut[a28,a25] + 0 OutOut[a28,a26]
+   + 0 OutOut[a28,a27] + 0 OutOut[a28,a28] + 0 InOut[a01,a01]
+   + 0 InOut[a01,a02] + 0 InOut[a01,a03] + 0 InOut[a02,a01]
+   + 0 InOut[a02,a02] + 0 InOut[a02,a03] + 0 InOut[a03,a01]
+   + 0 InOut[a03,a02] + 0 InOut[a03,a03] + 0 InOut[a04,a04]
+   + 0 InOut[a05,a05] + 0 InOut[a06,a06] + 0 InOut[a07,a07]
+   + 0 InOut[a08,a08] + 0 InOut[a09,a09] + 0 InOut[a10,a10]
+   + 0 InOut[a11,a11] + 0 InOut[a12,a12] + 0 InOut[a13,a13]
+   + 0 InOut[a14,a14] + 0 InOut[a15,a15] + 0 InOut[a16,a16]
+   + 0 InOut[a17,a17] + 0 InOut[a18,a18] + 0 InOut[a19,a19]
+   + 0 InOut[a20,a20] + 0 InOut[a21,a21] + 0 InOut[a22,a22]
+   + 0 InOut[a23,a23] + 0 InOut[a24,a24] + 0 InOut[a25,a25]
+   + 0 InOut[a26,a26] + 0 InOut[a27,a27] + 0 InOut[a28,a28] + 8210 Constant
 Subject To
  e02[a04]: X[a04] + Y[a04] + Roll_in[a04] + Roll_out[a04] + D_Arr[a04]
    + D_Dep[a04] - 10410 Accept[a04] <= 0
@@ -373,1618 +374,1618 @@ Subject To
  e06[a26]: - Roll_out[a26] + D_Dep[a26] >= -229
  e06[a27]: - Roll_out[a27] + D_Dep[a27] >= -232
  e06[a28]: - Roll_out[a28] + D_Dep[a28] >= -378
- e07[a04]: X[a04] - 7.5 Accept[a04] >= 0
- e08[a04]: X[a04] + 150 Accept[a04] <= 265.5
- e09[a04]: Y[a04] - 7.5 Accept[a04] >= 0
- e10[a04]: Y[a04] + 100 Accept[a04] <= 165.5
- e07[a05]: X[a05] - 7.5 Accept[a05] >= 0
- e08[a05]: X[a05] + 150 Accept[a05] <= 239.5
- e09[a05]: Y[a05] - 7.5 Accept[a05] >= 0
- e10[a05]: Y[a05] + 100 Accept[a05] <= 137.5
- e07[a06]: X[a06] - 7.5 Accept[a06] >= 0
- e08[a06]: X[a06] + 150 Accept[a06] <= 258.5
- e09[a06]: Y[a06] - 7.5 Accept[a06] >= 0
- e10[a06]: Y[a06] + 100 Accept[a06] <= 160.5
- e07[a07]: X[a07] - 7.5 Accept[a07] >= 0
- e08[a07]: X[a07] + 150 Accept[a07] <= 263.5
- e09[a07]: Y[a07] - 7.5 Accept[a07] >= 0
- e10[a07]: Y[a07] + 100 Accept[a07] <= 161.5
- e07[a08]: X[a08] - 7.5 Accept[a08] >= 0
- e08[a08]: X[a08] + 150 Accept[a08] <= 262.5
- e09[a08]: Y[a08] - 7.5 Accept[a08] >= 0
- e10[a08]: Y[a08] + 100 Accept[a08] <= 162.5
- e07[a09]: X[a09] - 7.5 Accept[a09] >= 0
- e08[a09]: X[a09] + 150 Accept[a09] <= 227.5
- e09[a09]: Y[a09] - 7.5 Accept[a09] >= 0
- e10[a09]: Y[a09] + 100 Accept[a09] <= 132.5
- e07[a10]: X[a10] - 7.5 Accept[a10] >= 0
- e08[a10]: X[a10] + 150 Accept[a10] <= 232.5
- e09[a10]: Y[a10] - 7.5 Accept[a10] >= 0
- e10[a10]: Y[a10] + 100 Accept[a10] <= 119.5
- e07[a11]: X[a11] - 7.5 Accept[a11] >= 0
- e08[a11]: X[a11] + 150 Accept[a11] <= 249.5
- e09[a11]: Y[a11] - 7.5 Accept[a11] >= 0
- e10[a11]: Y[a11] + 100 Accept[a11] <= 150.5
- e07[a12]: X[a12] - 7.5 Accept[a12] >= 0
- e08[a12]: X[a12] + 150 Accept[a12] <= 243.5
- e09[a12]: Y[a12] - 7.5 Accept[a12] >= 0
- e10[a12]: Y[a12] + 100 Accept[a12] <= 134.5
- e07[a13]: X[a13] - 7.5 Accept[a13] >= 0
- e08[a13]: X[a13] + 150 Accept[a13] <= 242.5
- e09[a13]: Y[a13] - 7.5 Accept[a13] >= 0
- e10[a13]: Y[a13] + 100 Accept[a13] <= 126.5
- e07[a14]: X[a14] - 7.5 Accept[a14] >= 0
- e08[a14]: X[a14] + 150 Accept[a14] <= 226.5
- e09[a14]: Y[a14] - 7.5 Accept[a14] >= 0
- e10[a14]: Y[a14] + 100 Accept[a14] <= 125.5
- e07[a15]: X[a15] - 7.5 Accept[a15] >= 0
- e08[a15]: X[a15] + 150 Accept[a15] <= 217.5
- e09[a15]: Y[a15] - 7.5 Accept[a15] >= 0
- e10[a15]: Y[a15] + 100 Accept[a15] <= 122.5
- e07[a16]: X[a16] - 7.5 Accept[a16] >= 0
- e08[a16]: X[a16] + 150 Accept[a16] <= 267.5
- e09[a16]: Y[a16] - 7.5 Accept[a16] >= 0
- e10[a16]: Y[a16] + 100 Accept[a16] <= 169.5
- e07[a17]: X[a17] - 7.5 Accept[a17] >= 0
- e08[a17]: X[a17] + 150 Accept[a17] <= 227.5
- e09[a17]: Y[a17] - 7.5 Accept[a17] >= 0
- e10[a17]: Y[a17] + 100 Accept[a17] <= 124.5
- e07[a18]: X[a18] - 7.5 Accept[a18] >= 0
- e08[a18]: X[a18] + 150 Accept[a18] <= 256.5
- e09[a18]: Y[a18] - 7.5 Accept[a18] >= 0
- e10[a18]: Y[a18] + 100 Accept[a18] <= 155.5
- e07[a19]: X[a19] - 7.5 Accept[a19] >= 0
- e08[a19]: X[a19] + 150 Accept[a19] <= 271.5
- e09[a19]: Y[a19] - 7.5 Accept[a19] >= 0
- e10[a19]: Y[a19] + 100 Accept[a19] <= 169.5
- e07[a20]: X[a20] - 7.5 Accept[a20] >= 0
- e08[a20]: X[a20] + 150 Accept[a20] <= 274.5
- e09[a20]: Y[a20] - 7.5 Accept[a20] >= 0
- e10[a20]: Y[a20] + 100 Accept[a20] <= 170.5
- e07[a21]: X[a21] - 7.5 Accept[a21] >= 0
- e08[a21]: X[a21] + 150 Accept[a21] <= 249.5
- e09[a21]: Y[a21] - 7.5 Accept[a21] >= 0
- e10[a21]: Y[a21] + 100 Accept[a21] <= 152.5
- e07[a22]: X[a22] - 7.5 Accept[a22] >= 0
- e08[a22]: X[a22] + 150 Accept[a22] <= 237.5
- e09[a22]: Y[a22] - 7.5 Accept[a22] >= 0
- e10[a22]: Y[a22] + 100 Accept[a22] <= 140.5
- e07[a23]: X[a23] - 7.5 Accept[a23] >= 0
- e08[a23]: X[a23] + 150 Accept[a23] <= 250.5
- e09[a23]: Y[a23] - 7.5 Accept[a23] >= 0
- e10[a23]: Y[a23] + 100 Accept[a23] <= 143.5
- e07[a24]: X[a24] - 7.5 Accept[a24] >= 0
- e08[a24]: X[a24] + 150 Accept[a24] <= 232.5
- e09[a24]: Y[a24] - 7.5 Accept[a24] >= 0
- e10[a24]: Y[a24] + 100 Accept[a24] <= 131.5
- e07[a25]: X[a25] - 7.5 Accept[a25] >= 0
- e08[a25]: X[a25] + 150 Accept[a25] <= 266.5
- e09[a25]: Y[a25] - 7.5 Accept[a25] >= 0
- e10[a25]: Y[a25] + 100 Accept[a25] <= 168.5
- e07[a26]: X[a26] - 7.5 Accept[a26] >= 0
- e08[a26]: X[a26] + 150 Accept[a26] <= 264.5
- e09[a26]: Y[a26] - 7.5 Accept[a26] >= 0
- e10[a26]: Y[a26] + 100 Accept[a26] <= 163.5
- e07[a27]: X[a27] - 7.5 Accept[a27] >= 0
- e08[a27]: X[a27] + 150 Accept[a27] <= 224.5
- e09[a27]: Y[a27] - 7.5 Accept[a27] >= 0
- e10[a27]: Y[a27] + 100 Accept[a27] <= 116.5
- e07[a28]: X[a28] - 7.5 Accept[a28] >= 0
- e08[a28]: X[a28] + 150 Accept[a28] <= 268.5
- e09[a28]: Y[a28] - 7.5 Accept[a28] >= 0
- e10[a28]: Y[a28] + 100 Accept[a28] <= 162.5
- e11[a01,a02]: - X[a01] + X[a02] + 150 Right[a01,a02] <= 105.5
- e12[a01,a02]: - Y[a01] + Y[a02] + 100 Above[a01,a02] <= 53.5
- e11[a01,a03]: - X[a01] + X[a03] + 150 Right[a01,a03] <= 115.5
- e12[a01,a03]: - Y[a01] + Y[a03] + 100 Above[a01,a03] <= 61.5
- e11[a01,a04]: - X[a01] + X[a04] + 150 Right[a01,a04] <= 115.5
- e12[a01,a04]: - Y[a01] + Y[a04] + 100 Above[a01,a04] <= 65.5
- e11[a01,a05]: - X[a01] + X[a05] + 150 Right[a01,a05] <= 89.5
- e12[a01,a05]: - Y[a01] + Y[a05] + 100 Above[a01,a05] <= 37.5
- e11[a01,a06]: - X[a01] + X[a06] + 150 Right[a01,a06] <= 108.5
- e12[a01,a06]: - Y[a01] + Y[a06] + 100 Above[a01,a06] <= 60.5
- e11[a01,a07]: - X[a01] + X[a07] + 150 Right[a01,a07] <= 113.5
- e12[a01,a07]: - Y[a01] + Y[a07] + 100 Above[a01,a07] <= 61.5
- e11[a01,a08]: - X[a01] + X[a08] + 150 Right[a01,a08] <= 112.5
- e12[a01,a08]: - Y[a01] + Y[a08] + 100 Above[a01,a08] <= 62.5
- e11[a01,a09]: - X[a01] + X[a09] + 150 Right[a01,a09] <= 77.5
- e12[a01,a09]: - Y[a01] + Y[a09] + 100 Above[a01,a09] <= 32.5
- e11[a01,a10]: - X[a01] + X[a10] + 150 Right[a01,a10] <= 82.5
- e12[a01,a10]: - Y[a01] + Y[a10] + 100 Above[a01,a10] <= 19.5
- e11[a01,a11]: - X[a01] + X[a11] + 150 Right[a01,a11] <= 99.5
- e12[a01,a11]: - Y[a01] + Y[a11] + 100 Above[a01,a11] <= 50.5
- e11[a01,a12]: - X[a01] + X[a12] + 150 Right[a01,a12] <= 93.5
- e12[a01,a12]: - Y[a01] + Y[a12] + 100 Above[a01,a12] <= 34.5
- e11[a01,a13]: - X[a01] + X[a13] + 150 Right[a01,a13] <= 92.5
- e12[a01,a13]: - Y[a01] + Y[a13] + 100 Above[a01,a13] <= 26.5
- e11[a01,a14]: - X[a01] + X[a14] + 150 Right[a01,a14] <= 76.5
- e12[a01,a14]: - Y[a01] + Y[a14] + 100 Above[a01,a14] <= 25.5
- e11[a01,a15]: - X[a01] + X[a15] + 150 Right[a01,a15] <= 67.5
- e12[a01,a15]: - Y[a01] + Y[a15] + 100 Above[a01,a15] <= 22.5
- e11[a01,a16]: - X[a01] + X[a16] + 150 Right[a01,a16] <= 117.5
- e12[a01,a16]: - Y[a01] + Y[a16] + 100 Above[a01,a16] <= 69.5
- e11[a01,a17]: - X[a01] + X[a17] + 150 Right[a01,a17] <= 77.5
- e12[a01,a17]: - Y[a01] + Y[a17] + 100 Above[a01,a17] <= 24.5
- e11[a01,a18]: - X[a01] + X[a18] + 150 Right[a01,a18] <= 106.5
- e12[a01,a18]: - Y[a01] + Y[a18] + 100 Above[a01,a18] <= 55.5
- e11[a01,a19]: - X[a01] + X[a19] + 150 Right[a01,a19] <= 121.5
- e12[a01,a19]: - Y[a01] + Y[a19] + 100 Above[a01,a19] <= 69.5
- e11[a01,a20]: - X[a01] + X[a20] + 150 Right[a01,a20] <= 124.5
- e12[a01,a20]: - Y[a01] + Y[a20] + 100 Above[a01,a20] <= 70.5
- e11[a01,a21]: - X[a01] + X[a21] + 150 Right[a01,a21] <= 99.5
- e12[a01,a21]: - Y[a01] + Y[a21] + 100 Above[a01,a21] <= 52.5
- e11[a01,a22]: - X[a01] + X[a22] + 150 Right[a01,a22] <= 87.5
- e12[a01,a22]: - Y[a01] + Y[a22] + 100 Above[a01,a22] <= 40.5
- e11[a01,a23]: - X[a01] + X[a23] + 150 Right[a01,a23] <= 100.5
- e12[a01,a23]: - Y[a01] + Y[a23] + 100 Above[a01,a23] <= 43.5
- e11[a01,a24]: - X[a01] + X[a24] + 150 Right[a01,a24] <= 82.5
- e12[a01,a24]: - Y[a01] + Y[a24] + 100 Above[a01,a24] <= 31.5
- e11[a01,a25]: - X[a01] + X[a25] + 150 Right[a01,a25] <= 116.5
- e12[a01,a25]: - Y[a01] + Y[a25] + 100 Above[a01,a25] <= 68.5
- e11[a01,a26]: - X[a01] + X[a26] + 150 Right[a01,a26] <= 114.5
- e12[a01,a26]: - Y[a01] + Y[a26] + 100 Above[a01,a26] <= 63.5
- e11[a01,a27]: - X[a01] + X[a27] + 150 Right[a01,a27] <= 74.5
- e12[a01,a27]: - Y[a01] + Y[a27] + 100 Above[a01,a27] <= 16.5
- e11[a01,a28]: - X[a01] + X[a28] + 150 Right[a01,a28] <= 118.5
- e12[a01,a28]: - Y[a01] + Y[a28] + 100 Above[a01,a28] <= 62.5
- e11[a02,a01]: X[a01] - X[a02] + 150 Right[a02,a01] <= 86.5
- e12[a02,a01]: Y[a01] - Y[a02] + 100 Above[a02,a01] <= 31.5
- e11[a02,a03]: - X[a02] + X[a03] + 150 Right[a02,a03] <= 115.5
- e12[a02,a03]: - Y[a02] + Y[a03] + 100 Above[a02,a03] <= 61.5
- e11[a02,a04]: - X[a02] + X[a04] + 150 Right[a02,a04] <= 115.5
- e12[a02,a04]: - Y[a02] + Y[a04] + 100 Above[a02,a04] <= 65.5
- e11[a02,a05]: - X[a02] + X[a05] + 150 Right[a02,a05] <= 89.5
- e12[a02,a05]: - Y[a02] + Y[a05] + 100 Above[a02,a05] <= 37.5
- e11[a02,a06]: - X[a02] + X[a06] + 150 Right[a02,a06] <= 108.5
- e12[a02,a06]: - Y[a02] + Y[a06] + 100 Above[a02,a06] <= 60.5
- e11[a02,a07]: - X[a02] + X[a07] + 150 Right[a02,a07] <= 113.5
- e12[a02,a07]: - Y[a02] + Y[a07] + 100 Above[a02,a07] <= 61.5
- e11[a02,a08]: - X[a02] + X[a08] + 150 Right[a02,a08] <= 112.5
- e12[a02,a08]: - Y[a02] + Y[a08] + 100 Above[a02,a08] <= 62.5
- e11[a02,a09]: - X[a02] + X[a09] + 150 Right[a02,a09] <= 77.5
- e12[a02,a09]: - Y[a02] + Y[a09] + 100 Above[a02,a09] <= 32.5
- e11[a02,a10]: - X[a02] + X[a10] + 150 Right[a02,a10] <= 82.5
- e12[a02,a10]: - Y[a02] + Y[a10] + 100 Above[a02,a10] <= 19.5
- e11[a02,a11]: - X[a02] + X[a11] + 150 Right[a02,a11] <= 99.5
- e12[a02,a11]: - Y[a02] + Y[a11] + 100 Above[a02,a11] <= 50.5
- e11[a02,a12]: - X[a02] + X[a12] + 150 Right[a02,a12] <= 93.5
- e12[a02,a12]: - Y[a02] + Y[a12] + 100 Above[a02,a12] <= 34.5
- e11[a02,a13]: - X[a02] + X[a13] + 150 Right[a02,a13] <= 92.5
- e12[a02,a13]: - Y[a02] + Y[a13] + 100 Above[a02,a13] <= 26.5
- e11[a02,a14]: - X[a02] + X[a14] + 150 Right[a02,a14] <= 76.5
- e12[a02,a14]: - Y[a02] + Y[a14] + 100 Above[a02,a14] <= 25.5
- e11[a02,a15]: - X[a02] + X[a15] + 150 Right[a02,a15] <= 67.5
- e12[a02,a15]: - Y[a02] + Y[a15] + 100 Above[a02,a15] <= 22.5
- e11[a02,a16]: - X[a02] + X[a16] + 150 Right[a02,a16] <= 117.5
- e12[a02,a16]: - Y[a02] + Y[a16] + 100 Above[a02,a16] <= 69.5
- e11[a02,a17]: - X[a02] + X[a17] + 150 Right[a02,a17] <= 77.5
- e12[a02,a17]: - Y[a02] + Y[a17] + 100 Above[a02,a17] <= 24.5
- e11[a02,a18]: - X[a02] + X[a18] + 150 Right[a02,a18] <= 106.5
- e12[a02,a18]: - Y[a02] + Y[a18] + 100 Above[a02,a18] <= 55.5
- e11[a02,a19]: - X[a02] + X[a19] + 150 Right[a02,a19] <= 121.5
- e12[a02,a19]: - Y[a02] + Y[a19] + 100 Above[a02,a19] <= 69.5
- e11[a02,a20]: - X[a02] + X[a20] + 150 Right[a02,a20] <= 124.5
- e12[a02,a20]: - Y[a02] + Y[a20] + 100 Above[a02,a20] <= 70.5
- e11[a02,a21]: - X[a02] + X[a21] + 150 Right[a02,a21] <= 99.5
- e12[a02,a21]: - Y[a02] + Y[a21] + 100 Above[a02,a21] <= 52.5
- e11[a02,a22]: - X[a02] + X[a22] + 150 Right[a02,a22] <= 87.5
- e12[a02,a22]: - Y[a02] + Y[a22] + 100 Above[a02,a22] <= 40.5
- e11[a02,a23]: - X[a02] + X[a23] + 150 Right[a02,a23] <= 100.5
- e12[a02,a23]: - Y[a02] + Y[a23] + 100 Above[a02,a23] <= 43.5
- e11[a02,a24]: - X[a02] + X[a24] + 150 Right[a02,a24] <= 82.5
- e12[a02,a24]: - Y[a02] + Y[a24] + 100 Above[a02,a24] <= 31.5
- e11[a02,a25]: - X[a02] + X[a25] + 150 Right[a02,a25] <= 116.5
- e12[a02,a25]: - Y[a02] + Y[a25] + 100 Above[a02,a25] <= 68.5
- e11[a02,a26]: - X[a02] + X[a26] + 150 Right[a02,a26] <= 114.5
- e12[a02,a26]: - Y[a02] + Y[a26] + 100 Above[a02,a26] <= 63.5
- e11[a02,a27]: - X[a02] + X[a27] + 150 Right[a02,a27] <= 74.5
- e12[a02,a27]: - Y[a02] + Y[a27] + 100 Above[a02,a27] <= 16.5
- e11[a02,a28]: - X[a02] + X[a28] + 150 Right[a02,a28] <= 118.5
- e12[a02,a28]: - Y[a02] + Y[a28] + 100 Above[a02,a28] <= 62.5
- e11[a03,a01]: X[a01] - X[a03] + 150 Right[a03,a01] <= 86.5
- e12[a03,a01]: Y[a01] - Y[a03] + 100 Above[a03,a01] <= 31.5
- e11[a03,a02]: X[a02] - X[a03] + 150 Right[a03,a02] <= 105.5
- e12[a03,a02]: Y[a02] - Y[a03] + 100 Above[a03,a02] <= 53.5
- e11[a03,a04]: - X[a03] + X[a04] + 150 Right[a03,a04] <= 115.5
- e12[a03,a04]: - Y[a03] + Y[a04] + 100 Above[a03,a04] <= 65.5
- e11[a03,a05]: - X[a03] + X[a05] + 150 Right[a03,a05] <= 89.5
- e12[a03,a05]: - Y[a03] + Y[a05] + 100 Above[a03,a05] <= 37.5
- e11[a03,a06]: - X[a03] + X[a06] + 150 Right[a03,a06] <= 108.5
- e12[a03,a06]: - Y[a03] + Y[a06] + 100 Above[a03,a06] <= 60.5
- e11[a03,a07]: - X[a03] + X[a07] + 150 Right[a03,a07] <= 113.5
- e12[a03,a07]: - Y[a03] + Y[a07] + 100 Above[a03,a07] <= 61.5
- e11[a03,a08]: - X[a03] + X[a08] + 150 Right[a03,a08] <= 112.5
- e12[a03,a08]: - Y[a03] + Y[a08] + 100 Above[a03,a08] <= 62.5
- e11[a03,a09]: - X[a03] + X[a09] + 150 Right[a03,a09] <= 77.5
- e12[a03,a09]: - Y[a03] + Y[a09] + 100 Above[a03,a09] <= 32.5
- e11[a03,a10]: - X[a03] + X[a10] + 150 Right[a03,a10] <= 82.5
- e12[a03,a10]: - Y[a03] + Y[a10] + 100 Above[a03,a10] <= 19.5
- e11[a03,a11]: - X[a03] + X[a11] + 150 Right[a03,a11] <= 99.5
- e12[a03,a11]: - Y[a03] + Y[a11] + 100 Above[a03,a11] <= 50.5
- e11[a03,a12]: - X[a03] + X[a12] + 150 Right[a03,a12] <= 93.5
- e12[a03,a12]: - Y[a03] + Y[a12] + 100 Above[a03,a12] <= 34.5
- e11[a03,a13]: - X[a03] + X[a13] + 150 Right[a03,a13] <= 92.5
- e12[a03,a13]: - Y[a03] + Y[a13] + 100 Above[a03,a13] <= 26.5
- e11[a03,a14]: - X[a03] + X[a14] + 150 Right[a03,a14] <= 76.5
- e12[a03,a14]: - Y[a03] + Y[a14] + 100 Above[a03,a14] <= 25.5
- e11[a03,a15]: - X[a03] + X[a15] + 150 Right[a03,a15] <= 67.5
- e12[a03,a15]: - Y[a03] + Y[a15] + 100 Above[a03,a15] <= 22.5
- e11[a03,a16]: - X[a03] + X[a16] + 150 Right[a03,a16] <= 117.5
- e12[a03,a16]: - Y[a03] + Y[a16] + 100 Above[a03,a16] <= 69.5
- e11[a03,a17]: - X[a03] + X[a17] + 150 Right[a03,a17] <= 77.5
- e12[a03,a17]: - Y[a03] + Y[a17] + 100 Above[a03,a17] <= 24.5
- e11[a03,a18]: - X[a03] + X[a18] + 150 Right[a03,a18] <= 106.5
- e12[a03,a18]: - Y[a03] + Y[a18] + 100 Above[a03,a18] <= 55.5
- e11[a03,a19]: - X[a03] + X[a19] + 150 Right[a03,a19] <= 121.5
- e12[a03,a19]: - Y[a03] + Y[a19] + 100 Above[a03,a19] <= 69.5
- e11[a03,a20]: - X[a03] + X[a20] + 150 Right[a03,a20] <= 124.5
- e12[a03,a20]: - Y[a03] + Y[a20] + 100 Above[a03,a20] <= 70.5
- e11[a03,a21]: - X[a03] + X[a21] + 150 Right[a03,a21] <= 99.5
- e12[a03,a21]: - Y[a03] + Y[a21] + 100 Above[a03,a21] <= 52.5
- e11[a03,a22]: - X[a03] + X[a22] + 150 Right[a03,a22] <= 87.5
- e12[a03,a22]: - Y[a03] + Y[a22] + 100 Above[a03,a22] <= 40.5
- e11[a03,a23]: - X[a03] + X[a23] + 150 Right[a03,a23] <= 100.5
- e12[a03,a23]: - Y[a03] + Y[a23] + 100 Above[a03,a23] <= 43.5
- e11[a03,a24]: - X[a03] + X[a24] + 150 Right[a03,a24] <= 82.5
- e12[a03,a24]: - Y[a03] + Y[a24] + 100 Above[a03,a24] <= 31.5
- e11[a03,a25]: - X[a03] + X[a25] + 150 Right[a03,a25] <= 116.5
- e12[a03,a25]: - Y[a03] + Y[a25] + 100 Above[a03,a25] <= 68.5
- e11[a03,a26]: - X[a03] + X[a26] + 150 Right[a03,a26] <= 114.5
- e12[a03,a26]: - Y[a03] + Y[a26] + 100 Above[a03,a26] <= 63.5
- e11[a03,a27]: - X[a03] + X[a27] + 150 Right[a03,a27] <= 74.5
- e12[a03,a27]: - Y[a03] + Y[a27] + 100 Above[a03,a27] <= 16.5
- e11[a03,a28]: - X[a03] + X[a28] + 150 Right[a03,a28] <= 118.5
- e12[a03,a28]: - Y[a03] + Y[a28] + 100 Above[a03,a28] <= 62.5
- e11[a04,a01]: X[a01] - X[a04] + 150 Right[a04,a01] <= 86.5
- e12[a04,a01]: Y[a01] - Y[a04] + 100 Above[a04,a01] <= 31.5
- e11[a04,a02]: X[a02] - X[a04] + 150 Right[a04,a02] <= 105.5
- e12[a04,a02]: Y[a02] - Y[a04] + 100 Above[a04,a02] <= 53.5
- e11[a04,a03]: X[a03] - X[a04] + 150 Right[a04,a03] <= 115.5
- e12[a04,a03]: Y[a03] - Y[a04] + 100 Above[a04,a03] <= 61.5
- e11[a04,a05]: - X[a04] + X[a05] + 150 Right[a04,a05] <= 89.5
- e12[a04,a05]: - Y[a04] + Y[a05] + 100 Above[a04,a05] <= 37.5
- e11[a04,a06]: - X[a04] + X[a06] + 150 Right[a04,a06] <= 108.5
- e12[a04,a06]: - Y[a04] + Y[a06] + 100 Above[a04,a06] <= 60.5
- e11[a04,a07]: - X[a04] + X[a07] + 150 Right[a04,a07] <= 113.5
- e12[a04,a07]: - Y[a04] + Y[a07] + 100 Above[a04,a07] <= 61.5
- e11[a04,a08]: - X[a04] + X[a08] + 150 Right[a04,a08] <= 112.5
- e12[a04,a08]: - Y[a04] + Y[a08] + 100 Above[a04,a08] <= 62.5
- e11[a04,a09]: - X[a04] + X[a09] + 150 Right[a04,a09] <= 77.5
- e12[a04,a09]: - Y[a04] + Y[a09] + 100 Above[a04,a09] <= 32.5
- e11[a04,a10]: - X[a04] + X[a10] + 150 Right[a04,a10] <= 82.5
- e12[a04,a10]: - Y[a04] + Y[a10] + 100 Above[a04,a10] <= 19.5
- e11[a04,a11]: - X[a04] + X[a11] + 150 Right[a04,a11] <= 99.5
- e12[a04,a11]: - Y[a04] + Y[a11] + 100 Above[a04,a11] <= 50.5
- e11[a04,a12]: - X[a04] + X[a12] + 150 Right[a04,a12] <= 93.5
- e12[a04,a12]: - Y[a04] + Y[a12] + 100 Above[a04,a12] <= 34.5
- e11[a04,a13]: - X[a04] + X[a13] + 150 Right[a04,a13] <= 92.5
- e12[a04,a13]: - Y[a04] + Y[a13] + 100 Above[a04,a13] <= 26.5
- e11[a04,a14]: - X[a04] + X[a14] + 150 Right[a04,a14] <= 76.5
- e12[a04,a14]: - Y[a04] + Y[a14] + 100 Above[a04,a14] <= 25.5
- e11[a04,a15]: - X[a04] + X[a15] + 150 Right[a04,a15] <= 67.5
- e12[a04,a15]: - Y[a04] + Y[a15] + 100 Above[a04,a15] <= 22.5
- e11[a04,a16]: - X[a04] + X[a16] + 150 Right[a04,a16] <= 117.5
- e12[a04,a16]: - Y[a04] + Y[a16] + 100 Above[a04,a16] <= 69.5
- e11[a04,a17]: - X[a04] + X[a17] + 150 Right[a04,a17] <= 77.5
- e12[a04,a17]: - Y[a04] + Y[a17] + 100 Above[a04,a17] <= 24.5
- e11[a04,a18]: - X[a04] + X[a18] + 150 Right[a04,a18] <= 106.5
- e12[a04,a18]: - Y[a04] + Y[a18] + 100 Above[a04,a18] <= 55.5
- e11[a04,a19]: - X[a04] + X[a19] + 150 Right[a04,a19] <= 121.5
- e12[a04,a19]: - Y[a04] + Y[a19] + 100 Above[a04,a19] <= 69.5
- e11[a04,a20]: - X[a04] + X[a20] + 150 Right[a04,a20] <= 124.5
- e12[a04,a20]: - Y[a04] + Y[a20] + 100 Above[a04,a20] <= 70.5
- e11[a04,a21]: - X[a04] + X[a21] + 150 Right[a04,a21] <= 99.5
- e12[a04,a21]: - Y[a04] + Y[a21] + 100 Above[a04,a21] <= 52.5
- e11[a04,a22]: - X[a04] + X[a22] + 150 Right[a04,a22] <= 87.5
- e12[a04,a22]: - Y[a04] + Y[a22] + 100 Above[a04,a22] <= 40.5
- e11[a04,a23]: - X[a04] + X[a23] + 150 Right[a04,a23] <= 100.5
- e12[a04,a23]: - Y[a04] + Y[a23] + 100 Above[a04,a23] <= 43.5
- e11[a04,a24]: - X[a04] + X[a24] + 150 Right[a04,a24] <= 82.5
- e12[a04,a24]: - Y[a04] + Y[a24] + 100 Above[a04,a24] <= 31.5
- e11[a04,a25]: - X[a04] + X[a25] + 150 Right[a04,a25] <= 116.5
- e12[a04,a25]: - Y[a04] + Y[a25] + 100 Above[a04,a25] <= 68.5
- e11[a04,a26]: - X[a04] + X[a26] + 150 Right[a04,a26] <= 114.5
- e12[a04,a26]: - Y[a04] + Y[a26] + 100 Above[a04,a26] <= 63.5
- e11[a04,a27]: - X[a04] + X[a27] + 150 Right[a04,a27] <= 74.5
- e12[a04,a27]: - Y[a04] + Y[a27] + 100 Above[a04,a27] <= 16.5
- e11[a04,a28]: - X[a04] + X[a28] + 150 Right[a04,a28] <= 118.5
- e12[a04,a28]: - Y[a04] + Y[a28] + 100 Above[a04,a28] <= 62.5
- e11[a05,a01]: X[a01] - X[a05] + 150 Right[a05,a01] <= 86.5
- e12[a05,a01]: Y[a01] - Y[a05] + 100 Above[a05,a01] <= 31.5
- e11[a05,a02]: X[a02] - X[a05] + 150 Right[a05,a02] <= 105.5
- e12[a05,a02]: Y[a02] - Y[a05] + 100 Above[a05,a02] <= 53.5
- e11[a05,a03]: X[a03] - X[a05] + 150 Right[a05,a03] <= 115.5
- e12[a05,a03]: Y[a03] - Y[a05] + 100 Above[a05,a03] <= 61.5
- e11[a05,a04]: X[a04] - X[a05] + 150 Right[a05,a04] <= 115.5
- e12[a05,a04]: Y[a04] - Y[a05] + 100 Above[a05,a04] <= 65.5
- e11[a05,a06]: - X[a05] + X[a06] + 150 Right[a05,a06] <= 108.5
- e12[a05,a06]: - Y[a05] + Y[a06] + 100 Above[a05,a06] <= 60.5
- e11[a05,a07]: - X[a05] + X[a07] + 150 Right[a05,a07] <= 113.5
- e12[a05,a07]: - Y[a05] + Y[a07] + 100 Above[a05,a07] <= 61.5
- e11[a05,a08]: - X[a05] + X[a08] + 150 Right[a05,a08] <= 112.5
- e12[a05,a08]: - Y[a05] + Y[a08] + 100 Above[a05,a08] <= 62.5
- e11[a05,a09]: - X[a05] + X[a09] + 150 Right[a05,a09] <= 77.5
- e12[a05,a09]: - Y[a05] + Y[a09] + 100 Above[a05,a09] <= 32.5
- e11[a05,a10]: - X[a05] + X[a10] + 150 Right[a05,a10] <= 82.5
- e12[a05,a10]: - Y[a05] + Y[a10] + 100 Above[a05,a10] <= 19.5
- e11[a05,a11]: - X[a05] + X[a11] + 150 Right[a05,a11] <= 99.5
- e12[a05,a11]: - Y[a05] + Y[a11] + 100 Above[a05,a11] <= 50.5
- e11[a05,a12]: - X[a05] + X[a12] + 150 Right[a05,a12] <= 93.5
- e12[a05,a12]: - Y[a05] + Y[a12] + 100 Above[a05,a12] <= 34.5
- e11[a05,a13]: - X[a05] + X[a13] + 150 Right[a05,a13] <= 92.5
- e12[a05,a13]: - Y[a05] + Y[a13] + 100 Above[a05,a13] <= 26.5
- e11[a05,a14]: - X[a05] + X[a14] + 150 Right[a05,a14] <= 76.5
- e12[a05,a14]: - Y[a05] + Y[a14] + 100 Above[a05,a14] <= 25.5
- e11[a05,a15]: - X[a05] + X[a15] + 150 Right[a05,a15] <= 67.5
- e12[a05,a15]: - Y[a05] + Y[a15] + 100 Above[a05,a15] <= 22.5
- e11[a05,a16]: - X[a05] + X[a16] + 150 Right[a05,a16] <= 117.5
- e12[a05,a16]: - Y[a05] + Y[a16] + 100 Above[a05,a16] <= 69.5
- e11[a05,a17]: - X[a05] + X[a17] + 150 Right[a05,a17] <= 77.5
- e12[a05,a17]: - Y[a05] + Y[a17] + 100 Above[a05,a17] <= 24.5
- e11[a05,a18]: - X[a05] + X[a18] + 150 Right[a05,a18] <= 106.5
- e12[a05,a18]: - Y[a05] + Y[a18] + 100 Above[a05,a18] <= 55.5
- e11[a05,a19]: - X[a05] + X[a19] + 150 Right[a05,a19] <= 121.5
- e12[a05,a19]: - Y[a05] + Y[a19] + 100 Above[a05,a19] <= 69.5
- e11[a05,a20]: - X[a05] + X[a20] + 150 Right[a05,a20] <= 124.5
- e12[a05,a20]: - Y[a05] + Y[a20] + 100 Above[a05,a20] <= 70.5
- e11[a05,a21]: - X[a05] + X[a21] + 150 Right[a05,a21] <= 99.5
- e12[a05,a21]: - Y[a05] + Y[a21] + 100 Above[a05,a21] <= 52.5
- e11[a05,a22]: - X[a05] + X[a22] + 150 Right[a05,a22] <= 87.5
- e12[a05,a22]: - Y[a05] + Y[a22] + 100 Above[a05,a22] <= 40.5
- e11[a05,a23]: - X[a05] + X[a23] + 150 Right[a05,a23] <= 100.5
- e12[a05,a23]: - Y[a05] + Y[a23] + 100 Above[a05,a23] <= 43.5
- e11[a05,a24]: - X[a05] + X[a24] + 150 Right[a05,a24] <= 82.5
- e12[a05,a24]: - Y[a05] + Y[a24] + 100 Above[a05,a24] <= 31.5
- e11[a05,a25]: - X[a05] + X[a25] + 150 Right[a05,a25] <= 116.5
- e12[a05,a25]: - Y[a05] + Y[a25] + 100 Above[a05,a25] <= 68.5
- e11[a05,a26]: - X[a05] + X[a26] + 150 Right[a05,a26] <= 114.5
- e12[a05,a26]: - Y[a05] + Y[a26] + 100 Above[a05,a26] <= 63.5
- e11[a05,a27]: - X[a05] + X[a27] + 150 Right[a05,a27] <= 74.5
- e12[a05,a27]: - Y[a05] + Y[a27] + 100 Above[a05,a27] <= 16.5
- e11[a05,a28]: - X[a05] + X[a28] + 150 Right[a05,a28] <= 118.5
- e12[a05,a28]: - Y[a05] + Y[a28] + 100 Above[a05,a28] <= 62.5
- e11[a06,a01]: X[a01] - X[a06] + 150 Right[a06,a01] <= 86.5
- e12[a06,a01]: Y[a01] - Y[a06] + 100 Above[a06,a01] <= 31.5
- e11[a06,a02]: X[a02] - X[a06] + 150 Right[a06,a02] <= 105.5
- e12[a06,a02]: Y[a02] - Y[a06] + 100 Above[a06,a02] <= 53.5
- e11[a06,a03]: X[a03] - X[a06] + 150 Right[a06,a03] <= 115.5
- e12[a06,a03]: Y[a03] - Y[a06] + 100 Above[a06,a03] <= 61.5
- e11[a06,a04]: X[a04] - X[a06] + 150 Right[a06,a04] <= 115.5
- e12[a06,a04]: Y[a04] - Y[a06] + 100 Above[a06,a04] <= 65.5
- e11[a06,a05]: X[a05] - X[a06] + 150 Right[a06,a05] <= 89.5
- e12[a06,a05]: Y[a05] - Y[a06] + 100 Above[a06,a05] <= 37.5
- e11[a06,a07]: - X[a06] + X[a07] + 150 Right[a06,a07] <= 113.5
- e12[a06,a07]: - Y[a06] + Y[a07] + 100 Above[a06,a07] <= 61.5
- e11[a06,a08]: - X[a06] + X[a08] + 150 Right[a06,a08] <= 112.5
- e12[a06,a08]: - Y[a06] + Y[a08] + 100 Above[a06,a08] <= 62.5
- e11[a06,a09]: - X[a06] + X[a09] + 150 Right[a06,a09] <= 77.5
- e12[a06,a09]: - Y[a06] + Y[a09] + 100 Above[a06,a09] <= 32.5
- e11[a06,a10]: - X[a06] + X[a10] + 150 Right[a06,a10] <= 82.5
- e12[a06,a10]: - Y[a06] + Y[a10] + 100 Above[a06,a10] <= 19.5
- e11[a06,a11]: - X[a06] + X[a11] + 150 Right[a06,a11] <= 99.5
- e12[a06,a11]: - Y[a06] + Y[a11] + 100 Above[a06,a11] <= 50.5
- e11[a06,a12]: - X[a06] + X[a12] + 150 Right[a06,a12] <= 93.5
- e12[a06,a12]: - Y[a06] + Y[a12] + 100 Above[a06,a12] <= 34.5
- e11[a06,a13]: - X[a06] + X[a13] + 150 Right[a06,a13] <= 92.5
- e12[a06,a13]: - Y[a06] + Y[a13] + 100 Above[a06,a13] <= 26.5
- e11[a06,a14]: - X[a06] + X[a14] + 150 Right[a06,a14] <= 76.5
- e12[a06,a14]: - Y[a06] + Y[a14] + 100 Above[a06,a14] <= 25.5
- e11[a06,a15]: - X[a06] + X[a15] + 150 Right[a06,a15] <= 67.5
- e12[a06,a15]: - Y[a06] + Y[a15] + 100 Above[a06,a15] <= 22.5
- e11[a06,a16]: - X[a06] + X[a16] + 150 Right[a06,a16] <= 117.5
- e12[a06,a16]: - Y[a06] + Y[a16] + 100 Above[a06,a16] <= 69.5
- e11[a06,a17]: - X[a06] + X[a17] + 150 Right[a06,a17] <= 77.5
- e12[a06,a17]: - Y[a06] + Y[a17] + 100 Above[a06,a17] <= 24.5
- e11[a06,a18]: - X[a06] + X[a18] + 150 Right[a06,a18] <= 106.5
- e12[a06,a18]: - Y[a06] + Y[a18] + 100 Above[a06,a18] <= 55.5
- e11[a06,a19]: - X[a06] + X[a19] + 150 Right[a06,a19] <= 121.5
- e12[a06,a19]: - Y[a06] + Y[a19] + 100 Above[a06,a19] <= 69.5
- e11[a06,a20]: - X[a06] + X[a20] + 150 Right[a06,a20] <= 124.5
- e12[a06,a20]: - Y[a06] + Y[a20] + 100 Above[a06,a20] <= 70.5
- e11[a06,a21]: - X[a06] + X[a21] + 150 Right[a06,a21] <= 99.5
- e12[a06,a21]: - Y[a06] + Y[a21] + 100 Above[a06,a21] <= 52.5
- e11[a06,a22]: - X[a06] + X[a22] + 150 Right[a06,a22] <= 87.5
- e12[a06,a22]: - Y[a06] + Y[a22] + 100 Above[a06,a22] <= 40.5
- e11[a06,a23]: - X[a06] + X[a23] + 150 Right[a06,a23] <= 100.5
- e12[a06,a23]: - Y[a06] + Y[a23] + 100 Above[a06,a23] <= 43.5
- e11[a06,a24]: - X[a06] + X[a24] + 150 Right[a06,a24] <= 82.5
- e12[a06,a24]: - Y[a06] + Y[a24] + 100 Above[a06,a24] <= 31.5
- e11[a06,a25]: - X[a06] + X[a25] + 150 Right[a06,a25] <= 116.5
- e12[a06,a25]: - Y[a06] + Y[a25] + 100 Above[a06,a25] <= 68.5
- e11[a06,a26]: - X[a06] + X[a26] + 150 Right[a06,a26] <= 114.5
- e12[a06,a26]: - Y[a06] + Y[a26] + 100 Above[a06,a26] <= 63.5
- e11[a06,a27]: - X[a06] + X[a27] + 150 Right[a06,a27] <= 74.5
- e12[a06,a27]: - Y[a06] + Y[a27] + 100 Above[a06,a27] <= 16.5
- e11[a06,a28]: - X[a06] + X[a28] + 150 Right[a06,a28] <= 118.5
- e12[a06,a28]: - Y[a06] + Y[a28] + 100 Above[a06,a28] <= 62.5
- e11[a07,a01]: X[a01] - X[a07] + 150 Right[a07,a01] <= 86.5
- e12[a07,a01]: Y[a01] - Y[a07] + 100 Above[a07,a01] <= 31.5
- e11[a07,a02]: X[a02] - X[a07] + 150 Right[a07,a02] <= 105.5
- e12[a07,a02]: Y[a02] - Y[a07] + 100 Above[a07,a02] <= 53.5
- e11[a07,a03]: X[a03] - X[a07] + 150 Right[a07,a03] <= 115.5
- e12[a07,a03]: Y[a03] - Y[a07] + 100 Above[a07,a03] <= 61.5
- e11[a07,a04]: X[a04] - X[a07] + 150 Right[a07,a04] <= 115.5
- e12[a07,a04]: Y[a04] - Y[a07] + 100 Above[a07,a04] <= 65.5
- e11[a07,a05]: X[a05] - X[a07] + 150 Right[a07,a05] <= 89.5
- e12[a07,a05]: Y[a05] - Y[a07] + 100 Above[a07,a05] <= 37.5
- e11[a07,a06]: X[a06] - X[a07] + 150 Right[a07,a06] <= 108.5
- e12[a07,a06]: Y[a06] - Y[a07] + 100 Above[a07,a06] <= 60.5
- e11[a07,a08]: - X[a07] + X[a08] + 150 Right[a07,a08] <= 112.5
- e12[a07,a08]: - Y[a07] + Y[a08] + 100 Above[a07,a08] <= 62.5
- e11[a07,a09]: - X[a07] + X[a09] + 150 Right[a07,a09] <= 77.5
- e12[a07,a09]: - Y[a07] + Y[a09] + 100 Above[a07,a09] <= 32.5
- e11[a07,a10]: - X[a07] + X[a10] + 150 Right[a07,a10] <= 82.5
- e12[a07,a10]: - Y[a07] + Y[a10] + 100 Above[a07,a10] <= 19.5
- e11[a07,a11]: - X[a07] + X[a11] + 150 Right[a07,a11] <= 99.5
- e12[a07,a11]: - Y[a07] + Y[a11] + 100 Above[a07,a11] <= 50.5
- e11[a07,a12]: - X[a07] + X[a12] + 150 Right[a07,a12] <= 93.5
- e12[a07,a12]: - Y[a07] + Y[a12] + 100 Above[a07,a12] <= 34.5
- e11[a07,a13]: - X[a07] + X[a13] + 150 Right[a07,a13] <= 92.5
- e12[a07,a13]: - Y[a07] + Y[a13] + 100 Above[a07,a13] <= 26.5
- e11[a07,a14]: - X[a07] + X[a14] + 150 Right[a07,a14] <= 76.5
- e12[a07,a14]: - Y[a07] + Y[a14] + 100 Above[a07,a14] <= 25.5
- e11[a07,a15]: - X[a07] + X[a15] + 150 Right[a07,a15] <= 67.5
- e12[a07,a15]: - Y[a07] + Y[a15] + 100 Above[a07,a15] <= 22.5
- e11[a07,a16]: - X[a07] + X[a16] + 150 Right[a07,a16] <= 117.5
- e12[a07,a16]: - Y[a07] + Y[a16] + 100 Above[a07,a16] <= 69.5
- e11[a07,a17]: - X[a07] + X[a17] + 150 Right[a07,a17] <= 77.5
- e12[a07,a17]: - Y[a07] + Y[a17] + 100 Above[a07,a17] <= 24.5
- e11[a07,a18]: - X[a07] + X[a18] + 150 Right[a07,a18] <= 106.5
- e12[a07,a18]: - Y[a07] + Y[a18] + 100 Above[a07,a18] <= 55.5
- e11[a07,a19]: - X[a07] + X[a19] + 150 Right[a07,a19] <= 121.5
- e12[a07,a19]: - Y[a07] + Y[a19] + 100 Above[a07,a19] <= 69.5
- e11[a07,a20]: - X[a07] + X[a20] + 150 Right[a07,a20] <= 124.5
- e12[a07,a20]: - Y[a07] + Y[a20] + 100 Above[a07,a20] <= 70.5
- e11[a07,a21]: - X[a07] + X[a21] + 150 Right[a07,a21] <= 99.5
- e12[a07,a21]: - Y[a07] + Y[a21] + 100 Above[a07,a21] <= 52.5
- e11[a07,a22]: - X[a07] + X[a22] + 150 Right[a07,a22] <= 87.5
- e12[a07,a22]: - Y[a07] + Y[a22] + 100 Above[a07,a22] <= 40.5
- e11[a07,a23]: - X[a07] + X[a23] + 150 Right[a07,a23] <= 100.5
- e12[a07,a23]: - Y[a07] + Y[a23] + 100 Above[a07,a23] <= 43.5
- e11[a07,a24]: - X[a07] + X[a24] + 150 Right[a07,a24] <= 82.5
- e12[a07,a24]: - Y[a07] + Y[a24] + 100 Above[a07,a24] <= 31.5
- e11[a07,a25]: - X[a07] + X[a25] + 150 Right[a07,a25] <= 116.5
- e12[a07,a25]: - Y[a07] + Y[a25] + 100 Above[a07,a25] <= 68.5
- e11[a07,a26]: - X[a07] + X[a26] + 150 Right[a07,a26] <= 114.5
- e12[a07,a26]: - Y[a07] + Y[a26] + 100 Above[a07,a26] <= 63.5
- e11[a07,a27]: - X[a07] + X[a27] + 150 Right[a07,a27] <= 74.5
- e12[a07,a27]: - Y[a07] + Y[a27] + 100 Above[a07,a27] <= 16.5
- e11[a07,a28]: - X[a07] + X[a28] + 150 Right[a07,a28] <= 118.5
- e12[a07,a28]: - Y[a07] + Y[a28] + 100 Above[a07,a28] <= 62.5
- e11[a08,a01]: X[a01] - X[a08] + 150 Right[a08,a01] <= 86.5
- e12[a08,a01]: Y[a01] - Y[a08] + 100 Above[a08,a01] <= 31.5
- e11[a08,a02]: X[a02] - X[a08] + 150 Right[a08,a02] <= 105.5
- e12[a08,a02]: Y[a02] - Y[a08] + 100 Above[a08,a02] <= 53.5
- e11[a08,a03]: X[a03] - X[a08] + 150 Right[a08,a03] <= 115.5
- e12[a08,a03]: Y[a03] - Y[a08] + 100 Above[a08,a03] <= 61.5
- e11[a08,a04]: X[a04] - X[a08] + 150 Right[a08,a04] <= 115.5
- e12[a08,a04]: Y[a04] - Y[a08] + 100 Above[a08,a04] <= 65.5
- e11[a08,a05]: X[a05] - X[a08] + 150 Right[a08,a05] <= 89.5
- e12[a08,a05]: Y[a05] - Y[a08] + 100 Above[a08,a05] <= 37.5
- e11[a08,a06]: X[a06] - X[a08] + 150 Right[a08,a06] <= 108.5
- e12[a08,a06]: Y[a06] - Y[a08] + 100 Above[a08,a06] <= 60.5
- e11[a08,a07]: X[a07] - X[a08] + 150 Right[a08,a07] <= 113.5
- e12[a08,a07]: Y[a07] - Y[a08] + 100 Above[a08,a07] <= 61.5
- e11[a08,a09]: - X[a08] + X[a09] + 150 Right[a08,a09] <= 77.5
- e12[a08,a09]: - Y[a08] + Y[a09] + 100 Above[a08,a09] <= 32.5
- e11[a08,a10]: - X[a08] + X[a10] + 150 Right[a08,a10] <= 82.5
- e12[a08,a10]: - Y[a08] + Y[a10] + 100 Above[a08,a10] <= 19.5
- e11[a08,a11]: - X[a08] + X[a11] + 150 Right[a08,a11] <= 99.5
- e12[a08,a11]: - Y[a08] + Y[a11] + 100 Above[a08,a11] <= 50.5
- e11[a08,a12]: - X[a08] + X[a12] + 150 Right[a08,a12] <= 93.5
- e12[a08,a12]: - Y[a08] + Y[a12] + 100 Above[a08,a12] <= 34.5
- e11[a08,a13]: - X[a08] + X[a13] + 150 Right[a08,a13] <= 92.5
- e12[a08,a13]: - Y[a08] + Y[a13] + 100 Above[a08,a13] <= 26.5
- e11[a08,a14]: - X[a08] + X[a14] + 150 Right[a08,a14] <= 76.5
- e12[a08,a14]: - Y[a08] + Y[a14] + 100 Above[a08,a14] <= 25.5
- e11[a08,a15]: - X[a08] + X[a15] + 150 Right[a08,a15] <= 67.5
- e12[a08,a15]: - Y[a08] + Y[a15] + 100 Above[a08,a15] <= 22.5
- e11[a08,a16]: - X[a08] + X[a16] + 150 Right[a08,a16] <= 117.5
- e12[a08,a16]: - Y[a08] + Y[a16] + 100 Above[a08,a16] <= 69.5
- e11[a08,a17]: - X[a08] + X[a17] + 150 Right[a08,a17] <= 77.5
- e12[a08,a17]: - Y[a08] + Y[a17] + 100 Above[a08,a17] <= 24.5
- e11[a08,a18]: - X[a08] + X[a18] + 150 Right[a08,a18] <= 106.5
- e12[a08,a18]: - Y[a08] + Y[a18] + 100 Above[a08,a18] <= 55.5
- e11[a08,a19]: - X[a08] + X[a19] + 150 Right[a08,a19] <= 121.5
- e12[a08,a19]: - Y[a08] + Y[a19] + 100 Above[a08,a19] <= 69.5
- e11[a08,a20]: - X[a08] + X[a20] + 150 Right[a08,a20] <= 124.5
- e12[a08,a20]: - Y[a08] + Y[a20] + 100 Above[a08,a20] <= 70.5
- e11[a08,a21]: - X[a08] + X[a21] + 150 Right[a08,a21] <= 99.5
- e12[a08,a21]: - Y[a08] + Y[a21] + 100 Above[a08,a21] <= 52.5
- e11[a08,a22]: - X[a08] + X[a22] + 150 Right[a08,a22] <= 87.5
- e12[a08,a22]: - Y[a08] + Y[a22] + 100 Above[a08,a22] <= 40.5
- e11[a08,a23]: - X[a08] + X[a23] + 150 Right[a08,a23] <= 100.5
- e12[a08,a23]: - Y[a08] + Y[a23] + 100 Above[a08,a23] <= 43.5
- e11[a08,a24]: - X[a08] + X[a24] + 150 Right[a08,a24] <= 82.5
- e12[a08,a24]: - Y[a08] + Y[a24] + 100 Above[a08,a24] <= 31.5
- e11[a08,a25]: - X[a08] + X[a25] + 150 Right[a08,a25] <= 116.5
- e12[a08,a25]: - Y[a08] + Y[a25] + 100 Above[a08,a25] <= 68.5
- e11[a08,a26]: - X[a08] + X[a26] + 150 Right[a08,a26] <= 114.5
- e12[a08,a26]: - Y[a08] + Y[a26] + 100 Above[a08,a26] <= 63.5
- e11[a08,a27]: - X[a08] + X[a27] + 150 Right[a08,a27] <= 74.5
- e12[a08,a27]: - Y[a08] + Y[a27] + 100 Above[a08,a27] <= 16.5
- e11[a08,a28]: - X[a08] + X[a28] + 150 Right[a08,a28] <= 118.5
- e12[a08,a28]: - Y[a08] + Y[a28] + 100 Above[a08,a28] <= 62.5
- e11[a09,a01]: X[a01] - X[a09] + 150 Right[a09,a01] <= 86.5
- e12[a09,a01]: Y[a01] - Y[a09] + 100 Above[a09,a01] <= 31.5
- e11[a09,a02]: X[a02] - X[a09] + 150 Right[a09,a02] <= 105.5
- e12[a09,a02]: Y[a02] - Y[a09] + 100 Above[a09,a02] <= 53.5
- e11[a09,a03]: X[a03] - X[a09] + 150 Right[a09,a03] <= 115.5
- e12[a09,a03]: Y[a03] - Y[a09] + 100 Above[a09,a03] <= 61.5
- e11[a09,a04]: X[a04] - X[a09] + 150 Right[a09,a04] <= 115.5
- e12[a09,a04]: Y[a04] - Y[a09] + 100 Above[a09,a04] <= 65.5
- e11[a09,a05]: X[a05] - X[a09] + 150 Right[a09,a05] <= 89.5
- e12[a09,a05]: Y[a05] - Y[a09] + 100 Above[a09,a05] <= 37.5
- e11[a09,a06]: X[a06] - X[a09] + 150 Right[a09,a06] <= 108.5
- e12[a09,a06]: Y[a06] - Y[a09] + 100 Above[a09,a06] <= 60.5
- e11[a09,a07]: X[a07] - X[a09] + 150 Right[a09,a07] <= 113.5
- e12[a09,a07]: Y[a07] - Y[a09] + 100 Above[a09,a07] <= 61.5
- e11[a09,a08]: X[a08] - X[a09] + 150 Right[a09,a08] <= 112.5
- e12[a09,a08]: Y[a08] - Y[a09] + 100 Above[a09,a08] <= 62.5
- e11[a09,a10]: - X[a09] + X[a10] + 150 Right[a09,a10] <= 82.5
- e12[a09,a10]: - Y[a09] + Y[a10] + 100 Above[a09,a10] <= 19.5
- e11[a09,a11]: - X[a09] + X[a11] + 150 Right[a09,a11] <= 99.5
- e12[a09,a11]: - Y[a09] + Y[a11] + 100 Above[a09,a11] <= 50.5
- e11[a09,a12]: - X[a09] + X[a12] + 150 Right[a09,a12] <= 93.5
- e12[a09,a12]: - Y[a09] + Y[a12] + 100 Above[a09,a12] <= 34.5
- e11[a09,a13]: - X[a09] + X[a13] + 150 Right[a09,a13] <= 92.5
- e12[a09,a13]: - Y[a09] + Y[a13] + 100 Above[a09,a13] <= 26.5
- e11[a09,a14]: - X[a09] + X[a14] + 150 Right[a09,a14] <= 76.5
- e12[a09,a14]: - Y[a09] + Y[a14] + 100 Above[a09,a14] <= 25.5
- e11[a09,a15]: - X[a09] + X[a15] + 150 Right[a09,a15] <= 67.5
- e12[a09,a15]: - Y[a09] + Y[a15] + 100 Above[a09,a15] <= 22.5
- e11[a09,a16]: - X[a09] + X[a16] + 150 Right[a09,a16] <= 117.5
- e12[a09,a16]: - Y[a09] + Y[a16] + 100 Above[a09,a16] <= 69.5
- e11[a09,a17]: - X[a09] + X[a17] + 150 Right[a09,a17] <= 77.5
- e12[a09,a17]: - Y[a09] + Y[a17] + 100 Above[a09,a17] <= 24.5
- e11[a09,a18]: - X[a09] + X[a18] + 150 Right[a09,a18] <= 106.5
- e12[a09,a18]: - Y[a09] + Y[a18] + 100 Above[a09,a18] <= 55.5
- e11[a09,a19]: - X[a09] + X[a19] + 150 Right[a09,a19] <= 121.5
- e12[a09,a19]: - Y[a09] + Y[a19] + 100 Above[a09,a19] <= 69.5
- e11[a09,a20]: - X[a09] + X[a20] + 150 Right[a09,a20] <= 124.5
- e12[a09,a20]: - Y[a09] + Y[a20] + 100 Above[a09,a20] <= 70.5
- e11[a09,a21]: - X[a09] + X[a21] + 150 Right[a09,a21] <= 99.5
- e12[a09,a21]: - Y[a09] + Y[a21] + 100 Above[a09,a21] <= 52.5
- e11[a09,a22]: - X[a09] + X[a22] + 150 Right[a09,a22] <= 87.5
- e12[a09,a22]: - Y[a09] + Y[a22] + 100 Above[a09,a22] <= 40.5
- e11[a09,a23]: - X[a09] + X[a23] + 150 Right[a09,a23] <= 100.5
- e12[a09,a23]: - Y[a09] + Y[a23] + 100 Above[a09,a23] <= 43.5
- e11[a09,a24]: - X[a09] + X[a24] + 150 Right[a09,a24] <= 82.5
- e12[a09,a24]: - Y[a09] + Y[a24] + 100 Above[a09,a24] <= 31.5
- e11[a09,a25]: - X[a09] + X[a25] + 150 Right[a09,a25] <= 116.5
- e12[a09,a25]: - Y[a09] + Y[a25] + 100 Above[a09,a25] <= 68.5
- e11[a09,a26]: - X[a09] + X[a26] + 150 Right[a09,a26] <= 114.5
- e12[a09,a26]: - Y[a09] + Y[a26] + 100 Above[a09,a26] <= 63.5
- e11[a09,a27]: - X[a09] + X[a27] + 150 Right[a09,a27] <= 74.5
- e12[a09,a27]: - Y[a09] + Y[a27] + 100 Above[a09,a27] <= 16.5
- e11[a09,a28]: - X[a09] + X[a28] + 150 Right[a09,a28] <= 118.5
- e12[a09,a28]: - Y[a09] + Y[a28] + 100 Above[a09,a28] <= 62.5
- e11[a10,a01]: X[a01] - X[a10] + 150 Right[a10,a01] <= 86.5
- e12[a10,a01]: Y[a01] - Y[a10] + 100 Above[a10,a01] <= 31.5
- e11[a10,a02]: X[a02] - X[a10] + 150 Right[a10,a02] <= 105.5
- e12[a10,a02]: Y[a02] - Y[a10] + 100 Above[a10,a02] <= 53.5
- e11[a10,a03]: X[a03] - X[a10] + 150 Right[a10,a03] <= 115.5
- e12[a10,a03]: Y[a03] - Y[a10] + 100 Above[a10,a03] <= 61.5
- e11[a10,a04]: X[a04] - X[a10] + 150 Right[a10,a04] <= 115.5
- e12[a10,a04]: Y[a04] - Y[a10] + 100 Above[a10,a04] <= 65.5
- e11[a10,a05]: X[a05] - X[a10] + 150 Right[a10,a05] <= 89.5
- e12[a10,a05]: Y[a05] - Y[a10] + 100 Above[a10,a05] <= 37.5
- e11[a10,a06]: X[a06] - X[a10] + 150 Right[a10,a06] <= 108.5
- e12[a10,a06]: Y[a06] - Y[a10] + 100 Above[a10,a06] <= 60.5
- e11[a10,a07]: X[a07] - X[a10] + 150 Right[a10,a07] <= 113.5
- e12[a10,a07]: Y[a07] - Y[a10] + 100 Above[a10,a07] <= 61.5
- e11[a10,a08]: X[a08] - X[a10] + 150 Right[a10,a08] <= 112.5
- e12[a10,a08]: Y[a08] - Y[a10] + 100 Above[a10,a08] <= 62.5
- e11[a10,a09]: X[a09] - X[a10] + 150 Right[a10,a09] <= 77.5
- e12[a10,a09]: Y[a09] - Y[a10] + 100 Above[a10,a09] <= 32.5
- e11[a10,a11]: - X[a10] + X[a11] + 150 Right[a10,a11] <= 99.5
- e12[a10,a11]: - Y[a10] + Y[a11] + 100 Above[a10,a11] <= 50.5
- e11[a10,a12]: - X[a10] + X[a12] + 150 Right[a10,a12] <= 93.5
- e12[a10,a12]: - Y[a10] + Y[a12] + 100 Above[a10,a12] <= 34.5
- e11[a10,a13]: - X[a10] + X[a13] + 150 Right[a10,a13] <= 92.5
- e12[a10,a13]: - Y[a10] + Y[a13] + 100 Above[a10,a13] <= 26.5
- e11[a10,a14]: - X[a10] + X[a14] + 150 Right[a10,a14] <= 76.5
- e12[a10,a14]: - Y[a10] + Y[a14] + 100 Above[a10,a14] <= 25.5
- e11[a10,a15]: - X[a10] + X[a15] + 150 Right[a10,a15] <= 67.5
- e12[a10,a15]: - Y[a10] + Y[a15] + 100 Above[a10,a15] <= 22.5
- e11[a10,a16]: - X[a10] + X[a16] + 150 Right[a10,a16] <= 117.5
- e12[a10,a16]: - Y[a10] + Y[a16] + 100 Above[a10,a16] <= 69.5
- e11[a10,a17]: - X[a10] + X[a17] + 150 Right[a10,a17] <= 77.5
- e12[a10,a17]: - Y[a10] + Y[a17] + 100 Above[a10,a17] <= 24.5
- e11[a10,a18]: - X[a10] + X[a18] + 150 Right[a10,a18] <= 106.5
- e12[a10,a18]: - Y[a10] + Y[a18] + 100 Above[a10,a18] <= 55.5
- e11[a10,a19]: - X[a10] + X[a19] + 150 Right[a10,a19] <= 121.5
- e12[a10,a19]: - Y[a10] + Y[a19] + 100 Above[a10,a19] <= 69.5
- e11[a10,a20]: - X[a10] + X[a20] + 150 Right[a10,a20] <= 124.5
- e12[a10,a20]: - Y[a10] + Y[a20] + 100 Above[a10,a20] <= 70.5
- e11[a10,a21]: - X[a10] + X[a21] + 150 Right[a10,a21] <= 99.5
- e12[a10,a21]: - Y[a10] + Y[a21] + 100 Above[a10,a21] <= 52.5
- e11[a10,a22]: - X[a10] + X[a22] + 150 Right[a10,a22] <= 87.5
- e12[a10,a22]: - Y[a10] + Y[a22] + 100 Above[a10,a22] <= 40.5
- e11[a10,a23]: - X[a10] + X[a23] + 150 Right[a10,a23] <= 100.5
- e12[a10,a23]: - Y[a10] + Y[a23] + 100 Above[a10,a23] <= 43.5
- e11[a10,a24]: - X[a10] + X[a24] + 150 Right[a10,a24] <= 82.5
- e12[a10,a24]: - Y[a10] + Y[a24] + 100 Above[a10,a24] <= 31.5
- e11[a10,a25]: - X[a10] + X[a25] + 150 Right[a10,a25] <= 116.5
- e12[a10,a25]: - Y[a10] + Y[a25] + 100 Above[a10,a25] <= 68.5
- e11[a10,a26]: - X[a10] + X[a26] + 150 Right[a10,a26] <= 114.5
- e12[a10,a26]: - Y[a10] + Y[a26] + 100 Above[a10,a26] <= 63.5
- e11[a10,a27]: - X[a10] + X[a27] + 150 Right[a10,a27] <= 74.5
- e12[a10,a27]: - Y[a10] + Y[a27] + 100 Above[a10,a27] <= 16.5
- e11[a10,a28]: - X[a10] + X[a28] + 150 Right[a10,a28] <= 118.5
- e12[a10,a28]: - Y[a10] + Y[a28] + 100 Above[a10,a28] <= 62.5
- e11[a11,a01]: X[a01] - X[a11] + 150 Right[a11,a01] <= 86.5
- e12[a11,a01]: Y[a01] - Y[a11] + 100 Above[a11,a01] <= 31.5
- e11[a11,a02]: X[a02] - X[a11] + 150 Right[a11,a02] <= 105.5
- e12[a11,a02]: Y[a02] - Y[a11] + 100 Above[a11,a02] <= 53.5
- e11[a11,a03]: X[a03] - X[a11] + 150 Right[a11,a03] <= 115.5
- e12[a11,a03]: Y[a03] - Y[a11] + 100 Above[a11,a03] <= 61.5
- e11[a11,a04]: X[a04] - X[a11] + 150 Right[a11,a04] <= 115.5
- e12[a11,a04]: Y[a04] - Y[a11] + 100 Above[a11,a04] <= 65.5
- e11[a11,a05]: X[a05] - X[a11] + 150 Right[a11,a05] <= 89.5
- e12[a11,a05]: Y[a05] - Y[a11] + 100 Above[a11,a05] <= 37.5
- e11[a11,a06]: X[a06] - X[a11] + 150 Right[a11,a06] <= 108.5
- e12[a11,a06]: Y[a06] - Y[a11] + 100 Above[a11,a06] <= 60.5
- e11[a11,a07]: X[a07] - X[a11] + 150 Right[a11,a07] <= 113.5
- e12[a11,a07]: Y[a07] - Y[a11] + 100 Above[a11,a07] <= 61.5
- e11[a11,a08]: X[a08] - X[a11] + 150 Right[a11,a08] <= 112.5
- e12[a11,a08]: Y[a08] - Y[a11] + 100 Above[a11,a08] <= 62.5
- e11[a11,a09]: X[a09] - X[a11] + 150 Right[a11,a09] <= 77.5
- e12[a11,a09]: Y[a09] - Y[a11] + 100 Above[a11,a09] <= 32.5
- e11[a11,a10]: X[a10] - X[a11] + 150 Right[a11,a10] <= 82.5
- e12[a11,a10]: Y[a10] - Y[a11] + 100 Above[a11,a10] <= 19.5
- e11[a11,a12]: - X[a11] + X[a12] + 150 Right[a11,a12] <= 93.5
- e12[a11,a12]: - Y[a11] + Y[a12] + 100 Above[a11,a12] <= 34.5
- e11[a11,a13]: - X[a11] + X[a13] + 150 Right[a11,a13] <= 92.5
- e12[a11,a13]: - Y[a11] + Y[a13] + 100 Above[a11,a13] <= 26.5
- e11[a11,a14]: - X[a11] + X[a14] + 150 Right[a11,a14] <= 76.5
- e12[a11,a14]: - Y[a11] + Y[a14] + 100 Above[a11,a14] <= 25.5
- e11[a11,a15]: - X[a11] + X[a15] + 150 Right[a11,a15] <= 67.5
- e12[a11,a15]: - Y[a11] + Y[a15] + 100 Above[a11,a15] <= 22.5
- e11[a11,a16]: - X[a11] + X[a16] + 150 Right[a11,a16] <= 117.5
- e12[a11,a16]: - Y[a11] + Y[a16] + 100 Above[a11,a16] <= 69.5
- e11[a11,a17]: - X[a11] + X[a17] + 150 Right[a11,a17] <= 77.5
- e12[a11,a17]: - Y[a11] + Y[a17] + 100 Above[a11,a17] <= 24.5
- e11[a11,a18]: - X[a11] + X[a18] + 150 Right[a11,a18] <= 106.5
- e12[a11,a18]: - Y[a11] + Y[a18] + 100 Above[a11,a18] <= 55.5
- e11[a11,a19]: - X[a11] + X[a19] + 150 Right[a11,a19] <= 121.5
- e12[a11,a19]: - Y[a11] + Y[a19] + 100 Above[a11,a19] <= 69.5
- e11[a11,a20]: - X[a11] + X[a20] + 150 Right[a11,a20] <= 124.5
- e12[a11,a20]: - Y[a11] + Y[a20] + 100 Above[a11,a20] <= 70.5
- e11[a11,a21]: - X[a11] + X[a21] + 150 Right[a11,a21] <= 99.5
- e12[a11,a21]: - Y[a11] + Y[a21] + 100 Above[a11,a21] <= 52.5
- e11[a11,a22]: - X[a11] + X[a22] + 150 Right[a11,a22] <= 87.5
- e12[a11,a22]: - Y[a11] + Y[a22] + 100 Above[a11,a22] <= 40.5
- e11[a11,a23]: - X[a11] + X[a23] + 150 Right[a11,a23] <= 100.5
- e12[a11,a23]: - Y[a11] + Y[a23] + 100 Above[a11,a23] <= 43.5
- e11[a11,a24]: - X[a11] + X[a24] + 150 Right[a11,a24] <= 82.5
- e12[a11,a24]: - Y[a11] + Y[a24] + 100 Above[a11,a24] <= 31.5
- e11[a11,a25]: - X[a11] + X[a25] + 150 Right[a11,a25] <= 116.5
- e12[a11,a25]: - Y[a11] + Y[a25] + 100 Above[a11,a25] <= 68.5
- e11[a11,a26]: - X[a11] + X[a26] + 150 Right[a11,a26] <= 114.5
- e12[a11,a26]: - Y[a11] + Y[a26] + 100 Above[a11,a26] <= 63.5
- e11[a11,a27]: - X[a11] + X[a27] + 150 Right[a11,a27] <= 74.5
- e12[a11,a27]: - Y[a11] + Y[a27] + 100 Above[a11,a27] <= 16.5
- e11[a11,a28]: - X[a11] + X[a28] + 150 Right[a11,a28] <= 118.5
- e12[a11,a28]: - Y[a11] + Y[a28] + 100 Above[a11,a28] <= 62.5
- e11[a12,a01]: X[a01] - X[a12] + 150 Right[a12,a01] <= 86.5
- e12[a12,a01]: Y[a01] - Y[a12] + 100 Above[a12,a01] <= 31.5
- e11[a12,a02]: X[a02] - X[a12] + 150 Right[a12,a02] <= 105.5
- e12[a12,a02]: Y[a02] - Y[a12] + 100 Above[a12,a02] <= 53.5
- e11[a12,a03]: X[a03] - X[a12] + 150 Right[a12,a03] <= 115.5
- e12[a12,a03]: Y[a03] - Y[a12] + 100 Above[a12,a03] <= 61.5
- e11[a12,a04]: X[a04] - X[a12] + 150 Right[a12,a04] <= 115.5
- e12[a12,a04]: Y[a04] - Y[a12] + 100 Above[a12,a04] <= 65.5
- e11[a12,a05]: X[a05] - X[a12] + 150 Right[a12,a05] <= 89.5
- e12[a12,a05]: Y[a05] - Y[a12] + 100 Above[a12,a05] <= 37.5
- e11[a12,a06]: X[a06] - X[a12] + 150 Right[a12,a06] <= 108.5
- e12[a12,a06]: Y[a06] - Y[a12] + 100 Above[a12,a06] <= 60.5
- e11[a12,a07]: X[a07] - X[a12] + 150 Right[a12,a07] <= 113.5
- e12[a12,a07]: Y[a07] - Y[a12] + 100 Above[a12,a07] <= 61.5
- e11[a12,a08]: X[a08] - X[a12] + 150 Right[a12,a08] <= 112.5
- e12[a12,a08]: Y[a08] - Y[a12] + 100 Above[a12,a08] <= 62.5
- e11[a12,a09]: X[a09] - X[a12] + 150 Right[a12,a09] <= 77.5
- e12[a12,a09]: Y[a09] - Y[a12] + 100 Above[a12,a09] <= 32.5
- e11[a12,a10]: X[a10] - X[a12] + 150 Right[a12,a10] <= 82.5
- e12[a12,a10]: Y[a10] - Y[a12] + 100 Above[a12,a10] <= 19.5
- e11[a12,a11]: X[a11] - X[a12] + 150 Right[a12,a11] <= 99.5
- e12[a12,a11]: Y[a11] - Y[a12] + 100 Above[a12,a11] <= 50.5
- e11[a12,a13]: - X[a12] + X[a13] + 150 Right[a12,a13] <= 92.5
- e12[a12,a13]: - Y[a12] + Y[a13] + 100 Above[a12,a13] <= 26.5
- e11[a12,a14]: - X[a12] + X[a14] + 150 Right[a12,a14] <= 76.5
- e12[a12,a14]: - Y[a12] + Y[a14] + 100 Above[a12,a14] <= 25.5
- e11[a12,a15]: - X[a12] + X[a15] + 150 Right[a12,a15] <= 67.5
- e12[a12,a15]: - Y[a12] + Y[a15] + 100 Above[a12,a15] <= 22.5
- e11[a12,a16]: - X[a12] + X[a16] + 150 Right[a12,a16] <= 117.5
- e12[a12,a16]: - Y[a12] + Y[a16] + 100 Above[a12,a16] <= 69.5
- e11[a12,a17]: - X[a12] + X[a17] + 150 Right[a12,a17] <= 77.5
- e12[a12,a17]: - Y[a12] + Y[a17] + 100 Above[a12,a17] <= 24.5
- e11[a12,a18]: - X[a12] + X[a18] + 150 Right[a12,a18] <= 106.5
- e12[a12,a18]: - Y[a12] + Y[a18] + 100 Above[a12,a18] <= 55.5
- e11[a12,a19]: - X[a12] + X[a19] + 150 Right[a12,a19] <= 121.5
- e12[a12,a19]: - Y[a12] + Y[a19] + 100 Above[a12,a19] <= 69.5
- e11[a12,a20]: - X[a12] + X[a20] + 150 Right[a12,a20] <= 124.5
- e12[a12,a20]: - Y[a12] + Y[a20] + 100 Above[a12,a20] <= 70.5
- e11[a12,a21]: - X[a12] + X[a21] + 150 Right[a12,a21] <= 99.5
- e12[a12,a21]: - Y[a12] + Y[a21] + 100 Above[a12,a21] <= 52.5
- e11[a12,a22]: - X[a12] + X[a22] + 150 Right[a12,a22] <= 87.5
- e12[a12,a22]: - Y[a12] + Y[a22] + 100 Above[a12,a22] <= 40.5
- e11[a12,a23]: - X[a12] + X[a23] + 150 Right[a12,a23] <= 100.5
- e12[a12,a23]: - Y[a12] + Y[a23] + 100 Above[a12,a23] <= 43.5
- e11[a12,a24]: - X[a12] + X[a24] + 150 Right[a12,a24] <= 82.5
- e12[a12,a24]: - Y[a12] + Y[a24] + 100 Above[a12,a24] <= 31.5
- e11[a12,a25]: - X[a12] + X[a25] + 150 Right[a12,a25] <= 116.5
- e12[a12,a25]: - Y[a12] + Y[a25] + 100 Above[a12,a25] <= 68.5
- e11[a12,a26]: - X[a12] + X[a26] + 150 Right[a12,a26] <= 114.5
- e12[a12,a26]: - Y[a12] + Y[a26] + 100 Above[a12,a26] <= 63.5
- e11[a12,a27]: - X[a12] + X[a27] + 150 Right[a12,a27] <= 74.5
- e12[a12,a27]: - Y[a12] + Y[a27] + 100 Above[a12,a27] <= 16.5
- e11[a12,a28]: - X[a12] + X[a28] + 150 Right[a12,a28] <= 118.5
- e12[a12,a28]: - Y[a12] + Y[a28] + 100 Above[a12,a28] <= 62.5
- e11[a13,a01]: X[a01] - X[a13] + 150 Right[a13,a01] <= 86.5
- e12[a13,a01]: Y[a01] - Y[a13] + 100 Above[a13,a01] <= 31.5
- e11[a13,a02]: X[a02] - X[a13] + 150 Right[a13,a02] <= 105.5
- e12[a13,a02]: Y[a02] - Y[a13] + 100 Above[a13,a02] <= 53.5
- e11[a13,a03]: X[a03] - X[a13] + 150 Right[a13,a03] <= 115.5
- e12[a13,a03]: Y[a03] - Y[a13] + 100 Above[a13,a03] <= 61.5
- e11[a13,a04]: X[a04] - X[a13] + 150 Right[a13,a04] <= 115.5
- e12[a13,a04]: Y[a04] - Y[a13] + 100 Above[a13,a04] <= 65.5
- e11[a13,a05]: X[a05] - X[a13] + 150 Right[a13,a05] <= 89.5
- e12[a13,a05]: Y[a05] - Y[a13] + 100 Above[a13,a05] <= 37.5
- e11[a13,a06]: X[a06] - X[a13] + 150 Right[a13,a06] <= 108.5
- e12[a13,a06]: Y[a06] - Y[a13] + 100 Above[a13,a06] <= 60.5
- e11[a13,a07]: X[a07] - X[a13] + 150 Right[a13,a07] <= 113.5
- e12[a13,a07]: Y[a07] - Y[a13] + 100 Above[a13,a07] <= 61.5
- e11[a13,a08]: X[a08] - X[a13] + 150 Right[a13,a08] <= 112.5
- e12[a13,a08]: Y[a08] - Y[a13] + 100 Above[a13,a08] <= 62.5
- e11[a13,a09]: X[a09] - X[a13] + 150 Right[a13,a09] <= 77.5
- e12[a13,a09]: Y[a09] - Y[a13] + 100 Above[a13,a09] <= 32.5
- e11[a13,a10]: X[a10] - X[a13] + 150 Right[a13,a10] <= 82.5
- e12[a13,a10]: Y[a10] - Y[a13] + 100 Above[a13,a10] <= 19.5
- e11[a13,a11]: X[a11] - X[a13] + 150 Right[a13,a11] <= 99.5
- e12[a13,a11]: Y[a11] - Y[a13] + 100 Above[a13,a11] <= 50.5
- e11[a13,a12]: X[a12] - X[a13] + 150 Right[a13,a12] <= 93.5
- e12[a13,a12]: Y[a12] - Y[a13] + 100 Above[a13,a12] <= 34.5
- e11[a13,a14]: - X[a13] + X[a14] + 150 Right[a13,a14] <= 76.5
- e12[a13,a14]: - Y[a13] + Y[a14] + 100 Above[a13,a14] <= 25.5
- e11[a13,a15]: - X[a13] + X[a15] + 150 Right[a13,a15] <= 67.5
- e12[a13,a15]: - Y[a13] + Y[a15] + 100 Above[a13,a15] <= 22.5
- e11[a13,a16]: - X[a13] + X[a16] + 150 Right[a13,a16] <= 117.5
- e12[a13,a16]: - Y[a13] + Y[a16] + 100 Above[a13,a16] <= 69.5
- e11[a13,a17]: - X[a13] + X[a17] + 150 Right[a13,a17] <= 77.5
- e12[a13,a17]: - Y[a13] + Y[a17] + 100 Above[a13,a17] <= 24.5
- e11[a13,a18]: - X[a13] + X[a18] + 150 Right[a13,a18] <= 106.5
- e12[a13,a18]: - Y[a13] + Y[a18] + 100 Above[a13,a18] <= 55.5
- e11[a13,a19]: - X[a13] + X[a19] + 150 Right[a13,a19] <= 121.5
- e12[a13,a19]: - Y[a13] + Y[a19] + 100 Above[a13,a19] <= 69.5
- e11[a13,a20]: - X[a13] + X[a20] + 150 Right[a13,a20] <= 124.5
- e12[a13,a20]: - Y[a13] + Y[a20] + 100 Above[a13,a20] <= 70.5
- e11[a13,a21]: - X[a13] + X[a21] + 150 Right[a13,a21] <= 99.5
- e12[a13,a21]: - Y[a13] + Y[a21] + 100 Above[a13,a21] <= 52.5
- e11[a13,a22]: - X[a13] + X[a22] + 150 Right[a13,a22] <= 87.5
- e12[a13,a22]: - Y[a13] + Y[a22] + 100 Above[a13,a22] <= 40.5
- e11[a13,a23]: - X[a13] + X[a23] + 150 Right[a13,a23] <= 100.5
- e12[a13,a23]: - Y[a13] + Y[a23] + 100 Above[a13,a23] <= 43.5
- e11[a13,a24]: - X[a13] + X[a24] + 150 Right[a13,a24] <= 82.5
- e12[a13,a24]: - Y[a13] + Y[a24] + 100 Above[a13,a24] <= 31.5
- e11[a13,a25]: - X[a13] + X[a25] + 150 Right[a13,a25] <= 116.5
- e12[a13,a25]: - Y[a13] + Y[a25] + 100 Above[a13,a25] <= 68.5
- e11[a13,a26]: - X[a13] + X[a26] + 150 Right[a13,a26] <= 114.5
- e12[a13,a26]: - Y[a13] + Y[a26] + 100 Above[a13,a26] <= 63.5
- e11[a13,a27]: - X[a13] + X[a27] + 150 Right[a13,a27] <= 74.5
- e12[a13,a27]: - Y[a13] + Y[a27] + 100 Above[a13,a27] <= 16.5
- e11[a13,a28]: - X[a13] + X[a28] + 150 Right[a13,a28] <= 118.5
- e12[a13,a28]: - Y[a13] + Y[a28] + 100 Above[a13,a28] <= 62.5
- e11[a14,a01]: X[a01] - X[a14] + 150 Right[a14,a01] <= 86.5
- e12[a14,a01]: Y[a01] - Y[a14] + 100 Above[a14,a01] <= 31.5
- e11[a14,a02]: X[a02] - X[a14] + 150 Right[a14,a02] <= 105.5
- e12[a14,a02]: Y[a02] - Y[a14] + 100 Above[a14,a02] <= 53.5
- e11[a14,a03]: X[a03] - X[a14] + 150 Right[a14,a03] <= 115.5
- e12[a14,a03]: Y[a03] - Y[a14] + 100 Above[a14,a03] <= 61.5
- e11[a14,a04]: X[a04] - X[a14] + 150 Right[a14,a04] <= 115.5
- e12[a14,a04]: Y[a04] - Y[a14] + 100 Above[a14,a04] <= 65.5
- e11[a14,a05]: X[a05] - X[a14] + 150 Right[a14,a05] <= 89.5
- e12[a14,a05]: Y[a05] - Y[a14] + 100 Above[a14,a05] <= 37.5
- e11[a14,a06]: X[a06] - X[a14] + 150 Right[a14,a06] <= 108.5
- e12[a14,a06]: Y[a06] - Y[a14] + 100 Above[a14,a06] <= 60.5
- e11[a14,a07]: X[a07] - X[a14] + 150 Right[a14,a07] <= 113.5
- e12[a14,a07]: Y[a07] - Y[a14] + 100 Above[a14,a07] <= 61.5
- e11[a14,a08]: X[a08] - X[a14] + 150 Right[a14,a08] <= 112.5
- e12[a14,a08]: Y[a08] - Y[a14] + 100 Above[a14,a08] <= 62.5
- e11[a14,a09]: X[a09] - X[a14] + 150 Right[a14,a09] <= 77.5
- e12[a14,a09]: Y[a09] - Y[a14] + 100 Above[a14,a09] <= 32.5
- e11[a14,a10]: X[a10] - X[a14] + 150 Right[a14,a10] <= 82.5
- e12[a14,a10]: Y[a10] - Y[a14] + 100 Above[a14,a10] <= 19.5
- e11[a14,a11]: X[a11] - X[a14] + 150 Right[a14,a11] <= 99.5
- e12[a14,a11]: Y[a11] - Y[a14] + 100 Above[a14,a11] <= 50.5
- e11[a14,a12]: X[a12] - X[a14] + 150 Right[a14,a12] <= 93.5
- e12[a14,a12]: Y[a12] - Y[a14] + 100 Above[a14,a12] <= 34.5
- e11[a14,a13]: X[a13] - X[a14] + 150 Right[a14,a13] <= 92.5
- e12[a14,a13]: Y[a13] - Y[a14] + 100 Above[a14,a13] <= 26.5
- e11[a14,a15]: - X[a14] + X[a15] + 150 Right[a14,a15] <= 67.5
- e12[a14,a15]: - Y[a14] + Y[a15] + 100 Above[a14,a15] <= 22.5
- e11[a14,a16]: - X[a14] + X[a16] + 150 Right[a14,a16] <= 117.5
- e12[a14,a16]: - Y[a14] + Y[a16] + 100 Above[a14,a16] <= 69.5
- e11[a14,a17]: - X[a14] + X[a17] + 150 Right[a14,a17] <= 77.5
- e12[a14,a17]: - Y[a14] + Y[a17] + 100 Above[a14,a17] <= 24.5
- e11[a14,a18]: - X[a14] + X[a18] + 150 Right[a14,a18] <= 106.5
- e12[a14,a18]: - Y[a14] + Y[a18] + 100 Above[a14,a18] <= 55.5
- e11[a14,a19]: - X[a14] + X[a19] + 150 Right[a14,a19] <= 121.5
- e12[a14,a19]: - Y[a14] + Y[a19] + 100 Above[a14,a19] <= 69.5
- e11[a14,a20]: - X[a14] + X[a20] + 150 Right[a14,a20] <= 124.5
- e12[a14,a20]: - Y[a14] + Y[a20] + 100 Above[a14,a20] <= 70.5
- e11[a14,a21]: - X[a14] + X[a21] + 150 Right[a14,a21] <= 99.5
- e12[a14,a21]: - Y[a14] + Y[a21] + 100 Above[a14,a21] <= 52.5
- e11[a14,a22]: - X[a14] + X[a22] + 150 Right[a14,a22] <= 87.5
- e12[a14,a22]: - Y[a14] + Y[a22] + 100 Above[a14,a22] <= 40.5
- e11[a14,a23]: - X[a14] + X[a23] + 150 Right[a14,a23] <= 100.5
- e12[a14,a23]: - Y[a14] + Y[a23] + 100 Above[a14,a23] <= 43.5
- e11[a14,a24]: - X[a14] + X[a24] + 150 Right[a14,a24] <= 82.5
- e12[a14,a24]: - Y[a14] + Y[a24] + 100 Above[a14,a24] <= 31.5
- e11[a14,a25]: - X[a14] + X[a25] + 150 Right[a14,a25] <= 116.5
- e12[a14,a25]: - Y[a14] + Y[a25] + 100 Above[a14,a25] <= 68.5
- e11[a14,a26]: - X[a14] + X[a26] + 150 Right[a14,a26] <= 114.5
- e12[a14,a26]: - Y[a14] + Y[a26] + 100 Above[a14,a26] <= 63.5
- e11[a14,a27]: - X[a14] + X[a27] + 150 Right[a14,a27] <= 74.5
- e12[a14,a27]: - Y[a14] + Y[a27] + 100 Above[a14,a27] <= 16.5
- e11[a14,a28]: - X[a14] + X[a28] + 150 Right[a14,a28] <= 118.5
- e12[a14,a28]: - Y[a14] + Y[a28] + 100 Above[a14,a28] <= 62.5
- e11[a15,a01]: X[a01] - X[a15] + 150 Right[a15,a01] <= 86.5
- e12[a15,a01]: Y[a01] - Y[a15] + 100 Above[a15,a01] <= 31.5
- e11[a15,a02]: X[a02] - X[a15] + 150 Right[a15,a02] <= 105.5
- e12[a15,a02]: Y[a02] - Y[a15] + 100 Above[a15,a02] <= 53.5
- e11[a15,a03]: X[a03] - X[a15] + 150 Right[a15,a03] <= 115.5
- e12[a15,a03]: Y[a03] - Y[a15] + 100 Above[a15,a03] <= 61.5
- e11[a15,a04]: X[a04] - X[a15] + 150 Right[a15,a04] <= 115.5
- e12[a15,a04]: Y[a04] - Y[a15] + 100 Above[a15,a04] <= 65.5
- e11[a15,a05]: X[a05] - X[a15] + 150 Right[a15,a05] <= 89.5
- e12[a15,a05]: Y[a05] - Y[a15] + 100 Above[a15,a05] <= 37.5
- e11[a15,a06]: X[a06] - X[a15] + 150 Right[a15,a06] <= 108.5
- e12[a15,a06]: Y[a06] - Y[a15] + 100 Above[a15,a06] <= 60.5
- e11[a15,a07]: X[a07] - X[a15] + 150 Right[a15,a07] <= 113.5
- e12[a15,a07]: Y[a07] - Y[a15] + 100 Above[a15,a07] <= 61.5
- e11[a15,a08]: X[a08] - X[a15] + 150 Right[a15,a08] <= 112.5
- e12[a15,a08]: Y[a08] - Y[a15] + 100 Above[a15,a08] <= 62.5
- e11[a15,a09]: X[a09] - X[a15] + 150 Right[a15,a09] <= 77.5
- e12[a15,a09]: Y[a09] - Y[a15] + 100 Above[a15,a09] <= 32.5
- e11[a15,a10]: X[a10] - X[a15] + 150 Right[a15,a10] <= 82.5
- e12[a15,a10]: Y[a10] - Y[a15] + 100 Above[a15,a10] <= 19.5
- e11[a15,a11]: X[a11] - X[a15] + 150 Right[a15,a11] <= 99.5
- e12[a15,a11]: Y[a11] - Y[a15] + 100 Above[a15,a11] <= 50.5
- e11[a15,a12]: X[a12] - X[a15] + 150 Right[a15,a12] <= 93.5
- e12[a15,a12]: Y[a12] - Y[a15] + 100 Above[a15,a12] <= 34.5
- e11[a15,a13]: X[a13] - X[a15] + 150 Right[a15,a13] <= 92.5
- e12[a15,a13]: Y[a13] - Y[a15] + 100 Above[a15,a13] <= 26.5
- e11[a15,a14]: X[a14] - X[a15] + 150 Right[a15,a14] <= 76.5
- e12[a15,a14]: Y[a14] - Y[a15] + 100 Above[a15,a14] <= 25.5
- e11[a15,a16]: - X[a15] + X[a16] + 150 Right[a15,a16] <= 117.5
- e12[a15,a16]: - Y[a15] + Y[a16] + 100 Above[a15,a16] <= 69.5
- e11[a15,a17]: - X[a15] + X[a17] + 150 Right[a15,a17] <= 77.5
- e12[a15,a17]: - Y[a15] + Y[a17] + 100 Above[a15,a17] <= 24.5
- e11[a15,a18]: - X[a15] + X[a18] + 150 Right[a15,a18] <= 106.5
- e12[a15,a18]: - Y[a15] + Y[a18] + 100 Above[a15,a18] <= 55.5
- e11[a15,a19]: - X[a15] + X[a19] + 150 Right[a15,a19] <= 121.5
- e12[a15,a19]: - Y[a15] + Y[a19] + 100 Above[a15,a19] <= 69.5
- e11[a15,a20]: - X[a15] + X[a20] + 150 Right[a15,a20] <= 124.5
- e12[a15,a20]: - Y[a15] + Y[a20] + 100 Above[a15,a20] <= 70.5
- e11[a15,a21]: - X[a15] + X[a21] + 150 Right[a15,a21] <= 99.5
- e12[a15,a21]: - Y[a15] + Y[a21] + 100 Above[a15,a21] <= 52.5
- e11[a15,a22]: - X[a15] + X[a22] + 150 Right[a15,a22] <= 87.5
- e12[a15,a22]: - Y[a15] + Y[a22] + 100 Above[a15,a22] <= 40.5
- e11[a15,a23]: - X[a15] + X[a23] + 150 Right[a15,a23] <= 100.5
- e12[a15,a23]: - Y[a15] + Y[a23] + 100 Above[a15,a23] <= 43.5
- e11[a15,a24]: - X[a15] + X[a24] + 150 Right[a15,a24] <= 82.5
- e12[a15,a24]: - Y[a15] + Y[a24] + 100 Above[a15,a24] <= 31.5
- e11[a15,a25]: - X[a15] + X[a25] + 150 Right[a15,a25] <= 116.5
- e12[a15,a25]: - Y[a15] + Y[a25] + 100 Above[a15,a25] <= 68.5
- e11[a15,a26]: - X[a15] + X[a26] + 150 Right[a15,a26] <= 114.5
- e12[a15,a26]: - Y[a15] + Y[a26] + 100 Above[a15,a26] <= 63.5
- e11[a15,a27]: - X[a15] + X[a27] + 150 Right[a15,a27] <= 74.5
- e12[a15,a27]: - Y[a15] + Y[a27] + 100 Above[a15,a27] <= 16.5
- e11[a15,a28]: - X[a15] + X[a28] + 150 Right[a15,a28] <= 118.5
- e12[a15,a28]: - Y[a15] + Y[a28] + 100 Above[a15,a28] <= 62.5
- e11[a16,a01]: X[a01] - X[a16] + 150 Right[a16,a01] <= 86.5
- e12[a16,a01]: Y[a01] - Y[a16] + 100 Above[a16,a01] <= 31.5
- e11[a16,a02]: X[a02] - X[a16] + 150 Right[a16,a02] <= 105.5
- e12[a16,a02]: Y[a02] - Y[a16] + 100 Above[a16,a02] <= 53.5
- e11[a16,a03]: X[a03] - X[a16] + 150 Right[a16,a03] <= 115.5
- e12[a16,a03]: Y[a03] - Y[a16] + 100 Above[a16,a03] <= 61.5
- e11[a16,a04]: X[a04] - X[a16] + 150 Right[a16,a04] <= 115.5
- e12[a16,a04]: Y[a04] - Y[a16] + 100 Above[a16,a04] <= 65.5
- e11[a16,a05]: X[a05] - X[a16] + 150 Right[a16,a05] <= 89.5
- e12[a16,a05]: Y[a05] - Y[a16] + 100 Above[a16,a05] <= 37.5
- e11[a16,a06]: X[a06] - X[a16] + 150 Right[a16,a06] <= 108.5
- e12[a16,a06]: Y[a06] - Y[a16] + 100 Above[a16,a06] <= 60.5
- e11[a16,a07]: X[a07] - X[a16] + 150 Right[a16,a07] <= 113.5
- e12[a16,a07]: Y[a07] - Y[a16] + 100 Above[a16,a07] <= 61.5
- e11[a16,a08]: X[a08] - X[a16] + 150 Right[a16,a08] <= 112.5
- e12[a16,a08]: Y[a08] - Y[a16] + 100 Above[a16,a08] <= 62.5
- e11[a16,a09]: X[a09] - X[a16] + 150 Right[a16,a09] <= 77.5
- e12[a16,a09]: Y[a09] - Y[a16] + 100 Above[a16,a09] <= 32.5
- e11[a16,a10]: X[a10] - X[a16] + 150 Right[a16,a10] <= 82.5
- e12[a16,a10]: Y[a10] - Y[a16] + 100 Above[a16,a10] <= 19.5
- e11[a16,a11]: X[a11] - X[a16] + 150 Right[a16,a11] <= 99.5
- e12[a16,a11]: Y[a11] - Y[a16] + 100 Above[a16,a11] <= 50.5
- e11[a16,a12]: X[a12] - X[a16] + 150 Right[a16,a12] <= 93.5
- e12[a16,a12]: Y[a12] - Y[a16] + 100 Above[a16,a12] <= 34.5
- e11[a16,a13]: X[a13] - X[a16] + 150 Right[a16,a13] <= 92.5
- e12[a16,a13]: Y[a13] - Y[a16] + 100 Above[a16,a13] <= 26.5
- e11[a16,a14]: X[a14] - X[a16] + 150 Right[a16,a14] <= 76.5
- e12[a16,a14]: Y[a14] - Y[a16] + 100 Above[a16,a14] <= 25.5
- e11[a16,a15]: X[a15] - X[a16] + 150 Right[a16,a15] <= 67.5
- e12[a16,a15]: Y[a15] - Y[a16] + 100 Above[a16,a15] <= 22.5
- e11[a16,a17]: - X[a16] + X[a17] + 150 Right[a16,a17] <= 77.5
- e12[a16,a17]: - Y[a16] + Y[a17] + 100 Above[a16,a17] <= 24.5
- e11[a16,a18]: - X[a16] + X[a18] + 150 Right[a16,a18] <= 106.5
- e12[a16,a18]: - Y[a16] + Y[a18] + 100 Above[a16,a18] <= 55.5
- e11[a16,a19]: - X[a16] + X[a19] + 150 Right[a16,a19] <= 121.5
- e12[a16,a19]: - Y[a16] + Y[a19] + 100 Above[a16,a19] <= 69.5
- e11[a16,a20]: - X[a16] + X[a20] + 150 Right[a16,a20] <= 124.5
- e12[a16,a20]: - Y[a16] + Y[a20] + 100 Above[a16,a20] <= 70.5
- e11[a16,a21]: - X[a16] + X[a21] + 150 Right[a16,a21] <= 99.5
- e12[a16,a21]: - Y[a16] + Y[a21] + 100 Above[a16,a21] <= 52.5
- e11[a16,a22]: - X[a16] + X[a22] + 150 Right[a16,a22] <= 87.5
- e12[a16,a22]: - Y[a16] + Y[a22] + 100 Above[a16,a22] <= 40.5
- e11[a16,a23]: - X[a16] + X[a23] + 150 Right[a16,a23] <= 100.5
- e12[a16,a23]: - Y[a16] + Y[a23] + 100 Above[a16,a23] <= 43.5
- e11[a16,a24]: - X[a16] + X[a24] + 150 Right[a16,a24] <= 82.5
- e12[a16,a24]: - Y[a16] + Y[a24] + 100 Above[a16,a24] <= 31.5
- e11[a16,a25]: - X[a16] + X[a25] + 150 Right[a16,a25] <= 116.5
- e12[a16,a25]: - Y[a16] + Y[a25] + 100 Above[a16,a25] <= 68.5
- e11[a16,a26]: - X[a16] + X[a26] + 150 Right[a16,a26] <= 114.5
- e12[a16,a26]: - Y[a16] + Y[a26] + 100 Above[a16,a26] <= 63.5
- e11[a16,a27]: - X[a16] + X[a27] + 150 Right[a16,a27] <= 74.5
- e12[a16,a27]: - Y[a16] + Y[a27] + 100 Above[a16,a27] <= 16.5
- e11[a16,a28]: - X[a16] + X[a28] + 150 Right[a16,a28] <= 118.5
- e12[a16,a28]: - Y[a16] + Y[a28] + 100 Above[a16,a28] <= 62.5
- e11[a17,a01]: X[a01] - X[a17] + 150 Right[a17,a01] <= 86.5
- e12[a17,a01]: Y[a01] - Y[a17] + 100 Above[a17,a01] <= 31.5
- e11[a17,a02]: X[a02] - X[a17] + 150 Right[a17,a02] <= 105.5
- e12[a17,a02]: Y[a02] - Y[a17] + 100 Above[a17,a02] <= 53.5
- e11[a17,a03]: X[a03] - X[a17] + 150 Right[a17,a03] <= 115.5
- e12[a17,a03]: Y[a03] - Y[a17] + 100 Above[a17,a03] <= 61.5
- e11[a17,a04]: X[a04] - X[a17] + 150 Right[a17,a04] <= 115.5
- e12[a17,a04]: Y[a04] - Y[a17] + 100 Above[a17,a04] <= 65.5
- e11[a17,a05]: X[a05] - X[a17] + 150 Right[a17,a05] <= 89.5
- e12[a17,a05]: Y[a05] - Y[a17] + 100 Above[a17,a05] <= 37.5
- e11[a17,a06]: X[a06] - X[a17] + 150 Right[a17,a06] <= 108.5
- e12[a17,a06]: Y[a06] - Y[a17] + 100 Above[a17,a06] <= 60.5
- e11[a17,a07]: X[a07] - X[a17] + 150 Right[a17,a07] <= 113.5
- e12[a17,a07]: Y[a07] - Y[a17] + 100 Above[a17,a07] <= 61.5
- e11[a17,a08]: X[a08] - X[a17] + 150 Right[a17,a08] <= 112.5
- e12[a17,a08]: Y[a08] - Y[a17] + 100 Above[a17,a08] <= 62.5
- e11[a17,a09]: X[a09] - X[a17] + 150 Right[a17,a09] <= 77.5
- e12[a17,a09]: Y[a09] - Y[a17] + 100 Above[a17,a09] <= 32.5
- e11[a17,a10]: X[a10] - X[a17] + 150 Right[a17,a10] <= 82.5
- e12[a17,a10]: Y[a10] - Y[a17] + 100 Above[a17,a10] <= 19.5
- e11[a17,a11]: X[a11] - X[a17] + 150 Right[a17,a11] <= 99.5
- e12[a17,a11]: Y[a11] - Y[a17] + 100 Above[a17,a11] <= 50.5
- e11[a17,a12]: X[a12] - X[a17] + 150 Right[a17,a12] <= 93.5
- e12[a17,a12]: Y[a12] - Y[a17] + 100 Above[a17,a12] <= 34.5
- e11[a17,a13]: X[a13] - X[a17] + 150 Right[a17,a13] <= 92.5
- e12[a17,a13]: Y[a13] - Y[a17] + 100 Above[a17,a13] <= 26.5
- e11[a17,a14]: X[a14] - X[a17] + 150 Right[a17,a14] <= 76.5
- e12[a17,a14]: Y[a14] - Y[a17] + 100 Above[a17,a14] <= 25.5
- e11[a17,a15]: X[a15] - X[a17] + 150 Right[a17,a15] <= 67.5
- e12[a17,a15]: Y[a15] - Y[a17] + 100 Above[a17,a15] <= 22.5
- e11[a17,a16]: X[a16] - X[a17] + 150 Right[a17,a16] <= 117.5
- e12[a17,a16]: Y[a16] - Y[a17] + 100 Above[a17,a16] <= 69.5
- e11[a17,a18]: - X[a17] + X[a18] + 150 Right[a17,a18] <= 106.5
- e12[a17,a18]: - Y[a17] + Y[a18] + 100 Above[a17,a18] <= 55.5
- e11[a17,a19]: - X[a17] + X[a19] + 150 Right[a17,a19] <= 121.5
- e12[a17,a19]: - Y[a17] + Y[a19] + 100 Above[a17,a19] <= 69.5
- e11[a17,a20]: - X[a17] + X[a20] + 150 Right[a17,a20] <= 124.5
- e12[a17,a20]: - Y[a17] + Y[a20] + 100 Above[a17,a20] <= 70.5
- e11[a17,a21]: - X[a17] + X[a21] + 150 Right[a17,a21] <= 99.5
- e12[a17,a21]: - Y[a17] + Y[a21] + 100 Above[a17,a21] <= 52.5
- e11[a17,a22]: - X[a17] + X[a22] + 150 Right[a17,a22] <= 87.5
- e12[a17,a22]: - Y[a17] + Y[a22] + 100 Above[a17,a22] <= 40.5
- e11[a17,a23]: - X[a17] + X[a23] + 150 Right[a17,a23] <= 100.5
- e12[a17,a23]: - Y[a17] + Y[a23] + 100 Above[a17,a23] <= 43.5
- e11[a17,a24]: - X[a17] + X[a24] + 150 Right[a17,a24] <= 82.5
- e12[a17,a24]: - Y[a17] + Y[a24] + 100 Above[a17,a24] <= 31.5
- e11[a17,a25]: - X[a17] + X[a25] + 150 Right[a17,a25] <= 116.5
- e12[a17,a25]: - Y[a17] + Y[a25] + 100 Above[a17,a25] <= 68.5
- e11[a17,a26]: - X[a17] + X[a26] + 150 Right[a17,a26] <= 114.5
- e12[a17,a26]: - Y[a17] + Y[a26] + 100 Above[a17,a26] <= 63.5
- e11[a17,a27]: - X[a17] + X[a27] + 150 Right[a17,a27] <= 74.5
- e12[a17,a27]: - Y[a17] + Y[a27] + 100 Above[a17,a27] <= 16.5
- e11[a17,a28]: - X[a17] + X[a28] + 150 Right[a17,a28] <= 118.5
- e12[a17,a28]: - Y[a17] + Y[a28] + 100 Above[a17,a28] <= 62.5
- e11[a18,a01]: X[a01] - X[a18] + 150 Right[a18,a01] <= 86.5
- e12[a18,a01]: Y[a01] - Y[a18] + 100 Above[a18,a01] <= 31.5
- e11[a18,a02]: X[a02] - X[a18] + 150 Right[a18,a02] <= 105.5
- e12[a18,a02]: Y[a02] - Y[a18] + 100 Above[a18,a02] <= 53.5
- e11[a18,a03]: X[a03] - X[a18] + 150 Right[a18,a03] <= 115.5
- e12[a18,a03]: Y[a03] - Y[a18] + 100 Above[a18,a03] <= 61.5
- e11[a18,a04]: X[a04] - X[a18] + 150 Right[a18,a04] <= 115.5
- e12[a18,a04]: Y[a04] - Y[a18] + 100 Above[a18,a04] <= 65.5
- e11[a18,a05]: X[a05] - X[a18] + 150 Right[a18,a05] <= 89.5
- e12[a18,a05]: Y[a05] - Y[a18] + 100 Above[a18,a05] <= 37.5
- e11[a18,a06]: X[a06] - X[a18] + 150 Right[a18,a06] <= 108.5
- e12[a18,a06]: Y[a06] - Y[a18] + 100 Above[a18,a06] <= 60.5
- e11[a18,a07]: X[a07] - X[a18] + 150 Right[a18,a07] <= 113.5
- e12[a18,a07]: Y[a07] - Y[a18] + 100 Above[a18,a07] <= 61.5
- e11[a18,a08]: X[a08] - X[a18] + 150 Right[a18,a08] <= 112.5
- e12[a18,a08]: Y[a08] - Y[a18] + 100 Above[a18,a08] <= 62.5
- e11[a18,a09]: X[a09] - X[a18] + 150 Right[a18,a09] <= 77.5
- e12[a18,a09]: Y[a09] - Y[a18] + 100 Above[a18,a09] <= 32.5
- e11[a18,a10]: X[a10] - X[a18] + 150 Right[a18,a10] <= 82.5
- e12[a18,a10]: Y[a10] - Y[a18] + 100 Above[a18,a10] <= 19.5
- e11[a18,a11]: X[a11] - X[a18] + 150 Right[a18,a11] <= 99.5
- e12[a18,a11]: Y[a11] - Y[a18] + 100 Above[a18,a11] <= 50.5
- e11[a18,a12]: X[a12] - X[a18] + 150 Right[a18,a12] <= 93.5
- e12[a18,a12]: Y[a12] - Y[a18] + 100 Above[a18,a12] <= 34.5
- e11[a18,a13]: X[a13] - X[a18] + 150 Right[a18,a13] <= 92.5
- e12[a18,a13]: Y[a13] - Y[a18] + 100 Above[a18,a13] <= 26.5
- e11[a18,a14]: X[a14] - X[a18] + 150 Right[a18,a14] <= 76.5
- e12[a18,a14]: Y[a14] - Y[a18] + 100 Above[a18,a14] <= 25.5
- e11[a18,a15]: X[a15] - X[a18] + 150 Right[a18,a15] <= 67.5
- e12[a18,a15]: Y[a15] - Y[a18] + 100 Above[a18,a15] <= 22.5
- e11[a18,a16]: X[a16] - X[a18] + 150 Right[a18,a16] <= 117.5
- e12[a18,a16]: Y[a16] - Y[a18] + 100 Above[a18,a16] <= 69.5
- e11[a18,a17]: X[a17] - X[a18] + 150 Right[a18,a17] <= 77.5
- e12[a18,a17]: Y[a17] - Y[a18] + 100 Above[a18,a17] <= 24.5
- e11[a18,a19]: - X[a18] + X[a19] + 150 Right[a18,a19] <= 121.5
- e12[a18,a19]: - Y[a18] + Y[a19] + 100 Above[a18,a19] <= 69.5
- e11[a18,a20]: - X[a18] + X[a20] + 150 Right[a18,a20] <= 124.5
- e12[a18,a20]: - Y[a18] + Y[a20] + 100 Above[a18,a20] <= 70.5
- e11[a18,a21]: - X[a18] + X[a21] + 150 Right[a18,a21] <= 99.5
- e12[a18,a21]: - Y[a18] + Y[a21] + 100 Above[a18,a21] <= 52.5
- e11[a18,a22]: - X[a18] + X[a22] + 150 Right[a18,a22] <= 87.5
- e12[a18,a22]: - Y[a18] + Y[a22] + 100 Above[a18,a22] <= 40.5
- e11[a18,a23]: - X[a18] + X[a23] + 150 Right[a18,a23] <= 100.5
- e12[a18,a23]: - Y[a18] + Y[a23] + 100 Above[a18,a23] <= 43.5
- e11[a18,a24]: - X[a18] + X[a24] + 150 Right[a18,a24] <= 82.5
- e12[a18,a24]: - Y[a18] + Y[a24] + 100 Above[a18,a24] <= 31.5
- e11[a18,a25]: - X[a18] + X[a25] + 150 Right[a18,a25] <= 116.5
- e12[a18,a25]: - Y[a18] + Y[a25] + 100 Above[a18,a25] <= 68.5
- e11[a18,a26]: - X[a18] + X[a26] + 150 Right[a18,a26] <= 114.5
- e12[a18,a26]: - Y[a18] + Y[a26] + 100 Above[a18,a26] <= 63.5
- e11[a18,a27]: - X[a18] + X[a27] + 150 Right[a18,a27] <= 74.5
- e12[a18,a27]: - Y[a18] + Y[a27] + 100 Above[a18,a27] <= 16.5
- e11[a18,a28]: - X[a18] + X[a28] + 150 Right[a18,a28] <= 118.5
- e12[a18,a28]: - Y[a18] + Y[a28] + 100 Above[a18,a28] <= 62.5
- e11[a19,a01]: X[a01] - X[a19] + 150 Right[a19,a01] <= 86.5
- e12[a19,a01]: Y[a01] - Y[a19] + 100 Above[a19,a01] <= 31.5
- e11[a19,a02]: X[a02] - X[a19] + 150 Right[a19,a02] <= 105.5
- e12[a19,a02]: Y[a02] - Y[a19] + 100 Above[a19,a02] <= 53.5
- e11[a19,a03]: X[a03] - X[a19] + 150 Right[a19,a03] <= 115.5
- e12[a19,a03]: Y[a03] - Y[a19] + 100 Above[a19,a03] <= 61.5
- e11[a19,a04]: X[a04] - X[a19] + 150 Right[a19,a04] <= 115.5
- e12[a19,a04]: Y[a04] - Y[a19] + 100 Above[a19,a04] <= 65.5
- e11[a19,a05]: X[a05] - X[a19] + 150 Right[a19,a05] <= 89.5
- e12[a19,a05]: Y[a05] - Y[a19] + 100 Above[a19,a05] <= 37.5
- e11[a19,a06]: X[a06] - X[a19] + 150 Right[a19,a06] <= 108.5
- e12[a19,a06]: Y[a06] - Y[a19] + 100 Above[a19,a06] <= 60.5
- e11[a19,a07]: X[a07] - X[a19] + 150 Right[a19,a07] <= 113.5
- e12[a19,a07]: Y[a07] - Y[a19] + 100 Above[a19,a07] <= 61.5
- e11[a19,a08]: X[a08] - X[a19] + 150 Right[a19,a08] <= 112.5
- e12[a19,a08]: Y[a08] - Y[a19] + 100 Above[a19,a08] <= 62.5
- e11[a19,a09]: X[a09] - X[a19] + 150 Right[a19,a09] <= 77.5
- e12[a19,a09]: Y[a09] - Y[a19] + 100 Above[a19,a09] <= 32.5
- e11[a19,a10]: X[a10] - X[a19] + 150 Right[a19,a10] <= 82.5
- e12[a19,a10]: Y[a10] - Y[a19] + 100 Above[a19,a10] <= 19.5
- e11[a19,a11]: X[a11] - X[a19] + 150 Right[a19,a11] <= 99.5
- e12[a19,a11]: Y[a11] - Y[a19] + 100 Above[a19,a11] <= 50.5
- e11[a19,a12]: X[a12] - X[a19] + 150 Right[a19,a12] <= 93.5
- e12[a19,a12]: Y[a12] - Y[a19] + 100 Above[a19,a12] <= 34.5
- e11[a19,a13]: X[a13] - X[a19] + 150 Right[a19,a13] <= 92.5
- e12[a19,a13]: Y[a13] - Y[a19] + 100 Above[a19,a13] <= 26.5
- e11[a19,a14]: X[a14] - X[a19] + 150 Right[a19,a14] <= 76.5
- e12[a19,a14]: Y[a14] - Y[a19] + 100 Above[a19,a14] <= 25.5
- e11[a19,a15]: X[a15] - X[a19] + 150 Right[a19,a15] <= 67.5
- e12[a19,a15]: Y[a15] - Y[a19] + 100 Above[a19,a15] <= 22.5
- e11[a19,a16]: X[a16] - X[a19] + 150 Right[a19,a16] <= 117.5
- e12[a19,a16]: Y[a16] - Y[a19] + 100 Above[a19,a16] <= 69.5
- e11[a19,a17]: X[a17] - X[a19] + 150 Right[a19,a17] <= 77.5
- e12[a19,a17]: Y[a17] - Y[a19] + 100 Above[a19,a17] <= 24.5
- e11[a19,a18]: X[a18] - X[a19] + 150 Right[a19,a18] <= 106.5
- e12[a19,a18]: Y[a18] - Y[a19] + 100 Above[a19,a18] <= 55.5
- e11[a19,a20]: - X[a19] + X[a20] + 150 Right[a19,a20] <= 124.5
- e12[a19,a20]: - Y[a19] + Y[a20] + 100 Above[a19,a20] <= 70.5
- e11[a19,a21]: - X[a19] + X[a21] + 150 Right[a19,a21] <= 99.5
- e12[a19,a21]: - Y[a19] + Y[a21] + 100 Above[a19,a21] <= 52.5
- e11[a19,a22]: - X[a19] + X[a22] + 150 Right[a19,a22] <= 87.5
- e12[a19,a22]: - Y[a19] + Y[a22] + 100 Above[a19,a22] <= 40.5
- e11[a19,a23]: - X[a19] + X[a23] + 150 Right[a19,a23] <= 100.5
- e12[a19,a23]: - Y[a19] + Y[a23] + 100 Above[a19,a23] <= 43.5
- e11[a19,a24]: - X[a19] + X[a24] + 150 Right[a19,a24] <= 82.5
- e12[a19,a24]: - Y[a19] + Y[a24] + 100 Above[a19,a24] <= 31.5
- e11[a19,a25]: - X[a19] + X[a25] + 150 Right[a19,a25] <= 116.5
- e12[a19,a25]: - Y[a19] + Y[a25] + 100 Above[a19,a25] <= 68.5
- e11[a19,a26]: - X[a19] + X[a26] + 150 Right[a19,a26] <= 114.5
- e12[a19,a26]: - Y[a19] + Y[a26] + 100 Above[a19,a26] <= 63.5
- e11[a19,a27]: - X[a19] + X[a27] + 150 Right[a19,a27] <= 74.5
- e12[a19,a27]: - Y[a19] + Y[a27] + 100 Above[a19,a27] <= 16.5
- e11[a19,a28]: - X[a19] + X[a28] + 150 Right[a19,a28] <= 118.5
- e12[a19,a28]: - Y[a19] + Y[a28] + 100 Above[a19,a28] <= 62.5
- e11[a20,a01]: X[a01] - X[a20] + 150 Right[a20,a01] <= 86.5
- e12[a20,a01]: Y[a01] - Y[a20] + 100 Above[a20,a01] <= 31.5
- e11[a20,a02]: X[a02] - X[a20] + 150 Right[a20,a02] <= 105.5
- e12[a20,a02]: Y[a02] - Y[a20] + 100 Above[a20,a02] <= 53.5
- e11[a20,a03]: X[a03] - X[a20] + 150 Right[a20,a03] <= 115.5
- e12[a20,a03]: Y[a03] - Y[a20] + 100 Above[a20,a03] <= 61.5
- e11[a20,a04]: X[a04] - X[a20] + 150 Right[a20,a04] <= 115.5
- e12[a20,a04]: Y[a04] - Y[a20] + 100 Above[a20,a04] <= 65.5
- e11[a20,a05]: X[a05] - X[a20] + 150 Right[a20,a05] <= 89.5
- e12[a20,a05]: Y[a05] - Y[a20] + 100 Above[a20,a05] <= 37.5
- e11[a20,a06]: X[a06] - X[a20] + 150 Right[a20,a06] <= 108.5
- e12[a20,a06]: Y[a06] - Y[a20] + 100 Above[a20,a06] <= 60.5
- e11[a20,a07]: X[a07] - X[a20] + 150 Right[a20,a07] <= 113.5
- e12[a20,a07]: Y[a07] - Y[a20] + 100 Above[a20,a07] <= 61.5
- e11[a20,a08]: X[a08] - X[a20] + 150 Right[a20,a08] <= 112.5
- e12[a20,a08]: Y[a08] - Y[a20] + 100 Above[a20,a08] <= 62.5
- e11[a20,a09]: X[a09] - X[a20] + 150 Right[a20,a09] <= 77.5
- e12[a20,a09]: Y[a09] - Y[a20] + 100 Above[a20,a09] <= 32.5
- e11[a20,a10]: X[a10] - X[a20] + 150 Right[a20,a10] <= 82.5
- e12[a20,a10]: Y[a10] - Y[a20] + 100 Above[a20,a10] <= 19.5
- e11[a20,a11]: X[a11] - X[a20] + 150 Right[a20,a11] <= 99.5
- e12[a20,a11]: Y[a11] - Y[a20] + 100 Above[a20,a11] <= 50.5
- e11[a20,a12]: X[a12] - X[a20] + 150 Right[a20,a12] <= 93.5
- e12[a20,a12]: Y[a12] - Y[a20] + 100 Above[a20,a12] <= 34.5
- e11[a20,a13]: X[a13] - X[a20] + 150 Right[a20,a13] <= 92.5
- e12[a20,a13]: Y[a13] - Y[a20] + 100 Above[a20,a13] <= 26.5
- e11[a20,a14]: X[a14] - X[a20] + 150 Right[a20,a14] <= 76.5
- e12[a20,a14]: Y[a14] - Y[a20] + 100 Above[a20,a14] <= 25.5
- e11[a20,a15]: X[a15] - X[a20] + 150 Right[a20,a15] <= 67.5
- e12[a20,a15]: Y[a15] - Y[a20] + 100 Above[a20,a15] <= 22.5
- e11[a20,a16]: X[a16] - X[a20] + 150 Right[a20,a16] <= 117.5
- e12[a20,a16]: Y[a16] - Y[a20] + 100 Above[a20,a16] <= 69.5
- e11[a20,a17]: X[a17] - X[a20] + 150 Right[a20,a17] <= 77.5
- e12[a20,a17]: Y[a17] - Y[a20] + 100 Above[a20,a17] <= 24.5
- e11[a20,a18]: X[a18] - X[a20] + 150 Right[a20,a18] <= 106.5
- e12[a20,a18]: Y[a18] - Y[a20] + 100 Above[a20,a18] <= 55.5
- e11[a20,a19]: X[a19] - X[a20] + 150 Right[a20,a19] <= 121.5
- e12[a20,a19]: Y[a19] - Y[a20] + 100 Above[a20,a19] <= 69.5
- e11[a20,a21]: - X[a20] + X[a21] + 150 Right[a20,a21] <= 99.5
- e12[a20,a21]: - Y[a20] + Y[a21] + 100 Above[a20,a21] <= 52.5
- e11[a20,a22]: - X[a20] + X[a22] + 150 Right[a20,a22] <= 87.5
- e12[a20,a22]: - Y[a20] + Y[a22] + 100 Above[a20,a22] <= 40.5
- e11[a20,a23]: - X[a20] + X[a23] + 150 Right[a20,a23] <= 100.5
- e12[a20,a23]: - Y[a20] + Y[a23] + 100 Above[a20,a23] <= 43.5
- e11[a20,a24]: - X[a20] + X[a24] + 150 Right[a20,a24] <= 82.5
- e12[a20,a24]: - Y[a20] + Y[a24] + 100 Above[a20,a24] <= 31.5
- e11[a20,a25]: - X[a20] + X[a25] + 150 Right[a20,a25] <= 116.5
- e12[a20,a25]: - Y[a20] + Y[a25] + 100 Above[a20,a25] <= 68.5
- e11[a20,a26]: - X[a20] + X[a26] + 150 Right[a20,a26] <= 114.5
- e12[a20,a26]: - Y[a20] + Y[a26] + 100 Above[a20,a26] <= 63.5
- e11[a20,a27]: - X[a20] + X[a27] + 150 Right[a20,a27] <= 74.5
- e12[a20,a27]: - Y[a20] + Y[a27] + 100 Above[a20,a27] <= 16.5
- e11[a20,a28]: - X[a20] + X[a28] + 150 Right[a20,a28] <= 118.5
- e12[a20,a28]: - Y[a20] + Y[a28] + 100 Above[a20,a28] <= 62.5
- e11[a21,a01]: X[a01] - X[a21] + 150 Right[a21,a01] <= 86.5
- e12[a21,a01]: Y[a01] - Y[a21] + 100 Above[a21,a01] <= 31.5
- e11[a21,a02]: X[a02] - X[a21] + 150 Right[a21,a02] <= 105.5
- e12[a21,a02]: Y[a02] - Y[a21] + 100 Above[a21,a02] <= 53.5
- e11[a21,a03]: X[a03] - X[a21] + 150 Right[a21,a03] <= 115.5
- e12[a21,a03]: Y[a03] - Y[a21] + 100 Above[a21,a03] <= 61.5
- e11[a21,a04]: X[a04] - X[a21] + 150 Right[a21,a04] <= 115.5
- e12[a21,a04]: Y[a04] - Y[a21] + 100 Above[a21,a04] <= 65.5
- e11[a21,a05]: X[a05] - X[a21] + 150 Right[a21,a05] <= 89.5
- e12[a21,a05]: Y[a05] - Y[a21] + 100 Above[a21,a05] <= 37.5
- e11[a21,a06]: X[a06] - X[a21] + 150 Right[a21,a06] <= 108.5
- e12[a21,a06]: Y[a06] - Y[a21] + 100 Above[a21,a06] <= 60.5
- e11[a21,a07]: X[a07] - X[a21] + 150 Right[a21,a07] <= 113.5
- e12[a21,a07]: Y[a07] - Y[a21] + 100 Above[a21,a07] <= 61.5
- e11[a21,a08]: X[a08] - X[a21] + 150 Right[a21,a08] <= 112.5
- e12[a21,a08]: Y[a08] - Y[a21] + 100 Above[a21,a08] <= 62.5
- e11[a21,a09]: X[a09] - X[a21] + 150 Right[a21,a09] <= 77.5
- e12[a21,a09]: Y[a09] - Y[a21] + 100 Above[a21,a09] <= 32.5
- e11[a21,a10]: X[a10] - X[a21] + 150 Right[a21,a10] <= 82.5
- e12[a21,a10]: Y[a10] - Y[a21] + 100 Above[a21,a10] <= 19.5
- e11[a21,a11]: X[a11] - X[a21] + 150 Right[a21,a11] <= 99.5
- e12[a21,a11]: Y[a11] - Y[a21] + 100 Above[a21,a11] <= 50.5
- e11[a21,a12]: X[a12] - X[a21] + 150 Right[a21,a12] <= 93.5
- e12[a21,a12]: Y[a12] - Y[a21] + 100 Above[a21,a12] <= 34.5
- e11[a21,a13]: X[a13] - X[a21] + 150 Right[a21,a13] <= 92.5
- e12[a21,a13]: Y[a13] - Y[a21] + 100 Above[a21,a13] <= 26.5
- e11[a21,a14]: X[a14] - X[a21] + 150 Right[a21,a14] <= 76.5
- e12[a21,a14]: Y[a14] - Y[a21] + 100 Above[a21,a14] <= 25.5
- e11[a21,a15]: X[a15] - X[a21] + 150 Right[a21,a15] <= 67.5
- e12[a21,a15]: Y[a15] - Y[a21] + 100 Above[a21,a15] <= 22.5
- e11[a21,a16]: X[a16] - X[a21] + 150 Right[a21,a16] <= 117.5
- e12[a21,a16]: Y[a16] - Y[a21] + 100 Above[a21,a16] <= 69.5
- e11[a21,a17]: X[a17] - X[a21] + 150 Right[a21,a17] <= 77.5
- e12[a21,a17]: Y[a17] - Y[a21] + 100 Above[a21,a17] <= 24.5
- e11[a21,a18]: X[a18] - X[a21] + 150 Right[a21,a18] <= 106.5
- e12[a21,a18]: Y[a18] - Y[a21] + 100 Above[a21,a18] <= 55.5
- e11[a21,a19]: X[a19] - X[a21] + 150 Right[a21,a19] <= 121.5
- e12[a21,a19]: Y[a19] - Y[a21] + 100 Above[a21,a19] <= 69.5
- e11[a21,a20]: X[a20] - X[a21] + 150 Right[a21,a20] <= 124.5
- e12[a21,a20]: Y[a20] - Y[a21] + 100 Above[a21,a20] <= 70.5
- e11[a21,a22]: - X[a21] + X[a22] + 150 Right[a21,a22] <= 87.5
- e12[a21,a22]: - Y[a21] + Y[a22] + 100 Above[a21,a22] <= 40.5
- e11[a21,a23]: - X[a21] + X[a23] + 150 Right[a21,a23] <= 100.5
- e12[a21,a23]: - Y[a21] + Y[a23] + 100 Above[a21,a23] <= 43.5
- e11[a21,a24]: - X[a21] + X[a24] + 150 Right[a21,a24] <= 82.5
- e12[a21,a24]: - Y[a21] + Y[a24] + 100 Above[a21,a24] <= 31.5
- e11[a21,a25]: - X[a21] + X[a25] + 150 Right[a21,a25] <= 116.5
- e12[a21,a25]: - Y[a21] + Y[a25] + 100 Above[a21,a25] <= 68.5
- e11[a21,a26]: - X[a21] + X[a26] + 150 Right[a21,a26] <= 114.5
- e12[a21,a26]: - Y[a21] + Y[a26] + 100 Above[a21,a26] <= 63.5
- e11[a21,a27]: - X[a21] + X[a27] + 150 Right[a21,a27] <= 74.5
- e12[a21,a27]: - Y[a21] + Y[a27] + 100 Above[a21,a27] <= 16.5
- e11[a21,a28]: - X[a21] + X[a28] + 150 Right[a21,a28] <= 118.5
- e12[a21,a28]: - Y[a21] + Y[a28] + 100 Above[a21,a28] <= 62.5
- e11[a22,a01]: X[a01] - X[a22] + 150 Right[a22,a01] <= 86.5
- e12[a22,a01]: Y[a01] - Y[a22] + 100 Above[a22,a01] <= 31.5
- e11[a22,a02]: X[a02] - X[a22] + 150 Right[a22,a02] <= 105.5
- e12[a22,a02]: Y[a02] - Y[a22] + 100 Above[a22,a02] <= 53.5
- e11[a22,a03]: X[a03] - X[a22] + 150 Right[a22,a03] <= 115.5
- e12[a22,a03]: Y[a03] - Y[a22] + 100 Above[a22,a03] <= 61.5
- e11[a22,a04]: X[a04] - X[a22] + 150 Right[a22,a04] <= 115.5
- e12[a22,a04]: Y[a04] - Y[a22] + 100 Above[a22,a04] <= 65.5
- e11[a22,a05]: X[a05] - X[a22] + 150 Right[a22,a05] <= 89.5
- e12[a22,a05]: Y[a05] - Y[a22] + 100 Above[a22,a05] <= 37.5
- e11[a22,a06]: X[a06] - X[a22] + 150 Right[a22,a06] <= 108.5
- e12[a22,a06]: Y[a06] - Y[a22] + 100 Above[a22,a06] <= 60.5
- e11[a22,a07]: X[a07] - X[a22] + 150 Right[a22,a07] <= 113.5
- e12[a22,a07]: Y[a07] - Y[a22] + 100 Above[a22,a07] <= 61.5
- e11[a22,a08]: X[a08] - X[a22] + 150 Right[a22,a08] <= 112.5
- e12[a22,a08]: Y[a08] - Y[a22] + 100 Above[a22,a08] <= 62.5
- e11[a22,a09]: X[a09] - X[a22] + 150 Right[a22,a09] <= 77.5
- e12[a22,a09]: Y[a09] - Y[a22] + 100 Above[a22,a09] <= 32.5
- e11[a22,a10]: X[a10] - X[a22] + 150 Right[a22,a10] <= 82.5
- e12[a22,a10]: Y[a10] - Y[a22] + 100 Above[a22,a10] <= 19.5
- e11[a22,a11]: X[a11] - X[a22] + 150 Right[a22,a11] <= 99.5
- e12[a22,a11]: Y[a11] - Y[a22] + 100 Above[a22,a11] <= 50.5
- e11[a22,a12]: X[a12] - X[a22] + 150 Right[a22,a12] <= 93.5
- e12[a22,a12]: Y[a12] - Y[a22] + 100 Above[a22,a12] <= 34.5
- e11[a22,a13]: X[a13] - X[a22] + 150 Right[a22,a13] <= 92.5
- e12[a22,a13]: Y[a13] - Y[a22] + 100 Above[a22,a13] <= 26.5
- e11[a22,a14]: X[a14] - X[a22] + 150 Right[a22,a14] <= 76.5
- e12[a22,a14]: Y[a14] - Y[a22] + 100 Above[a22,a14] <= 25.5
- e11[a22,a15]: X[a15] - X[a22] + 150 Right[a22,a15] <= 67.5
- e12[a22,a15]: Y[a15] - Y[a22] + 100 Above[a22,a15] <= 22.5
- e11[a22,a16]: X[a16] - X[a22] + 150 Right[a22,a16] <= 117.5
- e12[a22,a16]: Y[a16] - Y[a22] + 100 Above[a22,a16] <= 69.5
- e11[a22,a17]: X[a17] - X[a22] + 150 Right[a22,a17] <= 77.5
- e12[a22,a17]: Y[a17] - Y[a22] + 100 Above[a22,a17] <= 24.5
- e11[a22,a18]: X[a18] - X[a22] + 150 Right[a22,a18] <= 106.5
- e12[a22,a18]: Y[a18] - Y[a22] + 100 Above[a22,a18] <= 55.5
- e11[a22,a19]: X[a19] - X[a22] + 150 Right[a22,a19] <= 121.5
- e12[a22,a19]: Y[a19] - Y[a22] + 100 Above[a22,a19] <= 69.5
- e11[a22,a20]: X[a20] - X[a22] + 150 Right[a22,a20] <= 124.5
- e12[a22,a20]: Y[a20] - Y[a22] + 100 Above[a22,a20] <= 70.5
- e11[a22,a21]: X[a21] - X[a22] + 150 Right[a22,a21] <= 99.5
- e12[a22,a21]: Y[a21] - Y[a22] + 100 Above[a22,a21] <= 52.5
- e11[a22,a23]: - X[a22] + X[a23] + 150 Right[a22,a23] <= 100.5
- e12[a22,a23]: - Y[a22] + Y[a23] + 100 Above[a22,a23] <= 43.5
- e11[a22,a24]: - X[a22] + X[a24] + 150 Right[a22,a24] <= 82.5
- e12[a22,a24]: - Y[a22] + Y[a24] + 100 Above[a22,a24] <= 31.5
- e11[a22,a25]: - X[a22] + X[a25] + 150 Right[a22,a25] <= 116.5
- e12[a22,a25]: - Y[a22] + Y[a25] + 100 Above[a22,a25] <= 68.5
- e11[a22,a26]: - X[a22] + X[a26] + 150 Right[a22,a26] <= 114.5
- e12[a22,a26]: - Y[a22] + Y[a26] + 100 Above[a22,a26] <= 63.5
- e11[a22,a27]: - X[a22] + X[a27] + 150 Right[a22,a27] <= 74.5
- e12[a22,a27]: - Y[a22] + Y[a27] + 100 Above[a22,a27] <= 16.5
- e11[a22,a28]: - X[a22] + X[a28] + 150 Right[a22,a28] <= 118.5
- e12[a22,a28]: - Y[a22] + Y[a28] + 100 Above[a22,a28] <= 62.5
- e11[a23,a01]: X[a01] - X[a23] + 150 Right[a23,a01] <= 86.5
- e12[a23,a01]: Y[a01] - Y[a23] + 100 Above[a23,a01] <= 31.5
- e11[a23,a02]: X[a02] - X[a23] + 150 Right[a23,a02] <= 105.5
- e12[a23,a02]: Y[a02] - Y[a23] + 100 Above[a23,a02] <= 53.5
- e11[a23,a03]: X[a03] - X[a23] + 150 Right[a23,a03] <= 115.5
- e12[a23,a03]: Y[a03] - Y[a23] + 100 Above[a23,a03] <= 61.5
- e11[a23,a04]: X[a04] - X[a23] + 150 Right[a23,a04] <= 115.5
- e12[a23,a04]: Y[a04] - Y[a23] + 100 Above[a23,a04] <= 65.5
- e11[a23,a05]: X[a05] - X[a23] + 150 Right[a23,a05] <= 89.5
- e12[a23,a05]: Y[a05] - Y[a23] + 100 Above[a23,a05] <= 37.5
- e11[a23,a06]: X[a06] - X[a23] + 150 Right[a23,a06] <= 108.5
- e12[a23,a06]: Y[a06] - Y[a23] + 100 Above[a23,a06] <= 60.5
- e11[a23,a07]: X[a07] - X[a23] + 150 Right[a23,a07] <= 113.5
- e12[a23,a07]: Y[a07] - Y[a23] + 100 Above[a23,a07] <= 61.5
- e11[a23,a08]: X[a08] - X[a23] + 150 Right[a23,a08] <= 112.5
- e12[a23,a08]: Y[a08] - Y[a23] + 100 Above[a23,a08] <= 62.5
- e11[a23,a09]: X[a09] - X[a23] + 150 Right[a23,a09] <= 77.5
- e12[a23,a09]: Y[a09] - Y[a23] + 100 Above[a23,a09] <= 32.5
- e11[a23,a10]: X[a10] - X[a23] + 150 Right[a23,a10] <= 82.5
- e12[a23,a10]: Y[a10] - Y[a23] + 100 Above[a23,a10] <= 19.5
- e11[a23,a11]: X[a11] - X[a23] + 150 Right[a23,a11] <= 99.5
- e12[a23,a11]: Y[a11] - Y[a23] + 100 Above[a23,a11] <= 50.5
- e11[a23,a12]: X[a12] - X[a23] + 150 Right[a23,a12] <= 93.5
- e12[a23,a12]: Y[a12] - Y[a23] + 100 Above[a23,a12] <= 34.5
- e11[a23,a13]: X[a13] - X[a23] + 150 Right[a23,a13] <= 92.5
- e12[a23,a13]: Y[a13] - Y[a23] + 100 Above[a23,a13] <= 26.5
- e11[a23,a14]: X[a14] - X[a23] + 150 Right[a23,a14] <= 76.5
- e12[a23,a14]: Y[a14] - Y[a23] + 100 Above[a23,a14] <= 25.5
- e11[a23,a15]: X[a15] - X[a23] + 150 Right[a23,a15] <= 67.5
- e12[a23,a15]: Y[a15] - Y[a23] + 100 Above[a23,a15] <= 22.5
- e11[a23,a16]: X[a16] - X[a23] + 150 Right[a23,a16] <= 117.5
- e12[a23,a16]: Y[a16] - Y[a23] + 100 Above[a23,a16] <= 69.5
- e11[a23,a17]: X[a17] - X[a23] + 150 Right[a23,a17] <= 77.5
- e12[a23,a17]: Y[a17] - Y[a23] + 100 Above[a23,a17] <= 24.5
- e11[a23,a18]: X[a18] - X[a23] + 150 Right[a23,a18] <= 106.5
- e12[a23,a18]: Y[a18] - Y[a23] + 100 Above[a23,a18] <= 55.5
- e11[a23,a19]: X[a19] - X[a23] + 150 Right[a23,a19] <= 121.5
- e12[a23,a19]: Y[a19] - Y[a23] + 100 Above[a23,a19] <= 69.5
- e11[a23,a20]: X[a20] - X[a23] + 150 Right[a23,a20] <= 124.5
- e12[a23,a20]: Y[a20] - Y[a23] + 100 Above[a23,a20] <= 70.5
- e11[a23,a21]: X[a21] - X[a23] + 150 Right[a23,a21] <= 99.5
- e12[a23,a21]: Y[a21] - Y[a23] + 100 Above[a23,a21] <= 52.5
- e11[a23,a22]: X[a22] - X[a23] + 150 Right[a23,a22] <= 87.5
- e12[a23,a22]: Y[a22] - Y[a23] + 100 Above[a23,a22] <= 40.5
- e11[a23,a24]: - X[a23] + X[a24] + 150 Right[a23,a24] <= 82.5
- e12[a23,a24]: - Y[a23] + Y[a24] + 100 Above[a23,a24] <= 31.5
- e11[a23,a25]: - X[a23] + X[a25] + 150 Right[a23,a25] <= 116.5
- e12[a23,a25]: - Y[a23] + Y[a25] + 100 Above[a23,a25] <= 68.5
- e11[a23,a26]: - X[a23] + X[a26] + 150 Right[a23,a26] <= 114.5
- e12[a23,a26]: - Y[a23] + Y[a26] + 100 Above[a23,a26] <= 63.5
- e11[a23,a27]: - X[a23] + X[a27] + 150 Right[a23,a27] <= 74.5
- e12[a23,a27]: - Y[a23] + Y[a27] + 100 Above[a23,a27] <= 16.5
- e11[a23,a28]: - X[a23] + X[a28] + 150 Right[a23,a28] <= 118.5
- e12[a23,a28]: - Y[a23] + Y[a28] + 100 Above[a23,a28] <= 62.5
- e11[a24,a01]: X[a01] - X[a24] + 150 Right[a24,a01] <= 86.5
- e12[a24,a01]: Y[a01] - Y[a24] + 100 Above[a24,a01] <= 31.5
- e11[a24,a02]: X[a02] - X[a24] + 150 Right[a24,a02] <= 105.5
- e12[a24,a02]: Y[a02] - Y[a24] + 100 Above[a24,a02] <= 53.5
- e11[a24,a03]: X[a03] - X[a24] + 150 Right[a24,a03] <= 115.5
- e12[a24,a03]: Y[a03] - Y[a24] + 100 Above[a24,a03] <= 61.5
- e11[a24,a04]: X[a04] - X[a24] + 150 Right[a24,a04] <= 115.5
- e12[a24,a04]: Y[a04] - Y[a24] + 100 Above[a24,a04] <= 65.5
- e11[a24,a05]: X[a05] - X[a24] + 150 Right[a24,a05] <= 89.5
- e12[a24,a05]: Y[a05] - Y[a24] + 100 Above[a24,a05] <= 37.5
- e11[a24,a06]: X[a06] - X[a24] + 150 Right[a24,a06] <= 108.5
- e12[a24,a06]: Y[a06] - Y[a24] + 100 Above[a24,a06] <= 60.5
- e11[a24,a07]: X[a07] - X[a24] + 150 Right[a24,a07] <= 113.5
- e12[a24,a07]: Y[a07] - Y[a24] + 100 Above[a24,a07] <= 61.5
- e11[a24,a08]: X[a08] - X[a24] + 150 Right[a24,a08] <= 112.5
- e12[a24,a08]: Y[a08] - Y[a24] + 100 Above[a24,a08] <= 62.5
- e11[a24,a09]: X[a09] - X[a24] + 150 Right[a24,a09] <= 77.5
- e12[a24,a09]: Y[a09] - Y[a24] + 100 Above[a24,a09] <= 32.5
- e11[a24,a10]: X[a10] - X[a24] + 150 Right[a24,a10] <= 82.5
- e12[a24,a10]: Y[a10] - Y[a24] + 100 Above[a24,a10] <= 19.5
- e11[a24,a11]: X[a11] - X[a24] + 150 Right[a24,a11] <= 99.5
- e12[a24,a11]: Y[a11] - Y[a24] + 100 Above[a24,a11] <= 50.5
- e11[a24,a12]: X[a12] - X[a24] + 150 Right[a24,a12] <= 93.5
- e12[a24,a12]: Y[a12] - Y[a24] + 100 Above[a24,a12] <= 34.5
- e11[a24,a13]: X[a13] - X[a24] + 150 Right[a24,a13] <= 92.5
- e12[a24,a13]: Y[a13] - Y[a24] + 100 Above[a24,a13] <= 26.5
- e11[a24,a14]: X[a14] - X[a24] + 150 Right[a24,a14] <= 76.5
- e12[a24,a14]: Y[a14] - Y[a24] + 100 Above[a24,a14] <= 25.5
- e11[a24,a15]: X[a15] - X[a24] + 150 Right[a24,a15] <= 67.5
- e12[a24,a15]: Y[a15] - Y[a24] + 100 Above[a24,a15] <= 22.5
- e11[a24,a16]: X[a16] - X[a24] + 150 Right[a24,a16] <= 117.5
- e12[a24,a16]: Y[a16] - Y[a24] + 100 Above[a24,a16] <= 69.5
- e11[a24,a17]: X[a17] - X[a24] + 150 Right[a24,a17] <= 77.5
- e12[a24,a17]: Y[a17] - Y[a24] + 100 Above[a24,a17] <= 24.5
- e11[a24,a18]: X[a18] - X[a24] + 150 Right[a24,a18] <= 106.5
- e12[a24,a18]: Y[a18] - Y[a24] + 100 Above[a24,a18] <= 55.5
- e11[a24,a19]: X[a19] - X[a24] + 150 Right[a24,a19] <= 121.5
- e12[a24,a19]: Y[a19] - Y[a24] + 100 Above[a24,a19] <= 69.5
- e11[a24,a20]: X[a20] - X[a24] + 150 Right[a24,a20] <= 124.5
- e12[a24,a20]: Y[a20] - Y[a24] + 100 Above[a24,a20] <= 70.5
- e11[a24,a21]: X[a21] - X[a24] + 150 Right[a24,a21] <= 99.5
- e12[a24,a21]: Y[a21] - Y[a24] + 100 Above[a24,a21] <= 52.5
- e11[a24,a22]: X[a22] - X[a24] + 150 Right[a24,a22] <= 87.5
- e12[a24,a22]: Y[a22] - Y[a24] + 100 Above[a24,a22] <= 40.5
- e11[a24,a23]: X[a23] - X[a24] + 150 Right[a24,a23] <= 100.5
- e12[a24,a23]: Y[a23] - Y[a24] + 100 Above[a24,a23] <= 43.5
- e11[a24,a25]: - X[a24] + X[a25] + 150 Right[a24,a25] <= 116.5
- e12[a24,a25]: - Y[a24] + Y[a25] + 100 Above[a24,a25] <= 68.5
- e11[a24,a26]: - X[a24] + X[a26] + 150 Right[a24,a26] <= 114.5
- e12[a24,a26]: - Y[a24] + Y[a26] + 100 Above[a24,a26] <= 63.5
- e11[a24,a27]: - X[a24] + X[a27] + 150 Right[a24,a27] <= 74.5
- e12[a24,a27]: - Y[a24] + Y[a27] + 100 Above[a24,a27] <= 16.5
- e11[a24,a28]: - X[a24] + X[a28] + 150 Right[a24,a28] <= 118.5
- e12[a24,a28]: - Y[a24] + Y[a28] + 100 Above[a24,a28] <= 62.5
- e11[a25,a01]: X[a01] - X[a25] + 150 Right[a25,a01] <= 86.5
- e12[a25,a01]: Y[a01] - Y[a25] + 100 Above[a25,a01] <= 31.5
- e11[a25,a02]: X[a02] - X[a25] + 150 Right[a25,a02] <= 105.5
- e12[a25,a02]: Y[a02] - Y[a25] + 100 Above[a25,a02] <= 53.5
- e11[a25,a03]: X[a03] - X[a25] + 150 Right[a25,a03] <= 115.5
- e12[a25,a03]: Y[a03] - Y[a25] + 100 Above[a25,a03] <= 61.5
- e11[a25,a04]: X[a04] - X[a25] + 150 Right[a25,a04] <= 115.5
- e12[a25,a04]: Y[a04] - Y[a25] + 100 Above[a25,a04] <= 65.5
- e11[a25,a05]: X[a05] - X[a25] + 150 Right[a25,a05] <= 89.5
- e12[a25,a05]: Y[a05] - Y[a25] + 100 Above[a25,a05] <= 37.5
- e11[a25,a06]: X[a06] - X[a25] + 150 Right[a25,a06] <= 108.5
- e12[a25,a06]: Y[a06] - Y[a25] + 100 Above[a25,a06] <= 60.5
- e11[a25,a07]: X[a07] - X[a25] + 150 Right[a25,a07] <= 113.5
- e12[a25,a07]: Y[a07] - Y[a25] + 100 Above[a25,a07] <= 61.5
- e11[a25,a08]: X[a08] - X[a25] + 150 Right[a25,a08] <= 112.5
- e12[a25,a08]: Y[a08] - Y[a25] + 100 Above[a25,a08] <= 62.5
- e11[a25,a09]: X[a09] - X[a25] + 150 Right[a25,a09] <= 77.5
- e12[a25,a09]: Y[a09] - Y[a25] + 100 Above[a25,a09] <= 32.5
- e11[a25,a10]: X[a10] - X[a25] + 150 Right[a25,a10] <= 82.5
- e12[a25,a10]: Y[a10] - Y[a25] + 100 Above[a25,a10] <= 19.5
- e11[a25,a11]: X[a11] - X[a25] + 150 Right[a25,a11] <= 99.5
- e12[a25,a11]: Y[a11] - Y[a25] + 100 Above[a25,a11] <= 50.5
- e11[a25,a12]: X[a12] - X[a25] + 150 Right[a25,a12] <= 93.5
- e12[a25,a12]: Y[a12] - Y[a25] + 100 Above[a25,a12] <= 34.5
- e11[a25,a13]: X[a13] - X[a25] + 150 Right[a25,a13] <= 92.5
- e12[a25,a13]: Y[a13] - Y[a25] + 100 Above[a25,a13] <= 26.5
- e11[a25,a14]: X[a14] - X[a25] + 150 Right[a25,a14] <= 76.5
- e12[a25,a14]: Y[a14] - Y[a25] + 100 Above[a25,a14] <= 25.5
- e11[a25,a15]: X[a15] - X[a25] + 150 Right[a25,a15] <= 67.5
- e12[a25,a15]: Y[a15] - Y[a25] + 100 Above[a25,a15] <= 22.5
- e11[a25,a16]: X[a16] - X[a25] + 150 Right[a25,a16] <= 117.5
- e12[a25,a16]: Y[a16] - Y[a25] + 100 Above[a25,a16] <= 69.5
- e11[a25,a17]: X[a17] - X[a25] + 150 Right[a25,a17] <= 77.5
- e12[a25,a17]: Y[a17] - Y[a25] + 100 Above[a25,a17] <= 24.5
- e11[a25,a18]: X[a18] - X[a25] + 150 Right[a25,a18] <= 106.5
- e12[a25,a18]: Y[a18] - Y[a25] + 100 Above[a25,a18] <= 55.5
- e11[a25,a19]: X[a19] - X[a25] + 150 Right[a25,a19] <= 121.5
- e12[a25,a19]: Y[a19] - Y[a25] + 100 Above[a25,a19] <= 69.5
- e11[a25,a20]: X[a20] - X[a25] + 150 Right[a25,a20] <= 124.5
- e12[a25,a20]: Y[a20] - Y[a25] + 100 Above[a25,a20] <= 70.5
- e11[a25,a21]: X[a21] - X[a25] + 150 Right[a25,a21] <= 99.5
- e12[a25,a21]: Y[a21] - Y[a25] + 100 Above[a25,a21] <= 52.5
- e11[a25,a22]: X[a22] - X[a25] + 150 Right[a25,a22] <= 87.5
- e12[a25,a22]: Y[a22] - Y[a25] + 100 Above[a25,a22] <= 40.5
- e11[a25,a23]: X[a23] - X[a25] + 150 Right[a25,a23] <= 100.5
- e12[a25,a23]: Y[a23] - Y[a25] + 100 Above[a25,a23] <= 43.5
- e11[a25,a24]: X[a24] - X[a25] + 150 Right[a25,a24] <= 82.5
- e12[a25,a24]: Y[a24] - Y[a25] + 100 Above[a25,a24] <= 31.5
- e11[a25,a26]: - X[a25] + X[a26] + 150 Right[a25,a26] <= 114.5
- e12[a25,a26]: - Y[a25] + Y[a26] + 100 Above[a25,a26] <= 63.5
- e11[a25,a27]: - X[a25] + X[a27] + 150 Right[a25,a27] <= 74.5
- e12[a25,a27]: - Y[a25] + Y[a27] + 100 Above[a25,a27] <= 16.5
- e11[a25,a28]: - X[a25] + X[a28] + 150 Right[a25,a28] <= 118.5
- e12[a25,a28]: - Y[a25] + Y[a28] + 100 Above[a25,a28] <= 62.5
- e11[a26,a01]: X[a01] - X[a26] + 150 Right[a26,a01] <= 86.5
- e12[a26,a01]: Y[a01] - Y[a26] + 100 Above[a26,a01] <= 31.5
- e11[a26,a02]: X[a02] - X[a26] + 150 Right[a26,a02] <= 105.5
- e12[a26,a02]: Y[a02] - Y[a26] + 100 Above[a26,a02] <= 53.5
- e11[a26,a03]: X[a03] - X[a26] + 150 Right[a26,a03] <= 115.5
- e12[a26,a03]: Y[a03] - Y[a26] + 100 Above[a26,a03] <= 61.5
- e11[a26,a04]: X[a04] - X[a26] + 150 Right[a26,a04] <= 115.5
- e12[a26,a04]: Y[a04] - Y[a26] + 100 Above[a26,a04] <= 65.5
- e11[a26,a05]: X[a05] - X[a26] + 150 Right[a26,a05] <= 89.5
- e12[a26,a05]: Y[a05] - Y[a26] + 100 Above[a26,a05] <= 37.5
- e11[a26,a06]: X[a06] - X[a26] + 150 Right[a26,a06] <= 108.5
- e12[a26,a06]: Y[a06] - Y[a26] + 100 Above[a26,a06] <= 60.5
- e11[a26,a07]: X[a07] - X[a26] + 150 Right[a26,a07] <= 113.5
- e12[a26,a07]: Y[a07] - Y[a26] + 100 Above[a26,a07] <= 61.5
- e11[a26,a08]: X[a08] - X[a26] + 150 Right[a26,a08] <= 112.5
- e12[a26,a08]: Y[a08] - Y[a26] + 100 Above[a26,a08] <= 62.5
- e11[a26,a09]: X[a09] - X[a26] + 150 Right[a26,a09] <= 77.5
- e12[a26,a09]: Y[a09] - Y[a26] + 100 Above[a26,a09] <= 32.5
- e11[a26,a10]: X[a10] - X[a26] + 150 Right[a26,a10] <= 82.5
- e12[a26,a10]: Y[a10] - Y[a26] + 100 Above[a26,a10] <= 19.5
- e11[a26,a11]: X[a11] - X[a26] + 150 Right[a26,a11] <= 99.5
- e12[a26,a11]: Y[a11] - Y[a26] + 100 Above[a26,a11] <= 50.5
- e11[a26,a12]: X[a12] - X[a26] + 150 Right[a26,a12] <= 93.5
- e12[a26,a12]: Y[a12] - Y[a26] + 100 Above[a26,a12] <= 34.5
- e11[a26,a13]: X[a13] - X[a26] + 150 Right[a26,a13] <= 92.5
- e12[a26,a13]: Y[a13] - Y[a26] + 100 Above[a26,a13] <= 26.5
- e11[a26,a14]: X[a14] - X[a26] + 150 Right[a26,a14] <= 76.5
- e12[a26,a14]: Y[a14] - Y[a26] + 100 Above[a26,a14] <= 25.5
- e11[a26,a15]: X[a15] - X[a26] + 150 Right[a26,a15] <= 67.5
- e12[a26,a15]: Y[a15] - Y[a26] + 100 Above[a26,a15] <= 22.5
- e11[a26,a16]: X[a16] - X[a26] + 150 Right[a26,a16] <= 117.5
- e12[a26,a16]: Y[a16] - Y[a26] + 100 Above[a26,a16] <= 69.5
- e11[a26,a17]: X[a17] - X[a26] + 150 Right[a26,a17] <= 77.5
- e12[a26,a17]: Y[a17] - Y[a26] + 100 Above[a26,a17] <= 24.5
- e11[a26,a18]: X[a18] - X[a26] + 150 Right[a26,a18] <= 106.5
- e12[a26,a18]: Y[a18] - Y[a26] + 100 Above[a26,a18] <= 55.5
- e11[a26,a19]: X[a19] - X[a26] + 150 Right[a26,a19] <= 121.5
- e12[a26,a19]: Y[a19] - Y[a26] + 100 Above[a26,a19] <= 69.5
- e11[a26,a20]: X[a20] - X[a26] + 150 Right[a26,a20] <= 124.5
- e12[a26,a20]: Y[a20] - Y[a26] + 100 Above[a26,a20] <= 70.5
- e11[a26,a21]: X[a21] - X[a26] + 150 Right[a26,a21] <= 99.5
- e12[a26,a21]: Y[a21] - Y[a26] + 100 Above[a26,a21] <= 52.5
- e11[a26,a22]: X[a22] - X[a26] + 150 Right[a26,a22] <= 87.5
- e12[a26,a22]: Y[a22] - Y[a26] + 100 Above[a26,a22] <= 40.5
- e11[a26,a23]: X[a23] - X[a26] + 150 Right[a26,a23] <= 100.5
- e12[a26,a23]: Y[a23] - Y[a26] + 100 Above[a26,a23] <= 43.5
- e11[a26,a24]: X[a24] - X[a26] + 150 Right[a26,a24] <= 82.5
- e12[a26,a24]: Y[a24] - Y[a26] + 100 Above[a26,a24] <= 31.5
- e11[a26,a25]: X[a25] - X[a26] + 150 Right[a26,a25] <= 116.5
- e12[a26,a25]: Y[a25] - Y[a26] + 100 Above[a26,a25] <= 68.5
- e11[a26,a27]: - X[a26] + X[a27] + 150 Right[a26,a27] <= 74.5
- e12[a26,a27]: - Y[a26] + Y[a27] + 100 Above[a26,a27] <= 16.5
- e11[a26,a28]: - X[a26] + X[a28] + 150 Right[a26,a28] <= 118.5
- e12[a26,a28]: - Y[a26] + Y[a28] + 100 Above[a26,a28] <= 62.5
- e11[a27,a01]: X[a01] - X[a27] + 150 Right[a27,a01] <= 86.5
- e12[a27,a01]: Y[a01] - Y[a27] + 100 Above[a27,a01] <= 31.5
- e11[a27,a02]: X[a02] - X[a27] + 150 Right[a27,a02] <= 105.5
- e12[a27,a02]: Y[a02] - Y[a27] + 100 Above[a27,a02] <= 53.5
- e11[a27,a03]: X[a03] - X[a27] + 150 Right[a27,a03] <= 115.5
- e12[a27,a03]: Y[a03] - Y[a27] + 100 Above[a27,a03] <= 61.5
- e11[a27,a04]: X[a04] - X[a27] + 150 Right[a27,a04] <= 115.5
- e12[a27,a04]: Y[a04] - Y[a27] + 100 Above[a27,a04] <= 65.5
- e11[a27,a05]: X[a05] - X[a27] + 150 Right[a27,a05] <= 89.5
- e12[a27,a05]: Y[a05] - Y[a27] + 100 Above[a27,a05] <= 37.5
- e11[a27,a06]: X[a06] - X[a27] + 150 Right[a27,a06] <= 108.5
- e12[a27,a06]: Y[a06] - Y[a27] + 100 Above[a27,a06] <= 60.5
- e11[a27,a07]: X[a07] - X[a27] + 150 Right[a27,a07] <= 113.5
- e12[a27,a07]: Y[a07] - Y[a27] + 100 Above[a27,a07] <= 61.5
- e11[a27,a08]: X[a08] - X[a27] + 150 Right[a27,a08] <= 112.5
- e12[a27,a08]: Y[a08] - Y[a27] + 100 Above[a27,a08] <= 62.5
- e11[a27,a09]: X[a09] - X[a27] + 150 Right[a27,a09] <= 77.5
- e12[a27,a09]: Y[a09] - Y[a27] + 100 Above[a27,a09] <= 32.5
- e11[a27,a10]: X[a10] - X[a27] + 150 Right[a27,a10] <= 82.5
- e12[a27,a10]: Y[a10] - Y[a27] + 100 Above[a27,a10] <= 19.5
- e11[a27,a11]: X[a11] - X[a27] + 150 Right[a27,a11] <= 99.5
- e12[a27,a11]: Y[a11] - Y[a27] + 100 Above[a27,a11] <= 50.5
- e11[a27,a12]: X[a12] - X[a27] + 150 Right[a27,a12] <= 93.5
- e12[a27,a12]: Y[a12] - Y[a27] + 100 Above[a27,a12] <= 34.5
- e11[a27,a13]: X[a13] - X[a27] + 150 Right[a27,a13] <= 92.5
- e12[a27,a13]: Y[a13] - Y[a27] + 100 Above[a27,a13] <= 26.5
- e11[a27,a14]: X[a14] - X[a27] + 150 Right[a27,a14] <= 76.5
- e12[a27,a14]: Y[a14] - Y[a27] + 100 Above[a27,a14] <= 25.5
- e11[a27,a15]: X[a15] - X[a27] + 150 Right[a27,a15] <= 67.5
- e12[a27,a15]: Y[a15] - Y[a27] + 100 Above[a27,a15] <= 22.5
- e11[a27,a16]: X[a16] - X[a27] + 150 Right[a27,a16] <= 117.5
- e12[a27,a16]: Y[a16] - Y[a27] + 100 Above[a27,a16] <= 69.5
- e11[a27,a17]: X[a17] - X[a27] + 150 Right[a27,a17] <= 77.5
- e12[a27,a17]: Y[a17] - Y[a27] + 100 Above[a27,a17] <= 24.5
- e11[a27,a18]: X[a18] - X[a27] + 150 Right[a27,a18] <= 106.5
- e12[a27,a18]: Y[a18] - Y[a27] + 100 Above[a27,a18] <= 55.5
- e11[a27,a19]: X[a19] - X[a27] + 150 Right[a27,a19] <= 121.5
- e12[a27,a19]: Y[a19] - Y[a27] + 100 Above[a27,a19] <= 69.5
- e11[a27,a20]: X[a20] - X[a27] + 150 Right[a27,a20] <= 124.5
- e12[a27,a20]: Y[a20] - Y[a27] + 100 Above[a27,a20] <= 70.5
- e11[a27,a21]: X[a21] - X[a27] + 150 Right[a27,a21] <= 99.5
- e12[a27,a21]: Y[a21] - Y[a27] + 100 Above[a27,a21] <= 52.5
- e11[a27,a22]: X[a22] - X[a27] + 150 Right[a27,a22] <= 87.5
- e12[a27,a22]: Y[a22] - Y[a27] + 100 Above[a27,a22] <= 40.5
- e11[a27,a23]: X[a23] - X[a27] + 150 Right[a27,a23] <= 100.5
- e12[a27,a23]: Y[a23] - Y[a27] + 100 Above[a27,a23] <= 43.5
- e11[a27,a24]: X[a24] - X[a27] + 150 Right[a27,a24] <= 82.5
- e12[a27,a24]: Y[a24] - Y[a27] + 100 Above[a27,a24] <= 31.5
- e11[a27,a25]: X[a25] - X[a27] + 150 Right[a27,a25] <= 116.5
- e12[a27,a25]: Y[a25] - Y[a27] + 100 Above[a27,a25] <= 68.5
- e11[a27,a26]: X[a26] - X[a27] + 150 Right[a27,a26] <= 114.5
- e12[a27,a26]: Y[a26] - Y[a27] + 100 Above[a27,a26] <= 63.5
- e11[a27,a28]: - X[a27] + X[a28] + 150 Right[a27,a28] <= 118.5
- e12[a27,a28]: - Y[a27] + Y[a28] + 100 Above[a27,a28] <= 62.5
- e11[a28,a01]: X[a01] - X[a28] + 150 Right[a28,a01] <= 86.5
- e12[a28,a01]: Y[a01] - Y[a28] + 100 Above[a28,a01] <= 31.5
- e11[a28,a02]: X[a02] - X[a28] + 150 Right[a28,a02] <= 105.5
- e12[a28,a02]: Y[a02] - Y[a28] + 100 Above[a28,a02] <= 53.5
- e11[a28,a03]: X[a03] - X[a28] + 150 Right[a28,a03] <= 115.5
- e12[a28,a03]: Y[a03] - Y[a28] + 100 Above[a28,a03] <= 61.5
- e11[a28,a04]: X[a04] - X[a28] + 150 Right[a28,a04] <= 115.5
- e12[a28,a04]: Y[a04] - Y[a28] + 100 Above[a28,a04] <= 65.5
- e11[a28,a05]: X[a05] - X[a28] + 150 Right[a28,a05] <= 89.5
- e12[a28,a05]: Y[a05] - Y[a28] + 100 Above[a28,a05] <= 37.5
- e11[a28,a06]: X[a06] - X[a28] + 150 Right[a28,a06] <= 108.5
- e12[a28,a06]: Y[a06] - Y[a28] + 100 Above[a28,a06] <= 60.5
- e11[a28,a07]: X[a07] - X[a28] + 150 Right[a28,a07] <= 113.5
- e12[a28,a07]: Y[a07] - Y[a28] + 100 Above[a28,a07] <= 61.5
- e11[a28,a08]: X[a08] - X[a28] + 150 Right[a28,a08] <= 112.5
- e12[a28,a08]: Y[a08] - Y[a28] + 100 Above[a28,a08] <= 62.5
- e11[a28,a09]: X[a09] - X[a28] + 150 Right[a28,a09] <= 77.5
- e12[a28,a09]: Y[a09] - Y[a28] + 100 Above[a28,a09] <= 32.5
- e11[a28,a10]: X[a10] - X[a28] + 150 Right[a28,a10] <= 82.5
- e12[a28,a10]: Y[a10] - Y[a28] + 100 Above[a28,a10] <= 19.5
- e11[a28,a11]: X[a11] - X[a28] + 150 Right[a28,a11] <= 99.5
- e12[a28,a11]: Y[a11] - Y[a28] + 100 Above[a28,a11] <= 50.5
- e11[a28,a12]: X[a12] - X[a28] + 150 Right[a28,a12] <= 93.5
- e12[a28,a12]: Y[a12] - Y[a28] + 100 Above[a28,a12] <= 34.5
- e11[a28,a13]: X[a13] - X[a28] + 150 Right[a28,a13] <= 92.5
- e12[a28,a13]: Y[a13] - Y[a28] + 100 Above[a28,a13] <= 26.5
- e11[a28,a14]: X[a14] - X[a28] + 150 Right[a28,a14] <= 76.5
- e12[a28,a14]: Y[a14] - Y[a28] + 100 Above[a28,a14] <= 25.5
- e11[a28,a15]: X[a15] - X[a28] + 150 Right[a28,a15] <= 67.5
- e12[a28,a15]: Y[a15] - Y[a28] + 100 Above[a28,a15] <= 22.5
- e11[a28,a16]: X[a16] - X[a28] + 150 Right[a28,a16] <= 117.5
- e12[a28,a16]: Y[a16] - Y[a28] + 100 Above[a28,a16] <= 69.5
- e11[a28,a17]: X[a17] - X[a28] + 150 Right[a28,a17] <= 77.5
- e12[a28,a17]: Y[a17] - Y[a28] + 100 Above[a28,a17] <= 24.5
- e11[a28,a18]: X[a18] - X[a28] + 150 Right[a28,a18] <= 106.5
- e12[a28,a18]: Y[a18] - Y[a28] + 100 Above[a28,a18] <= 55.5
- e11[a28,a19]: X[a19] - X[a28] + 150 Right[a28,a19] <= 121.5
- e12[a28,a19]: Y[a19] - Y[a28] + 100 Above[a28,a19] <= 69.5
- e11[a28,a20]: X[a20] - X[a28] + 150 Right[a28,a20] <= 124.5
- e12[a28,a20]: Y[a20] - Y[a28] + 100 Above[a28,a20] <= 70.5
- e11[a28,a21]: X[a21] - X[a28] + 150 Right[a28,a21] <= 99.5
- e12[a28,a21]: Y[a21] - Y[a28] + 100 Above[a28,a21] <= 52.5
- e11[a28,a22]: X[a22] - X[a28] + 150 Right[a28,a22] <= 87.5
- e12[a28,a22]: Y[a22] - Y[a28] + 100 Above[a28,a22] <= 40.5
- e11[a28,a23]: X[a23] - X[a28] + 150 Right[a28,a23] <= 100.5
- e12[a28,a23]: Y[a23] - Y[a28] + 100 Above[a28,a23] <= 43.5
- e11[a28,a24]: X[a24] - X[a28] + 150 Right[a28,a24] <= 82.5
- e12[a28,a24]: Y[a24] - Y[a28] + 100 Above[a28,a24] <= 31.5
- e11[a28,a25]: X[a25] - X[a28] + 150 Right[a28,a25] <= 116.5
- e12[a28,a25]: Y[a25] - Y[a28] + 100 Above[a28,a25] <= 68.5
- e11[a28,a26]: X[a26] - X[a28] + 150 Right[a28,a26] <= 114.5
- e12[a28,a26]: Y[a26] - Y[a28] + 100 Above[a28,a26] <= 63.5
- e11[a28,a27]: X[a27] - X[a28] + 150 Right[a28,a27] <= 74.5
- e12[a28,a27]: Y[a27] - Y[a28] + 100 Above[a28,a27] <= 16.5
+ e07[a04]: X[a04] - 5 Accept[a04] >= 0
+ e08[a04]: X[a04] + 150 Accept[a04] <= 268
+ e09[a04]: Y[a04] - 5 Accept[a04] >= 0
+ e10[a04]: Y[a04] + 100 Accept[a04] <= 168
+ e07[a05]: X[a05] - 5 Accept[a05] >= 0
+ e08[a05]: X[a05] + 150 Accept[a05] <= 242
+ e09[a05]: Y[a05] - 5 Accept[a05] >= 0
+ e10[a05]: Y[a05] + 100 Accept[a05] <= 140
+ e07[a06]: X[a06] - 5 Accept[a06] >= 0
+ e08[a06]: X[a06] + 150 Accept[a06] <= 261
+ e09[a06]: Y[a06] - 5 Accept[a06] >= 0
+ e10[a06]: Y[a06] + 100 Accept[a06] <= 163
+ e07[a07]: X[a07] - 5 Accept[a07] >= 0
+ e08[a07]: X[a07] + 150 Accept[a07] <= 266
+ e09[a07]: Y[a07] - 5 Accept[a07] >= 0
+ e10[a07]: Y[a07] + 100 Accept[a07] <= 164
+ e07[a08]: X[a08] - 5 Accept[a08] >= 0
+ e08[a08]: X[a08] + 150 Accept[a08] <= 265
+ e09[a08]: Y[a08] - 5 Accept[a08] >= 0
+ e10[a08]: Y[a08] + 100 Accept[a08] <= 165
+ e07[a09]: X[a09] - 5 Accept[a09] >= 0
+ e08[a09]: X[a09] + 150 Accept[a09] <= 230
+ e09[a09]: Y[a09] - 5 Accept[a09] >= 0
+ e10[a09]: Y[a09] + 100 Accept[a09] <= 135
+ e07[a10]: X[a10] - 5 Accept[a10] >= 0
+ e08[a10]: X[a10] + 150 Accept[a10] <= 235
+ e09[a10]: Y[a10] - 5 Accept[a10] >= 0
+ e10[a10]: Y[a10] + 100 Accept[a10] <= 122
+ e07[a11]: X[a11] - 5 Accept[a11] >= 0
+ e08[a11]: X[a11] + 150 Accept[a11] <= 252
+ e09[a11]: Y[a11] - 5 Accept[a11] >= 0
+ e10[a11]: Y[a11] + 100 Accept[a11] <= 153
+ e07[a12]: X[a12] - 5 Accept[a12] >= 0
+ e08[a12]: X[a12] + 150 Accept[a12] <= 246
+ e09[a12]: Y[a12] - 5 Accept[a12] >= 0
+ e10[a12]: Y[a12] + 100 Accept[a12] <= 137
+ e07[a13]: X[a13] - 5 Accept[a13] >= 0
+ e08[a13]: X[a13] + 150 Accept[a13] <= 245
+ e09[a13]: Y[a13] - 5 Accept[a13] >= 0
+ e10[a13]: Y[a13] + 100 Accept[a13] <= 129
+ e07[a14]: X[a14] - 5 Accept[a14] >= 0
+ e08[a14]: X[a14] + 150 Accept[a14] <= 229
+ e09[a14]: Y[a14] - 5 Accept[a14] >= 0
+ e10[a14]: Y[a14] + 100 Accept[a14] <= 128
+ e07[a15]: X[a15] - 5 Accept[a15] >= 0
+ e08[a15]: X[a15] + 150 Accept[a15] <= 220
+ e09[a15]: Y[a15] - 5 Accept[a15] >= 0
+ e10[a15]: Y[a15] + 100 Accept[a15] <= 125
+ e07[a16]: X[a16] - 5 Accept[a16] >= 0
+ e08[a16]: X[a16] + 150 Accept[a16] <= 270
+ e09[a16]: Y[a16] - 5 Accept[a16] >= 0
+ e10[a16]: Y[a16] + 100 Accept[a16] <= 172
+ e07[a17]: X[a17] - 5 Accept[a17] >= 0
+ e08[a17]: X[a17] + 150 Accept[a17] <= 230
+ e09[a17]: Y[a17] - 5 Accept[a17] >= 0
+ e10[a17]: Y[a17] + 100 Accept[a17] <= 127
+ e07[a18]: X[a18] - 5 Accept[a18] >= 0
+ e08[a18]: X[a18] + 150 Accept[a18] <= 259
+ e09[a18]: Y[a18] - 5 Accept[a18] >= 0
+ e10[a18]: Y[a18] + 100 Accept[a18] <= 158
+ e07[a19]: X[a19] - 5 Accept[a19] >= 0
+ e08[a19]: X[a19] + 150 Accept[a19] <= 274
+ e09[a19]: Y[a19] - 5 Accept[a19] >= 0
+ e10[a19]: Y[a19] + 100 Accept[a19] <= 172
+ e07[a20]: X[a20] - 5 Accept[a20] >= 0
+ e08[a20]: X[a20] + 150 Accept[a20] <= 277
+ e09[a20]: Y[a20] - 5 Accept[a20] >= 0
+ e10[a20]: Y[a20] + 100 Accept[a20] <= 173
+ e07[a21]: X[a21] - 5 Accept[a21] >= 0
+ e08[a21]: X[a21] + 150 Accept[a21] <= 252
+ e09[a21]: Y[a21] - 5 Accept[a21] >= 0
+ e10[a21]: Y[a21] + 100 Accept[a21] <= 155
+ e07[a22]: X[a22] - 5 Accept[a22] >= 0
+ e08[a22]: X[a22] + 150 Accept[a22] <= 240
+ e09[a22]: Y[a22] - 5 Accept[a22] >= 0
+ e10[a22]: Y[a22] + 100 Accept[a22] <= 143
+ e07[a23]: X[a23] - 5 Accept[a23] >= 0
+ e08[a23]: X[a23] + 150 Accept[a23] <= 253
+ e09[a23]: Y[a23] - 5 Accept[a23] >= 0
+ e10[a23]: Y[a23] + 100 Accept[a23] <= 146
+ e07[a24]: X[a24] - 5 Accept[a24] >= 0
+ e08[a24]: X[a24] + 150 Accept[a24] <= 235
+ e09[a24]: Y[a24] - 5 Accept[a24] >= 0
+ e10[a24]: Y[a24] + 100 Accept[a24] <= 134
+ e07[a25]: X[a25] - 5 Accept[a25] >= 0
+ e08[a25]: X[a25] + 150 Accept[a25] <= 269
+ e09[a25]: Y[a25] - 5 Accept[a25] >= 0
+ e10[a25]: Y[a25] + 100 Accept[a25] <= 171
+ e07[a26]: X[a26] - 5 Accept[a26] >= 0
+ e08[a26]: X[a26] + 150 Accept[a26] <= 267
+ e09[a26]: Y[a26] - 5 Accept[a26] >= 0
+ e10[a26]: Y[a26] + 100 Accept[a26] <= 166
+ e07[a27]: X[a27] - 5 Accept[a27] >= 0
+ e08[a27]: X[a27] + 150 Accept[a27] <= 227
+ e09[a27]: Y[a27] - 5 Accept[a27] >= 0
+ e10[a27]: Y[a27] + 100 Accept[a27] <= 119
+ e07[a28]: X[a28] - 5 Accept[a28] >= 0
+ e08[a28]: X[a28] + 150 Accept[a28] <= 271
+ e09[a28]: Y[a28] - 5 Accept[a28] >= 0
+ e10[a28]: Y[a28] + 100 Accept[a28] <= 165
+ e11[a01,a02]: - X[a01] + X[a02] + 150 Right[a01,a02] <= 108
+ e12[a01,a02]: - Y[a01] + Y[a02] + 100 Above[a01,a02] <= 56
+ e11[a01,a03]: - X[a01] + X[a03] + 150 Right[a01,a03] <= 118
+ e12[a01,a03]: - Y[a01] + Y[a03] + 100 Above[a01,a03] <= 64
+ e11[a01,a04]: - X[a01] + X[a04] + 150 Right[a01,a04] <= 118
+ e12[a01,a04]: - Y[a01] + Y[a04] + 100 Above[a01,a04] <= 68
+ e11[a01,a05]: - X[a01] + X[a05] + 150 Right[a01,a05] <= 92
+ e12[a01,a05]: - Y[a01] + Y[a05] + 100 Above[a01,a05] <= 40
+ e11[a01,a06]: - X[a01] + X[a06] + 150 Right[a01,a06] <= 111
+ e12[a01,a06]: - Y[a01] + Y[a06] + 100 Above[a01,a06] <= 63
+ e11[a01,a07]: - X[a01] + X[a07] + 150 Right[a01,a07] <= 116
+ e12[a01,a07]: - Y[a01] + Y[a07] + 100 Above[a01,a07] <= 64
+ e11[a01,a08]: - X[a01] + X[a08] + 150 Right[a01,a08] <= 115
+ e12[a01,a08]: - Y[a01] + Y[a08] + 100 Above[a01,a08] <= 65
+ e11[a01,a09]: - X[a01] + X[a09] + 150 Right[a01,a09] <= 80
+ e12[a01,a09]: - Y[a01] + Y[a09] + 100 Above[a01,a09] <= 35
+ e11[a01,a10]: - X[a01] + X[a10] + 150 Right[a01,a10] <= 85
+ e12[a01,a10]: - Y[a01] + Y[a10] + 100 Above[a01,a10] <= 22
+ e11[a01,a11]: - X[a01] + X[a11] + 150 Right[a01,a11] <= 102
+ e12[a01,a11]: - Y[a01] + Y[a11] + 100 Above[a01,a11] <= 53
+ e11[a01,a12]: - X[a01] + X[a12] + 150 Right[a01,a12] <= 96
+ e12[a01,a12]: - Y[a01] + Y[a12] + 100 Above[a01,a12] <= 37
+ e11[a01,a13]: - X[a01] + X[a13] + 150 Right[a01,a13] <= 95
+ e12[a01,a13]: - Y[a01] + Y[a13] + 100 Above[a01,a13] <= 29
+ e11[a01,a14]: - X[a01] + X[a14] + 150 Right[a01,a14] <= 79
+ e12[a01,a14]: - Y[a01] + Y[a14] + 100 Above[a01,a14] <= 28
+ e11[a01,a15]: - X[a01] + X[a15] + 150 Right[a01,a15] <= 70
+ e12[a01,a15]: - Y[a01] + Y[a15] + 100 Above[a01,a15] <= 25
+ e11[a01,a16]: - X[a01] + X[a16] + 150 Right[a01,a16] <= 120
+ e12[a01,a16]: - Y[a01] + Y[a16] + 100 Above[a01,a16] <= 72
+ e11[a01,a17]: - X[a01] + X[a17] + 150 Right[a01,a17] <= 80
+ e12[a01,a17]: - Y[a01] + Y[a17] + 100 Above[a01,a17] <= 27
+ e11[a01,a18]: - X[a01] + X[a18] + 150 Right[a01,a18] <= 109
+ e12[a01,a18]: - Y[a01] + Y[a18] + 100 Above[a01,a18] <= 58
+ e11[a01,a19]: - X[a01] + X[a19] + 150 Right[a01,a19] <= 124
+ e12[a01,a19]: - Y[a01] + Y[a19] + 100 Above[a01,a19] <= 72
+ e11[a01,a20]: - X[a01] + X[a20] + 150 Right[a01,a20] <= 127
+ e12[a01,a20]: - Y[a01] + Y[a20] + 100 Above[a01,a20] <= 73
+ e11[a01,a21]: - X[a01] + X[a21] + 150 Right[a01,a21] <= 102
+ e12[a01,a21]: - Y[a01] + Y[a21] + 100 Above[a01,a21] <= 55
+ e11[a01,a22]: - X[a01] + X[a22] + 150 Right[a01,a22] <= 90
+ e12[a01,a22]: - Y[a01] + Y[a22] + 100 Above[a01,a22] <= 43
+ e11[a01,a23]: - X[a01] + X[a23] + 150 Right[a01,a23] <= 103
+ e12[a01,a23]: - Y[a01] + Y[a23] + 100 Above[a01,a23] <= 46
+ e11[a01,a24]: - X[a01] + X[a24] + 150 Right[a01,a24] <= 85
+ e12[a01,a24]: - Y[a01] + Y[a24] + 100 Above[a01,a24] <= 34
+ e11[a01,a25]: - X[a01] + X[a25] + 150 Right[a01,a25] <= 119
+ e12[a01,a25]: - Y[a01] + Y[a25] + 100 Above[a01,a25] <= 71
+ e11[a01,a26]: - X[a01] + X[a26] + 150 Right[a01,a26] <= 117
+ e12[a01,a26]: - Y[a01] + Y[a26] + 100 Above[a01,a26] <= 66
+ e11[a01,a27]: - X[a01] + X[a27] + 150 Right[a01,a27] <= 77
+ e12[a01,a27]: - Y[a01] + Y[a27] + 100 Above[a01,a27] <= 19
+ e11[a01,a28]: - X[a01] + X[a28] + 150 Right[a01,a28] <= 121
+ e12[a01,a28]: - Y[a01] + Y[a28] + 100 Above[a01,a28] <= 65
+ e11[a02,a01]: X[a01] - X[a02] + 150 Right[a02,a01] <= 89
+ e12[a02,a01]: Y[a01] - Y[a02] + 100 Above[a02,a01] <= 34
+ e11[a02,a03]: - X[a02] + X[a03] + 150 Right[a02,a03] <= 118
+ e12[a02,a03]: - Y[a02] + Y[a03] + 100 Above[a02,a03] <= 64
+ e11[a02,a04]: - X[a02] + X[a04] + 150 Right[a02,a04] <= 118
+ e12[a02,a04]: - Y[a02] + Y[a04] + 100 Above[a02,a04] <= 68
+ e11[a02,a05]: - X[a02] + X[a05] + 150 Right[a02,a05] <= 92
+ e12[a02,a05]: - Y[a02] + Y[a05] + 100 Above[a02,a05] <= 40
+ e11[a02,a06]: - X[a02] + X[a06] + 150 Right[a02,a06] <= 111
+ e12[a02,a06]: - Y[a02] + Y[a06] + 100 Above[a02,a06] <= 63
+ e11[a02,a07]: - X[a02] + X[a07] + 150 Right[a02,a07] <= 116
+ e12[a02,a07]: - Y[a02] + Y[a07] + 100 Above[a02,a07] <= 64
+ e11[a02,a08]: - X[a02] + X[a08] + 150 Right[a02,a08] <= 115
+ e12[a02,a08]: - Y[a02] + Y[a08] + 100 Above[a02,a08] <= 65
+ e11[a02,a09]: - X[a02] + X[a09] + 150 Right[a02,a09] <= 80
+ e12[a02,a09]: - Y[a02] + Y[a09] + 100 Above[a02,a09] <= 35
+ e11[a02,a10]: - X[a02] + X[a10] + 150 Right[a02,a10] <= 85
+ e12[a02,a10]: - Y[a02] + Y[a10] + 100 Above[a02,a10] <= 22
+ e11[a02,a11]: - X[a02] + X[a11] + 150 Right[a02,a11] <= 102
+ e12[a02,a11]: - Y[a02] + Y[a11] + 100 Above[a02,a11] <= 53
+ e11[a02,a12]: - X[a02] + X[a12] + 150 Right[a02,a12] <= 96
+ e12[a02,a12]: - Y[a02] + Y[a12] + 100 Above[a02,a12] <= 37
+ e11[a02,a13]: - X[a02] + X[a13] + 150 Right[a02,a13] <= 95
+ e12[a02,a13]: - Y[a02] + Y[a13] + 100 Above[a02,a13] <= 29
+ e11[a02,a14]: - X[a02] + X[a14] + 150 Right[a02,a14] <= 79
+ e12[a02,a14]: - Y[a02] + Y[a14] + 100 Above[a02,a14] <= 28
+ e11[a02,a15]: - X[a02] + X[a15] + 150 Right[a02,a15] <= 70
+ e12[a02,a15]: - Y[a02] + Y[a15] + 100 Above[a02,a15] <= 25
+ e11[a02,a16]: - X[a02] + X[a16] + 150 Right[a02,a16] <= 120
+ e12[a02,a16]: - Y[a02] + Y[a16] + 100 Above[a02,a16] <= 72
+ e11[a02,a17]: - X[a02] + X[a17] + 150 Right[a02,a17] <= 80
+ e12[a02,a17]: - Y[a02] + Y[a17] + 100 Above[a02,a17] <= 27
+ e11[a02,a18]: - X[a02] + X[a18] + 150 Right[a02,a18] <= 109
+ e12[a02,a18]: - Y[a02] + Y[a18] + 100 Above[a02,a18] <= 58
+ e11[a02,a19]: - X[a02] + X[a19] + 150 Right[a02,a19] <= 124
+ e12[a02,a19]: - Y[a02] + Y[a19] + 100 Above[a02,a19] <= 72
+ e11[a02,a20]: - X[a02] + X[a20] + 150 Right[a02,a20] <= 127
+ e12[a02,a20]: - Y[a02] + Y[a20] + 100 Above[a02,a20] <= 73
+ e11[a02,a21]: - X[a02] + X[a21] + 150 Right[a02,a21] <= 102
+ e12[a02,a21]: - Y[a02] + Y[a21] + 100 Above[a02,a21] <= 55
+ e11[a02,a22]: - X[a02] + X[a22] + 150 Right[a02,a22] <= 90
+ e12[a02,a22]: - Y[a02] + Y[a22] + 100 Above[a02,a22] <= 43
+ e11[a02,a23]: - X[a02] + X[a23] + 150 Right[a02,a23] <= 103
+ e12[a02,a23]: - Y[a02] + Y[a23] + 100 Above[a02,a23] <= 46
+ e11[a02,a24]: - X[a02] + X[a24] + 150 Right[a02,a24] <= 85
+ e12[a02,a24]: - Y[a02] + Y[a24] + 100 Above[a02,a24] <= 34
+ e11[a02,a25]: - X[a02] + X[a25] + 150 Right[a02,a25] <= 119
+ e12[a02,a25]: - Y[a02] + Y[a25] + 100 Above[a02,a25] <= 71
+ e11[a02,a26]: - X[a02] + X[a26] + 150 Right[a02,a26] <= 117
+ e12[a02,a26]: - Y[a02] + Y[a26] + 100 Above[a02,a26] <= 66
+ e11[a02,a27]: - X[a02] + X[a27] + 150 Right[a02,a27] <= 77
+ e12[a02,a27]: - Y[a02] + Y[a27] + 100 Above[a02,a27] <= 19
+ e11[a02,a28]: - X[a02] + X[a28] + 150 Right[a02,a28] <= 121
+ e12[a02,a28]: - Y[a02] + Y[a28] + 100 Above[a02,a28] <= 65
+ e11[a03,a01]: X[a01] - X[a03] + 150 Right[a03,a01] <= 89
+ e12[a03,a01]: Y[a01] - Y[a03] + 100 Above[a03,a01] <= 34
+ e11[a03,a02]: X[a02] - X[a03] + 150 Right[a03,a02] <= 108
+ e12[a03,a02]: Y[a02] - Y[a03] + 100 Above[a03,a02] <= 56
+ e11[a03,a04]: - X[a03] + X[a04] + 150 Right[a03,a04] <= 118
+ e12[a03,a04]: - Y[a03] + Y[a04] + 100 Above[a03,a04] <= 68
+ e11[a03,a05]: - X[a03] + X[a05] + 150 Right[a03,a05] <= 92
+ e12[a03,a05]: - Y[a03] + Y[a05] + 100 Above[a03,a05] <= 40
+ e11[a03,a06]: - X[a03] + X[a06] + 150 Right[a03,a06] <= 111
+ e12[a03,a06]: - Y[a03] + Y[a06] + 100 Above[a03,a06] <= 63
+ e11[a03,a07]: - X[a03] + X[a07] + 150 Right[a03,a07] <= 116
+ e12[a03,a07]: - Y[a03] + Y[a07] + 100 Above[a03,a07] <= 64
+ e11[a03,a08]: - X[a03] + X[a08] + 150 Right[a03,a08] <= 115
+ e12[a03,a08]: - Y[a03] + Y[a08] + 100 Above[a03,a08] <= 65
+ e11[a03,a09]: - X[a03] + X[a09] + 150 Right[a03,a09] <= 80
+ e12[a03,a09]: - Y[a03] + Y[a09] + 100 Above[a03,a09] <= 35
+ e11[a03,a10]: - X[a03] + X[a10] + 150 Right[a03,a10] <= 85
+ e12[a03,a10]: - Y[a03] + Y[a10] + 100 Above[a03,a10] <= 22
+ e11[a03,a11]: - X[a03] + X[a11] + 150 Right[a03,a11] <= 102
+ e12[a03,a11]: - Y[a03] + Y[a11] + 100 Above[a03,a11] <= 53
+ e11[a03,a12]: - X[a03] + X[a12] + 150 Right[a03,a12] <= 96
+ e12[a03,a12]: - Y[a03] + Y[a12] + 100 Above[a03,a12] <= 37
+ e11[a03,a13]: - X[a03] + X[a13] + 150 Right[a03,a13] <= 95
+ e12[a03,a13]: - Y[a03] + Y[a13] + 100 Above[a03,a13] <= 29
+ e11[a03,a14]: - X[a03] + X[a14] + 150 Right[a03,a14] <= 79
+ e12[a03,a14]: - Y[a03] + Y[a14] + 100 Above[a03,a14] <= 28
+ e11[a03,a15]: - X[a03] + X[a15] + 150 Right[a03,a15] <= 70
+ e12[a03,a15]: - Y[a03] + Y[a15] + 100 Above[a03,a15] <= 25
+ e11[a03,a16]: - X[a03] + X[a16] + 150 Right[a03,a16] <= 120
+ e12[a03,a16]: - Y[a03] + Y[a16] + 100 Above[a03,a16] <= 72
+ e11[a03,a17]: - X[a03] + X[a17] + 150 Right[a03,a17] <= 80
+ e12[a03,a17]: - Y[a03] + Y[a17] + 100 Above[a03,a17] <= 27
+ e11[a03,a18]: - X[a03] + X[a18] + 150 Right[a03,a18] <= 109
+ e12[a03,a18]: - Y[a03] + Y[a18] + 100 Above[a03,a18] <= 58
+ e11[a03,a19]: - X[a03] + X[a19] + 150 Right[a03,a19] <= 124
+ e12[a03,a19]: - Y[a03] + Y[a19] + 100 Above[a03,a19] <= 72
+ e11[a03,a20]: - X[a03] + X[a20] + 150 Right[a03,a20] <= 127
+ e12[a03,a20]: - Y[a03] + Y[a20] + 100 Above[a03,a20] <= 73
+ e11[a03,a21]: - X[a03] + X[a21] + 150 Right[a03,a21] <= 102
+ e12[a03,a21]: - Y[a03] + Y[a21] + 100 Above[a03,a21] <= 55
+ e11[a03,a22]: - X[a03] + X[a22] + 150 Right[a03,a22] <= 90
+ e12[a03,a22]: - Y[a03] + Y[a22] + 100 Above[a03,a22] <= 43
+ e11[a03,a23]: - X[a03] + X[a23] + 150 Right[a03,a23] <= 103
+ e12[a03,a23]: - Y[a03] + Y[a23] + 100 Above[a03,a23] <= 46
+ e11[a03,a24]: - X[a03] + X[a24] + 150 Right[a03,a24] <= 85
+ e12[a03,a24]: - Y[a03] + Y[a24] + 100 Above[a03,a24] <= 34
+ e11[a03,a25]: - X[a03] + X[a25] + 150 Right[a03,a25] <= 119
+ e12[a03,a25]: - Y[a03] + Y[a25] + 100 Above[a03,a25] <= 71
+ e11[a03,a26]: - X[a03] + X[a26] + 150 Right[a03,a26] <= 117
+ e12[a03,a26]: - Y[a03] + Y[a26] + 100 Above[a03,a26] <= 66
+ e11[a03,a27]: - X[a03] + X[a27] + 150 Right[a03,a27] <= 77
+ e12[a03,a27]: - Y[a03] + Y[a27] + 100 Above[a03,a27] <= 19
+ e11[a03,a28]: - X[a03] + X[a28] + 150 Right[a03,a28] <= 121
+ e12[a03,a28]: - Y[a03] + Y[a28] + 100 Above[a03,a28] <= 65
+ e11[a04,a01]: X[a01] - X[a04] + 150 Right[a04,a01] <= 89
+ e12[a04,a01]: Y[a01] - Y[a04] + 100 Above[a04,a01] <= 34
+ e11[a04,a02]: X[a02] - X[a04] + 150 Right[a04,a02] <= 108
+ e12[a04,a02]: Y[a02] - Y[a04] + 100 Above[a04,a02] <= 56
+ e11[a04,a03]: X[a03] - X[a04] + 150 Right[a04,a03] <= 118
+ e12[a04,a03]: Y[a03] - Y[a04] + 100 Above[a04,a03] <= 64
+ e11[a04,a05]: - X[a04] + X[a05] + 150 Right[a04,a05] <= 92
+ e12[a04,a05]: - Y[a04] + Y[a05] + 100 Above[a04,a05] <= 40
+ e11[a04,a06]: - X[a04] + X[a06] + 150 Right[a04,a06] <= 111
+ e12[a04,a06]: - Y[a04] + Y[a06] + 100 Above[a04,a06] <= 63
+ e11[a04,a07]: - X[a04] + X[a07] + 150 Right[a04,a07] <= 116
+ e12[a04,a07]: - Y[a04] + Y[a07] + 100 Above[a04,a07] <= 64
+ e11[a04,a08]: - X[a04] + X[a08] + 150 Right[a04,a08] <= 115
+ e12[a04,a08]: - Y[a04] + Y[a08] + 100 Above[a04,a08] <= 65
+ e11[a04,a09]: - X[a04] + X[a09] + 150 Right[a04,a09] <= 80
+ e12[a04,a09]: - Y[a04] + Y[a09] + 100 Above[a04,a09] <= 35
+ e11[a04,a10]: - X[a04] + X[a10] + 150 Right[a04,a10] <= 85
+ e12[a04,a10]: - Y[a04] + Y[a10] + 100 Above[a04,a10] <= 22
+ e11[a04,a11]: - X[a04] + X[a11] + 150 Right[a04,a11] <= 102
+ e12[a04,a11]: - Y[a04] + Y[a11] + 100 Above[a04,a11] <= 53
+ e11[a04,a12]: - X[a04] + X[a12] + 150 Right[a04,a12] <= 96
+ e12[a04,a12]: - Y[a04] + Y[a12] + 100 Above[a04,a12] <= 37
+ e11[a04,a13]: - X[a04] + X[a13] + 150 Right[a04,a13] <= 95
+ e12[a04,a13]: - Y[a04] + Y[a13] + 100 Above[a04,a13] <= 29
+ e11[a04,a14]: - X[a04] + X[a14] + 150 Right[a04,a14] <= 79
+ e12[a04,a14]: - Y[a04] + Y[a14] + 100 Above[a04,a14] <= 28
+ e11[a04,a15]: - X[a04] + X[a15] + 150 Right[a04,a15] <= 70
+ e12[a04,a15]: - Y[a04] + Y[a15] + 100 Above[a04,a15] <= 25
+ e11[a04,a16]: - X[a04] + X[a16] + 150 Right[a04,a16] <= 120
+ e12[a04,a16]: - Y[a04] + Y[a16] + 100 Above[a04,a16] <= 72
+ e11[a04,a17]: - X[a04] + X[a17] + 150 Right[a04,a17] <= 80
+ e12[a04,a17]: - Y[a04] + Y[a17] + 100 Above[a04,a17] <= 27
+ e11[a04,a18]: - X[a04] + X[a18] + 150 Right[a04,a18] <= 109
+ e12[a04,a18]: - Y[a04] + Y[a18] + 100 Above[a04,a18] <= 58
+ e11[a04,a19]: - X[a04] + X[a19] + 150 Right[a04,a19] <= 124
+ e12[a04,a19]: - Y[a04] + Y[a19] + 100 Above[a04,a19] <= 72
+ e11[a04,a20]: - X[a04] + X[a20] + 150 Right[a04,a20] <= 127
+ e12[a04,a20]: - Y[a04] + Y[a20] + 100 Above[a04,a20] <= 73
+ e11[a04,a21]: - X[a04] + X[a21] + 150 Right[a04,a21] <= 102
+ e12[a04,a21]: - Y[a04] + Y[a21] + 100 Above[a04,a21] <= 55
+ e11[a04,a22]: - X[a04] + X[a22] + 150 Right[a04,a22] <= 90
+ e12[a04,a22]: - Y[a04] + Y[a22] + 100 Above[a04,a22] <= 43
+ e11[a04,a23]: - X[a04] + X[a23] + 150 Right[a04,a23] <= 103
+ e12[a04,a23]: - Y[a04] + Y[a23] + 100 Above[a04,a23] <= 46
+ e11[a04,a24]: - X[a04] + X[a24] + 150 Right[a04,a24] <= 85
+ e12[a04,a24]: - Y[a04] + Y[a24] + 100 Above[a04,a24] <= 34
+ e11[a04,a25]: - X[a04] + X[a25] + 150 Right[a04,a25] <= 119
+ e12[a04,a25]: - Y[a04] + Y[a25] + 100 Above[a04,a25] <= 71
+ e11[a04,a26]: - X[a04] + X[a26] + 150 Right[a04,a26] <= 117
+ e12[a04,a26]: - Y[a04] + Y[a26] + 100 Above[a04,a26] <= 66
+ e11[a04,a27]: - X[a04] + X[a27] + 150 Right[a04,a27] <= 77
+ e12[a04,a27]: - Y[a04] + Y[a27] + 100 Above[a04,a27] <= 19
+ e11[a04,a28]: - X[a04] + X[a28] + 150 Right[a04,a28] <= 121
+ e12[a04,a28]: - Y[a04] + Y[a28] + 100 Above[a04,a28] <= 65
+ e11[a05,a01]: X[a01] - X[a05] + 150 Right[a05,a01] <= 89
+ e12[a05,a01]: Y[a01] - Y[a05] + 100 Above[a05,a01] <= 34
+ e11[a05,a02]: X[a02] - X[a05] + 150 Right[a05,a02] <= 108
+ e12[a05,a02]: Y[a02] - Y[a05] + 100 Above[a05,a02] <= 56
+ e11[a05,a03]: X[a03] - X[a05] + 150 Right[a05,a03] <= 118
+ e12[a05,a03]: Y[a03] - Y[a05] + 100 Above[a05,a03] <= 64
+ e11[a05,a04]: X[a04] - X[a05] + 150 Right[a05,a04] <= 118
+ e12[a05,a04]: Y[a04] - Y[a05] + 100 Above[a05,a04] <= 68
+ e11[a05,a06]: - X[a05] + X[a06] + 150 Right[a05,a06] <= 111
+ e12[a05,a06]: - Y[a05] + Y[a06] + 100 Above[a05,a06] <= 63
+ e11[a05,a07]: - X[a05] + X[a07] + 150 Right[a05,a07] <= 116
+ e12[a05,a07]: - Y[a05] + Y[a07] + 100 Above[a05,a07] <= 64
+ e11[a05,a08]: - X[a05] + X[a08] + 150 Right[a05,a08] <= 115
+ e12[a05,a08]: - Y[a05] + Y[a08] + 100 Above[a05,a08] <= 65
+ e11[a05,a09]: - X[a05] + X[a09] + 150 Right[a05,a09] <= 80
+ e12[a05,a09]: - Y[a05] + Y[a09] + 100 Above[a05,a09] <= 35
+ e11[a05,a10]: - X[a05] + X[a10] + 150 Right[a05,a10] <= 85
+ e12[a05,a10]: - Y[a05] + Y[a10] + 100 Above[a05,a10] <= 22
+ e11[a05,a11]: - X[a05] + X[a11] + 150 Right[a05,a11] <= 102
+ e12[a05,a11]: - Y[a05] + Y[a11] + 100 Above[a05,a11] <= 53
+ e11[a05,a12]: - X[a05] + X[a12] + 150 Right[a05,a12] <= 96
+ e12[a05,a12]: - Y[a05] + Y[a12] + 100 Above[a05,a12] <= 37
+ e11[a05,a13]: - X[a05] + X[a13] + 150 Right[a05,a13] <= 95
+ e12[a05,a13]: - Y[a05] + Y[a13] + 100 Above[a05,a13] <= 29
+ e11[a05,a14]: - X[a05] + X[a14] + 150 Right[a05,a14] <= 79
+ e12[a05,a14]: - Y[a05] + Y[a14] + 100 Above[a05,a14] <= 28
+ e11[a05,a15]: - X[a05] + X[a15] + 150 Right[a05,a15] <= 70
+ e12[a05,a15]: - Y[a05] + Y[a15] + 100 Above[a05,a15] <= 25
+ e11[a05,a16]: - X[a05] + X[a16] + 150 Right[a05,a16] <= 120
+ e12[a05,a16]: - Y[a05] + Y[a16] + 100 Above[a05,a16] <= 72
+ e11[a05,a17]: - X[a05] + X[a17] + 150 Right[a05,a17] <= 80
+ e12[a05,a17]: - Y[a05] + Y[a17] + 100 Above[a05,a17] <= 27
+ e11[a05,a18]: - X[a05] + X[a18] + 150 Right[a05,a18] <= 109
+ e12[a05,a18]: - Y[a05] + Y[a18] + 100 Above[a05,a18] <= 58
+ e11[a05,a19]: - X[a05] + X[a19] + 150 Right[a05,a19] <= 124
+ e12[a05,a19]: - Y[a05] + Y[a19] + 100 Above[a05,a19] <= 72
+ e11[a05,a20]: - X[a05] + X[a20] + 150 Right[a05,a20] <= 127
+ e12[a05,a20]: - Y[a05] + Y[a20] + 100 Above[a05,a20] <= 73
+ e11[a05,a21]: - X[a05] + X[a21] + 150 Right[a05,a21] <= 102
+ e12[a05,a21]: - Y[a05] + Y[a21] + 100 Above[a05,a21] <= 55
+ e11[a05,a22]: - X[a05] + X[a22] + 150 Right[a05,a22] <= 90
+ e12[a05,a22]: - Y[a05] + Y[a22] + 100 Above[a05,a22] <= 43
+ e11[a05,a23]: - X[a05] + X[a23] + 150 Right[a05,a23] <= 103
+ e12[a05,a23]: - Y[a05] + Y[a23] + 100 Above[a05,a23] <= 46
+ e11[a05,a24]: - X[a05] + X[a24] + 150 Right[a05,a24] <= 85
+ e12[a05,a24]: - Y[a05] + Y[a24] + 100 Above[a05,a24] <= 34
+ e11[a05,a25]: - X[a05] + X[a25] + 150 Right[a05,a25] <= 119
+ e12[a05,a25]: - Y[a05] + Y[a25] + 100 Above[a05,a25] <= 71
+ e11[a05,a26]: - X[a05] + X[a26] + 150 Right[a05,a26] <= 117
+ e12[a05,a26]: - Y[a05] + Y[a26] + 100 Above[a05,a26] <= 66
+ e11[a05,a27]: - X[a05] + X[a27] + 150 Right[a05,a27] <= 77
+ e12[a05,a27]: - Y[a05] + Y[a27] + 100 Above[a05,a27] <= 19
+ e11[a05,a28]: - X[a05] + X[a28] + 150 Right[a05,a28] <= 121
+ e12[a05,a28]: - Y[a05] + Y[a28] + 100 Above[a05,a28] <= 65
+ e11[a06,a01]: X[a01] - X[a06] + 150 Right[a06,a01] <= 89
+ e12[a06,a01]: Y[a01] - Y[a06] + 100 Above[a06,a01] <= 34
+ e11[a06,a02]: X[a02] - X[a06] + 150 Right[a06,a02] <= 108
+ e12[a06,a02]: Y[a02] - Y[a06] + 100 Above[a06,a02] <= 56
+ e11[a06,a03]: X[a03] - X[a06] + 150 Right[a06,a03] <= 118
+ e12[a06,a03]: Y[a03] - Y[a06] + 100 Above[a06,a03] <= 64
+ e11[a06,a04]: X[a04] - X[a06] + 150 Right[a06,a04] <= 118
+ e12[a06,a04]: Y[a04] - Y[a06] + 100 Above[a06,a04] <= 68
+ e11[a06,a05]: X[a05] - X[a06] + 150 Right[a06,a05] <= 92
+ e12[a06,a05]: Y[a05] - Y[a06] + 100 Above[a06,a05] <= 40
+ e11[a06,a07]: - X[a06] + X[a07] + 150 Right[a06,a07] <= 116
+ e12[a06,a07]: - Y[a06] + Y[a07] + 100 Above[a06,a07] <= 64
+ e11[a06,a08]: - X[a06] + X[a08] + 150 Right[a06,a08] <= 115
+ e12[a06,a08]: - Y[a06] + Y[a08] + 100 Above[a06,a08] <= 65
+ e11[a06,a09]: - X[a06] + X[a09] + 150 Right[a06,a09] <= 80
+ e12[a06,a09]: - Y[a06] + Y[a09] + 100 Above[a06,a09] <= 35
+ e11[a06,a10]: - X[a06] + X[a10] + 150 Right[a06,a10] <= 85
+ e12[a06,a10]: - Y[a06] + Y[a10] + 100 Above[a06,a10] <= 22
+ e11[a06,a11]: - X[a06] + X[a11] + 150 Right[a06,a11] <= 102
+ e12[a06,a11]: - Y[a06] + Y[a11] + 100 Above[a06,a11] <= 53
+ e11[a06,a12]: - X[a06] + X[a12] + 150 Right[a06,a12] <= 96
+ e12[a06,a12]: - Y[a06] + Y[a12] + 100 Above[a06,a12] <= 37
+ e11[a06,a13]: - X[a06] + X[a13] + 150 Right[a06,a13] <= 95
+ e12[a06,a13]: - Y[a06] + Y[a13] + 100 Above[a06,a13] <= 29
+ e11[a06,a14]: - X[a06] + X[a14] + 150 Right[a06,a14] <= 79
+ e12[a06,a14]: - Y[a06] + Y[a14] + 100 Above[a06,a14] <= 28
+ e11[a06,a15]: - X[a06] + X[a15] + 150 Right[a06,a15] <= 70
+ e12[a06,a15]: - Y[a06] + Y[a15] + 100 Above[a06,a15] <= 25
+ e11[a06,a16]: - X[a06] + X[a16] + 150 Right[a06,a16] <= 120
+ e12[a06,a16]: - Y[a06] + Y[a16] + 100 Above[a06,a16] <= 72
+ e11[a06,a17]: - X[a06] + X[a17] + 150 Right[a06,a17] <= 80
+ e12[a06,a17]: - Y[a06] + Y[a17] + 100 Above[a06,a17] <= 27
+ e11[a06,a18]: - X[a06] + X[a18] + 150 Right[a06,a18] <= 109
+ e12[a06,a18]: - Y[a06] + Y[a18] + 100 Above[a06,a18] <= 58
+ e11[a06,a19]: - X[a06] + X[a19] + 150 Right[a06,a19] <= 124
+ e12[a06,a19]: - Y[a06] + Y[a19] + 100 Above[a06,a19] <= 72
+ e11[a06,a20]: - X[a06] + X[a20] + 150 Right[a06,a20] <= 127
+ e12[a06,a20]: - Y[a06] + Y[a20] + 100 Above[a06,a20] <= 73
+ e11[a06,a21]: - X[a06] + X[a21] + 150 Right[a06,a21] <= 102
+ e12[a06,a21]: - Y[a06] + Y[a21] + 100 Above[a06,a21] <= 55
+ e11[a06,a22]: - X[a06] + X[a22] + 150 Right[a06,a22] <= 90
+ e12[a06,a22]: - Y[a06] + Y[a22] + 100 Above[a06,a22] <= 43
+ e11[a06,a23]: - X[a06] + X[a23] + 150 Right[a06,a23] <= 103
+ e12[a06,a23]: - Y[a06] + Y[a23] + 100 Above[a06,a23] <= 46
+ e11[a06,a24]: - X[a06] + X[a24] + 150 Right[a06,a24] <= 85
+ e12[a06,a24]: - Y[a06] + Y[a24] + 100 Above[a06,a24] <= 34
+ e11[a06,a25]: - X[a06] + X[a25] + 150 Right[a06,a25] <= 119
+ e12[a06,a25]: - Y[a06] + Y[a25] + 100 Above[a06,a25] <= 71
+ e11[a06,a26]: - X[a06] + X[a26] + 150 Right[a06,a26] <= 117
+ e12[a06,a26]: - Y[a06] + Y[a26] + 100 Above[a06,a26] <= 66
+ e11[a06,a27]: - X[a06] + X[a27] + 150 Right[a06,a27] <= 77
+ e12[a06,a27]: - Y[a06] + Y[a27] + 100 Above[a06,a27] <= 19
+ e11[a06,a28]: - X[a06] + X[a28] + 150 Right[a06,a28] <= 121
+ e12[a06,a28]: - Y[a06] + Y[a28] + 100 Above[a06,a28] <= 65
+ e11[a07,a01]: X[a01] - X[a07] + 150 Right[a07,a01] <= 89
+ e12[a07,a01]: Y[a01] - Y[a07] + 100 Above[a07,a01] <= 34
+ e11[a07,a02]: X[a02] - X[a07] + 150 Right[a07,a02] <= 108
+ e12[a07,a02]: Y[a02] - Y[a07] + 100 Above[a07,a02] <= 56
+ e11[a07,a03]: X[a03] - X[a07] + 150 Right[a07,a03] <= 118
+ e12[a07,a03]: Y[a03] - Y[a07] + 100 Above[a07,a03] <= 64
+ e11[a07,a04]: X[a04] - X[a07] + 150 Right[a07,a04] <= 118
+ e12[a07,a04]: Y[a04] - Y[a07] + 100 Above[a07,a04] <= 68
+ e11[a07,a05]: X[a05] - X[a07] + 150 Right[a07,a05] <= 92
+ e12[a07,a05]: Y[a05] - Y[a07] + 100 Above[a07,a05] <= 40
+ e11[a07,a06]: X[a06] - X[a07] + 150 Right[a07,a06] <= 111
+ e12[a07,a06]: Y[a06] - Y[a07] + 100 Above[a07,a06] <= 63
+ e11[a07,a08]: - X[a07] + X[a08] + 150 Right[a07,a08] <= 115
+ e12[a07,a08]: - Y[a07] + Y[a08] + 100 Above[a07,a08] <= 65
+ e11[a07,a09]: - X[a07] + X[a09] + 150 Right[a07,a09] <= 80
+ e12[a07,a09]: - Y[a07] + Y[a09] + 100 Above[a07,a09] <= 35
+ e11[a07,a10]: - X[a07] + X[a10] + 150 Right[a07,a10] <= 85
+ e12[a07,a10]: - Y[a07] + Y[a10] + 100 Above[a07,a10] <= 22
+ e11[a07,a11]: - X[a07] + X[a11] + 150 Right[a07,a11] <= 102
+ e12[a07,a11]: - Y[a07] + Y[a11] + 100 Above[a07,a11] <= 53
+ e11[a07,a12]: - X[a07] + X[a12] + 150 Right[a07,a12] <= 96
+ e12[a07,a12]: - Y[a07] + Y[a12] + 100 Above[a07,a12] <= 37
+ e11[a07,a13]: - X[a07] + X[a13] + 150 Right[a07,a13] <= 95
+ e12[a07,a13]: - Y[a07] + Y[a13] + 100 Above[a07,a13] <= 29
+ e11[a07,a14]: - X[a07] + X[a14] + 150 Right[a07,a14] <= 79
+ e12[a07,a14]: - Y[a07] + Y[a14] + 100 Above[a07,a14] <= 28
+ e11[a07,a15]: - X[a07] + X[a15] + 150 Right[a07,a15] <= 70
+ e12[a07,a15]: - Y[a07] + Y[a15] + 100 Above[a07,a15] <= 25
+ e11[a07,a16]: - X[a07] + X[a16] + 150 Right[a07,a16] <= 120
+ e12[a07,a16]: - Y[a07] + Y[a16] + 100 Above[a07,a16] <= 72
+ e11[a07,a17]: - X[a07] + X[a17] + 150 Right[a07,a17] <= 80
+ e12[a07,a17]: - Y[a07] + Y[a17] + 100 Above[a07,a17] <= 27
+ e11[a07,a18]: - X[a07] + X[a18] + 150 Right[a07,a18] <= 109
+ e12[a07,a18]: - Y[a07] + Y[a18] + 100 Above[a07,a18] <= 58
+ e11[a07,a19]: - X[a07] + X[a19] + 150 Right[a07,a19] <= 124
+ e12[a07,a19]: - Y[a07] + Y[a19] + 100 Above[a07,a19] <= 72
+ e11[a07,a20]: - X[a07] + X[a20] + 150 Right[a07,a20] <= 127
+ e12[a07,a20]: - Y[a07] + Y[a20] + 100 Above[a07,a20] <= 73
+ e11[a07,a21]: - X[a07] + X[a21] + 150 Right[a07,a21] <= 102
+ e12[a07,a21]: - Y[a07] + Y[a21] + 100 Above[a07,a21] <= 55
+ e11[a07,a22]: - X[a07] + X[a22] + 150 Right[a07,a22] <= 90
+ e12[a07,a22]: - Y[a07] + Y[a22] + 100 Above[a07,a22] <= 43
+ e11[a07,a23]: - X[a07] + X[a23] + 150 Right[a07,a23] <= 103
+ e12[a07,a23]: - Y[a07] + Y[a23] + 100 Above[a07,a23] <= 46
+ e11[a07,a24]: - X[a07] + X[a24] + 150 Right[a07,a24] <= 85
+ e12[a07,a24]: - Y[a07] + Y[a24] + 100 Above[a07,a24] <= 34
+ e11[a07,a25]: - X[a07] + X[a25] + 150 Right[a07,a25] <= 119
+ e12[a07,a25]: - Y[a07] + Y[a25] + 100 Above[a07,a25] <= 71
+ e11[a07,a26]: - X[a07] + X[a26] + 150 Right[a07,a26] <= 117
+ e12[a07,a26]: - Y[a07] + Y[a26] + 100 Above[a07,a26] <= 66
+ e11[a07,a27]: - X[a07] + X[a27] + 150 Right[a07,a27] <= 77
+ e12[a07,a27]: - Y[a07] + Y[a27] + 100 Above[a07,a27] <= 19
+ e11[a07,a28]: - X[a07] + X[a28] + 150 Right[a07,a28] <= 121
+ e12[a07,a28]: - Y[a07] + Y[a28] + 100 Above[a07,a28] <= 65
+ e11[a08,a01]: X[a01] - X[a08] + 150 Right[a08,a01] <= 89
+ e12[a08,a01]: Y[a01] - Y[a08] + 100 Above[a08,a01] <= 34
+ e11[a08,a02]: X[a02] - X[a08] + 150 Right[a08,a02] <= 108
+ e12[a08,a02]: Y[a02] - Y[a08] + 100 Above[a08,a02] <= 56
+ e11[a08,a03]: X[a03] - X[a08] + 150 Right[a08,a03] <= 118
+ e12[a08,a03]: Y[a03] - Y[a08] + 100 Above[a08,a03] <= 64
+ e11[a08,a04]: X[a04] - X[a08] + 150 Right[a08,a04] <= 118
+ e12[a08,a04]: Y[a04] - Y[a08] + 100 Above[a08,a04] <= 68
+ e11[a08,a05]: X[a05] - X[a08] + 150 Right[a08,a05] <= 92
+ e12[a08,a05]: Y[a05] - Y[a08] + 100 Above[a08,a05] <= 40
+ e11[a08,a06]: X[a06] - X[a08] + 150 Right[a08,a06] <= 111
+ e12[a08,a06]: Y[a06] - Y[a08] + 100 Above[a08,a06] <= 63
+ e11[a08,a07]: X[a07] - X[a08] + 150 Right[a08,a07] <= 116
+ e12[a08,a07]: Y[a07] - Y[a08] + 100 Above[a08,a07] <= 64
+ e11[a08,a09]: - X[a08] + X[a09] + 150 Right[a08,a09] <= 80
+ e12[a08,a09]: - Y[a08] + Y[a09] + 100 Above[a08,a09] <= 35
+ e11[a08,a10]: - X[a08] + X[a10] + 150 Right[a08,a10] <= 85
+ e12[a08,a10]: - Y[a08] + Y[a10] + 100 Above[a08,a10] <= 22
+ e11[a08,a11]: - X[a08] + X[a11] + 150 Right[a08,a11] <= 102
+ e12[a08,a11]: - Y[a08] + Y[a11] + 100 Above[a08,a11] <= 53
+ e11[a08,a12]: - X[a08] + X[a12] + 150 Right[a08,a12] <= 96
+ e12[a08,a12]: - Y[a08] + Y[a12] + 100 Above[a08,a12] <= 37
+ e11[a08,a13]: - X[a08] + X[a13] + 150 Right[a08,a13] <= 95
+ e12[a08,a13]: - Y[a08] + Y[a13] + 100 Above[a08,a13] <= 29
+ e11[a08,a14]: - X[a08] + X[a14] + 150 Right[a08,a14] <= 79
+ e12[a08,a14]: - Y[a08] + Y[a14] + 100 Above[a08,a14] <= 28
+ e11[a08,a15]: - X[a08] + X[a15] + 150 Right[a08,a15] <= 70
+ e12[a08,a15]: - Y[a08] + Y[a15] + 100 Above[a08,a15] <= 25
+ e11[a08,a16]: - X[a08] + X[a16] + 150 Right[a08,a16] <= 120
+ e12[a08,a16]: - Y[a08] + Y[a16] + 100 Above[a08,a16] <= 72
+ e11[a08,a17]: - X[a08] + X[a17] + 150 Right[a08,a17] <= 80
+ e12[a08,a17]: - Y[a08] + Y[a17] + 100 Above[a08,a17] <= 27
+ e11[a08,a18]: - X[a08] + X[a18] + 150 Right[a08,a18] <= 109
+ e12[a08,a18]: - Y[a08] + Y[a18] + 100 Above[a08,a18] <= 58
+ e11[a08,a19]: - X[a08] + X[a19] + 150 Right[a08,a19] <= 124
+ e12[a08,a19]: - Y[a08] + Y[a19] + 100 Above[a08,a19] <= 72
+ e11[a08,a20]: - X[a08] + X[a20] + 150 Right[a08,a20] <= 127
+ e12[a08,a20]: - Y[a08] + Y[a20] + 100 Above[a08,a20] <= 73
+ e11[a08,a21]: - X[a08] + X[a21] + 150 Right[a08,a21] <= 102
+ e12[a08,a21]: - Y[a08] + Y[a21] + 100 Above[a08,a21] <= 55
+ e11[a08,a22]: - X[a08] + X[a22] + 150 Right[a08,a22] <= 90
+ e12[a08,a22]: - Y[a08] + Y[a22] + 100 Above[a08,a22] <= 43
+ e11[a08,a23]: - X[a08] + X[a23] + 150 Right[a08,a23] <= 103
+ e12[a08,a23]: - Y[a08] + Y[a23] + 100 Above[a08,a23] <= 46
+ e11[a08,a24]: - X[a08] + X[a24] + 150 Right[a08,a24] <= 85
+ e12[a08,a24]: - Y[a08] + Y[a24] + 100 Above[a08,a24] <= 34
+ e11[a08,a25]: - X[a08] + X[a25] + 150 Right[a08,a25] <= 119
+ e12[a08,a25]: - Y[a08] + Y[a25] + 100 Above[a08,a25] <= 71
+ e11[a08,a26]: - X[a08] + X[a26] + 150 Right[a08,a26] <= 117
+ e12[a08,a26]: - Y[a08] + Y[a26] + 100 Above[a08,a26] <= 66
+ e11[a08,a27]: - X[a08] + X[a27] + 150 Right[a08,a27] <= 77
+ e12[a08,a27]: - Y[a08] + Y[a27] + 100 Above[a08,a27] <= 19
+ e11[a08,a28]: - X[a08] + X[a28] + 150 Right[a08,a28] <= 121
+ e12[a08,a28]: - Y[a08] + Y[a28] + 100 Above[a08,a28] <= 65
+ e11[a09,a01]: X[a01] - X[a09] + 150 Right[a09,a01] <= 89
+ e12[a09,a01]: Y[a01] - Y[a09] + 100 Above[a09,a01] <= 34
+ e11[a09,a02]: X[a02] - X[a09] + 150 Right[a09,a02] <= 108
+ e12[a09,a02]: Y[a02] - Y[a09] + 100 Above[a09,a02] <= 56
+ e11[a09,a03]: X[a03] - X[a09] + 150 Right[a09,a03] <= 118
+ e12[a09,a03]: Y[a03] - Y[a09] + 100 Above[a09,a03] <= 64
+ e11[a09,a04]: X[a04] - X[a09] + 150 Right[a09,a04] <= 118
+ e12[a09,a04]: Y[a04] - Y[a09] + 100 Above[a09,a04] <= 68
+ e11[a09,a05]: X[a05] - X[a09] + 150 Right[a09,a05] <= 92
+ e12[a09,a05]: Y[a05] - Y[a09] + 100 Above[a09,a05] <= 40
+ e11[a09,a06]: X[a06] - X[a09] + 150 Right[a09,a06] <= 111
+ e12[a09,a06]: Y[a06] - Y[a09] + 100 Above[a09,a06] <= 63
+ e11[a09,a07]: X[a07] - X[a09] + 150 Right[a09,a07] <= 116
+ e12[a09,a07]: Y[a07] - Y[a09] + 100 Above[a09,a07] <= 64
+ e11[a09,a08]: X[a08] - X[a09] + 150 Right[a09,a08] <= 115
+ e12[a09,a08]: Y[a08] - Y[a09] + 100 Above[a09,a08] <= 65
+ e11[a09,a10]: - X[a09] + X[a10] + 150 Right[a09,a10] <= 85
+ e12[a09,a10]: - Y[a09] + Y[a10] + 100 Above[a09,a10] <= 22
+ e11[a09,a11]: - X[a09] + X[a11] + 150 Right[a09,a11] <= 102
+ e12[a09,a11]: - Y[a09] + Y[a11] + 100 Above[a09,a11] <= 53
+ e11[a09,a12]: - X[a09] + X[a12] + 150 Right[a09,a12] <= 96
+ e12[a09,a12]: - Y[a09] + Y[a12] + 100 Above[a09,a12] <= 37
+ e11[a09,a13]: - X[a09] + X[a13] + 150 Right[a09,a13] <= 95
+ e12[a09,a13]: - Y[a09] + Y[a13] + 100 Above[a09,a13] <= 29
+ e11[a09,a14]: - X[a09] + X[a14] + 150 Right[a09,a14] <= 79
+ e12[a09,a14]: - Y[a09] + Y[a14] + 100 Above[a09,a14] <= 28
+ e11[a09,a15]: - X[a09] + X[a15] + 150 Right[a09,a15] <= 70
+ e12[a09,a15]: - Y[a09] + Y[a15] + 100 Above[a09,a15] <= 25
+ e11[a09,a16]: - X[a09] + X[a16] + 150 Right[a09,a16] <= 120
+ e12[a09,a16]: - Y[a09] + Y[a16] + 100 Above[a09,a16] <= 72
+ e11[a09,a17]: - X[a09] + X[a17] + 150 Right[a09,a17] <= 80
+ e12[a09,a17]: - Y[a09] + Y[a17] + 100 Above[a09,a17] <= 27
+ e11[a09,a18]: - X[a09] + X[a18] + 150 Right[a09,a18] <= 109
+ e12[a09,a18]: - Y[a09] + Y[a18] + 100 Above[a09,a18] <= 58
+ e11[a09,a19]: - X[a09] + X[a19] + 150 Right[a09,a19] <= 124
+ e12[a09,a19]: - Y[a09] + Y[a19] + 100 Above[a09,a19] <= 72
+ e11[a09,a20]: - X[a09] + X[a20] + 150 Right[a09,a20] <= 127
+ e12[a09,a20]: - Y[a09] + Y[a20] + 100 Above[a09,a20] <= 73
+ e11[a09,a21]: - X[a09] + X[a21] + 150 Right[a09,a21] <= 102
+ e12[a09,a21]: - Y[a09] + Y[a21] + 100 Above[a09,a21] <= 55
+ e11[a09,a22]: - X[a09] + X[a22] + 150 Right[a09,a22] <= 90
+ e12[a09,a22]: - Y[a09] + Y[a22] + 100 Above[a09,a22] <= 43
+ e11[a09,a23]: - X[a09] + X[a23] + 150 Right[a09,a23] <= 103
+ e12[a09,a23]: - Y[a09] + Y[a23] + 100 Above[a09,a23] <= 46
+ e11[a09,a24]: - X[a09] + X[a24] + 150 Right[a09,a24] <= 85
+ e12[a09,a24]: - Y[a09] + Y[a24] + 100 Above[a09,a24] <= 34
+ e11[a09,a25]: - X[a09] + X[a25] + 150 Right[a09,a25] <= 119
+ e12[a09,a25]: - Y[a09] + Y[a25] + 100 Above[a09,a25] <= 71
+ e11[a09,a26]: - X[a09] + X[a26] + 150 Right[a09,a26] <= 117
+ e12[a09,a26]: - Y[a09] + Y[a26] + 100 Above[a09,a26] <= 66
+ e11[a09,a27]: - X[a09] + X[a27] + 150 Right[a09,a27] <= 77
+ e12[a09,a27]: - Y[a09] + Y[a27] + 100 Above[a09,a27] <= 19
+ e11[a09,a28]: - X[a09] + X[a28] + 150 Right[a09,a28] <= 121
+ e12[a09,a28]: - Y[a09] + Y[a28] + 100 Above[a09,a28] <= 65
+ e11[a10,a01]: X[a01] - X[a10] + 150 Right[a10,a01] <= 89
+ e12[a10,a01]: Y[a01] - Y[a10] + 100 Above[a10,a01] <= 34
+ e11[a10,a02]: X[a02] - X[a10] + 150 Right[a10,a02] <= 108
+ e12[a10,a02]: Y[a02] - Y[a10] + 100 Above[a10,a02] <= 56
+ e11[a10,a03]: X[a03] - X[a10] + 150 Right[a10,a03] <= 118
+ e12[a10,a03]: Y[a03] - Y[a10] + 100 Above[a10,a03] <= 64
+ e11[a10,a04]: X[a04] - X[a10] + 150 Right[a10,a04] <= 118
+ e12[a10,a04]: Y[a04] - Y[a10] + 100 Above[a10,a04] <= 68
+ e11[a10,a05]: X[a05] - X[a10] + 150 Right[a10,a05] <= 92
+ e12[a10,a05]: Y[a05] - Y[a10] + 100 Above[a10,a05] <= 40
+ e11[a10,a06]: X[a06] - X[a10] + 150 Right[a10,a06] <= 111
+ e12[a10,a06]: Y[a06] - Y[a10] + 100 Above[a10,a06] <= 63
+ e11[a10,a07]: X[a07] - X[a10] + 150 Right[a10,a07] <= 116
+ e12[a10,a07]: Y[a07] - Y[a10] + 100 Above[a10,a07] <= 64
+ e11[a10,a08]: X[a08] - X[a10] + 150 Right[a10,a08] <= 115
+ e12[a10,a08]: Y[a08] - Y[a10] + 100 Above[a10,a08] <= 65
+ e11[a10,a09]: X[a09] - X[a10] + 150 Right[a10,a09] <= 80
+ e12[a10,a09]: Y[a09] - Y[a10] + 100 Above[a10,a09] <= 35
+ e11[a10,a11]: - X[a10] + X[a11] + 150 Right[a10,a11] <= 102
+ e12[a10,a11]: - Y[a10] + Y[a11] + 100 Above[a10,a11] <= 53
+ e11[a10,a12]: - X[a10] + X[a12] + 150 Right[a10,a12] <= 96
+ e12[a10,a12]: - Y[a10] + Y[a12] + 100 Above[a10,a12] <= 37
+ e11[a10,a13]: - X[a10] + X[a13] + 150 Right[a10,a13] <= 95
+ e12[a10,a13]: - Y[a10] + Y[a13] + 100 Above[a10,a13] <= 29
+ e11[a10,a14]: - X[a10] + X[a14] + 150 Right[a10,a14] <= 79
+ e12[a10,a14]: - Y[a10] + Y[a14] + 100 Above[a10,a14] <= 28
+ e11[a10,a15]: - X[a10] + X[a15] + 150 Right[a10,a15] <= 70
+ e12[a10,a15]: - Y[a10] + Y[a15] + 100 Above[a10,a15] <= 25
+ e11[a10,a16]: - X[a10] + X[a16] + 150 Right[a10,a16] <= 120
+ e12[a10,a16]: - Y[a10] + Y[a16] + 100 Above[a10,a16] <= 72
+ e11[a10,a17]: - X[a10] + X[a17] + 150 Right[a10,a17] <= 80
+ e12[a10,a17]: - Y[a10] + Y[a17] + 100 Above[a10,a17] <= 27
+ e11[a10,a18]: - X[a10] + X[a18] + 150 Right[a10,a18] <= 109
+ e12[a10,a18]: - Y[a10] + Y[a18] + 100 Above[a10,a18] <= 58
+ e11[a10,a19]: - X[a10] + X[a19] + 150 Right[a10,a19] <= 124
+ e12[a10,a19]: - Y[a10] + Y[a19] + 100 Above[a10,a19] <= 72
+ e11[a10,a20]: - X[a10] + X[a20] + 150 Right[a10,a20] <= 127
+ e12[a10,a20]: - Y[a10] + Y[a20] + 100 Above[a10,a20] <= 73
+ e11[a10,a21]: - X[a10] + X[a21] + 150 Right[a10,a21] <= 102
+ e12[a10,a21]: - Y[a10] + Y[a21] + 100 Above[a10,a21] <= 55
+ e11[a10,a22]: - X[a10] + X[a22] + 150 Right[a10,a22] <= 90
+ e12[a10,a22]: - Y[a10] + Y[a22] + 100 Above[a10,a22] <= 43
+ e11[a10,a23]: - X[a10] + X[a23] + 150 Right[a10,a23] <= 103
+ e12[a10,a23]: - Y[a10] + Y[a23] + 100 Above[a10,a23] <= 46
+ e11[a10,a24]: - X[a10] + X[a24] + 150 Right[a10,a24] <= 85
+ e12[a10,a24]: - Y[a10] + Y[a24] + 100 Above[a10,a24] <= 34
+ e11[a10,a25]: - X[a10] + X[a25] + 150 Right[a10,a25] <= 119
+ e12[a10,a25]: - Y[a10] + Y[a25] + 100 Above[a10,a25] <= 71
+ e11[a10,a26]: - X[a10] + X[a26] + 150 Right[a10,a26] <= 117
+ e12[a10,a26]: - Y[a10] + Y[a26] + 100 Above[a10,a26] <= 66
+ e11[a10,a27]: - X[a10] + X[a27] + 150 Right[a10,a27] <= 77
+ e12[a10,a27]: - Y[a10] + Y[a27] + 100 Above[a10,a27] <= 19
+ e11[a10,a28]: - X[a10] + X[a28] + 150 Right[a10,a28] <= 121
+ e12[a10,a28]: - Y[a10] + Y[a28] + 100 Above[a10,a28] <= 65
+ e11[a11,a01]: X[a01] - X[a11] + 150 Right[a11,a01] <= 89
+ e12[a11,a01]: Y[a01] - Y[a11] + 100 Above[a11,a01] <= 34
+ e11[a11,a02]: X[a02] - X[a11] + 150 Right[a11,a02] <= 108
+ e12[a11,a02]: Y[a02] - Y[a11] + 100 Above[a11,a02] <= 56
+ e11[a11,a03]: X[a03] - X[a11] + 150 Right[a11,a03] <= 118
+ e12[a11,a03]: Y[a03] - Y[a11] + 100 Above[a11,a03] <= 64
+ e11[a11,a04]: X[a04] - X[a11] + 150 Right[a11,a04] <= 118
+ e12[a11,a04]: Y[a04] - Y[a11] + 100 Above[a11,a04] <= 68
+ e11[a11,a05]: X[a05] - X[a11] + 150 Right[a11,a05] <= 92
+ e12[a11,a05]: Y[a05] - Y[a11] + 100 Above[a11,a05] <= 40
+ e11[a11,a06]: X[a06] - X[a11] + 150 Right[a11,a06] <= 111
+ e12[a11,a06]: Y[a06] - Y[a11] + 100 Above[a11,a06] <= 63
+ e11[a11,a07]: X[a07] - X[a11] + 150 Right[a11,a07] <= 116
+ e12[a11,a07]: Y[a07] - Y[a11] + 100 Above[a11,a07] <= 64
+ e11[a11,a08]: X[a08] - X[a11] + 150 Right[a11,a08] <= 115
+ e12[a11,a08]: Y[a08] - Y[a11] + 100 Above[a11,a08] <= 65
+ e11[a11,a09]: X[a09] - X[a11] + 150 Right[a11,a09] <= 80
+ e12[a11,a09]: Y[a09] - Y[a11] + 100 Above[a11,a09] <= 35
+ e11[a11,a10]: X[a10] - X[a11] + 150 Right[a11,a10] <= 85
+ e12[a11,a10]: Y[a10] - Y[a11] + 100 Above[a11,a10] <= 22
+ e11[a11,a12]: - X[a11] + X[a12] + 150 Right[a11,a12] <= 96
+ e12[a11,a12]: - Y[a11] + Y[a12] + 100 Above[a11,a12] <= 37
+ e11[a11,a13]: - X[a11] + X[a13] + 150 Right[a11,a13] <= 95
+ e12[a11,a13]: - Y[a11] + Y[a13] + 100 Above[a11,a13] <= 29
+ e11[a11,a14]: - X[a11] + X[a14] + 150 Right[a11,a14] <= 79
+ e12[a11,a14]: - Y[a11] + Y[a14] + 100 Above[a11,a14] <= 28
+ e11[a11,a15]: - X[a11] + X[a15] + 150 Right[a11,a15] <= 70
+ e12[a11,a15]: - Y[a11] + Y[a15] + 100 Above[a11,a15] <= 25
+ e11[a11,a16]: - X[a11] + X[a16] + 150 Right[a11,a16] <= 120
+ e12[a11,a16]: - Y[a11] + Y[a16] + 100 Above[a11,a16] <= 72
+ e11[a11,a17]: - X[a11] + X[a17] + 150 Right[a11,a17] <= 80
+ e12[a11,a17]: - Y[a11] + Y[a17] + 100 Above[a11,a17] <= 27
+ e11[a11,a18]: - X[a11] + X[a18] + 150 Right[a11,a18] <= 109
+ e12[a11,a18]: - Y[a11] + Y[a18] + 100 Above[a11,a18] <= 58
+ e11[a11,a19]: - X[a11] + X[a19] + 150 Right[a11,a19] <= 124
+ e12[a11,a19]: - Y[a11] + Y[a19] + 100 Above[a11,a19] <= 72
+ e11[a11,a20]: - X[a11] + X[a20] + 150 Right[a11,a20] <= 127
+ e12[a11,a20]: - Y[a11] + Y[a20] + 100 Above[a11,a20] <= 73
+ e11[a11,a21]: - X[a11] + X[a21] + 150 Right[a11,a21] <= 102
+ e12[a11,a21]: - Y[a11] + Y[a21] + 100 Above[a11,a21] <= 55
+ e11[a11,a22]: - X[a11] + X[a22] + 150 Right[a11,a22] <= 90
+ e12[a11,a22]: - Y[a11] + Y[a22] + 100 Above[a11,a22] <= 43
+ e11[a11,a23]: - X[a11] + X[a23] + 150 Right[a11,a23] <= 103
+ e12[a11,a23]: - Y[a11] + Y[a23] + 100 Above[a11,a23] <= 46
+ e11[a11,a24]: - X[a11] + X[a24] + 150 Right[a11,a24] <= 85
+ e12[a11,a24]: - Y[a11] + Y[a24] + 100 Above[a11,a24] <= 34
+ e11[a11,a25]: - X[a11] + X[a25] + 150 Right[a11,a25] <= 119
+ e12[a11,a25]: - Y[a11] + Y[a25] + 100 Above[a11,a25] <= 71
+ e11[a11,a26]: - X[a11] + X[a26] + 150 Right[a11,a26] <= 117
+ e12[a11,a26]: - Y[a11] + Y[a26] + 100 Above[a11,a26] <= 66
+ e11[a11,a27]: - X[a11] + X[a27] + 150 Right[a11,a27] <= 77
+ e12[a11,a27]: - Y[a11] + Y[a27] + 100 Above[a11,a27] <= 19
+ e11[a11,a28]: - X[a11] + X[a28] + 150 Right[a11,a28] <= 121
+ e12[a11,a28]: - Y[a11] + Y[a28] + 100 Above[a11,a28] <= 65
+ e11[a12,a01]: X[a01] - X[a12] + 150 Right[a12,a01] <= 89
+ e12[a12,a01]: Y[a01] - Y[a12] + 100 Above[a12,a01] <= 34
+ e11[a12,a02]: X[a02] - X[a12] + 150 Right[a12,a02] <= 108
+ e12[a12,a02]: Y[a02] - Y[a12] + 100 Above[a12,a02] <= 56
+ e11[a12,a03]: X[a03] - X[a12] + 150 Right[a12,a03] <= 118
+ e12[a12,a03]: Y[a03] - Y[a12] + 100 Above[a12,a03] <= 64
+ e11[a12,a04]: X[a04] - X[a12] + 150 Right[a12,a04] <= 118
+ e12[a12,a04]: Y[a04] - Y[a12] + 100 Above[a12,a04] <= 68
+ e11[a12,a05]: X[a05] - X[a12] + 150 Right[a12,a05] <= 92
+ e12[a12,a05]: Y[a05] - Y[a12] + 100 Above[a12,a05] <= 40
+ e11[a12,a06]: X[a06] - X[a12] + 150 Right[a12,a06] <= 111
+ e12[a12,a06]: Y[a06] - Y[a12] + 100 Above[a12,a06] <= 63
+ e11[a12,a07]: X[a07] - X[a12] + 150 Right[a12,a07] <= 116
+ e12[a12,a07]: Y[a07] - Y[a12] + 100 Above[a12,a07] <= 64
+ e11[a12,a08]: X[a08] - X[a12] + 150 Right[a12,a08] <= 115
+ e12[a12,a08]: Y[a08] - Y[a12] + 100 Above[a12,a08] <= 65
+ e11[a12,a09]: X[a09] - X[a12] + 150 Right[a12,a09] <= 80
+ e12[a12,a09]: Y[a09] - Y[a12] + 100 Above[a12,a09] <= 35
+ e11[a12,a10]: X[a10] - X[a12] + 150 Right[a12,a10] <= 85
+ e12[a12,a10]: Y[a10] - Y[a12] + 100 Above[a12,a10] <= 22
+ e11[a12,a11]: X[a11] - X[a12] + 150 Right[a12,a11] <= 102
+ e12[a12,a11]: Y[a11] - Y[a12] + 100 Above[a12,a11] <= 53
+ e11[a12,a13]: - X[a12] + X[a13] + 150 Right[a12,a13] <= 95
+ e12[a12,a13]: - Y[a12] + Y[a13] + 100 Above[a12,a13] <= 29
+ e11[a12,a14]: - X[a12] + X[a14] + 150 Right[a12,a14] <= 79
+ e12[a12,a14]: - Y[a12] + Y[a14] + 100 Above[a12,a14] <= 28
+ e11[a12,a15]: - X[a12] + X[a15] + 150 Right[a12,a15] <= 70
+ e12[a12,a15]: - Y[a12] + Y[a15] + 100 Above[a12,a15] <= 25
+ e11[a12,a16]: - X[a12] + X[a16] + 150 Right[a12,a16] <= 120
+ e12[a12,a16]: - Y[a12] + Y[a16] + 100 Above[a12,a16] <= 72
+ e11[a12,a17]: - X[a12] + X[a17] + 150 Right[a12,a17] <= 80
+ e12[a12,a17]: - Y[a12] + Y[a17] + 100 Above[a12,a17] <= 27
+ e11[a12,a18]: - X[a12] + X[a18] + 150 Right[a12,a18] <= 109
+ e12[a12,a18]: - Y[a12] + Y[a18] + 100 Above[a12,a18] <= 58
+ e11[a12,a19]: - X[a12] + X[a19] + 150 Right[a12,a19] <= 124
+ e12[a12,a19]: - Y[a12] + Y[a19] + 100 Above[a12,a19] <= 72
+ e11[a12,a20]: - X[a12] + X[a20] + 150 Right[a12,a20] <= 127
+ e12[a12,a20]: - Y[a12] + Y[a20] + 100 Above[a12,a20] <= 73
+ e11[a12,a21]: - X[a12] + X[a21] + 150 Right[a12,a21] <= 102
+ e12[a12,a21]: - Y[a12] + Y[a21] + 100 Above[a12,a21] <= 55
+ e11[a12,a22]: - X[a12] + X[a22] + 150 Right[a12,a22] <= 90
+ e12[a12,a22]: - Y[a12] + Y[a22] + 100 Above[a12,a22] <= 43
+ e11[a12,a23]: - X[a12] + X[a23] + 150 Right[a12,a23] <= 103
+ e12[a12,a23]: - Y[a12] + Y[a23] + 100 Above[a12,a23] <= 46
+ e11[a12,a24]: - X[a12] + X[a24] + 150 Right[a12,a24] <= 85
+ e12[a12,a24]: - Y[a12] + Y[a24] + 100 Above[a12,a24] <= 34
+ e11[a12,a25]: - X[a12] + X[a25] + 150 Right[a12,a25] <= 119
+ e12[a12,a25]: - Y[a12] + Y[a25] + 100 Above[a12,a25] <= 71
+ e11[a12,a26]: - X[a12] + X[a26] + 150 Right[a12,a26] <= 117
+ e12[a12,a26]: - Y[a12] + Y[a26] + 100 Above[a12,a26] <= 66
+ e11[a12,a27]: - X[a12] + X[a27] + 150 Right[a12,a27] <= 77
+ e12[a12,a27]: - Y[a12] + Y[a27] + 100 Above[a12,a27] <= 19
+ e11[a12,a28]: - X[a12] + X[a28] + 150 Right[a12,a28] <= 121
+ e12[a12,a28]: - Y[a12] + Y[a28] + 100 Above[a12,a28] <= 65
+ e11[a13,a01]: X[a01] - X[a13] + 150 Right[a13,a01] <= 89
+ e12[a13,a01]: Y[a01] - Y[a13] + 100 Above[a13,a01] <= 34
+ e11[a13,a02]: X[a02] - X[a13] + 150 Right[a13,a02] <= 108
+ e12[a13,a02]: Y[a02] - Y[a13] + 100 Above[a13,a02] <= 56
+ e11[a13,a03]: X[a03] - X[a13] + 150 Right[a13,a03] <= 118
+ e12[a13,a03]: Y[a03] - Y[a13] + 100 Above[a13,a03] <= 64
+ e11[a13,a04]: X[a04] - X[a13] + 150 Right[a13,a04] <= 118
+ e12[a13,a04]: Y[a04] - Y[a13] + 100 Above[a13,a04] <= 68
+ e11[a13,a05]: X[a05] - X[a13] + 150 Right[a13,a05] <= 92
+ e12[a13,a05]: Y[a05] - Y[a13] + 100 Above[a13,a05] <= 40
+ e11[a13,a06]: X[a06] - X[a13] + 150 Right[a13,a06] <= 111
+ e12[a13,a06]: Y[a06] - Y[a13] + 100 Above[a13,a06] <= 63
+ e11[a13,a07]: X[a07] - X[a13] + 150 Right[a13,a07] <= 116
+ e12[a13,a07]: Y[a07] - Y[a13] + 100 Above[a13,a07] <= 64
+ e11[a13,a08]: X[a08] - X[a13] + 150 Right[a13,a08] <= 115
+ e12[a13,a08]: Y[a08] - Y[a13] + 100 Above[a13,a08] <= 65
+ e11[a13,a09]: X[a09] - X[a13] + 150 Right[a13,a09] <= 80
+ e12[a13,a09]: Y[a09] - Y[a13] + 100 Above[a13,a09] <= 35
+ e11[a13,a10]: X[a10] - X[a13] + 150 Right[a13,a10] <= 85
+ e12[a13,a10]: Y[a10] - Y[a13] + 100 Above[a13,a10] <= 22
+ e11[a13,a11]: X[a11] - X[a13] + 150 Right[a13,a11] <= 102
+ e12[a13,a11]: Y[a11] - Y[a13] + 100 Above[a13,a11] <= 53
+ e11[a13,a12]: X[a12] - X[a13] + 150 Right[a13,a12] <= 96
+ e12[a13,a12]: Y[a12] - Y[a13] + 100 Above[a13,a12] <= 37
+ e11[a13,a14]: - X[a13] + X[a14] + 150 Right[a13,a14] <= 79
+ e12[a13,a14]: - Y[a13] + Y[a14] + 100 Above[a13,a14] <= 28
+ e11[a13,a15]: - X[a13] + X[a15] + 150 Right[a13,a15] <= 70
+ e12[a13,a15]: - Y[a13] + Y[a15] + 100 Above[a13,a15] <= 25
+ e11[a13,a16]: - X[a13] + X[a16] + 150 Right[a13,a16] <= 120
+ e12[a13,a16]: - Y[a13] + Y[a16] + 100 Above[a13,a16] <= 72
+ e11[a13,a17]: - X[a13] + X[a17] + 150 Right[a13,a17] <= 80
+ e12[a13,a17]: - Y[a13] + Y[a17] + 100 Above[a13,a17] <= 27
+ e11[a13,a18]: - X[a13] + X[a18] + 150 Right[a13,a18] <= 109
+ e12[a13,a18]: - Y[a13] + Y[a18] + 100 Above[a13,a18] <= 58
+ e11[a13,a19]: - X[a13] + X[a19] + 150 Right[a13,a19] <= 124
+ e12[a13,a19]: - Y[a13] + Y[a19] + 100 Above[a13,a19] <= 72
+ e11[a13,a20]: - X[a13] + X[a20] + 150 Right[a13,a20] <= 127
+ e12[a13,a20]: - Y[a13] + Y[a20] + 100 Above[a13,a20] <= 73
+ e11[a13,a21]: - X[a13] + X[a21] + 150 Right[a13,a21] <= 102
+ e12[a13,a21]: - Y[a13] + Y[a21] + 100 Above[a13,a21] <= 55
+ e11[a13,a22]: - X[a13] + X[a22] + 150 Right[a13,a22] <= 90
+ e12[a13,a22]: - Y[a13] + Y[a22] + 100 Above[a13,a22] <= 43
+ e11[a13,a23]: - X[a13] + X[a23] + 150 Right[a13,a23] <= 103
+ e12[a13,a23]: - Y[a13] + Y[a23] + 100 Above[a13,a23] <= 46
+ e11[a13,a24]: - X[a13] + X[a24] + 150 Right[a13,a24] <= 85
+ e12[a13,a24]: - Y[a13] + Y[a24] + 100 Above[a13,a24] <= 34
+ e11[a13,a25]: - X[a13] + X[a25] + 150 Right[a13,a25] <= 119
+ e12[a13,a25]: - Y[a13] + Y[a25] + 100 Above[a13,a25] <= 71
+ e11[a13,a26]: - X[a13] + X[a26] + 150 Right[a13,a26] <= 117
+ e12[a13,a26]: - Y[a13] + Y[a26] + 100 Above[a13,a26] <= 66
+ e11[a13,a27]: - X[a13] + X[a27] + 150 Right[a13,a27] <= 77
+ e12[a13,a27]: - Y[a13] + Y[a27] + 100 Above[a13,a27] <= 19
+ e11[a13,a28]: - X[a13] + X[a28] + 150 Right[a13,a28] <= 121
+ e12[a13,a28]: - Y[a13] + Y[a28] + 100 Above[a13,a28] <= 65
+ e11[a14,a01]: X[a01] - X[a14] + 150 Right[a14,a01] <= 89
+ e12[a14,a01]: Y[a01] - Y[a14] + 100 Above[a14,a01] <= 34
+ e11[a14,a02]: X[a02] - X[a14] + 150 Right[a14,a02] <= 108
+ e12[a14,a02]: Y[a02] - Y[a14] + 100 Above[a14,a02] <= 56
+ e11[a14,a03]: X[a03] - X[a14] + 150 Right[a14,a03] <= 118
+ e12[a14,a03]: Y[a03] - Y[a14] + 100 Above[a14,a03] <= 64
+ e11[a14,a04]: X[a04] - X[a14] + 150 Right[a14,a04] <= 118
+ e12[a14,a04]: Y[a04] - Y[a14] + 100 Above[a14,a04] <= 68
+ e11[a14,a05]: X[a05] - X[a14] + 150 Right[a14,a05] <= 92
+ e12[a14,a05]: Y[a05] - Y[a14] + 100 Above[a14,a05] <= 40
+ e11[a14,a06]: X[a06] - X[a14] + 150 Right[a14,a06] <= 111
+ e12[a14,a06]: Y[a06] - Y[a14] + 100 Above[a14,a06] <= 63
+ e11[a14,a07]: X[a07] - X[a14] + 150 Right[a14,a07] <= 116
+ e12[a14,a07]: Y[a07] - Y[a14] + 100 Above[a14,a07] <= 64
+ e11[a14,a08]: X[a08] - X[a14] + 150 Right[a14,a08] <= 115
+ e12[a14,a08]: Y[a08] - Y[a14] + 100 Above[a14,a08] <= 65
+ e11[a14,a09]: X[a09] - X[a14] + 150 Right[a14,a09] <= 80
+ e12[a14,a09]: Y[a09] - Y[a14] + 100 Above[a14,a09] <= 35
+ e11[a14,a10]: X[a10] - X[a14] + 150 Right[a14,a10] <= 85
+ e12[a14,a10]: Y[a10] - Y[a14] + 100 Above[a14,a10] <= 22
+ e11[a14,a11]: X[a11] - X[a14] + 150 Right[a14,a11] <= 102
+ e12[a14,a11]: Y[a11] - Y[a14] + 100 Above[a14,a11] <= 53
+ e11[a14,a12]: X[a12] - X[a14] + 150 Right[a14,a12] <= 96
+ e12[a14,a12]: Y[a12] - Y[a14] + 100 Above[a14,a12] <= 37
+ e11[a14,a13]: X[a13] - X[a14] + 150 Right[a14,a13] <= 95
+ e12[a14,a13]: Y[a13] - Y[a14] + 100 Above[a14,a13] <= 29
+ e11[a14,a15]: - X[a14] + X[a15] + 150 Right[a14,a15] <= 70
+ e12[a14,a15]: - Y[a14] + Y[a15] + 100 Above[a14,a15] <= 25
+ e11[a14,a16]: - X[a14] + X[a16] + 150 Right[a14,a16] <= 120
+ e12[a14,a16]: - Y[a14] + Y[a16] + 100 Above[a14,a16] <= 72
+ e11[a14,a17]: - X[a14] + X[a17] + 150 Right[a14,a17] <= 80
+ e12[a14,a17]: - Y[a14] + Y[a17] + 100 Above[a14,a17] <= 27
+ e11[a14,a18]: - X[a14] + X[a18] + 150 Right[a14,a18] <= 109
+ e12[a14,a18]: - Y[a14] + Y[a18] + 100 Above[a14,a18] <= 58
+ e11[a14,a19]: - X[a14] + X[a19] + 150 Right[a14,a19] <= 124
+ e12[a14,a19]: - Y[a14] + Y[a19] + 100 Above[a14,a19] <= 72
+ e11[a14,a20]: - X[a14] + X[a20] + 150 Right[a14,a20] <= 127
+ e12[a14,a20]: - Y[a14] + Y[a20] + 100 Above[a14,a20] <= 73
+ e11[a14,a21]: - X[a14] + X[a21] + 150 Right[a14,a21] <= 102
+ e12[a14,a21]: - Y[a14] + Y[a21] + 100 Above[a14,a21] <= 55
+ e11[a14,a22]: - X[a14] + X[a22] + 150 Right[a14,a22] <= 90
+ e12[a14,a22]: - Y[a14] + Y[a22] + 100 Above[a14,a22] <= 43
+ e11[a14,a23]: - X[a14] + X[a23] + 150 Right[a14,a23] <= 103
+ e12[a14,a23]: - Y[a14] + Y[a23] + 100 Above[a14,a23] <= 46
+ e11[a14,a24]: - X[a14] + X[a24] + 150 Right[a14,a24] <= 85
+ e12[a14,a24]: - Y[a14] + Y[a24] + 100 Above[a14,a24] <= 34
+ e11[a14,a25]: - X[a14] + X[a25] + 150 Right[a14,a25] <= 119
+ e12[a14,a25]: - Y[a14] + Y[a25] + 100 Above[a14,a25] <= 71
+ e11[a14,a26]: - X[a14] + X[a26] + 150 Right[a14,a26] <= 117
+ e12[a14,a26]: - Y[a14] + Y[a26] + 100 Above[a14,a26] <= 66
+ e11[a14,a27]: - X[a14] + X[a27] + 150 Right[a14,a27] <= 77
+ e12[a14,a27]: - Y[a14] + Y[a27] + 100 Above[a14,a27] <= 19
+ e11[a14,a28]: - X[a14] + X[a28] + 150 Right[a14,a28] <= 121
+ e12[a14,a28]: - Y[a14] + Y[a28] + 100 Above[a14,a28] <= 65
+ e11[a15,a01]: X[a01] - X[a15] + 150 Right[a15,a01] <= 89
+ e12[a15,a01]: Y[a01] - Y[a15] + 100 Above[a15,a01] <= 34
+ e11[a15,a02]: X[a02] - X[a15] + 150 Right[a15,a02] <= 108
+ e12[a15,a02]: Y[a02] - Y[a15] + 100 Above[a15,a02] <= 56
+ e11[a15,a03]: X[a03] - X[a15] + 150 Right[a15,a03] <= 118
+ e12[a15,a03]: Y[a03] - Y[a15] + 100 Above[a15,a03] <= 64
+ e11[a15,a04]: X[a04] - X[a15] + 150 Right[a15,a04] <= 118
+ e12[a15,a04]: Y[a04] - Y[a15] + 100 Above[a15,a04] <= 68
+ e11[a15,a05]: X[a05] - X[a15] + 150 Right[a15,a05] <= 92
+ e12[a15,a05]: Y[a05] - Y[a15] + 100 Above[a15,a05] <= 40
+ e11[a15,a06]: X[a06] - X[a15] + 150 Right[a15,a06] <= 111
+ e12[a15,a06]: Y[a06] - Y[a15] + 100 Above[a15,a06] <= 63
+ e11[a15,a07]: X[a07] - X[a15] + 150 Right[a15,a07] <= 116
+ e12[a15,a07]: Y[a07] - Y[a15] + 100 Above[a15,a07] <= 64
+ e11[a15,a08]: X[a08] - X[a15] + 150 Right[a15,a08] <= 115
+ e12[a15,a08]: Y[a08] - Y[a15] + 100 Above[a15,a08] <= 65
+ e11[a15,a09]: X[a09] - X[a15] + 150 Right[a15,a09] <= 80
+ e12[a15,a09]: Y[a09] - Y[a15] + 100 Above[a15,a09] <= 35
+ e11[a15,a10]: X[a10] - X[a15] + 150 Right[a15,a10] <= 85
+ e12[a15,a10]: Y[a10] - Y[a15] + 100 Above[a15,a10] <= 22
+ e11[a15,a11]: X[a11] - X[a15] + 150 Right[a15,a11] <= 102
+ e12[a15,a11]: Y[a11] - Y[a15] + 100 Above[a15,a11] <= 53
+ e11[a15,a12]: X[a12] - X[a15] + 150 Right[a15,a12] <= 96
+ e12[a15,a12]: Y[a12] - Y[a15] + 100 Above[a15,a12] <= 37
+ e11[a15,a13]: X[a13] - X[a15] + 150 Right[a15,a13] <= 95
+ e12[a15,a13]: Y[a13] - Y[a15] + 100 Above[a15,a13] <= 29
+ e11[a15,a14]: X[a14] - X[a15] + 150 Right[a15,a14] <= 79
+ e12[a15,a14]: Y[a14] - Y[a15] + 100 Above[a15,a14] <= 28
+ e11[a15,a16]: - X[a15] + X[a16] + 150 Right[a15,a16] <= 120
+ e12[a15,a16]: - Y[a15] + Y[a16] + 100 Above[a15,a16] <= 72
+ e11[a15,a17]: - X[a15] + X[a17] + 150 Right[a15,a17] <= 80
+ e12[a15,a17]: - Y[a15] + Y[a17] + 100 Above[a15,a17] <= 27
+ e11[a15,a18]: - X[a15] + X[a18] + 150 Right[a15,a18] <= 109
+ e12[a15,a18]: - Y[a15] + Y[a18] + 100 Above[a15,a18] <= 58
+ e11[a15,a19]: - X[a15] + X[a19] + 150 Right[a15,a19] <= 124
+ e12[a15,a19]: - Y[a15] + Y[a19] + 100 Above[a15,a19] <= 72
+ e11[a15,a20]: - X[a15] + X[a20] + 150 Right[a15,a20] <= 127
+ e12[a15,a20]: - Y[a15] + Y[a20] + 100 Above[a15,a20] <= 73
+ e11[a15,a21]: - X[a15] + X[a21] + 150 Right[a15,a21] <= 102
+ e12[a15,a21]: - Y[a15] + Y[a21] + 100 Above[a15,a21] <= 55
+ e11[a15,a22]: - X[a15] + X[a22] + 150 Right[a15,a22] <= 90
+ e12[a15,a22]: - Y[a15] + Y[a22] + 100 Above[a15,a22] <= 43
+ e11[a15,a23]: - X[a15] + X[a23] + 150 Right[a15,a23] <= 103
+ e12[a15,a23]: - Y[a15] + Y[a23] + 100 Above[a15,a23] <= 46
+ e11[a15,a24]: - X[a15] + X[a24] + 150 Right[a15,a24] <= 85
+ e12[a15,a24]: - Y[a15] + Y[a24] + 100 Above[a15,a24] <= 34
+ e11[a15,a25]: - X[a15] + X[a25] + 150 Right[a15,a25] <= 119
+ e12[a15,a25]: - Y[a15] + Y[a25] + 100 Above[a15,a25] <= 71
+ e11[a15,a26]: - X[a15] + X[a26] + 150 Right[a15,a26] <= 117
+ e12[a15,a26]: - Y[a15] + Y[a26] + 100 Above[a15,a26] <= 66
+ e11[a15,a27]: - X[a15] + X[a27] + 150 Right[a15,a27] <= 77
+ e12[a15,a27]: - Y[a15] + Y[a27] + 100 Above[a15,a27] <= 19
+ e11[a15,a28]: - X[a15] + X[a28] + 150 Right[a15,a28] <= 121
+ e12[a15,a28]: - Y[a15] + Y[a28] + 100 Above[a15,a28] <= 65
+ e11[a16,a01]: X[a01] - X[a16] + 150 Right[a16,a01] <= 89
+ e12[a16,a01]: Y[a01] - Y[a16] + 100 Above[a16,a01] <= 34
+ e11[a16,a02]: X[a02] - X[a16] + 150 Right[a16,a02] <= 108
+ e12[a16,a02]: Y[a02] - Y[a16] + 100 Above[a16,a02] <= 56
+ e11[a16,a03]: X[a03] - X[a16] + 150 Right[a16,a03] <= 118
+ e12[a16,a03]: Y[a03] - Y[a16] + 100 Above[a16,a03] <= 64
+ e11[a16,a04]: X[a04] - X[a16] + 150 Right[a16,a04] <= 118
+ e12[a16,a04]: Y[a04] - Y[a16] + 100 Above[a16,a04] <= 68
+ e11[a16,a05]: X[a05] - X[a16] + 150 Right[a16,a05] <= 92
+ e12[a16,a05]: Y[a05] - Y[a16] + 100 Above[a16,a05] <= 40
+ e11[a16,a06]: X[a06] - X[a16] + 150 Right[a16,a06] <= 111
+ e12[a16,a06]: Y[a06] - Y[a16] + 100 Above[a16,a06] <= 63
+ e11[a16,a07]: X[a07] - X[a16] + 150 Right[a16,a07] <= 116
+ e12[a16,a07]: Y[a07] - Y[a16] + 100 Above[a16,a07] <= 64
+ e11[a16,a08]: X[a08] - X[a16] + 150 Right[a16,a08] <= 115
+ e12[a16,a08]: Y[a08] - Y[a16] + 100 Above[a16,a08] <= 65
+ e11[a16,a09]: X[a09] - X[a16] + 150 Right[a16,a09] <= 80
+ e12[a16,a09]: Y[a09] - Y[a16] + 100 Above[a16,a09] <= 35
+ e11[a16,a10]: X[a10] - X[a16] + 150 Right[a16,a10] <= 85
+ e12[a16,a10]: Y[a10] - Y[a16] + 100 Above[a16,a10] <= 22
+ e11[a16,a11]: X[a11] - X[a16] + 150 Right[a16,a11] <= 102
+ e12[a16,a11]: Y[a11] - Y[a16] + 100 Above[a16,a11] <= 53
+ e11[a16,a12]: X[a12] - X[a16] + 150 Right[a16,a12] <= 96
+ e12[a16,a12]: Y[a12] - Y[a16] + 100 Above[a16,a12] <= 37
+ e11[a16,a13]: X[a13] - X[a16] + 150 Right[a16,a13] <= 95
+ e12[a16,a13]: Y[a13] - Y[a16] + 100 Above[a16,a13] <= 29
+ e11[a16,a14]: X[a14] - X[a16] + 150 Right[a16,a14] <= 79
+ e12[a16,a14]: Y[a14] - Y[a16] + 100 Above[a16,a14] <= 28
+ e11[a16,a15]: X[a15] - X[a16] + 150 Right[a16,a15] <= 70
+ e12[a16,a15]: Y[a15] - Y[a16] + 100 Above[a16,a15] <= 25
+ e11[a16,a17]: - X[a16] + X[a17] + 150 Right[a16,a17] <= 80
+ e12[a16,a17]: - Y[a16] + Y[a17] + 100 Above[a16,a17] <= 27
+ e11[a16,a18]: - X[a16] + X[a18] + 150 Right[a16,a18] <= 109
+ e12[a16,a18]: - Y[a16] + Y[a18] + 100 Above[a16,a18] <= 58
+ e11[a16,a19]: - X[a16] + X[a19] + 150 Right[a16,a19] <= 124
+ e12[a16,a19]: - Y[a16] + Y[a19] + 100 Above[a16,a19] <= 72
+ e11[a16,a20]: - X[a16] + X[a20] + 150 Right[a16,a20] <= 127
+ e12[a16,a20]: - Y[a16] + Y[a20] + 100 Above[a16,a20] <= 73
+ e11[a16,a21]: - X[a16] + X[a21] + 150 Right[a16,a21] <= 102
+ e12[a16,a21]: - Y[a16] + Y[a21] + 100 Above[a16,a21] <= 55
+ e11[a16,a22]: - X[a16] + X[a22] + 150 Right[a16,a22] <= 90
+ e12[a16,a22]: - Y[a16] + Y[a22] + 100 Above[a16,a22] <= 43
+ e11[a16,a23]: - X[a16] + X[a23] + 150 Right[a16,a23] <= 103
+ e12[a16,a23]: - Y[a16] + Y[a23] + 100 Above[a16,a23] <= 46
+ e11[a16,a24]: - X[a16] + X[a24] + 150 Right[a16,a24] <= 85
+ e12[a16,a24]: - Y[a16] + Y[a24] + 100 Above[a16,a24] <= 34
+ e11[a16,a25]: - X[a16] + X[a25] + 150 Right[a16,a25] <= 119
+ e12[a16,a25]: - Y[a16] + Y[a25] + 100 Above[a16,a25] <= 71
+ e11[a16,a26]: - X[a16] + X[a26] + 150 Right[a16,a26] <= 117
+ e12[a16,a26]: - Y[a16] + Y[a26] + 100 Above[a16,a26] <= 66
+ e11[a16,a27]: - X[a16] + X[a27] + 150 Right[a16,a27] <= 77
+ e12[a16,a27]: - Y[a16] + Y[a27] + 100 Above[a16,a27] <= 19
+ e11[a16,a28]: - X[a16] + X[a28] + 150 Right[a16,a28] <= 121
+ e12[a16,a28]: - Y[a16] + Y[a28] + 100 Above[a16,a28] <= 65
+ e11[a17,a01]: X[a01] - X[a17] + 150 Right[a17,a01] <= 89
+ e12[a17,a01]: Y[a01] - Y[a17] + 100 Above[a17,a01] <= 34
+ e11[a17,a02]: X[a02] - X[a17] + 150 Right[a17,a02] <= 108
+ e12[a17,a02]: Y[a02] - Y[a17] + 100 Above[a17,a02] <= 56
+ e11[a17,a03]: X[a03] - X[a17] + 150 Right[a17,a03] <= 118
+ e12[a17,a03]: Y[a03] - Y[a17] + 100 Above[a17,a03] <= 64
+ e11[a17,a04]: X[a04] - X[a17] + 150 Right[a17,a04] <= 118
+ e12[a17,a04]: Y[a04] - Y[a17] + 100 Above[a17,a04] <= 68
+ e11[a17,a05]: X[a05] - X[a17] + 150 Right[a17,a05] <= 92
+ e12[a17,a05]: Y[a05] - Y[a17] + 100 Above[a17,a05] <= 40
+ e11[a17,a06]: X[a06] - X[a17] + 150 Right[a17,a06] <= 111
+ e12[a17,a06]: Y[a06] - Y[a17] + 100 Above[a17,a06] <= 63
+ e11[a17,a07]: X[a07] - X[a17] + 150 Right[a17,a07] <= 116
+ e12[a17,a07]: Y[a07] - Y[a17] + 100 Above[a17,a07] <= 64
+ e11[a17,a08]: X[a08] - X[a17] + 150 Right[a17,a08] <= 115
+ e12[a17,a08]: Y[a08] - Y[a17] + 100 Above[a17,a08] <= 65
+ e11[a17,a09]: X[a09] - X[a17] + 150 Right[a17,a09] <= 80
+ e12[a17,a09]: Y[a09] - Y[a17] + 100 Above[a17,a09] <= 35
+ e11[a17,a10]: X[a10] - X[a17] + 150 Right[a17,a10] <= 85
+ e12[a17,a10]: Y[a10] - Y[a17] + 100 Above[a17,a10] <= 22
+ e11[a17,a11]: X[a11] - X[a17] + 150 Right[a17,a11] <= 102
+ e12[a17,a11]: Y[a11] - Y[a17] + 100 Above[a17,a11] <= 53
+ e11[a17,a12]: X[a12] - X[a17] + 150 Right[a17,a12] <= 96
+ e12[a17,a12]: Y[a12] - Y[a17] + 100 Above[a17,a12] <= 37
+ e11[a17,a13]: X[a13] - X[a17] + 150 Right[a17,a13] <= 95
+ e12[a17,a13]: Y[a13] - Y[a17] + 100 Above[a17,a13] <= 29
+ e11[a17,a14]: X[a14] - X[a17] + 150 Right[a17,a14] <= 79
+ e12[a17,a14]: Y[a14] - Y[a17] + 100 Above[a17,a14] <= 28
+ e11[a17,a15]: X[a15] - X[a17] + 150 Right[a17,a15] <= 70
+ e12[a17,a15]: Y[a15] - Y[a17] + 100 Above[a17,a15] <= 25
+ e11[a17,a16]: X[a16] - X[a17] + 150 Right[a17,a16] <= 120
+ e12[a17,a16]: Y[a16] - Y[a17] + 100 Above[a17,a16] <= 72
+ e11[a17,a18]: - X[a17] + X[a18] + 150 Right[a17,a18] <= 109
+ e12[a17,a18]: - Y[a17] + Y[a18] + 100 Above[a17,a18] <= 58
+ e11[a17,a19]: - X[a17] + X[a19] + 150 Right[a17,a19] <= 124
+ e12[a17,a19]: - Y[a17] + Y[a19] + 100 Above[a17,a19] <= 72
+ e11[a17,a20]: - X[a17] + X[a20] + 150 Right[a17,a20] <= 127
+ e12[a17,a20]: - Y[a17] + Y[a20] + 100 Above[a17,a20] <= 73
+ e11[a17,a21]: - X[a17] + X[a21] + 150 Right[a17,a21] <= 102
+ e12[a17,a21]: - Y[a17] + Y[a21] + 100 Above[a17,a21] <= 55
+ e11[a17,a22]: - X[a17] + X[a22] + 150 Right[a17,a22] <= 90
+ e12[a17,a22]: - Y[a17] + Y[a22] + 100 Above[a17,a22] <= 43
+ e11[a17,a23]: - X[a17] + X[a23] + 150 Right[a17,a23] <= 103
+ e12[a17,a23]: - Y[a17] + Y[a23] + 100 Above[a17,a23] <= 46
+ e11[a17,a24]: - X[a17] + X[a24] + 150 Right[a17,a24] <= 85
+ e12[a17,a24]: - Y[a17] + Y[a24] + 100 Above[a17,a24] <= 34
+ e11[a17,a25]: - X[a17] + X[a25] + 150 Right[a17,a25] <= 119
+ e12[a17,a25]: - Y[a17] + Y[a25] + 100 Above[a17,a25] <= 71
+ e11[a17,a26]: - X[a17] + X[a26] + 150 Right[a17,a26] <= 117
+ e12[a17,a26]: - Y[a17] + Y[a26] + 100 Above[a17,a26] <= 66
+ e11[a17,a27]: - X[a17] + X[a27] + 150 Right[a17,a27] <= 77
+ e12[a17,a27]: - Y[a17] + Y[a27] + 100 Above[a17,a27] <= 19
+ e11[a17,a28]: - X[a17] + X[a28] + 150 Right[a17,a28] <= 121
+ e12[a17,a28]: - Y[a17] + Y[a28] + 100 Above[a17,a28] <= 65
+ e11[a18,a01]: X[a01] - X[a18] + 150 Right[a18,a01] <= 89
+ e12[a18,a01]: Y[a01] - Y[a18] + 100 Above[a18,a01] <= 34
+ e11[a18,a02]: X[a02] - X[a18] + 150 Right[a18,a02] <= 108
+ e12[a18,a02]: Y[a02] - Y[a18] + 100 Above[a18,a02] <= 56
+ e11[a18,a03]: X[a03] - X[a18] + 150 Right[a18,a03] <= 118
+ e12[a18,a03]: Y[a03] - Y[a18] + 100 Above[a18,a03] <= 64
+ e11[a18,a04]: X[a04] - X[a18] + 150 Right[a18,a04] <= 118
+ e12[a18,a04]: Y[a04] - Y[a18] + 100 Above[a18,a04] <= 68
+ e11[a18,a05]: X[a05] - X[a18] + 150 Right[a18,a05] <= 92
+ e12[a18,a05]: Y[a05] - Y[a18] + 100 Above[a18,a05] <= 40
+ e11[a18,a06]: X[a06] - X[a18] + 150 Right[a18,a06] <= 111
+ e12[a18,a06]: Y[a06] - Y[a18] + 100 Above[a18,a06] <= 63
+ e11[a18,a07]: X[a07] - X[a18] + 150 Right[a18,a07] <= 116
+ e12[a18,a07]: Y[a07] - Y[a18] + 100 Above[a18,a07] <= 64
+ e11[a18,a08]: X[a08] - X[a18] + 150 Right[a18,a08] <= 115
+ e12[a18,a08]: Y[a08] - Y[a18] + 100 Above[a18,a08] <= 65
+ e11[a18,a09]: X[a09] - X[a18] + 150 Right[a18,a09] <= 80
+ e12[a18,a09]: Y[a09] - Y[a18] + 100 Above[a18,a09] <= 35
+ e11[a18,a10]: X[a10] - X[a18] + 150 Right[a18,a10] <= 85
+ e12[a18,a10]: Y[a10] - Y[a18] + 100 Above[a18,a10] <= 22
+ e11[a18,a11]: X[a11] - X[a18] + 150 Right[a18,a11] <= 102
+ e12[a18,a11]: Y[a11] - Y[a18] + 100 Above[a18,a11] <= 53
+ e11[a18,a12]: X[a12] - X[a18] + 150 Right[a18,a12] <= 96
+ e12[a18,a12]: Y[a12] - Y[a18] + 100 Above[a18,a12] <= 37
+ e11[a18,a13]: X[a13] - X[a18] + 150 Right[a18,a13] <= 95
+ e12[a18,a13]: Y[a13] - Y[a18] + 100 Above[a18,a13] <= 29
+ e11[a18,a14]: X[a14] - X[a18] + 150 Right[a18,a14] <= 79
+ e12[a18,a14]: Y[a14] - Y[a18] + 100 Above[a18,a14] <= 28
+ e11[a18,a15]: X[a15] - X[a18] + 150 Right[a18,a15] <= 70
+ e12[a18,a15]: Y[a15] - Y[a18] + 100 Above[a18,a15] <= 25
+ e11[a18,a16]: X[a16] - X[a18] + 150 Right[a18,a16] <= 120
+ e12[a18,a16]: Y[a16] - Y[a18] + 100 Above[a18,a16] <= 72
+ e11[a18,a17]: X[a17] - X[a18] + 150 Right[a18,a17] <= 80
+ e12[a18,a17]: Y[a17] - Y[a18] + 100 Above[a18,a17] <= 27
+ e11[a18,a19]: - X[a18] + X[a19] + 150 Right[a18,a19] <= 124
+ e12[a18,a19]: - Y[a18] + Y[a19] + 100 Above[a18,a19] <= 72
+ e11[a18,a20]: - X[a18] + X[a20] + 150 Right[a18,a20] <= 127
+ e12[a18,a20]: - Y[a18] + Y[a20] + 100 Above[a18,a20] <= 73
+ e11[a18,a21]: - X[a18] + X[a21] + 150 Right[a18,a21] <= 102
+ e12[a18,a21]: - Y[a18] + Y[a21] + 100 Above[a18,a21] <= 55
+ e11[a18,a22]: - X[a18] + X[a22] + 150 Right[a18,a22] <= 90
+ e12[a18,a22]: - Y[a18] + Y[a22] + 100 Above[a18,a22] <= 43
+ e11[a18,a23]: - X[a18] + X[a23] + 150 Right[a18,a23] <= 103
+ e12[a18,a23]: - Y[a18] + Y[a23] + 100 Above[a18,a23] <= 46
+ e11[a18,a24]: - X[a18] + X[a24] + 150 Right[a18,a24] <= 85
+ e12[a18,a24]: - Y[a18] + Y[a24] + 100 Above[a18,a24] <= 34
+ e11[a18,a25]: - X[a18] + X[a25] + 150 Right[a18,a25] <= 119
+ e12[a18,a25]: - Y[a18] + Y[a25] + 100 Above[a18,a25] <= 71
+ e11[a18,a26]: - X[a18] + X[a26] + 150 Right[a18,a26] <= 117
+ e12[a18,a26]: - Y[a18] + Y[a26] + 100 Above[a18,a26] <= 66
+ e11[a18,a27]: - X[a18] + X[a27] + 150 Right[a18,a27] <= 77
+ e12[a18,a27]: - Y[a18] + Y[a27] + 100 Above[a18,a27] <= 19
+ e11[a18,a28]: - X[a18] + X[a28] + 150 Right[a18,a28] <= 121
+ e12[a18,a28]: - Y[a18] + Y[a28] + 100 Above[a18,a28] <= 65
+ e11[a19,a01]: X[a01] - X[a19] + 150 Right[a19,a01] <= 89
+ e12[a19,a01]: Y[a01] - Y[a19] + 100 Above[a19,a01] <= 34
+ e11[a19,a02]: X[a02] - X[a19] + 150 Right[a19,a02] <= 108
+ e12[a19,a02]: Y[a02] - Y[a19] + 100 Above[a19,a02] <= 56
+ e11[a19,a03]: X[a03] - X[a19] + 150 Right[a19,a03] <= 118
+ e12[a19,a03]: Y[a03] - Y[a19] + 100 Above[a19,a03] <= 64
+ e11[a19,a04]: X[a04] - X[a19] + 150 Right[a19,a04] <= 118
+ e12[a19,a04]: Y[a04] - Y[a19] + 100 Above[a19,a04] <= 68
+ e11[a19,a05]: X[a05] - X[a19] + 150 Right[a19,a05] <= 92
+ e12[a19,a05]: Y[a05] - Y[a19] + 100 Above[a19,a05] <= 40
+ e11[a19,a06]: X[a06] - X[a19] + 150 Right[a19,a06] <= 111
+ e12[a19,a06]: Y[a06] - Y[a19] + 100 Above[a19,a06] <= 63
+ e11[a19,a07]: X[a07] - X[a19] + 150 Right[a19,a07] <= 116
+ e12[a19,a07]: Y[a07] - Y[a19] + 100 Above[a19,a07] <= 64
+ e11[a19,a08]: X[a08] - X[a19] + 150 Right[a19,a08] <= 115
+ e12[a19,a08]: Y[a08] - Y[a19] + 100 Above[a19,a08] <= 65
+ e11[a19,a09]: X[a09] - X[a19] + 150 Right[a19,a09] <= 80
+ e12[a19,a09]: Y[a09] - Y[a19] + 100 Above[a19,a09] <= 35
+ e11[a19,a10]: X[a10] - X[a19] + 150 Right[a19,a10] <= 85
+ e12[a19,a10]: Y[a10] - Y[a19] + 100 Above[a19,a10] <= 22
+ e11[a19,a11]: X[a11] - X[a19] + 150 Right[a19,a11] <= 102
+ e12[a19,a11]: Y[a11] - Y[a19] + 100 Above[a19,a11] <= 53
+ e11[a19,a12]: X[a12] - X[a19] + 150 Right[a19,a12] <= 96
+ e12[a19,a12]: Y[a12] - Y[a19] + 100 Above[a19,a12] <= 37
+ e11[a19,a13]: X[a13] - X[a19] + 150 Right[a19,a13] <= 95
+ e12[a19,a13]: Y[a13] - Y[a19] + 100 Above[a19,a13] <= 29
+ e11[a19,a14]: X[a14] - X[a19] + 150 Right[a19,a14] <= 79
+ e12[a19,a14]: Y[a14] - Y[a19] + 100 Above[a19,a14] <= 28
+ e11[a19,a15]: X[a15] - X[a19] + 150 Right[a19,a15] <= 70
+ e12[a19,a15]: Y[a15] - Y[a19] + 100 Above[a19,a15] <= 25
+ e11[a19,a16]: X[a16] - X[a19] + 150 Right[a19,a16] <= 120
+ e12[a19,a16]: Y[a16] - Y[a19] + 100 Above[a19,a16] <= 72
+ e11[a19,a17]: X[a17] - X[a19] + 150 Right[a19,a17] <= 80
+ e12[a19,a17]: Y[a17] - Y[a19] + 100 Above[a19,a17] <= 27
+ e11[a19,a18]: X[a18] - X[a19] + 150 Right[a19,a18] <= 109
+ e12[a19,a18]: Y[a18] - Y[a19] + 100 Above[a19,a18] <= 58
+ e11[a19,a20]: - X[a19] + X[a20] + 150 Right[a19,a20] <= 127
+ e12[a19,a20]: - Y[a19] + Y[a20] + 100 Above[a19,a20] <= 73
+ e11[a19,a21]: - X[a19] + X[a21] + 150 Right[a19,a21] <= 102
+ e12[a19,a21]: - Y[a19] + Y[a21] + 100 Above[a19,a21] <= 55
+ e11[a19,a22]: - X[a19] + X[a22] + 150 Right[a19,a22] <= 90
+ e12[a19,a22]: - Y[a19] + Y[a22] + 100 Above[a19,a22] <= 43
+ e11[a19,a23]: - X[a19] + X[a23] + 150 Right[a19,a23] <= 103
+ e12[a19,a23]: - Y[a19] + Y[a23] + 100 Above[a19,a23] <= 46
+ e11[a19,a24]: - X[a19] + X[a24] + 150 Right[a19,a24] <= 85
+ e12[a19,a24]: - Y[a19] + Y[a24] + 100 Above[a19,a24] <= 34
+ e11[a19,a25]: - X[a19] + X[a25] + 150 Right[a19,a25] <= 119
+ e12[a19,a25]: - Y[a19] + Y[a25] + 100 Above[a19,a25] <= 71
+ e11[a19,a26]: - X[a19] + X[a26] + 150 Right[a19,a26] <= 117
+ e12[a19,a26]: - Y[a19] + Y[a26] + 100 Above[a19,a26] <= 66
+ e11[a19,a27]: - X[a19] + X[a27] + 150 Right[a19,a27] <= 77
+ e12[a19,a27]: - Y[a19] + Y[a27] + 100 Above[a19,a27] <= 19
+ e11[a19,a28]: - X[a19] + X[a28] + 150 Right[a19,a28] <= 121
+ e12[a19,a28]: - Y[a19] + Y[a28] + 100 Above[a19,a28] <= 65
+ e11[a20,a01]: X[a01] - X[a20] + 150 Right[a20,a01] <= 89
+ e12[a20,a01]: Y[a01] - Y[a20] + 100 Above[a20,a01] <= 34
+ e11[a20,a02]: X[a02] - X[a20] + 150 Right[a20,a02] <= 108
+ e12[a20,a02]: Y[a02] - Y[a20] + 100 Above[a20,a02] <= 56
+ e11[a20,a03]: X[a03] - X[a20] + 150 Right[a20,a03] <= 118
+ e12[a20,a03]: Y[a03] - Y[a20] + 100 Above[a20,a03] <= 64
+ e11[a20,a04]: X[a04] - X[a20] + 150 Right[a20,a04] <= 118
+ e12[a20,a04]: Y[a04] - Y[a20] + 100 Above[a20,a04] <= 68
+ e11[a20,a05]: X[a05] - X[a20] + 150 Right[a20,a05] <= 92
+ e12[a20,a05]: Y[a05] - Y[a20] + 100 Above[a20,a05] <= 40
+ e11[a20,a06]: X[a06] - X[a20] + 150 Right[a20,a06] <= 111
+ e12[a20,a06]: Y[a06] - Y[a20] + 100 Above[a20,a06] <= 63
+ e11[a20,a07]: X[a07] - X[a20] + 150 Right[a20,a07] <= 116
+ e12[a20,a07]: Y[a07] - Y[a20] + 100 Above[a20,a07] <= 64
+ e11[a20,a08]: X[a08] - X[a20] + 150 Right[a20,a08] <= 115
+ e12[a20,a08]: Y[a08] - Y[a20] + 100 Above[a20,a08] <= 65
+ e11[a20,a09]: X[a09] - X[a20] + 150 Right[a20,a09] <= 80
+ e12[a20,a09]: Y[a09] - Y[a20] + 100 Above[a20,a09] <= 35
+ e11[a20,a10]: X[a10] - X[a20] + 150 Right[a20,a10] <= 85
+ e12[a20,a10]: Y[a10] - Y[a20] + 100 Above[a20,a10] <= 22
+ e11[a20,a11]: X[a11] - X[a20] + 150 Right[a20,a11] <= 102
+ e12[a20,a11]: Y[a11] - Y[a20] + 100 Above[a20,a11] <= 53
+ e11[a20,a12]: X[a12] - X[a20] + 150 Right[a20,a12] <= 96
+ e12[a20,a12]: Y[a12] - Y[a20] + 100 Above[a20,a12] <= 37
+ e11[a20,a13]: X[a13] - X[a20] + 150 Right[a20,a13] <= 95
+ e12[a20,a13]: Y[a13] - Y[a20] + 100 Above[a20,a13] <= 29
+ e11[a20,a14]: X[a14] - X[a20] + 150 Right[a20,a14] <= 79
+ e12[a20,a14]: Y[a14] - Y[a20] + 100 Above[a20,a14] <= 28
+ e11[a20,a15]: X[a15] - X[a20] + 150 Right[a20,a15] <= 70
+ e12[a20,a15]: Y[a15] - Y[a20] + 100 Above[a20,a15] <= 25
+ e11[a20,a16]: X[a16] - X[a20] + 150 Right[a20,a16] <= 120
+ e12[a20,a16]: Y[a16] - Y[a20] + 100 Above[a20,a16] <= 72
+ e11[a20,a17]: X[a17] - X[a20] + 150 Right[a20,a17] <= 80
+ e12[a20,a17]: Y[a17] - Y[a20] + 100 Above[a20,a17] <= 27
+ e11[a20,a18]: X[a18] - X[a20] + 150 Right[a20,a18] <= 109
+ e12[a20,a18]: Y[a18] - Y[a20] + 100 Above[a20,a18] <= 58
+ e11[a20,a19]: X[a19] - X[a20] + 150 Right[a20,a19] <= 124
+ e12[a20,a19]: Y[a19] - Y[a20] + 100 Above[a20,a19] <= 72
+ e11[a20,a21]: - X[a20] + X[a21] + 150 Right[a20,a21] <= 102
+ e12[a20,a21]: - Y[a20] + Y[a21] + 100 Above[a20,a21] <= 55
+ e11[a20,a22]: - X[a20] + X[a22] + 150 Right[a20,a22] <= 90
+ e12[a20,a22]: - Y[a20] + Y[a22] + 100 Above[a20,a22] <= 43
+ e11[a20,a23]: - X[a20] + X[a23] + 150 Right[a20,a23] <= 103
+ e12[a20,a23]: - Y[a20] + Y[a23] + 100 Above[a20,a23] <= 46
+ e11[a20,a24]: - X[a20] + X[a24] + 150 Right[a20,a24] <= 85
+ e12[a20,a24]: - Y[a20] + Y[a24] + 100 Above[a20,a24] <= 34
+ e11[a20,a25]: - X[a20] + X[a25] + 150 Right[a20,a25] <= 119
+ e12[a20,a25]: - Y[a20] + Y[a25] + 100 Above[a20,a25] <= 71
+ e11[a20,a26]: - X[a20] + X[a26] + 150 Right[a20,a26] <= 117
+ e12[a20,a26]: - Y[a20] + Y[a26] + 100 Above[a20,a26] <= 66
+ e11[a20,a27]: - X[a20] + X[a27] + 150 Right[a20,a27] <= 77
+ e12[a20,a27]: - Y[a20] + Y[a27] + 100 Above[a20,a27] <= 19
+ e11[a20,a28]: - X[a20] + X[a28] + 150 Right[a20,a28] <= 121
+ e12[a20,a28]: - Y[a20] + Y[a28] + 100 Above[a20,a28] <= 65
+ e11[a21,a01]: X[a01] - X[a21] + 150 Right[a21,a01] <= 89
+ e12[a21,a01]: Y[a01] - Y[a21] + 100 Above[a21,a01] <= 34
+ e11[a21,a02]: X[a02] - X[a21] + 150 Right[a21,a02] <= 108
+ e12[a21,a02]: Y[a02] - Y[a21] + 100 Above[a21,a02] <= 56
+ e11[a21,a03]: X[a03] - X[a21] + 150 Right[a21,a03] <= 118
+ e12[a21,a03]: Y[a03] - Y[a21] + 100 Above[a21,a03] <= 64
+ e11[a21,a04]: X[a04] - X[a21] + 150 Right[a21,a04] <= 118
+ e12[a21,a04]: Y[a04] - Y[a21] + 100 Above[a21,a04] <= 68
+ e11[a21,a05]: X[a05] - X[a21] + 150 Right[a21,a05] <= 92
+ e12[a21,a05]: Y[a05] - Y[a21] + 100 Above[a21,a05] <= 40
+ e11[a21,a06]: X[a06] - X[a21] + 150 Right[a21,a06] <= 111
+ e12[a21,a06]: Y[a06] - Y[a21] + 100 Above[a21,a06] <= 63
+ e11[a21,a07]: X[a07] - X[a21] + 150 Right[a21,a07] <= 116
+ e12[a21,a07]: Y[a07] - Y[a21] + 100 Above[a21,a07] <= 64
+ e11[a21,a08]: X[a08] - X[a21] + 150 Right[a21,a08] <= 115
+ e12[a21,a08]: Y[a08] - Y[a21] + 100 Above[a21,a08] <= 65
+ e11[a21,a09]: X[a09] - X[a21] + 150 Right[a21,a09] <= 80
+ e12[a21,a09]: Y[a09] - Y[a21] + 100 Above[a21,a09] <= 35
+ e11[a21,a10]: X[a10] - X[a21] + 150 Right[a21,a10] <= 85
+ e12[a21,a10]: Y[a10] - Y[a21] + 100 Above[a21,a10] <= 22
+ e11[a21,a11]: X[a11] - X[a21] + 150 Right[a21,a11] <= 102
+ e12[a21,a11]: Y[a11] - Y[a21] + 100 Above[a21,a11] <= 53
+ e11[a21,a12]: X[a12] - X[a21] + 150 Right[a21,a12] <= 96
+ e12[a21,a12]: Y[a12] - Y[a21] + 100 Above[a21,a12] <= 37
+ e11[a21,a13]: X[a13] - X[a21] + 150 Right[a21,a13] <= 95
+ e12[a21,a13]: Y[a13] - Y[a21] + 100 Above[a21,a13] <= 29
+ e11[a21,a14]: X[a14] - X[a21] + 150 Right[a21,a14] <= 79
+ e12[a21,a14]: Y[a14] - Y[a21] + 100 Above[a21,a14] <= 28
+ e11[a21,a15]: X[a15] - X[a21] + 150 Right[a21,a15] <= 70
+ e12[a21,a15]: Y[a15] - Y[a21] + 100 Above[a21,a15] <= 25
+ e11[a21,a16]: X[a16] - X[a21] + 150 Right[a21,a16] <= 120
+ e12[a21,a16]: Y[a16] - Y[a21] + 100 Above[a21,a16] <= 72
+ e11[a21,a17]: X[a17] - X[a21] + 150 Right[a21,a17] <= 80
+ e12[a21,a17]: Y[a17] - Y[a21] + 100 Above[a21,a17] <= 27
+ e11[a21,a18]: X[a18] - X[a21] + 150 Right[a21,a18] <= 109
+ e12[a21,a18]: Y[a18] - Y[a21] + 100 Above[a21,a18] <= 58
+ e11[a21,a19]: X[a19] - X[a21] + 150 Right[a21,a19] <= 124
+ e12[a21,a19]: Y[a19] - Y[a21] + 100 Above[a21,a19] <= 72
+ e11[a21,a20]: X[a20] - X[a21] + 150 Right[a21,a20] <= 127
+ e12[a21,a20]: Y[a20] - Y[a21] + 100 Above[a21,a20] <= 73
+ e11[a21,a22]: - X[a21] + X[a22] + 150 Right[a21,a22] <= 90
+ e12[a21,a22]: - Y[a21] + Y[a22] + 100 Above[a21,a22] <= 43
+ e11[a21,a23]: - X[a21] + X[a23] + 150 Right[a21,a23] <= 103
+ e12[a21,a23]: - Y[a21] + Y[a23] + 100 Above[a21,a23] <= 46
+ e11[a21,a24]: - X[a21] + X[a24] + 150 Right[a21,a24] <= 85
+ e12[a21,a24]: - Y[a21] + Y[a24] + 100 Above[a21,a24] <= 34
+ e11[a21,a25]: - X[a21] + X[a25] + 150 Right[a21,a25] <= 119
+ e12[a21,a25]: - Y[a21] + Y[a25] + 100 Above[a21,a25] <= 71
+ e11[a21,a26]: - X[a21] + X[a26] + 150 Right[a21,a26] <= 117
+ e12[a21,a26]: - Y[a21] + Y[a26] + 100 Above[a21,a26] <= 66
+ e11[a21,a27]: - X[a21] + X[a27] + 150 Right[a21,a27] <= 77
+ e12[a21,a27]: - Y[a21] + Y[a27] + 100 Above[a21,a27] <= 19
+ e11[a21,a28]: - X[a21] + X[a28] + 150 Right[a21,a28] <= 121
+ e12[a21,a28]: - Y[a21] + Y[a28] + 100 Above[a21,a28] <= 65
+ e11[a22,a01]: X[a01] - X[a22] + 150 Right[a22,a01] <= 89
+ e12[a22,a01]: Y[a01] - Y[a22] + 100 Above[a22,a01] <= 34
+ e11[a22,a02]: X[a02] - X[a22] + 150 Right[a22,a02] <= 108
+ e12[a22,a02]: Y[a02] - Y[a22] + 100 Above[a22,a02] <= 56
+ e11[a22,a03]: X[a03] - X[a22] + 150 Right[a22,a03] <= 118
+ e12[a22,a03]: Y[a03] - Y[a22] + 100 Above[a22,a03] <= 64
+ e11[a22,a04]: X[a04] - X[a22] + 150 Right[a22,a04] <= 118
+ e12[a22,a04]: Y[a04] - Y[a22] + 100 Above[a22,a04] <= 68
+ e11[a22,a05]: X[a05] - X[a22] + 150 Right[a22,a05] <= 92
+ e12[a22,a05]: Y[a05] - Y[a22] + 100 Above[a22,a05] <= 40
+ e11[a22,a06]: X[a06] - X[a22] + 150 Right[a22,a06] <= 111
+ e12[a22,a06]: Y[a06] - Y[a22] + 100 Above[a22,a06] <= 63
+ e11[a22,a07]: X[a07] - X[a22] + 150 Right[a22,a07] <= 116
+ e12[a22,a07]: Y[a07] - Y[a22] + 100 Above[a22,a07] <= 64
+ e11[a22,a08]: X[a08] - X[a22] + 150 Right[a22,a08] <= 115
+ e12[a22,a08]: Y[a08] - Y[a22] + 100 Above[a22,a08] <= 65
+ e11[a22,a09]: X[a09] - X[a22] + 150 Right[a22,a09] <= 80
+ e12[a22,a09]: Y[a09] - Y[a22] + 100 Above[a22,a09] <= 35
+ e11[a22,a10]: X[a10] - X[a22] + 150 Right[a22,a10] <= 85
+ e12[a22,a10]: Y[a10] - Y[a22] + 100 Above[a22,a10] <= 22
+ e11[a22,a11]: X[a11] - X[a22] + 150 Right[a22,a11] <= 102
+ e12[a22,a11]: Y[a11] - Y[a22] + 100 Above[a22,a11] <= 53
+ e11[a22,a12]: X[a12] - X[a22] + 150 Right[a22,a12] <= 96
+ e12[a22,a12]: Y[a12] - Y[a22] + 100 Above[a22,a12] <= 37
+ e11[a22,a13]: X[a13] - X[a22] + 150 Right[a22,a13] <= 95
+ e12[a22,a13]: Y[a13] - Y[a22] + 100 Above[a22,a13] <= 29
+ e11[a22,a14]: X[a14] - X[a22] + 150 Right[a22,a14] <= 79
+ e12[a22,a14]: Y[a14] - Y[a22] + 100 Above[a22,a14] <= 28
+ e11[a22,a15]: X[a15] - X[a22] + 150 Right[a22,a15] <= 70
+ e12[a22,a15]: Y[a15] - Y[a22] + 100 Above[a22,a15] <= 25
+ e11[a22,a16]: X[a16] - X[a22] + 150 Right[a22,a16] <= 120
+ e12[a22,a16]: Y[a16] - Y[a22] + 100 Above[a22,a16] <= 72
+ e11[a22,a17]: X[a17] - X[a22] + 150 Right[a22,a17] <= 80
+ e12[a22,a17]: Y[a17] - Y[a22] + 100 Above[a22,a17] <= 27
+ e11[a22,a18]: X[a18] - X[a22] + 150 Right[a22,a18] <= 109
+ e12[a22,a18]: Y[a18] - Y[a22] + 100 Above[a22,a18] <= 58
+ e11[a22,a19]: X[a19] - X[a22] + 150 Right[a22,a19] <= 124
+ e12[a22,a19]: Y[a19] - Y[a22] + 100 Above[a22,a19] <= 72
+ e11[a22,a20]: X[a20] - X[a22] + 150 Right[a22,a20] <= 127
+ e12[a22,a20]: Y[a20] - Y[a22] + 100 Above[a22,a20] <= 73
+ e11[a22,a21]: X[a21] - X[a22] + 150 Right[a22,a21] <= 102
+ e12[a22,a21]: Y[a21] - Y[a22] + 100 Above[a22,a21] <= 55
+ e11[a22,a23]: - X[a22] + X[a23] + 150 Right[a22,a23] <= 103
+ e12[a22,a23]: - Y[a22] + Y[a23] + 100 Above[a22,a23] <= 46
+ e11[a22,a24]: - X[a22] + X[a24] + 150 Right[a22,a24] <= 85
+ e12[a22,a24]: - Y[a22] + Y[a24] + 100 Above[a22,a24] <= 34
+ e11[a22,a25]: - X[a22] + X[a25] + 150 Right[a22,a25] <= 119
+ e12[a22,a25]: - Y[a22] + Y[a25] + 100 Above[a22,a25] <= 71
+ e11[a22,a26]: - X[a22] + X[a26] + 150 Right[a22,a26] <= 117
+ e12[a22,a26]: - Y[a22] + Y[a26] + 100 Above[a22,a26] <= 66
+ e11[a22,a27]: - X[a22] + X[a27] + 150 Right[a22,a27] <= 77
+ e12[a22,a27]: - Y[a22] + Y[a27] + 100 Above[a22,a27] <= 19
+ e11[a22,a28]: - X[a22] + X[a28] + 150 Right[a22,a28] <= 121
+ e12[a22,a28]: - Y[a22] + Y[a28] + 100 Above[a22,a28] <= 65
+ e11[a23,a01]: X[a01] - X[a23] + 150 Right[a23,a01] <= 89
+ e12[a23,a01]: Y[a01] - Y[a23] + 100 Above[a23,a01] <= 34
+ e11[a23,a02]: X[a02] - X[a23] + 150 Right[a23,a02] <= 108
+ e12[a23,a02]: Y[a02] - Y[a23] + 100 Above[a23,a02] <= 56
+ e11[a23,a03]: X[a03] - X[a23] + 150 Right[a23,a03] <= 118
+ e12[a23,a03]: Y[a03] - Y[a23] + 100 Above[a23,a03] <= 64
+ e11[a23,a04]: X[a04] - X[a23] + 150 Right[a23,a04] <= 118
+ e12[a23,a04]: Y[a04] - Y[a23] + 100 Above[a23,a04] <= 68
+ e11[a23,a05]: X[a05] - X[a23] + 150 Right[a23,a05] <= 92
+ e12[a23,a05]: Y[a05] - Y[a23] + 100 Above[a23,a05] <= 40
+ e11[a23,a06]: X[a06] - X[a23] + 150 Right[a23,a06] <= 111
+ e12[a23,a06]: Y[a06] - Y[a23] + 100 Above[a23,a06] <= 63
+ e11[a23,a07]: X[a07] - X[a23] + 150 Right[a23,a07] <= 116
+ e12[a23,a07]: Y[a07] - Y[a23] + 100 Above[a23,a07] <= 64
+ e11[a23,a08]: X[a08] - X[a23] + 150 Right[a23,a08] <= 115
+ e12[a23,a08]: Y[a08] - Y[a23] + 100 Above[a23,a08] <= 65
+ e11[a23,a09]: X[a09] - X[a23] + 150 Right[a23,a09] <= 80
+ e12[a23,a09]: Y[a09] - Y[a23] + 100 Above[a23,a09] <= 35
+ e11[a23,a10]: X[a10] - X[a23] + 150 Right[a23,a10] <= 85
+ e12[a23,a10]: Y[a10] - Y[a23] + 100 Above[a23,a10] <= 22
+ e11[a23,a11]: X[a11] - X[a23] + 150 Right[a23,a11] <= 102
+ e12[a23,a11]: Y[a11] - Y[a23] + 100 Above[a23,a11] <= 53
+ e11[a23,a12]: X[a12] - X[a23] + 150 Right[a23,a12] <= 96
+ e12[a23,a12]: Y[a12] - Y[a23] + 100 Above[a23,a12] <= 37
+ e11[a23,a13]: X[a13] - X[a23] + 150 Right[a23,a13] <= 95
+ e12[a23,a13]: Y[a13] - Y[a23] + 100 Above[a23,a13] <= 29
+ e11[a23,a14]: X[a14] - X[a23] + 150 Right[a23,a14] <= 79
+ e12[a23,a14]: Y[a14] - Y[a23] + 100 Above[a23,a14] <= 28
+ e11[a23,a15]: X[a15] - X[a23] + 150 Right[a23,a15] <= 70
+ e12[a23,a15]: Y[a15] - Y[a23] + 100 Above[a23,a15] <= 25
+ e11[a23,a16]: X[a16] - X[a23] + 150 Right[a23,a16] <= 120
+ e12[a23,a16]: Y[a16] - Y[a23] + 100 Above[a23,a16] <= 72
+ e11[a23,a17]: X[a17] - X[a23] + 150 Right[a23,a17] <= 80
+ e12[a23,a17]: Y[a17] - Y[a23] + 100 Above[a23,a17] <= 27
+ e11[a23,a18]: X[a18] - X[a23] + 150 Right[a23,a18] <= 109
+ e12[a23,a18]: Y[a18] - Y[a23] + 100 Above[a23,a18] <= 58
+ e11[a23,a19]: X[a19] - X[a23] + 150 Right[a23,a19] <= 124
+ e12[a23,a19]: Y[a19] - Y[a23] + 100 Above[a23,a19] <= 72
+ e11[a23,a20]: X[a20] - X[a23] + 150 Right[a23,a20] <= 127
+ e12[a23,a20]: Y[a20] - Y[a23] + 100 Above[a23,a20] <= 73
+ e11[a23,a21]: X[a21] - X[a23] + 150 Right[a23,a21] <= 102
+ e12[a23,a21]: Y[a21] - Y[a23] + 100 Above[a23,a21] <= 55
+ e11[a23,a22]: X[a22] - X[a23] + 150 Right[a23,a22] <= 90
+ e12[a23,a22]: Y[a22] - Y[a23] + 100 Above[a23,a22] <= 43
+ e11[a23,a24]: - X[a23] + X[a24] + 150 Right[a23,a24] <= 85
+ e12[a23,a24]: - Y[a23] + Y[a24] + 100 Above[a23,a24] <= 34
+ e11[a23,a25]: - X[a23] + X[a25] + 150 Right[a23,a25] <= 119
+ e12[a23,a25]: - Y[a23] + Y[a25] + 100 Above[a23,a25] <= 71
+ e11[a23,a26]: - X[a23] + X[a26] + 150 Right[a23,a26] <= 117
+ e12[a23,a26]: - Y[a23] + Y[a26] + 100 Above[a23,a26] <= 66
+ e11[a23,a27]: - X[a23] + X[a27] + 150 Right[a23,a27] <= 77
+ e12[a23,a27]: - Y[a23] + Y[a27] + 100 Above[a23,a27] <= 19
+ e11[a23,a28]: - X[a23] + X[a28] + 150 Right[a23,a28] <= 121
+ e12[a23,a28]: - Y[a23] + Y[a28] + 100 Above[a23,a28] <= 65
+ e11[a24,a01]: X[a01] - X[a24] + 150 Right[a24,a01] <= 89
+ e12[a24,a01]: Y[a01] - Y[a24] + 100 Above[a24,a01] <= 34
+ e11[a24,a02]: X[a02] - X[a24] + 150 Right[a24,a02] <= 108
+ e12[a24,a02]: Y[a02] - Y[a24] + 100 Above[a24,a02] <= 56
+ e11[a24,a03]: X[a03] - X[a24] + 150 Right[a24,a03] <= 118
+ e12[a24,a03]: Y[a03] - Y[a24] + 100 Above[a24,a03] <= 64
+ e11[a24,a04]: X[a04] - X[a24] + 150 Right[a24,a04] <= 118
+ e12[a24,a04]: Y[a04] - Y[a24] + 100 Above[a24,a04] <= 68
+ e11[a24,a05]: X[a05] - X[a24] + 150 Right[a24,a05] <= 92
+ e12[a24,a05]: Y[a05] - Y[a24] + 100 Above[a24,a05] <= 40
+ e11[a24,a06]: X[a06] - X[a24] + 150 Right[a24,a06] <= 111
+ e12[a24,a06]: Y[a06] - Y[a24] + 100 Above[a24,a06] <= 63
+ e11[a24,a07]: X[a07] - X[a24] + 150 Right[a24,a07] <= 116
+ e12[a24,a07]: Y[a07] - Y[a24] + 100 Above[a24,a07] <= 64
+ e11[a24,a08]: X[a08] - X[a24] + 150 Right[a24,a08] <= 115
+ e12[a24,a08]: Y[a08] - Y[a24] + 100 Above[a24,a08] <= 65
+ e11[a24,a09]: X[a09] - X[a24] + 150 Right[a24,a09] <= 80
+ e12[a24,a09]: Y[a09] - Y[a24] + 100 Above[a24,a09] <= 35
+ e11[a24,a10]: X[a10] - X[a24] + 150 Right[a24,a10] <= 85
+ e12[a24,a10]: Y[a10] - Y[a24] + 100 Above[a24,a10] <= 22
+ e11[a24,a11]: X[a11] - X[a24] + 150 Right[a24,a11] <= 102
+ e12[a24,a11]: Y[a11] - Y[a24] + 100 Above[a24,a11] <= 53
+ e11[a24,a12]: X[a12] - X[a24] + 150 Right[a24,a12] <= 96
+ e12[a24,a12]: Y[a12] - Y[a24] + 100 Above[a24,a12] <= 37
+ e11[a24,a13]: X[a13] - X[a24] + 150 Right[a24,a13] <= 95
+ e12[a24,a13]: Y[a13] - Y[a24] + 100 Above[a24,a13] <= 29
+ e11[a24,a14]: X[a14] - X[a24] + 150 Right[a24,a14] <= 79
+ e12[a24,a14]: Y[a14] - Y[a24] + 100 Above[a24,a14] <= 28
+ e11[a24,a15]: X[a15] - X[a24] + 150 Right[a24,a15] <= 70
+ e12[a24,a15]: Y[a15] - Y[a24] + 100 Above[a24,a15] <= 25
+ e11[a24,a16]: X[a16] - X[a24] + 150 Right[a24,a16] <= 120
+ e12[a24,a16]: Y[a16] - Y[a24] + 100 Above[a24,a16] <= 72
+ e11[a24,a17]: X[a17] - X[a24] + 150 Right[a24,a17] <= 80
+ e12[a24,a17]: Y[a17] - Y[a24] + 100 Above[a24,a17] <= 27
+ e11[a24,a18]: X[a18] - X[a24] + 150 Right[a24,a18] <= 109
+ e12[a24,a18]: Y[a18] - Y[a24] + 100 Above[a24,a18] <= 58
+ e11[a24,a19]: X[a19] - X[a24] + 150 Right[a24,a19] <= 124
+ e12[a24,a19]: Y[a19] - Y[a24] + 100 Above[a24,a19] <= 72
+ e11[a24,a20]: X[a20] - X[a24] + 150 Right[a24,a20] <= 127
+ e12[a24,a20]: Y[a20] - Y[a24] + 100 Above[a24,a20] <= 73
+ e11[a24,a21]: X[a21] - X[a24] + 150 Right[a24,a21] <= 102
+ e12[a24,a21]: Y[a21] - Y[a24] + 100 Above[a24,a21] <= 55
+ e11[a24,a22]: X[a22] - X[a24] + 150 Right[a24,a22] <= 90
+ e12[a24,a22]: Y[a22] - Y[a24] + 100 Above[a24,a22] <= 43
+ e11[a24,a23]: X[a23] - X[a24] + 150 Right[a24,a23] <= 103
+ e12[a24,a23]: Y[a23] - Y[a24] + 100 Above[a24,a23] <= 46
+ e11[a24,a25]: - X[a24] + X[a25] + 150 Right[a24,a25] <= 119
+ e12[a24,a25]: - Y[a24] + Y[a25] + 100 Above[a24,a25] <= 71
+ e11[a24,a26]: - X[a24] + X[a26] + 150 Right[a24,a26] <= 117
+ e12[a24,a26]: - Y[a24] + Y[a26] + 100 Above[a24,a26] <= 66
+ e11[a24,a27]: - X[a24] + X[a27] + 150 Right[a24,a27] <= 77
+ e12[a24,a27]: - Y[a24] + Y[a27] + 100 Above[a24,a27] <= 19
+ e11[a24,a28]: - X[a24] + X[a28] + 150 Right[a24,a28] <= 121
+ e12[a24,a28]: - Y[a24] + Y[a28] + 100 Above[a24,a28] <= 65
+ e11[a25,a01]: X[a01] - X[a25] + 150 Right[a25,a01] <= 89
+ e12[a25,a01]: Y[a01] - Y[a25] + 100 Above[a25,a01] <= 34
+ e11[a25,a02]: X[a02] - X[a25] + 150 Right[a25,a02] <= 108
+ e12[a25,a02]: Y[a02] - Y[a25] + 100 Above[a25,a02] <= 56
+ e11[a25,a03]: X[a03] - X[a25] + 150 Right[a25,a03] <= 118
+ e12[a25,a03]: Y[a03] - Y[a25] + 100 Above[a25,a03] <= 64
+ e11[a25,a04]: X[a04] - X[a25] + 150 Right[a25,a04] <= 118
+ e12[a25,a04]: Y[a04] - Y[a25] + 100 Above[a25,a04] <= 68
+ e11[a25,a05]: X[a05] - X[a25] + 150 Right[a25,a05] <= 92
+ e12[a25,a05]: Y[a05] - Y[a25] + 100 Above[a25,a05] <= 40
+ e11[a25,a06]: X[a06] - X[a25] + 150 Right[a25,a06] <= 111
+ e12[a25,a06]: Y[a06] - Y[a25] + 100 Above[a25,a06] <= 63
+ e11[a25,a07]: X[a07] - X[a25] + 150 Right[a25,a07] <= 116
+ e12[a25,a07]: Y[a07] - Y[a25] + 100 Above[a25,a07] <= 64
+ e11[a25,a08]: X[a08] - X[a25] + 150 Right[a25,a08] <= 115
+ e12[a25,a08]: Y[a08] - Y[a25] + 100 Above[a25,a08] <= 65
+ e11[a25,a09]: X[a09] - X[a25] + 150 Right[a25,a09] <= 80
+ e12[a25,a09]: Y[a09] - Y[a25] + 100 Above[a25,a09] <= 35
+ e11[a25,a10]: X[a10] - X[a25] + 150 Right[a25,a10] <= 85
+ e12[a25,a10]: Y[a10] - Y[a25] + 100 Above[a25,a10] <= 22
+ e11[a25,a11]: X[a11] - X[a25] + 150 Right[a25,a11] <= 102
+ e12[a25,a11]: Y[a11] - Y[a25] + 100 Above[a25,a11] <= 53
+ e11[a25,a12]: X[a12] - X[a25] + 150 Right[a25,a12] <= 96
+ e12[a25,a12]: Y[a12] - Y[a25] + 100 Above[a25,a12] <= 37
+ e11[a25,a13]: X[a13] - X[a25] + 150 Right[a25,a13] <= 95
+ e12[a25,a13]: Y[a13] - Y[a25] + 100 Above[a25,a13] <= 29
+ e11[a25,a14]: X[a14] - X[a25] + 150 Right[a25,a14] <= 79
+ e12[a25,a14]: Y[a14] - Y[a25] + 100 Above[a25,a14] <= 28
+ e11[a25,a15]: X[a15] - X[a25] + 150 Right[a25,a15] <= 70
+ e12[a25,a15]: Y[a15] - Y[a25] + 100 Above[a25,a15] <= 25
+ e11[a25,a16]: X[a16] - X[a25] + 150 Right[a25,a16] <= 120
+ e12[a25,a16]: Y[a16] - Y[a25] + 100 Above[a25,a16] <= 72
+ e11[a25,a17]: X[a17] - X[a25] + 150 Right[a25,a17] <= 80
+ e12[a25,a17]: Y[a17] - Y[a25] + 100 Above[a25,a17] <= 27
+ e11[a25,a18]: X[a18] - X[a25] + 150 Right[a25,a18] <= 109
+ e12[a25,a18]: Y[a18] - Y[a25] + 100 Above[a25,a18] <= 58
+ e11[a25,a19]: X[a19] - X[a25] + 150 Right[a25,a19] <= 124
+ e12[a25,a19]: Y[a19] - Y[a25] + 100 Above[a25,a19] <= 72
+ e11[a25,a20]: X[a20] - X[a25] + 150 Right[a25,a20] <= 127
+ e12[a25,a20]: Y[a20] - Y[a25] + 100 Above[a25,a20] <= 73
+ e11[a25,a21]: X[a21] - X[a25] + 150 Right[a25,a21] <= 102
+ e12[a25,a21]: Y[a21] - Y[a25] + 100 Above[a25,a21] <= 55
+ e11[a25,a22]: X[a22] - X[a25] + 150 Right[a25,a22] <= 90
+ e12[a25,a22]: Y[a22] - Y[a25] + 100 Above[a25,a22] <= 43
+ e11[a25,a23]: X[a23] - X[a25] + 150 Right[a25,a23] <= 103
+ e12[a25,a23]: Y[a23] - Y[a25] + 100 Above[a25,a23] <= 46
+ e11[a25,a24]: X[a24] - X[a25] + 150 Right[a25,a24] <= 85
+ e12[a25,a24]: Y[a24] - Y[a25] + 100 Above[a25,a24] <= 34
+ e11[a25,a26]: - X[a25] + X[a26] + 150 Right[a25,a26] <= 117
+ e12[a25,a26]: - Y[a25] + Y[a26] + 100 Above[a25,a26] <= 66
+ e11[a25,a27]: - X[a25] + X[a27] + 150 Right[a25,a27] <= 77
+ e12[a25,a27]: - Y[a25] + Y[a27] + 100 Above[a25,a27] <= 19
+ e11[a25,a28]: - X[a25] + X[a28] + 150 Right[a25,a28] <= 121
+ e12[a25,a28]: - Y[a25] + Y[a28] + 100 Above[a25,a28] <= 65
+ e11[a26,a01]: X[a01] - X[a26] + 150 Right[a26,a01] <= 89
+ e12[a26,a01]: Y[a01] - Y[a26] + 100 Above[a26,a01] <= 34
+ e11[a26,a02]: X[a02] - X[a26] + 150 Right[a26,a02] <= 108
+ e12[a26,a02]: Y[a02] - Y[a26] + 100 Above[a26,a02] <= 56
+ e11[a26,a03]: X[a03] - X[a26] + 150 Right[a26,a03] <= 118
+ e12[a26,a03]: Y[a03] - Y[a26] + 100 Above[a26,a03] <= 64
+ e11[a26,a04]: X[a04] - X[a26] + 150 Right[a26,a04] <= 118
+ e12[a26,a04]: Y[a04] - Y[a26] + 100 Above[a26,a04] <= 68
+ e11[a26,a05]: X[a05] - X[a26] + 150 Right[a26,a05] <= 92
+ e12[a26,a05]: Y[a05] - Y[a26] + 100 Above[a26,a05] <= 40
+ e11[a26,a06]: X[a06] - X[a26] + 150 Right[a26,a06] <= 111
+ e12[a26,a06]: Y[a06] - Y[a26] + 100 Above[a26,a06] <= 63
+ e11[a26,a07]: X[a07] - X[a26] + 150 Right[a26,a07] <= 116
+ e12[a26,a07]: Y[a07] - Y[a26] + 100 Above[a26,a07] <= 64
+ e11[a26,a08]: X[a08] - X[a26] + 150 Right[a26,a08] <= 115
+ e12[a26,a08]: Y[a08] - Y[a26] + 100 Above[a26,a08] <= 65
+ e11[a26,a09]: X[a09] - X[a26] + 150 Right[a26,a09] <= 80
+ e12[a26,a09]: Y[a09] - Y[a26] + 100 Above[a26,a09] <= 35
+ e11[a26,a10]: X[a10] - X[a26] + 150 Right[a26,a10] <= 85
+ e12[a26,a10]: Y[a10] - Y[a26] + 100 Above[a26,a10] <= 22
+ e11[a26,a11]: X[a11] - X[a26] + 150 Right[a26,a11] <= 102
+ e12[a26,a11]: Y[a11] - Y[a26] + 100 Above[a26,a11] <= 53
+ e11[a26,a12]: X[a12] - X[a26] + 150 Right[a26,a12] <= 96
+ e12[a26,a12]: Y[a12] - Y[a26] + 100 Above[a26,a12] <= 37
+ e11[a26,a13]: X[a13] - X[a26] + 150 Right[a26,a13] <= 95
+ e12[a26,a13]: Y[a13] - Y[a26] + 100 Above[a26,a13] <= 29
+ e11[a26,a14]: X[a14] - X[a26] + 150 Right[a26,a14] <= 79
+ e12[a26,a14]: Y[a14] - Y[a26] + 100 Above[a26,a14] <= 28
+ e11[a26,a15]: X[a15] - X[a26] + 150 Right[a26,a15] <= 70
+ e12[a26,a15]: Y[a15] - Y[a26] + 100 Above[a26,a15] <= 25
+ e11[a26,a16]: X[a16] - X[a26] + 150 Right[a26,a16] <= 120
+ e12[a26,a16]: Y[a16] - Y[a26] + 100 Above[a26,a16] <= 72
+ e11[a26,a17]: X[a17] - X[a26] + 150 Right[a26,a17] <= 80
+ e12[a26,a17]: Y[a17] - Y[a26] + 100 Above[a26,a17] <= 27
+ e11[a26,a18]: X[a18] - X[a26] + 150 Right[a26,a18] <= 109
+ e12[a26,a18]: Y[a18] - Y[a26] + 100 Above[a26,a18] <= 58
+ e11[a26,a19]: X[a19] - X[a26] + 150 Right[a26,a19] <= 124
+ e12[a26,a19]: Y[a19] - Y[a26] + 100 Above[a26,a19] <= 72
+ e11[a26,a20]: X[a20] - X[a26] + 150 Right[a26,a20] <= 127
+ e12[a26,a20]: Y[a20] - Y[a26] + 100 Above[a26,a20] <= 73
+ e11[a26,a21]: X[a21] - X[a26] + 150 Right[a26,a21] <= 102
+ e12[a26,a21]: Y[a21] - Y[a26] + 100 Above[a26,a21] <= 55
+ e11[a26,a22]: X[a22] - X[a26] + 150 Right[a26,a22] <= 90
+ e12[a26,a22]: Y[a22] - Y[a26] + 100 Above[a26,a22] <= 43
+ e11[a26,a23]: X[a23] - X[a26] + 150 Right[a26,a23] <= 103
+ e12[a26,a23]: Y[a23] - Y[a26] + 100 Above[a26,a23] <= 46
+ e11[a26,a24]: X[a24] - X[a26] + 150 Right[a26,a24] <= 85
+ e12[a26,a24]: Y[a24] - Y[a26] + 100 Above[a26,a24] <= 34
+ e11[a26,a25]: X[a25] - X[a26] + 150 Right[a26,a25] <= 119
+ e12[a26,a25]: Y[a25] - Y[a26] + 100 Above[a26,a25] <= 71
+ e11[a26,a27]: - X[a26] + X[a27] + 150 Right[a26,a27] <= 77
+ e12[a26,a27]: - Y[a26] + Y[a27] + 100 Above[a26,a27] <= 19
+ e11[a26,a28]: - X[a26] + X[a28] + 150 Right[a26,a28] <= 121
+ e12[a26,a28]: - Y[a26] + Y[a28] + 100 Above[a26,a28] <= 65
+ e11[a27,a01]: X[a01] - X[a27] + 150 Right[a27,a01] <= 89
+ e12[a27,a01]: Y[a01] - Y[a27] + 100 Above[a27,a01] <= 34
+ e11[a27,a02]: X[a02] - X[a27] + 150 Right[a27,a02] <= 108
+ e12[a27,a02]: Y[a02] - Y[a27] + 100 Above[a27,a02] <= 56
+ e11[a27,a03]: X[a03] - X[a27] + 150 Right[a27,a03] <= 118
+ e12[a27,a03]: Y[a03] - Y[a27] + 100 Above[a27,a03] <= 64
+ e11[a27,a04]: X[a04] - X[a27] + 150 Right[a27,a04] <= 118
+ e12[a27,a04]: Y[a04] - Y[a27] + 100 Above[a27,a04] <= 68
+ e11[a27,a05]: X[a05] - X[a27] + 150 Right[a27,a05] <= 92
+ e12[a27,a05]: Y[a05] - Y[a27] + 100 Above[a27,a05] <= 40
+ e11[a27,a06]: X[a06] - X[a27] + 150 Right[a27,a06] <= 111
+ e12[a27,a06]: Y[a06] - Y[a27] + 100 Above[a27,a06] <= 63
+ e11[a27,a07]: X[a07] - X[a27] + 150 Right[a27,a07] <= 116
+ e12[a27,a07]: Y[a07] - Y[a27] + 100 Above[a27,a07] <= 64
+ e11[a27,a08]: X[a08] - X[a27] + 150 Right[a27,a08] <= 115
+ e12[a27,a08]: Y[a08] - Y[a27] + 100 Above[a27,a08] <= 65
+ e11[a27,a09]: X[a09] - X[a27] + 150 Right[a27,a09] <= 80
+ e12[a27,a09]: Y[a09] - Y[a27] + 100 Above[a27,a09] <= 35
+ e11[a27,a10]: X[a10] - X[a27] + 150 Right[a27,a10] <= 85
+ e12[a27,a10]: Y[a10] - Y[a27] + 100 Above[a27,a10] <= 22
+ e11[a27,a11]: X[a11] - X[a27] + 150 Right[a27,a11] <= 102
+ e12[a27,a11]: Y[a11] - Y[a27] + 100 Above[a27,a11] <= 53
+ e11[a27,a12]: X[a12] - X[a27] + 150 Right[a27,a12] <= 96
+ e12[a27,a12]: Y[a12] - Y[a27] + 100 Above[a27,a12] <= 37
+ e11[a27,a13]: X[a13] - X[a27] + 150 Right[a27,a13] <= 95
+ e12[a27,a13]: Y[a13] - Y[a27] + 100 Above[a27,a13] <= 29
+ e11[a27,a14]: X[a14] - X[a27] + 150 Right[a27,a14] <= 79
+ e12[a27,a14]: Y[a14] - Y[a27] + 100 Above[a27,a14] <= 28
+ e11[a27,a15]: X[a15] - X[a27] + 150 Right[a27,a15] <= 70
+ e12[a27,a15]: Y[a15] - Y[a27] + 100 Above[a27,a15] <= 25
+ e11[a27,a16]: X[a16] - X[a27] + 150 Right[a27,a16] <= 120
+ e12[a27,a16]: Y[a16] - Y[a27] + 100 Above[a27,a16] <= 72
+ e11[a27,a17]: X[a17] - X[a27] + 150 Right[a27,a17] <= 80
+ e12[a27,a17]: Y[a17] - Y[a27] + 100 Above[a27,a17] <= 27
+ e11[a27,a18]: X[a18] - X[a27] + 150 Right[a27,a18] <= 109
+ e12[a27,a18]: Y[a18] - Y[a27] + 100 Above[a27,a18] <= 58
+ e11[a27,a19]: X[a19] - X[a27] + 150 Right[a27,a19] <= 124
+ e12[a27,a19]: Y[a19] - Y[a27] + 100 Above[a27,a19] <= 72
+ e11[a27,a20]: X[a20] - X[a27] + 150 Right[a27,a20] <= 127
+ e12[a27,a20]: Y[a20] - Y[a27] + 100 Above[a27,a20] <= 73
+ e11[a27,a21]: X[a21] - X[a27] + 150 Right[a27,a21] <= 102
+ e12[a27,a21]: Y[a21] - Y[a27] + 100 Above[a27,a21] <= 55
+ e11[a27,a22]: X[a22] - X[a27] + 150 Right[a27,a22] <= 90
+ e12[a27,a22]: Y[a22] - Y[a27] + 100 Above[a27,a22] <= 43
+ e11[a27,a23]: X[a23] - X[a27] + 150 Right[a27,a23] <= 103
+ e12[a27,a23]: Y[a23] - Y[a27] + 100 Above[a27,a23] <= 46
+ e11[a27,a24]: X[a24] - X[a27] + 150 Right[a27,a24] <= 85
+ e12[a27,a24]: Y[a24] - Y[a27] + 100 Above[a27,a24] <= 34
+ e11[a27,a25]: X[a25] - X[a27] + 150 Right[a27,a25] <= 119
+ e12[a27,a25]: Y[a25] - Y[a27] + 100 Above[a27,a25] <= 71
+ e11[a27,a26]: X[a26] - X[a27] + 150 Right[a27,a26] <= 117
+ e12[a27,a26]: Y[a26] - Y[a27] + 100 Above[a27,a26] <= 66
+ e11[a27,a28]: - X[a27] + X[a28] + 150 Right[a27,a28] <= 121
+ e12[a27,a28]: - Y[a27] + Y[a28] + 100 Above[a27,a28] <= 65
+ e11[a28,a01]: X[a01] - X[a28] + 150 Right[a28,a01] <= 89
+ e12[a28,a01]: Y[a01] - Y[a28] + 100 Above[a28,a01] <= 34
+ e11[a28,a02]: X[a02] - X[a28] + 150 Right[a28,a02] <= 108
+ e12[a28,a02]: Y[a02] - Y[a28] + 100 Above[a28,a02] <= 56
+ e11[a28,a03]: X[a03] - X[a28] + 150 Right[a28,a03] <= 118
+ e12[a28,a03]: Y[a03] - Y[a28] + 100 Above[a28,a03] <= 64
+ e11[a28,a04]: X[a04] - X[a28] + 150 Right[a28,a04] <= 118
+ e12[a28,a04]: Y[a04] - Y[a28] + 100 Above[a28,a04] <= 68
+ e11[a28,a05]: X[a05] - X[a28] + 150 Right[a28,a05] <= 92
+ e12[a28,a05]: Y[a05] - Y[a28] + 100 Above[a28,a05] <= 40
+ e11[a28,a06]: X[a06] - X[a28] + 150 Right[a28,a06] <= 111
+ e12[a28,a06]: Y[a06] - Y[a28] + 100 Above[a28,a06] <= 63
+ e11[a28,a07]: X[a07] - X[a28] + 150 Right[a28,a07] <= 116
+ e12[a28,a07]: Y[a07] - Y[a28] + 100 Above[a28,a07] <= 64
+ e11[a28,a08]: X[a08] - X[a28] + 150 Right[a28,a08] <= 115
+ e12[a28,a08]: Y[a08] - Y[a28] + 100 Above[a28,a08] <= 65
+ e11[a28,a09]: X[a09] - X[a28] + 150 Right[a28,a09] <= 80
+ e12[a28,a09]: Y[a09] - Y[a28] + 100 Above[a28,a09] <= 35
+ e11[a28,a10]: X[a10] - X[a28] + 150 Right[a28,a10] <= 85
+ e12[a28,a10]: Y[a10] - Y[a28] + 100 Above[a28,a10] <= 22
+ e11[a28,a11]: X[a11] - X[a28] + 150 Right[a28,a11] <= 102
+ e12[a28,a11]: Y[a11] - Y[a28] + 100 Above[a28,a11] <= 53
+ e11[a28,a12]: X[a12] - X[a28] + 150 Right[a28,a12] <= 96
+ e12[a28,a12]: Y[a12] - Y[a28] + 100 Above[a28,a12] <= 37
+ e11[a28,a13]: X[a13] - X[a28] + 150 Right[a28,a13] <= 95
+ e12[a28,a13]: Y[a13] - Y[a28] + 100 Above[a28,a13] <= 29
+ e11[a28,a14]: X[a14] - X[a28] + 150 Right[a28,a14] <= 79
+ e12[a28,a14]: Y[a14] - Y[a28] + 100 Above[a28,a14] <= 28
+ e11[a28,a15]: X[a15] - X[a28] + 150 Right[a28,a15] <= 70
+ e12[a28,a15]: Y[a15] - Y[a28] + 100 Above[a28,a15] <= 25
+ e11[a28,a16]: X[a16] - X[a28] + 150 Right[a28,a16] <= 120
+ e12[a28,a16]: Y[a16] - Y[a28] + 100 Above[a28,a16] <= 72
+ e11[a28,a17]: X[a17] - X[a28] + 150 Right[a28,a17] <= 80
+ e12[a28,a17]: Y[a17] - Y[a28] + 100 Above[a28,a17] <= 27
+ e11[a28,a18]: X[a18] - X[a28] + 150 Right[a28,a18] <= 109
+ e12[a28,a18]: Y[a18] - Y[a28] + 100 Above[a28,a18] <= 58
+ e11[a28,a19]: X[a19] - X[a28] + 150 Right[a28,a19] <= 124
+ e12[a28,a19]: Y[a19] - Y[a28] + 100 Above[a28,a19] <= 72
+ e11[a28,a20]: X[a20] - X[a28] + 150 Right[a28,a20] <= 127
+ e12[a28,a20]: Y[a20] - Y[a28] + 100 Above[a28,a20] <= 73
+ e11[a28,a21]: X[a21] - X[a28] + 150 Right[a28,a21] <= 102
+ e12[a28,a21]: Y[a21] - Y[a28] + 100 Above[a28,a21] <= 55
+ e11[a28,a22]: X[a22] - X[a28] + 150 Right[a28,a22] <= 90
+ e12[a28,a22]: Y[a22] - Y[a28] + 100 Above[a28,a22] <= 43
+ e11[a28,a23]: X[a23] - X[a28] + 150 Right[a28,a23] <= 103
+ e12[a28,a23]: Y[a23] - Y[a28] + 100 Above[a28,a23] <= 46
+ e11[a28,a24]: X[a24] - X[a28] + 150 Right[a28,a24] <= 85
+ e12[a28,a24]: Y[a24] - Y[a28] + 100 Above[a28,a24] <= 34
+ e11[a28,a25]: X[a25] - X[a28] + 150 Right[a28,a25] <= 119
+ e12[a28,a25]: Y[a25] - Y[a28] + 100 Above[a28,a25] <= 71
+ e11[a28,a26]: X[a26] - X[a28] + 150 Right[a28,a26] <= 117
+ e12[a28,a26]: Y[a26] - Y[a28] + 100 Above[a28,a26] <= 66
+ e11[a28,a27]: X[a27] - X[a28] + 150 Right[a28,a27] <= 77
+ e12[a28,a27]: Y[a27] - Y[a28] + 100 Above[a28,a27] <= 19
  e13[a01,a02]: - Accept[a01] - Accept[a02] + Right[a01,a02]
    + Right[a02,a01] + Above[a01,a02] + Above[a02,a01] + OutIn[a01,a02]
    + OutIn[a02,a01] >= -1

@@ -103,8 +103,8 @@ def plot_initial_hangar_state(
 
 
 plot_initial_hangar_state(
-    t2_path="Sensitivity/Mauro/Example_Sensitivity_Scenario/T2.csv",
-    t1_path="Sensitivity/Mauro/Example_Sensitivity_Scenario/T1.csv",
+    t2_path="Sensitivity/Sensitivity_Scenario/T2.csv",
+    t1_path="Sensitivity/Sensitivity_Scenario/T1.csv",
     hangar_width=150.0,
     hangar_length=100.0,
 )
