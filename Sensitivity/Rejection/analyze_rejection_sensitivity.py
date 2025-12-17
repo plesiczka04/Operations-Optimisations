@@ -270,10 +270,10 @@ def main():
     rows = collect_sensitivity(DEFAULT_PATTERN)
 
     # Write table with one row per factor
-    write_summary_csv(rows, out_path="Code/Sensitivity/Rej_penalty/sensitivity_rej_summary.csv")
+    write_summary_csv(rows, out_path="Sensitivity/Mauro/sensitivity_rej_summary.csv")
 
     # Create a few basic plots for the report
-    plot_sensitivity(rows, prefix="Code/Sensitivity/Rej_penalty/sensitivity_rej")
+    plot_sensitivity(rows, prefix="Sensitivity/Mauro/sensitivity_rej")
 
 if __name__ == "__main__":
     main()

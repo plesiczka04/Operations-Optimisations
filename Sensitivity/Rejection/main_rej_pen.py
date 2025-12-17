@@ -35,11 +35,11 @@ def main():
     import os
 
     # Fixed input/output paths
-    t1_path = "Code/Sensitivity/Sensitivity_Scenario/T1.csv"
-    t2_path = "Code/Sensitivity/Sensitivity_Scenario/T2.csv"
-    t3_path = "Code/Sensitivity/Sensitivity_Scenario/T3.csv"
-    out_path = "Code/Sensitivity/Rej_penalty/solution.csv"
-    out_vars = "Code/Sensitivity/Rej_penalty/solution_vars.csv"
+    t1_path = "Sensitivity/Mauro/Example_Sensitivity_Scenario/T1.csv"
+    t2_path = "Sensitivity/Mauro/Example_Sensitivity_Scenario/T2.csv"
+    t3_path = "Sensitivity/Mauro/Example_Sensitivity_Scenario/T3.csv"
+    out_path = "Sensitivity/Mauro/solution.csv"
+    out_vars = "Sensitivity/Mauro/solution_vars.csv"
     
     # Solver options
     time_limit = None  # Time limit in seconds (optional)
@@ -48,7 +48,7 @@ def main():
 
     # Sensitivity factors for the rejection penalty
     # Each factor multiplies all P_Rej values from the input data.
-    rej_factors = [0.01, 0.1, 0.25, 0.5, 0.75, 1.0, 1.5, 2.0, 4.0, 8.0, 10.0]
+    rej_factors = [0, 0.25, 0.5, 0.75, 1.0, 1.25, 1.5, 1.75, 2.0, 2.25, 2.5, 2.75]
 
     # Read input CSVs (first column is the index)
     t1_keys, t1_map = read_indexed_csv(t1_path)
