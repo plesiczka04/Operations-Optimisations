@@ -17,7 +17,7 @@ Date: November 2025
 
 from csvimport import read_indexed_csv, build_sets, build_parameters
 from model import build_model, check_initial_configuration, solve_and_report
-from datetime import datetime
+from analyze_solution import analyze_solution_csv
 
 
 ############# PARAMETERS #############
@@ -84,6 +84,23 @@ def main():
 
         # Solve and write report
         solve_and_report(m, vars, a, c, f, HW, HL, params, out_path, start_date, out_vars)
+
+        metrics = analyze_solution_csv(
+            path="Sensitivity/Sensitivity_Scenario/solution.csv",   # <-- single result file
+            epsilon_p=0.001,
+            run_tag="baseline_solution"
+        )
+
+        print(
+            metrics["n_accepted"],
+            metrics["n_rejected"],
+            metrics["acceptance_rate"],
+            metrics["total_D_Dep"],   # departure delay
+            metrics["total_D_Arr"],   # arrival delay
+            metrics["total_D_Arr"] + metrics["total_D_Dep"],
+            metrics["objective"],
+        )
+
 
 
 if __name__ == "__main__":

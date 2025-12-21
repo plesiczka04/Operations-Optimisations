@@ -26,6 +26,8 @@ import os
 from typing import Dict, List, Any
 
 import matplotlib.pyplot as plt
+import numpy as np
+
 
 # Must match epsilon_p used in the model / main.py
 EPSILON_P = 0.001
@@ -96,6 +98,9 @@ def summarize_solution_file(path: str) -> Dict[str, Any]:
     obj_arr = 0.0
     obj_dep = 0.0
     obj_eps = 0.0
+    accepted_request_dep_delays: List[float] = []  # P95 departure delay over accepted requests only
+
+
 
     # "Future" (request) aircraft: those with positive rejection or arrival penalty.
     for row in rows:
@@ -107,10 +112,14 @@ def summarize_solution_file(path: str) -> Dict[str, Any]:
         p_dep = float(row["Penalty_DepartureDelay"])
         d_arr = float(row["D_Arr"])
         d_dep = float(row["D_Dep"])
+
         x = float(row["X"])
         y = float(row["Y"])
 
         is_future = (p_rej > 0.0) or (p_arr > 0.0)
+        if is_future and accepted > 0.5:
+            accepted_request_dep_delays.append(d_dep)
+
 
         if is_future:
             n_requests += 1
@@ -134,6 +143,12 @@ def summarize_solution_file(path: str) -> Dict[str, Any]:
         1.0 if n_requests == 0 else n_accepted_requests / n_requests
     )
     objective = obj_rej + obj_arr + obj_dep + obj_eps
+    p95_D_Dep_req = float("nan")
+    if accepted_request_dep_delays:
+        p95_D_Dep_req = float(
+            np.percentile(np.array(accepted_request_dep_delays, dtype=float), 95)
+        )
+
 
     return {
         "factor": factor,
@@ -145,6 +160,7 @@ def summarize_solution_file(path: str) -> Dict[str, Any]:
         "acceptance_rate": acceptance_rate,
         "total_D_Arr": total_D_Arr,
         "total_D_Dep": total_D_Dep,
+        "p95_D_Dep_req": p95_D_Dep_req,
         "obj_rej": obj_rej,
         "obj_arr": obj_arr,
         "obj_dep": obj_dep,
@@ -192,6 +208,7 @@ def write_summary_csv(
         "acceptance_rate",
         "total_D_Arr",
         "total_D_Dep",
+        "p95_D_Dep_req",
         "obj_rej",
         "obj_arr",
         "obj_dep",
@@ -224,6 +241,9 @@ def plot_sensitivity(rows: List[Dict[str, Any]], prefix: str = "sensitivity_rej"
     obj_dep = [r["obj_dep"] for r in rows]
     obj_eps = [r["obj_eps"] for r in rows]
     obj_tot = [r["objective"] for r in rows]
+    p95_dep = [r.get("p95_D_Dep_req", float("nan")) for r in rows]
+
+
 
     # #rejected vs factor
     plt.figure()
@@ -247,6 +267,18 @@ def plot_sensitivity(rows: List[Dict[str, Any]], prefix: str = "sensitivity_rej"
     out2 = f"{prefix}_acceptance_rate.png"
     plt.savefig(out2, dpi=200)
     print(f"Saved {out2}")
+
+    # P95 departure delay vs factor (tail-delay metric)
+    plt.figure()
+    plt.plot(factors, p95_dep, marker="o")
+    plt.xlabel("Rejection penalty factor")
+    plt.ylabel("P95 departure delay (minutes)")
+    plt.grid(True, linestyle="--", alpha=0.5)
+    plt.tight_layout()
+    out_p95 = f"{prefix}_p95_dep_delay.png"
+    plt.savefig(out_p95, dpi=200)
+    print(f"Saved {out_p95}")
+
 
     # Objective decomposition vs factor
     plt.figure()
