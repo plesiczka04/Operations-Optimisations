@@ -244,12 +244,20 @@ def plot_sensitivity(rows: List[Dict[str, Any]], prefix: str = "sensitivity_rej"
     p95_dep = [r.get("p95_D_Dep_req", float("nan")) for r in rows]
 
 
+    BIG_FONT = 16
+    BIGGER_FONT = 18
+    BIG_TICKS = 14
+    BIGGER_TICKS = 16
+
+
 
     # #rejected vs factor
     plt.figure()
     plt.plot(factors, n_rej, marker="o")
-    plt.xlabel("Rejection penalty factor")
-    plt.ylabel("Number of rejected requests")
+    plt.xlabel("Rejection penalty factor", fontsize=BIGGER_FONT)
+    plt.ylabel("Number of rejected requests", fontsize=BIGGER_FONT)
+    plt.xticks(fontsize=BIGGER_TICKS)
+    plt.yticks(fontsize=BIGGER_TICKS)
     plt.grid(True, linestyle="--", alpha=0.5)
     plt.tight_layout()
     out1 = f"{prefix}_num_rejected.png"
@@ -259,9 +267,11 @@ def plot_sensitivity(rows: List[Dict[str, Any]], prefix: str = "sensitivity_rej"
     # Acceptance rate vs factor
     plt.figure()
     plt.plot(factors, acc_rate, marker="o")
-    plt.xlabel("Rejection penalty factor")
-    plt.ylabel("Acceptance rate (requests)")
+    plt.xlabel("Rejection penalty factor", fontsize=BIGGER_FONT)
+    plt.ylabel("Acceptance rate (requests)", fontsize=BIGGER_FONT)
     plt.ylim(0.0, 1.05)
+    plt.xticks(fontsize=BIGGER_TICKS)
+    plt.yticks(fontsize=BIGGER_TICKS)
     plt.grid(True, linestyle="--", alpha=0.5)
     plt.tight_layout()
     out2 = f"{prefix}_acceptance_rate.png"
@@ -271,9 +281,11 @@ def plot_sensitivity(rows: List[Dict[str, Any]], prefix: str = "sensitivity_rej"
     # P95 departure delay vs factor (tail-delay metric)
     plt.figure()
     plt.plot(factors, p95_dep, marker="o")
-    plt.xlabel("Rejection penalty factor")
-    plt.ylabel("P95 departure delay (minutes)")
+    plt.xlabel("Rejection penalty factor", fontsize=BIG_FONT)
+    plt.ylabel("P95 departure delay (minutes)", fontsize=BIG_FONT)
     plt.grid(True, linestyle="--", alpha=0.5)
+    plt.xticks(fontsize=BIG_TICKS)
+    plt.yticks(fontsize=BIG_TICKS)
     plt.tight_layout()
     out_p95 = f"{prefix}_p95_dep_delay.png"
     plt.savefig(out_p95, dpi=200)
@@ -287,9 +299,11 @@ def plot_sensitivity(rows: List[Dict[str, Any]], prefix: str = "sensitivity_rej"
     plt.plot(factors, obj_dep, marker="o", label="Departure delay cost")
     plt.plot(factors, obj_eps, marker="o", label="Positioning (ε_p term)")
     plt.plot(factors, obj_tot, marker="o", linestyle="--", label="Total objective")
-    plt.xlabel("Rejection penalty factor")
-    plt.ylabel("Cost contribution")
+    plt.xlabel("Rejection penalty factor", fontsize=BIG_FONT)
+    plt.ylabel("Cost contribution", fontsize=BIG_FONT)
     plt.grid(True, linestyle="--", alpha=0.5)
+    plt.xticks(fontsize=BIG_TICKS)
+    plt.yticks(fontsize=BIG_TICKS)
     plt.legend()
     plt.tight_layout()
     out3 = f"{prefix}_objective_components.png"
