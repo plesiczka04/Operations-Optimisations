@@ -25,6 +25,7 @@ import glob
 import os
 from typing import Dict, List, Any
 import re
+import numpy as np
 
 import matplotlib.pyplot as plt
 
@@ -98,6 +99,7 @@ def summarize_solution_file(path: str) -> Dict[str, Any]:
     obj_arr = 0.0
     obj_dep = 0.0
     obj_eps = 0.0
+    hangar_space_used = 0.0
 
     # "Future" (request) aircraft: those with positive rejection or arrival penalty.
     for row in rows:
@@ -132,6 +134,7 @@ def summarize_solution_file(path: str) -> Dict[str, Any]:
         total_D_Dep += d_dep
         obj_dep += p_dep * d_dep
 
+    hangar_space_used = row["Hangar_Space_Usage"]
     acceptance_rate = (
         1.0 if n_requests == 0 else n_accepted_requests / n_requests
     )
@@ -153,6 +156,7 @@ def summarize_solution_file(path: str) -> Dict[str, Any]:
         "obj_eps": obj_eps,
         "objective": objective,
         "file": os.path.basename(path),
+        "hangar_space_used": hangar_space_used,
     }
 
 
@@ -175,7 +179,7 @@ def collect_sensitivity(pattern: str = DEFAULT_PATTERN) -> List[Dict[str, Any]]:
 
 def write_summary_csv(
     rows: List[Dict[str, Any]],
-    out_path: str = "sensitivity_buffer_summary.csv",
+    out_path: str = "Sensitivity/Buffer/sensitivity_buffer_summary.csv",
 ) -> None:
     """
     Write a single CSV summarizing all runs (one row per factor).
@@ -199,6 +203,7 @@ def write_summary_csv(
         "obj_dep",
         "obj_eps",
         "objective",
+        "hangar_space_used",
     ]
 
     with open(out_path, "w", newline="", encoding="utf-8") as f:
@@ -226,12 +231,21 @@ def plot_sensitivity(rows: List[Dict[str, Any]], prefix: str = "sensitivity_buff
     obj_dep = [r["obj_dep"] for r in rows]
     obj_eps = [r["obj_eps"] for r in rows]
     obj_tot = [r["objective"] for r in rows]
+    space_used = [r["hangar_space_used"] for r in rows]
+    space_used = [float(x) for x in space_used]
 
-    # #rejected vs factor
+    BIG_FONT = 16
+    BIGGER_FONT = 18
+    BIG_TICKS = 14
+    BIGGER_TICKS = 16
+
+    #rejected vs factor
     plt.figure()
     plt.plot(factors, n_rej, marker="o")
-    plt.xlabel("Minimum time gap factor")
-    plt.ylabel("Number of rejected requests")
+    plt.xlabel("Space buffer factor", fontsize = BIGGER_FONT)
+    plt.ylabel("Number of rejected requests", fontsize = BIGGER_FONT)
+    plt.xticks(fontsize=BIGGER_TICKS)
+    plt.yticks(fontsize=BIGGER_TICKS)
     plt.grid(True, linestyle="--", alpha=0.5)
     plt.tight_layout()
     out1 = f"{prefix}_num_rejected.png"
@@ -241,9 +255,11 @@ def plot_sensitivity(rows: List[Dict[str, Any]], prefix: str = "sensitivity_buff
     # Acceptance rate vs factor
     plt.figure()
     plt.plot(factors, acc_rate, marker="o")
-    plt.xlabel("Minimum time gap factor")
-    plt.ylabel("Acceptance rate (requests)")
+    plt.xlabel("Space buffer factor", fontsize = BIGGER_FONT)
+    plt.ylabel("Acceptance rate (requests)", fontsize = BIGGER_FONT)
     plt.ylim(0.0, 1.05)
+    plt.xticks(fontsize=BIGGER_TICKS)
+    plt.yticks(fontsize=BIGGER_TICKS)
     plt.grid(True, linestyle="--", alpha=0.5)
     plt.tight_layout()
     out2 = f"{prefix}_acceptance_rate.png"
@@ -257,14 +273,30 @@ def plot_sensitivity(rows: List[Dict[str, Any]], prefix: str = "sensitivity_buff
     plt.plot(factors, obj_dep, marker="o", label="Departure delay cost")
     plt.plot(factors, obj_eps, marker="o", label="Positioning (ε_p term)")
     plt.plot(factors, obj_tot, marker="o", linestyle="--", label="Total objective")
-    plt.xlabel("Minimum time gap factor")
-    plt.ylabel("Cost contribution")
+    plt.xlabel("Space buffer factor", fontsize = BIG_FONT)
+    plt.ylabel("Cost contribution", fontsize = BIG_FONT)
+    plt.xticks(fontsize=BIG_TICKS)
+    plt.yticks(fontsize=BIG_TICKS)
     plt.grid(True, linestyle="--", alpha=0.5)
     plt.legend()
     plt.tight_layout()
     out3 = f"{prefix}_objective_components.png"
     plt.savefig(out3, dpi=200)
     print(f"Saved {out3}")
+
+    # used space fraction
+    plt.figure()
+    plt.plot(factors, space_used, marker="o")
+    plt.yticks(np.arange(0.2, 0.50, 0.05))
+    plt.xlabel("Space buffer factor", fontsize = BIG_FONT)
+    plt.ylabel("Used space fraction", fontsize = BIG_FONT)
+    plt.xticks(fontsize=BIG_TICKS)
+    plt.yticks(fontsize=BIG_TICKS)
+    plt.grid(True, linestyle="--", alpha=0.5)
+    plt.tight_layout()
+    out4 = f"{prefix}_space_used.png"
+    plt.savefig(out4, dpi=200)
+    print(f"Saved {out4}")
 
 
 def main():
@@ -275,10 +307,10 @@ def main():
     rows = collect_sensitivity(DEFAULT_PATTERN)
 
     # Write table with one row per factor
-    write_summary_csv(rows, out_path="Sensitivity/sensitivity_buffer_summary.csv")
+    write_summary_csv(rows, out_path="Sensitivity/Buffer/sensitivity_buffer_summary.csv")
 
     # Create a few basic plots for the report
-    plot_sensitivity(rows, prefix="Sensitivity/sensitivity_buffer")
+    plot_sensitivity(rows, prefix="Sensitivity/Buffer/sensitivity_buffer")
 
 if __name__ == "__main__":
     main()

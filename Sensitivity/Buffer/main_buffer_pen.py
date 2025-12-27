@@ -17,7 +17,7 @@ import sys
 import os
 
 # Add parent directory to module search path
-sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "..")))
 
 
 ############ IMPORTS #############
@@ -45,8 +45,8 @@ def main():
     t1_path = "Sensitivity/Sensitivity_Scenario/T1.csv"
     t2_path = "Sensitivity/Sensitivity_Scenario/T2.csv"
     t3_path = "Sensitivity/Sensitivity_Scenario/T3.csv"
-    out_path = "Sensitivity/solution.csv"
-    out_vars = "Sensitivity/solution_vars.csv"
+    out_path = "Sensitivity/Buffer/solution.csv"
+    out_vars = "Sensitivity/Buffer/solution_vars.csv"
     
     # Solver options
     time_limit = None  # Time limit in seconds (optional)
@@ -55,7 +55,7 @@ def main():
 
     # Sensitivity factors for the minimum time gap
     # Each factor multiplies the buffer values from the input data.
-    buffer_factors = [0.2, 0.4, 0.6, 0.8, 1.0, 1.25, 1.5]
+    buffer_factors = [0.0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1.0, 1.1, 1.2, 1.3, 1.4, 1.5, 1.6]
 
     # Read input CSVs (first column is the index)
     t1_keys, t1_map = read_indexed_csv(t1_path)

@@ -340,12 +340,38 @@ def solve_and_report(m: gp.Model, vars, a: List[str], c: List[str], f: List[str]
     ServT = params["ServT"]
     P_Rej, P_Arr, P_Dep = params["P_Rej"], params["P_Arr"], params["P_Dep"]
 
+    area_time_used = 0.0
+    roll_in_times = []
+    roll_out_times = []
+
+    for i in a:
+        if Accept[i].X > 0.5:  # aircraft accepted
+            t_in = Roll_in[i].X
+            t_out = Roll_out[i].X
+            dwell_time = max(0.0, t_out - t_in)
+
+            area_time_used += W[i] * L[i] * dwell_time
+            roll_in_times.append(t_in)
+            roll_out_times.append(t_out)
+
+    # Define scenario time horizon
+    if roll_in_times and roll_out_times:
+        T_scenario = max(roll_out_times) - min(roll_in_times)
+    else:
+        T_scenario = 0.0
+
+    # Normalize by total hangar area-time
+    if T_scenario > 0:
+        hangar_space_usage = area_time_used / (HW * HL * T_scenario)
+    else:
+        hangar_space_usage = 0.0
+
     stamp = start_date
     # Define report items
     fieldnames = ["Aircraft", "Accepted", "Width", "Length", "ETA", "Roll_In", "X", "Y",
                   "ServT", "ETD", "Roll_Out", "D_Arr", "D_Dep", "Penalty_Reject",
                   "Penalty_ArrivalDelay", "Penalty_DepartureDelay", "Hangar_Width",
-                  "Hangar_Length", "StartDate"]
+                  "Hangar_Length", "StartDate", "Hangar_Space_Usage"]
 
     # Write report to CSV
     with open(out_csv, "w", newline="", encoding="utf-8") as fcsv:
@@ -373,6 +399,7 @@ def solve_and_report(m: gp.Model, vars, a: List[str], c: List[str], f: List[str]
                 "Hangar_Width": HW,
                 "Hangar_Length": HL,
                 "StartDate": stamp,
+                "Hangar_Space_Usage": hangar_space_usage,
             }
             writer.writerow(row)
 

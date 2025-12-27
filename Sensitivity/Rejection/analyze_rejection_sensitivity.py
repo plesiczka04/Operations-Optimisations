@@ -312,6 +312,9 @@ def plot_sensitivity(rows: List[Dict[str, Any]], prefix: str = "sensitivity_rej"
 
 
 def main():
+
+    import os
+    print(os.getcwd())
     # Collect and summarize all runs
     rows = collect_sensitivity(DEFAULT_PATTERN)
 

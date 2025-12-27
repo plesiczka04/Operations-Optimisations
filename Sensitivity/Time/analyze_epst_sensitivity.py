@@ -25,6 +25,7 @@ import glob
 import os
 from typing import Dict, List, Any
 import re
+import pandas as pd
 
 import matplotlib.pyplot as plt
 
@@ -172,6 +173,73 @@ def collect_sensitivity(pattern: str = DEFAULT_PATTERN) -> List[Dict[str, Any]]:
     rows.sort(key=lambda r: r["factor"])
     return rows
 
+def read_roll_times(path: str) -> Dict[str, Dict[str, float]]:
+    """
+    Read Roll_In and Roll_Out times per aircraft from a solution CSV.
+
+    Returns:
+        { Aircraft_ID : {"Roll_In": float, "Roll_Out": float} }
+    """
+    roll = {}
+
+    with open(path, newline="", encoding="utf-8") as f:
+        reader = csv.DictReader(f)
+        for row in reader:
+            ac = row["Aircraft"]
+            roll[ac] = {
+                "Roll_In": float(row["Roll_In"]),
+                "Roll_Out": float(row["Roll_Out"]),
+            }
+
+    return roll
+
+def compute_roll_shifts(paths: List[str]):
+    """
+    Compute Delta_Roll_In and Delta_Roll_Out relative to the baseline (factor 1).
+    """
+    # Sort paths by factor
+    paths = sorted(paths, key=parse_factor_from_filename)
+    rows_excel = []
+
+    baseline_path = paths[2]
+    baseline_factor = parse_factor_from_filename(baseline_path)
+
+    baseline_roll = read_roll_times(baseline_path)
+
+    delta_roll_in = []
+    delta_roll_out = []
+    factors = []
+
+    for path in paths[1:]:
+        factor = parse_factor_from_filename(path)
+        roll = read_roll_times(path)
+        
+        row = {"factor": factor}
+
+        for ac, times in roll.items():
+            row[f"{ac}_Roll_In"] = times["Roll_In"]
+            row[f"{ac}_Roll_Out"] = times["Roll_Out"]
+
+        rows_excel.append(row)
+
+        for ac, base_times in baseline_roll.items():
+            if ac not in roll:
+                continue
+            if roll[ac]["Roll_In"] != 0:
+                delta_roll_in.append(roll[ac]["Roll_In"] - base_times["Roll_In"])
+                delta_roll_out.append(roll[ac]["Roll_Out"] - base_times["Roll_Out"])
+                factors.append(factor)
+    
+    df = pd.DataFrame(rows_excel)
+
+    out_csv = "Sensitivity/Time/roll_times_by_scenario.csv"
+    df.sort_values("factor", inplace=True)
+    df.to_csv(out_csv, index=False)  # <-- use to_csv instead of to_excel
+
+    print(f"Wrote roll-in / roll-out comparison to {out_csv}")
+
+    return factors, delta_roll_in, delta_roll_out, baseline_factor
+
 
 def write_summary_csv(
     rows: List[Dict[str, Any]],
@@ -226,12 +294,20 @@ def plot_sensitivity(rows: List[Dict[str, Any]], prefix: str = "sensitivity_epst
     obj_dep = [r["obj_dep"] for r in rows]
     obj_eps = [r["obj_eps"] for r in rows]
     obj_tot = [r["objective"] for r in rows]
+    roll_in = []
+
+    BIG_FONT = 16
+    BIGGER_FONT = 18
+    BIG_TICKS = 14
+    BIGGER_TICKS = 16
 
     # #rejected vs factor
     plt.figure()
     plt.plot(factors, n_rej, marker="o")
-    plt.xlabel("Minimum time gap factor")
-    plt.ylabel("Number of rejected requests")
+    plt.xlabel("Minimum time gap factor", fontsize = BIGGER_FONT)
+    plt.ylabel("Number of rejected requests", fontsize = BIGGER_FONT)
+    plt.xticks(fontsize=BIGGER_TICKS)
+    plt.yticks(fontsize=BIGGER_TICKS)
     plt.grid(True, linestyle="--", alpha=0.5)
     plt.tight_layout()
     out1 = f"{prefix}_num_rejected.png"
@@ -241,8 +317,10 @@ def plot_sensitivity(rows: List[Dict[str, Any]], prefix: str = "sensitivity_epst
     # Acceptance rate vs factor
     plt.figure()
     plt.plot(factors, acc_rate, marker="o")
-    plt.xlabel("Minimum time gap factor")
-    plt.ylabel("Acceptance rate (requests)")
+    plt.xlabel("Minimum time gap factor", fontsize = BIGGER_FONT)
+    plt.ylabel("Acceptance rate (requests)", fontsize = BIGGER_FONT)
+    plt.xticks(fontsize=BIGGER_TICKS)
+    plt.yticks(fontsize=BIGGER_TICKS)
     plt.ylim(0.0, 1.05)
     plt.grid(True, linestyle="--", alpha=0.5)
     plt.tight_layout()
@@ -257,14 +335,47 @@ def plot_sensitivity(rows: List[Dict[str, Any]], prefix: str = "sensitivity_epst
     plt.plot(factors, obj_dep, marker="o", label="Departure delay cost")
     plt.plot(factors, obj_eps, marker="o", label="Positioning (ε_p term)")
     plt.plot(factors, obj_tot, marker="o", linestyle="--", label="Total objective")
-    plt.xlabel("Minimum time gap factor")
-    plt.ylabel("Cost contribution")
+    plt.xlabel("Minimum time gap factor", fontsize = BIG_FONT)
+    plt.ylabel("Cost contribution", fontsize = BIG_FONT)
+    plt.xticks(fontsize=BIG_TICKS)
+    plt.yticks(fontsize=BIG_TICKS)
     plt.grid(True, linestyle="--", alpha=0.5)
     plt.legend()
     plt.tight_layout()
     out3 = f"{prefix}_objective_components.png"
     plt.savefig(out3, dpi=200)
     print(f"Saved {out3}")
+
+    paths = sorted(glob.glob(DEFAULT_PATTERN))
+    factors_sc, d_roll_in, d_roll_out, base_factor = compute_roll_shifts(paths)
+
+    plt.figure()
+    plt.scatter(factors_sc, d_roll_in, s=20, alpha=0.6)
+    plt.axhline(0.0, linestyle="--", linewidth=1)
+    plt.xlabel("Minimum time gap factor", fontsize = BIGGER_FONT)
+    plt.ylabel(r"$\Delta$ Roll-in time", fontsize = BIGGER_FONT)
+    plt.xticks(fontsize=BIGGER_TICKS)
+    plt.yticks(fontsize=BIGGER_TICKS)
+    plt.grid(True, linestyle="--", alpha=0.4)
+    plt.tight_layout()
+
+    out4 = f"{prefix}_delta_roll_in_scatter.png"
+    plt.savefig(out4, dpi=200)
+    print(f"Saved {out4}")
+
+    plt.figure()
+    plt.scatter(factors_sc, d_roll_out, s=20, alpha=0.6)
+    plt.axhline(0.0, linestyle="--", linewidth=1)
+    plt.xlabel("Minimum time gap factor", fontsize = BIGGER_FONT)
+    plt.ylabel(r"$\Delta$ Roll-out time", fontsize = BIGGER_FONT)
+    plt.xticks(fontsize=BIGGER_TICKS)
+    plt.yticks(fontsize=BIGGER_TICKS)
+    plt.grid(True, linestyle="--", alpha=0.4)
+    plt.tight_layout()
+
+    out5 = f"{prefix}_delta_roll_out_scatter.png"
+    plt.savefig(out5, dpi=200)
+    print(f"Saved {out5}")
 
 
 def main():
@@ -275,10 +386,10 @@ def main():
     rows = collect_sensitivity(DEFAULT_PATTERN)
 
     # Write table with one row per factor
-    write_summary_csv(rows, out_path="Sensitivity/sensitivity_epst_summary.csv")
+    write_summary_csv(rows, out_path="Sensitivity/Time/sensitivity_epst_summary.csv")
 
     # Create a few basic plots for the report
-    plot_sensitivity(rows, prefix="Sensitivity/sensitivity_epst")
+    plot_sensitivity(rows, prefix="Sensitivity/Time/sensitivity_epst")
 
 if __name__ == "__main__":
     main()

@@ -13,6 +13,11 @@ Przemek Lesiczka
 Date: November 2025
 """
 
+import sys, os
+
+sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "..")))
+
+
 ############ IMPORTS #############
 
 import sys
