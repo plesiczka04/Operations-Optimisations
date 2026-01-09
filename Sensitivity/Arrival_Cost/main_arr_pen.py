@@ -13,6 +13,12 @@ Przemek Lesiczka
 Date: November 2025
 """
 
+import sys
+import os
+
+# Add parent directory to module search path
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "..")))
+
 ############ IMPORTS #############
 
 from csvimport import read_indexed_csv, build_sets, build_parameters
@@ -35,12 +41,13 @@ def main():
     import os
 
     # Fixed input/output paths
-    t1_path = r"C:\Users\plesiczka\Desktop\Operations3\Operations-Optimisations\T1.csv"
-    t2_path = r"C:\Users\plesiczka\Desktop\Operations3\Operations-Optimisations\T2.csv"
-    t3_path = r"C:\Users\plesiczka\Desktop\Operations3\Operations-Optimisations\T3.csv"
-    out_path = r"C:\Users\plesiczka\Desktop\Operations3\Operations-Optimisations\Sensitivity\Przemek\departure_cost\solution.csv"
-    out_vars = r"C:\Users\plesiczka\Desktop\Operations3\Operations-Optimisations\Sensitivity\Przemek\departure_cost\solution_vars.csv"
+    t1_path = "Sensitivity/Sensitivity_Scenario/T1.csv"
+    t2_path = "Sensitivity/Sensitivity_Scenario/T2.csv"
+    t3_path = "Sensitivity/Sensitivity_Scenario/T3.csv"
+    out_path = "Sensitivity/Arrival_Cost/solution.csv"
+    out_vars = "Sensitivity/Arrival_Cost/solution_vars.csv"
 
+    
     # Solver options
     time_limit = None  # Time limit in seconds (optional)
     mip_gap = None     # MIP gap (e.g., 0.01 for 1%) (optional)
@@ -48,7 +55,7 @@ def main():
 
     # Sensitivity factors for the rejection penalty
     # Each factor multiplies all P_Rej values from the input data.
-    dep_factors = [0.00, 0.01, 0.1, 0.25, 0.5, 0.75, 1.0, 1.25, 1.5, 1.75, 2.0, 2.25, 2.5, 2.75, 3.0, 4.0, 5.0, 6.0, 7.0, 8.0, 9.0, 10.0]
+    arr_factors = [0.00, 0.01, 0.1, 0.25, 0.5, 0.75, 1.0, 1.25, 1.5, 1.75, 2.0, 2.25, 2.5, 2.75, 3.0, 4.0, 5.0, 6.0, 7.0, 8.0, 9.0, 10.0]
 
     # Read input CSVs (first column is the index)
     t1_keys, t1_map = read_indexed_csv(t1_path)
@@ -62,18 +69,19 @@ def main():
     params = build_parameters(t1_map, t2_map, t3_map, a, c, f, M_ID)
 
     # Store a copy of the baseline rejection penalties
-    base_P_Dep = params["P_Dep"].copy()   # <-- adjust key name if different
+    base_P_Arr = params["P_Arr"].copy()
 
     # Produce a consistent start-date string (minutes precision)
     # Set the default start date as 1st Jan 2026 00:00
     start_date = "2026-01-01 00:00"
 
-    # Loop over all rejection-penalty factors
-    for factor in dep_factors:
-        print(f"\n=== Solving model with DEPARTURE penalty factor {factor:.3g} ===")
+    # Loop over all ARRIVAL-penalty factors
+    for factor in arr_factors:
+        print(f"\n=== Solving model with ARRIVAL penalty factor {factor:.3g} ===")
 
-        # Scale DEPARTURE penalties for this run
-        params["P_Dep"] = {key: factor * val for key, val in base_P_Dep.items()}
+        # Scale ARRIVAL penalties for this run
+        params["P_Arr"] = {key: factor * val for key, val in base_P_Arr.items()}
+
 
         # Build model
         m, vars, bigm = build_model(params, a, c, f, HW, HL, Buffer, epsilon_t, epsilon_p)
@@ -88,7 +96,7 @@ def main():
             m.Params.Threads = threads
 
         # Build factor-specific output names (to avoid overwriting files)
-        tag = f"dep_{factor}".replace(".", "p")  # e.g. dep_0p25, dep_1p0
+        tag = f"arr_{factor}".replace(".", "p")  
         base_out, ext_out = os.path.splitext(out_path)
         base_vars, ext_vars = os.path.splitext(out_vars)
         out_path_factor = f"{base_out}_{tag}{ext_out}"
